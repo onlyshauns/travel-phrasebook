@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Phrasebook</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --dark: #1a1612;
+    --rouge: #c0392b;
+    --gold: #c9a84c;
+    --muted: #8a7f72;
+    --card: #fff;
+    --border: #e0d8cc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+  }
+
+  .container { max-width: 620px; margin: 0 auto; }
+
+  /* HOME */
+  .home-header {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+
+  .home-header .globe {
+    font-size: 2.4rem;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .home-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .home-header h1 em { font-style: italic; color: var(--rouge); }
+
+  .home-header p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+    margin: 14px auto 0;
+  }
+
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  @media (min-width: 460px) {
+    .country-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .country-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 12px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+  }
+
+  .country-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+    transform: translateY(-2px);
+    border-color: var(--gold);
+  }
+
+  .country-card .flag { font-size: 2.6rem; display: block; margin-bottom: 10px; }
+  .country-card .cname {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .country-card .clang { font-size: 0.75rem; color: var(--muted); font-style: italic; }
+
+  /* PHRASEBOOK */
+  #phrasebook { display: none; }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: 7px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    margin-bottom: 32px;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { border-color: var(--dark); color: var(--dark); }
+
+  .pb-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .pb-header .flag-lg { font-size: 2.6rem; display: block; margin-bottom: 10px; }
+  .pb-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .pb-header h2 em { font-style: italic; color: var(--rouge); }
+  .pb-header p {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  .tab {
+    padding: 8px 18px;
+    border: 1.5px solid var(--border);
+    background: transparent;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    color: var(--muted);
+    transition: all 0.2s;
+  }
+  .tab:hover { border-color: var(--rouge); color: var(--rouge); }
+  .tab.active { background: var(--rouge); border-color: var(--rouge); color: #fff; }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .phrases { display: grid; gap: 12px; }
+
+  .phrase-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .phrase-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    transform: translateY(-1px);
+  }
+
+  .play-btn {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--rouge);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.1s;
+    color: white;
+  }
+  .play-btn:hover { background: #a93226; }
+  .play-btn:active { transform: scale(0.94); }
+  .play-btn.speaking {
+    background: var(--gold);
+    animation: pulse 0.8s ease-in-out infinite alternate;
+  }
+  @keyframes pulse {
+    from { box-shadow: 0 0 0 0 rgba(201,168,76,0.4); }
+    to   { box-shadow: 0 0 0 8px rgba(201,168,76,0); }
+  }
+  .play-icon { width: 14px; height: 14px; }
+
+  .phrase-text { flex: 1; min-width: 0; }
+
+  .native {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  /* Use serif only for Latin-script languages */
+  #phrasebook.latin .native { font-family: 'Playfair Display', serif; }
+
+  .pronunciation {
+    font-size: 0.78rem;
+    color: var(--rouge);
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+  .english { font-size: 0.82rem; color: var(--muted); }
+
+  .tip-box {
+    background: #fff8ee;
+    border: 1px solid #f0dfa0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.82rem;
+    color: #7a6830;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  .tip-box strong { font-weight: 600; }
+
+  .no-speech {
+    display: none;
+    background: #fff3f3;
+    border: 1px solid #f5c6c6;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.82rem;
+    color: var(--rouge);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HOME -->
+  <div id="home">
+    <div class="home-header">
+      <span class="globe">🌏</span>
+      <h1>Travel <em>Phrasebook</em></h1>
+      <p>Pick a country to get started</p>
+      <div class="divider"></div>
+    </div>
+    <div class="country-grid" id="countryGrid"></div>
+  </div>
+
+  <!-- PHRASEBOOK -->
+  <div id="phrasebook">
+    <button class="back-btn" onclick="goHome()">← All Countries</button>
+    <div class="pb-header">
+      <span class="flag-lg" id="pbFlag"></span>
+      <h2 id="pbTitle"></h2>
+      <p id="pbSubtitle"></p>
+      <div class="divider"></div>
+    </div>
+    <div class="no-speech" id="noSpeech">⚠️ Your browser doesn't support text-to-speech. Try Chrome or Safari.</div>
+    <div class="tabs">
+      <button class="tab active" onclick="showSection('greetings', event)">👋 Greetings</button>
+      <button class="tab" onclick="showSection('food', event)">🍽️ Food & Dining</button>
+      <button class="tab" onclick="showSection('directions', event)">🗺️ Directions</button>
+      <button class="tab" onclick="showSection('shopping', event)">🛍️ Shopping</button>
+      <button class="tab" onclick="showSection('numbers', event)">🔢 Numbers</button>
+      <button class="tab" onclick="showSection('emergency', event)">🆘 Emergency</button>
+    </div>
+    <div class="section active" id="greetings">
+      <div class="section-title">Greetings & Pleasantries</div>
+      <div class="phrases" id="phrases-greetings"></div>
+      <div class="tip-box" id="tip-greetings"></div>
+    </div>
+    <div class="section" id="food">
+      <div class="section-title">Food & Dining</div>
+      <div class="phrases" id="phrases-food"></div>
+      <div class="tip-box" id="tip-food"></div>
+    </div>
+    <div class="section" id="directions">
+      <div class="section-title">Getting Around</div>
+      <div class="phrases" id="phrases-directions"></div>
+      <div class="tip-box" id="tip-directions"></div>
+    </div>
+    <div class="section" id="shopping">
+      <div class="section-title">Shopping</div>
+      <div class="phrases" id="phrases-shopping"></div>
+      <div class="tip-box" id="tip-shopping"></div>
+    </div>
+    <div class="section" id="numbers">
+      <div class="section-title">Numbers & Counting</div>
+      <div class="phrases" id="phrases-numbers"></div>
+      <div class="tip-box" id="tip-numbers"></div>
+    </div>
+    <div class="section" id="emergency">
+      <div class="section-title">Emergency & Help</div>
+      <div class="phrases" id="phrases-emergency"></div>
+      <div class="tip-box" id="tip-emergency"></div>
+    </div>
+  </div>
+
+</div>
+<script>
+// ─── DATA ────────────────────────────────────────────────────────────────────
+
+const countries = {
+
+  france: {
+    name: "France", flag: "🇫🇷", lang: "Français", langCode: "fr-FR", latinScript: true,
+    tips: {
+      greetings: '💡 <strong>Always say Bonjour</strong> when entering any shop, café, or restaurant — and <em>Au revoir</em> when you leave. It\'s the #1 cultural rule.',
+      food: '💡 The bill won\'t come unless you ask. Say <em>"L\'addition, s\'il vous plaît"</em> and make eye contact — don\'t wave or call out.',
+      directions: '💡 Start with <em>"Excusez-moi"</em> and try a little French before switching to English — it goes a long way.',
+      numbers: '💡 After 60, French gets quirky — 70 is <em>"soixante-dix"</em> (sixty-ten), 80 is <em>"quatre-vingts"</em> (four-twenties).',
+      emergency: '💡 Emergency: <strong>112</strong>. Police: <strong>17</strong>. Ambulance (SAMU): <strong>15</strong>.',
+    },
+    data: {
+      greetings: [
+        { native: "Bonjour", pron: "bon-ZHOOR", en: "Hello / Good morning" },
+        { native: "Bonsoir", pron: "bon-SWAHR", en: "Good evening" },
+        { native: "Au revoir", pron: "oh ruh-VWAHR", en: "Goodbye" },
+        { native: "Merci", pron: "mair-SEE", en: "Thank you" },
+        { native: "Merci beaucoup", pron: "mair-SEE boh-KOO", en: "Thank you very much" },
+        { native: "S'il vous plaît", pron: "seel voo PLAY", en: "Please" },
+        { native: "De rien", pron: "duh ree-EN", en: "You're welcome" },
+        { native: "Pardon", pron: "par-DOHN", en: "Sorry (bumping into someone)" },
+        { native: "Désolé(e)", pron: "day-zo-LAY", en: "I'm sorry (sincere apology)" },
+        { native: "Excusez-moi", pron: "ex-koo-ZAY mwah", en: "Excuse me" },
+        { native: "Parlez-vous anglais ?", pron: "par-LAY voo on-GLAY", en: "Do you speak English?" },
+        { native: "Je ne comprends pas", pron: "zhuh nuh com-PROHN pah", en: "I don't understand" },
+        { native: "Pouvez-vous répéter ?", pron: "poo-VAY voo ray-pay-TAY", en: "Can you repeat that?" },
+        { native: "Je m'appelle...", pron: "zhuh ma-PEL", en: "My name is..." },
+      ],
+      food: [
+        { native: "Je voudrais réserver une table", pron: "zhuh voo-DRAY ray-zair-VAY oon TAH-bluh", en: "I'd like to reserve a table" },
+        { native: "Une table pour deux, s'il vous plaît", pron: "oon TAH-bluh poor duh", en: "A table for two, please" },
+        { native: "La carte, s'il vous plaît", pron: "lah KART seel voo PLAY", en: "The menu, please" },
+        { native: "Je voudrais...", pron: "zhuh voo-DRAY", en: "I would like..." },
+        { native: "L'addition, s'il vous plaît", pron: "lah-dee-SYON seel voo PLAY", en: "The bill, please" },
+        { native: "C'est délicieux !", pron: "say day-lee-SYUH", en: "This is delicious!" },
+        { native: "Je suis végétarien(ne)", pron: "zhuh swee vay-zhay-tah-RYEN", en: "I am vegetarian" },
+        { native: "Sans gluten, s'il vous plaît", pron: "son gloo-TEN seel voo PLAY", en: "Gluten-free, please" },
+        { native: "Un café, s'il vous plaît", pron: "un ka-FAY seel voo PLAY", en: "A coffee, please" },
+        { native: "Un verre de vin rouge / blanc", pron: "un VAIR duh van ROOZH / BLON", en: "A glass of red / white wine" },
+        { native: "De l'eau, s'il vous plaît", pron: "duh LOH seel voo PLAY", en: "Some water, please" },
+        { native: "C'est combien ?", pron: "say com-BYEN", en: "How much is it?" },
+      ],
+      directions: [
+        { native: "Où est... ?", pron: "oo ay", en: "Where is...?" },
+        { native: "La station de métro", pron: "lah sta-SYON duh may-TROH", en: "The metro station" },
+        { native: "À gauche", pron: "ah GOHSH", en: "To the left" },
+        { native: "À droite", pron: "ah DRWAHT", en: "To the right" },
+        { native: "Tout droit", pron: "too DRWAH", en: "Straight ahead" },
+        { native: "Près d'ici", pron: "pray dee-SEE", en: "Near here" },
+        { native: "Loin d'ici", pron: "lwen dee-SEE", en: "Far from here" },
+        { native: "Je suis perdu(e)", pron: "zhuh swee pair-DU", en: "I am lost" },
+        { native: "Pouvez-vous m'aider ?", pron: "poo-VAY voo may-DAY", en: "Can you help me?" },
+        { native: "Un billet, s'il vous plaît", pron: "un bee-YAY seel voo PLAY", en: "A ticket, please" },
+        { native: "Où sont les toilettes ?", pron: "oo son lay twa-LET", en: "Where are the toilets?" },
+      ],
+      shopping: [
+        { native: "Combien ça coûte ?", pron: "com-BYEN sah KOOT", en: "How much does this cost?" },
+        { native: "C'est trop cher", pron: "say troh SHAIR", en: "It's too expensive" },
+        { native: "Je regarde seulement", pron: "zhuh ruh-GARD suhl-MON", en: "I'm just looking" },
+        { native: "Avez-vous... ?", pron: "ah-VAY voo", en: "Do you have...?" },
+        { native: "En quelle taille ?", pron: "on kel TIE", en: "In what size?" },
+        { native: "Je vais le prendre", pron: "zhuh vay luh PRON-druh", en: "I'll take it" },
+        { native: "Acceptez-vous les cartes ?", pron: "ak-sep-TAY voo lay KART", en: "Do you accept cards?" },
+        { native: "Un reçu, s'il vous plaît", pron: "un ruh-SU seel voo PLAY", en: "A receipt, please" },
+        { native: "C'est ouvert / fermé ?", pron: "say oo-VAIR / fair-MAY", en: "Is it open / closed?" },
+        { native: "Le wifi, c'est quoi ?", pron: "luh WEE-fee say kwah", en: "What's the wifi password?" },
+      ],
+      numbers: [
+        { native: "Un / Une", pron: "un / oon", en: "1" },
+        { native: "Deux", pron: "duh", en: "2" },
+        { native: "Trois", pron: "trwah", en: "3" },
+        { native: "Quatre", pron: "KAH-truh", en: "4" },
+        { native: "Cinq", pron: "sank", en: "5" },
+        { native: "Six", pron: "sees", en: "6" },
+        { native: "Sept", pron: "set", en: "7" },
+        { native: "Huit", pron: "weet", en: "8" },
+        { native: "Neuf", pron: "nuhf", en: "9" },
+        { native: "Dix", pron: "dees", en: "10" },
+        { native: "Onze", pron: "onz", en: "11" },
+        { native: "Douze", pron: "dooz", en: "12" },
+        { native: "Treize", pron: "trez", en: "13" },
+        { native: "Quatorze", pron: "ka-TORZ", en: "14" },
+        { native: "Quinze", pron: "kanz", en: "15" },
+        { native: "Seize", pron: "sez", en: "16" },
+        { native: "Dix-sept", pron: "dee-SET", en: "17" },
+        { native: "Dix-huit", pron: "dee-ZWEET", en: "18" },
+        { native: "Dix-neuf", pron: "dee-ZNUHF", en: "19" },
+        { native: "Vingt", pron: "van", en: "20" },
+        { native: "Cinquante", pron: "san-KONT", en: "50" },
+        { native: "Cent", pron: "son", en: "100" },
+      ],
+      emergency: [
+        { native: "Au secours !", pron: "oh suh-KOOR", en: "Help!" },
+        { native: "Appelez la police !", pron: "ah-play lah poh-LEES", en: "Call the police!" },
+        { native: "Appelez une ambulance !", pron: "ah-play oon om-boo-LONSS", en: "Call an ambulance!" },
+        { native: "J'ai besoin d'un médecin", pron: "zhay buh-ZWEN dun mayd-SAN", en: "I need a doctor" },
+        { native: "Je suis allergique à...", pron: "zhuh swee ah-lair-ZHEEK ah", en: "I am allergic to..." },
+        { native: "On m'a volé", pron: "on mah voh-LAY", en: "I've been robbed" },
+        { native: "Où est l'hôpital ?", pron: "oo ay lo-pee-TAL", en: "Where is the hospital?" },
+      ],
+    },
+  },
+
+  malaysia: {
+    name: "Malaysia", flag: "🇲🇾", lang: "Bahasa Melayu", langCode: "ms-MY", latinScript: true,
+    tips: {
+      greetings: '💡 <strong>Selamat</strong> is the all-purpose greeting prefix. Locals will always appreciate you trying a few words of Malay — even a simple terima kasih earns a smile.',
+      food: '💡 Malaysian food is often served family-style. Nasi lemak (coconut rice with sambal) is the national dish and available everywhere, even for breakfast.',
+      directions: '💡 Grab (Southeast Asia\'s ride-hailing app) is the easiest way to get around KL. Just show the driver your destination on the screen.',
+      numbers: '💡 Malay numbers are logical — once you know 1–10 and "puluh" (tens), you can build any number. "Dua puluh lima" = 25.',
+      emergency: '💡 Emergency number in Malaysia: <strong>999</strong> for police, fire, and ambulance.',
+    },
+    data: {
+      greetings: [
+        { native: "Selamat pagi", pron: "suh-LAH-mat PAH-gee", en: "Good morning" },
+        { native: "Selamat petang", pron: "suh-LAH-mat puh-TAHNG", en: "Good afternoon / evening" },
+        { native: "Selamat malam", pron: "suh-LAH-mat MAH-lam", en: "Good night" },
+        { native: "Terima kasih", pron: "tuh-REE-mah KAH-see", en: "Thank you" },
+        { native: "Terima kasih banyak-banyak", pron: "tuh-REE-mah KAH-see BAH-nyak", en: "Thank you very much" },
+        { native: "Sama-sama", pron: "SAH-mah SAH-mah", en: "You're welcome" },
+        { native: "Tolong", pron: "TOH-long", en: "Please / Help" },
+        { native: "Maaf", pron: "MAH-af", en: "Sorry / Excuse me" },
+        { native: "Boleh cakap Bahasa Inggeris?", pron: "BOH-leh CHA-kap ba-HAH-sa ing-GRISS", en: "Do you speak English?" },
+        { native: "Saya tidak faham", pron: "SAH-yah tee-DAHK FAH-ham", en: "I don't understand" },
+        { native: "Boleh ulang semula?", pron: "BOH-leh OO-lang suh-MOO-lah", en: "Can you repeat that?" },
+        { native: "Nama saya...", pron: "NAH-mah SAH-yah", en: "My name is..." },
+      ],
+      food: [
+        { native: "Meja untuk dua orang, tolong", pron: "MEH-jah OON-took DOO-ah OH-rang", en: "A table for two, please" },
+        { native: "Menu, tolong", pron: "MEH-noo TOH-long", en: "The menu, please" },
+        { native: "Saya nak...", pron: "SAH-yah nahk", en: "I would like..." },
+        { native: "Bil, tolong", pron: "beel TOH-long", en: "The bill, please" },
+        { native: "Sedap!", pron: "suh-DAHP", en: "Delicious!" },
+        { native: "Saya vegetarian", pron: "SAH-yah veh-juh-TAY-ree-an", en: "I am vegetarian" },
+        { native: "Tanpa gluten, tolong", pron: "TAHN-pah GLOO-ten TOH-long", en: "Gluten-free, please" },
+        { native: "Kopi, tolong", pron: "KOH-pee TOH-long", en: "A coffee, please" },
+        { native: "Air, tolong", pron: "ah-EAR TOH-long", en: "Some water, please" },
+        { native: "Berapa harga ini?", pron: "buh-RAH-pah HAR-gah EE-nee", en: "How much is this?" },
+      ],
+      directions: [
+        { native: "Di mana...?", pron: "dee MAH-nah", en: "Where is...?" },
+        { native: "Stesen LRT", pron: "STEH-sen el-ar-TEE", en: "The LRT station" },
+        { native: "Ke kiri", pron: "kuh KEE-ree", en: "To the left" },
+        { native: "Ke kanan", pron: "kuh KAH-nan", en: "To the right" },
+        { native: "Terus", pron: "TEH-roos", en: "Straight ahead" },
+        { native: "Dekat sini", pron: "duh-KAHT SEE-nee", en: "Near here" },
+        { native: "Jauh", pron: "JAH-ooh", en: "Far" },
+        { native: "Saya sesat", pron: "SAH-yah suh-SAHT", en: "I am lost" },
+        { native: "Boleh tolong saya?", pron: "BOH-leh TOH-long SAH-yah", en: "Can you help me?" },
+        { native: "Satu tiket, tolong", pron: "SAH-too TEE-ket TOH-long", en: "A ticket, please" },
+        { native: "Di mana tandas?", pron: "dee MAH-nah TAHN-dahs", en: "Where is the toilet?" },
+      ],
+      shopping: [
+        { native: "Berapa harganya?", pron: "buh-RAH-pah har-GAH-nyah", en: "How much does this cost?" },
+        { native: "Mahal sangat", pron: "MAH-hal SAH-ngat", en: "It's too expensive" },
+        { native: "Saya tengok-tengok sahaja", pron: "SAH-yah tung-OHK SAH-hah-jah", en: "I'm just looking" },
+        { native: "Ada...?", pron: "AH-dah", en: "Do you have...?" },
+        { native: "Saiz apa?", pron: "sah-EEZ AH-pah", en: "What size?" },
+        { native: "Saya ambil ini", pron: "SAH-yah AHM-beel EE-nee", en: "I'll take it" },
+        { native: "Boleh guna kad?", pron: "BOH-leh GOO-nah kahd", en: "Do you accept cards?" },
+        { native: "Resit, tolong", pron: "ruh-SEET TOH-long", en: "A receipt, please" },
+        { native: "Buka / Tutup?", pron: "BOO-kah / TOO-toop", en: "Open / Closed?" },
+        { native: "Kata laluan WiFi?", pron: "KAH-tah LAH-loo-an WEE-fee", en: "What's the wifi password?" },
+      ],
+      numbers: [
+        { native: "Satu", pron: "SAH-too", en: "1" },
+        { native: "Dua", pron: "DOO-ah", en: "2" },
+        { native: "Tiga", pron: "TEE-gah", en: "3" },
+        { native: "Empat", pron: "EM-pat", en: "4" },
+        { native: "Lima", pron: "LEE-mah", en: "5" },
+        { native: "Enam", pron: "EH-nam", en: "6" },
+        { native: "Tujuh", pron: "TOO-jooh", en: "7" },
+        { native: "Lapan", pron: "LAH-pan", en: "8" },
+        { native: "Sembilan", pron: "suhm-BEE-lan", en: "9" },
+        { native: "Sepuluh", pron: "suh-POO-looh", en: "10" },
+        { native: "Sebelas", pron: "suh-BEH-lahs", en: "11" },
+        { native: "Dua belas", pron: "DOO-ah BEH-lahs", en: "12" },
+        { native: "Dua puluh", pron: "DOO-ah POO-looh", en: "20" },
+        { native: "Lima puluh", pron: "LEE-mah POO-looh", en: "50" },
+        { native: "Seratus", pron: "suh-RAH-toos", en: "100" },
+      ],
+      emergency: [
+        { native: "Tolong!", pron: "TOH-long", en: "Help!" },
+        { native: "Panggil polis!", pron: "PAHNG-geel POH-lees", en: "Call the police!" },
+        { native: "Panggil ambulans!", pron: "PAHNG-geel AM-boo-lanss", en: "Call an ambulance!" },
+        { native: "Saya perlu doktor", pron: "SAH-yah PER-loo DOK-tor", en: "I need a doctor" },
+        { native: "Saya alah kepada...", pron: "SAH-yah AH-lah kuh-PAH-dah", en: "I am allergic to..." },
+        { native: "Saya kena curi", pron: "SAH-yah kuh-NAH CHOO-ree", en: "I've been robbed" },
+        { native: "Di mana hospital?", pron: "dee MAH-nah hoss-PEE-tal", en: "Where is the hospital?" },
+      ],
+    },
+  },
+
+  thailand: {
+    name: "Thailand", flag: "🇹🇭", lang: "ภาษาไทย", langCode: "th-TH", latinScript: false,
+    tips: {
+      greetings: '💡 Add <strong>krap</strong> (men) or <strong>ka</strong> (women) to the end of any phrase to make it polite — it\'s the Thai equivalent of a respectful tone.',
+      food: '💡 For spice level: <em>"mai phet"</em> = not spicy, <em>"phet nit noi"</em> = a little spicy. Street food is safe and delicious — always go where locals are eating.',
+      directions: '💡 Agree on a tuk-tuk price before getting in. Bangkok\'s BTS Skytrain and MRT are far easier — signs are also in English.',
+      numbers: '💡 Thai has its own numerals (๑๒๓) but prices are almost always shown in Arabic numerals. Focus on learning the spoken words.',
+      emergency: '💡 Police: <strong>191</strong>. Tourist Police (English): <strong>1155</strong>. Ambulance: <strong>1669</strong>.',
+    },
+    data: {
+      greetings: [
+        { native: "สวัสดี", pron: "sah-WAHT-dee (krap/ka)", en: "Hello / Good day" },
+        { native: "ราตรีสวัสดิ์", pron: "raat-tree sah-WAHT", en: "Good night" },
+        { native: "ลาก่อน", pron: "laa-GAWN", en: "Goodbye" },
+        { native: "ขอบคุณ", pron: "kòp-KHUN", en: "Thank you" },
+        { native: "ขอบคุณมาก", pron: "kòp-KHUN mâak", en: "Thank you very much" },
+        { native: "ยินดี", pron: "yin-DEE", en: "You're welcome" },
+        { native: "ขอโทษ", pron: "kŏr TÔHT", en: "Sorry / Excuse me" },
+        { native: "คุณพูดภาษาอังกฤษได้ไหม", pron: "khun pôot paa-SĂA ang-GRIT dâi mái", en: "Do you speak English?" },
+        { native: "ไม่เข้าใจ", pron: "mâi kâo JAI", en: "I don't understand" },
+        { native: "ช่วยพูดซ้ำได้ไหม", pron: "chûay pôot sám dâi mái", en: "Can you repeat that?" },
+        { native: "ผม/ฉันชื่อ...", pron: "pŏm / chán chûue", en: "My name is..." },
+      ],
+      food: [
+        { native: "ขอโต๊ะสำหรับสองคน", pron: "kŏr dtó săm-ràp sŏng khon", en: "A table for two, please" },
+        { native: "ขอเมนูหน่อย", pron: "kŏr meh-NOO nòi", en: "The menu, please" },
+        { native: "ขอ...", pron: "kŏr...", en: "I would like..." },
+        { native: "เก็บเงินด้วย", pron: "gèp ngern dûay", en: "The bill, please" },
+        { native: "อร่อยมาก!", pron: "a-RÒI mâak", en: "Delicious!" },
+        { native: "ฉันกินมังสวิรัติ", pron: "chán gin mang-sà-wí-RÁT", en: "I am vegetarian" },
+        { native: "ไม่เผ็ด", pron: "mâi pèt", en: "Not spicy, please" },
+        { native: "กาแฟหน่อย", pron: "GAA-fae nòi", en: "A coffee, please" },
+        { native: "น้ำหน่อย", pron: "náam nòi", en: "Some water, please" },
+        { native: "ราคาเท่าไหร่", pron: "raa-KAA tâo RÀI", en: "How much is it?" },
+      ],
+      directions: [
+        { native: "...อยู่ที่ไหน", pron: "...yòo têe NǍI", en: "Where is...?" },
+        { native: "สถานีรถไฟฟ้า", pron: "sà-tǎa-NEE rót-fai-FÁA", en: "BTS / MRT station" },
+        { native: "ซ้าย", pron: "sáai", en: "Left" },
+        { native: "ขวา", pron: "kwăa", en: "Right" },
+        { native: "ตรงไป", pron: "trong bpai", en: "Straight ahead" },
+        { native: "ใกล้", pron: "glâi", en: "Near" },
+        { native: "ไกล", pron: "glai", en: "Far" },
+        { native: "ฉันหลงทาง", pron: "chán lŏng TAANG", en: "I am lost" },
+        { native: "ช่วยฉันได้ไหม", pron: "chûay chán dâi mái", en: "Can you help me?" },
+        { native: "ขอตั๋วหนึ่งใบ", pron: "kŏr dtŭa nùeng bai", en: "One ticket, please" },
+        { native: "ห้องน้ำอยู่ที่ไหน", pron: "hông-náam yòo têe NǍI", en: "Where is the toilet?" },
+      ],
+      shopping: [
+        { native: "ราคาเท่าไหร่", pron: "raa-KAA tâo RÀI", en: "How much does this cost?" },
+        { native: "แพงเกินไป", pron: "pɛɛng gern bpai", en: "It's too expensive" },
+        { native: "แค่ดูเฉยๆ", pron: "kâe duu chĕuy chĕuy", en: "I'm just looking" },
+        { native: "มี...ไหม", pron: "mee...mái", en: "Do you have...?" },
+        { native: "ไซส์อะไร", pron: "sai à-RAI", en: "What size?" },
+        { native: "เอาอันนี้", pron: "ao an-NÍI", en: "I'll take this" },
+        { native: "รับบัตรเครดิตไหม", pron: "ráp bàt kray-DÌT mái", en: "Do you accept cards?" },
+        { native: "ขอใบเสร็จด้วย", pron: "kŏr bai-sèt dûay", en: "A receipt, please" },
+        { native: "เปิด / ปิด?", pron: "bpèrt / bpìt", en: "Open / Closed?" },
+        { native: "รหัส WiFi คืออะไร", pron: "rá-hàt WEE-fai kuue à-RAI", en: "What's the wifi password?" },
+      ],
+      numbers: [
+        { native: "หนึ่ง", pron: "nùeng", en: "1" },
+        { native: "สอง", pron: "sŏng", en: "2" },
+        { native: "สาม", pron: "sǎam", en: "3" },
+        { native: "สี่", pron: "sèe", en: "4" },
+        { native: "ห้า", pron: "hâa", en: "5" },
+        { native: "หก", pron: "hòk", en: "6" },
+        { native: "เจ็ด", pron: "jèt", en: "7" },
+        { native: "แปด", pron: "bpàet", en: "8" },
+        { native: "เก้า", pron: "gâo", en: "9" },
+        { native: "สิบ", pron: "sìp", en: "10" },
+        { native: "สิบเอ็ด", pron: "sìp-èt", en: "11" },
+        { native: "สิบสอง", pron: "sìp-sŏng", en: "12" },
+        { native: "ยี่สิบ", pron: "yêe-sìp", en: "20" },
+        { native: "ห้าสิบ", pron: "hâa-sìp", en: "50" },
+        { native: "หนึ่งร้อย", pron: "nùeng-rói", en: "100" },
+      ],
+      emergency: [
+        { native: "ช่วยด้วย!", pron: "chûay dûay", en: "Help!" },
+        { native: "เรียกตำรวจด้วย!", pron: "rîak tam-RÙAT dûay", en: "Call the police!" },
+        { native: "เรียกรถพยาบาลด้วย!", pron: "rîak rót-pá-yaa-BAAN dûay", en: "Call an ambulance!" },
+        { native: "ต้องการหมอ", pron: "dtông-gaan MŎR", en: "I need a doctor" },
+        { native: "ฉันแพ้...", pron: "chán pɛ̂ɛ", en: "I am allergic to..." },
+        { native: "ถูกขโมย", pron: "tòok kà-MOI", en: "I've been robbed" },
+        { native: "โรงพยาบาลอยู่ที่ไหน", pron: "roong-pá-yaa-BAAN yòo têe NǍI", en: "Where is the hospital?" },
+      ],
+    },
+  },
+
+  korea: {
+    name: "Korea", flag: "🇰🇷", lang: "한국어", langCode: "ko-KR", latinScript: false,
+    tips: {
+      greetings: '💡 Koreans genuinely appreciate foreigners trying Korean. Even <strong>안녕하세요</strong> and <strong>감사합니다</strong> will earn you a warm response.',
+      food: '💡 Banchan (side dishes) are free and refillable — just ask. Tipping is not customary in Korea and can sometimes cause awkwardness.',
+      directions: '💡 Seoul\'s metro is world-class and signs are in English. Kakao Maps and Naver Maps are more accurate than Google Maps for Korea.',
+      numbers: '💡 Korean has two number systems — Sino-Korean (일이삼, used for money and dates) and Native Korean (하나둘셋, for counting objects). These Sino-Korean ones cover most travel needs.',
+      emergency: '💡 Police: <strong>112</strong>. Fire & Ambulance: <strong>119</strong>. Tourist helpline (English 24/7): <strong>1330</strong>.',
+    },
+    data: {
+      greetings: [
+        { native: "안녕하세요", pron: "an-NYONG-ha-se-yo", en: "Hello" },
+        { native: "안녕히 가세요", pron: "an-nyong-hee GA-se-yo", en: "Goodbye (to person leaving)" },
+        { native: "감사합니다", pron: "kam-SA-ham-ni-da", en: "Thank you" },
+        { native: "대단히 감사합니다", pron: "dae-DAN-hee kam-SA-ham-ni-da", en: "Thank you very much" },
+        { native: "천만에요", pron: "chon-MAN-e-yo", en: "You're welcome" },
+        { native: "주세요", pron: "JU-se-yo", en: "Please (give me)" },
+        { native: "실례합니다", pron: "sil-LYE-ham-ni-da", en: "Excuse me" },
+        { native: "죄송합니다", pron: "joe-SONG-ham-ni-da", en: "I'm sorry" },
+        { native: "영어 하세요?", pron: "yong-O HA-se-yo", en: "Do you speak English?" },
+        { native: "이해 못 했어요", pron: "i-HAE mot hae-SSO-yo", en: "I don't understand" },
+        { native: "다시 말씀해 주세요", pron: "DA-si mal-sseum-HAE JU-se-yo", en: "Can you repeat that?" },
+        { native: "제 이름은...이에요", pron: "je i-REU-meun...i-E-yo", en: "My name is..." },
+      ],
+      food: [
+        { native: "두 명 자리 주세요", pron: "du MYONG ja-RI JU-se-yo", en: "Table for two, please" },
+        { native: "메뉴 주세요", pron: "me-NYU JU-se-yo", en: "The menu, please" },
+        { native: "...주세요", pron: "...JU-se-yo", en: "I would like..." },
+        { native: "계산서 주세요", pron: "gye-SAN-so JU-se-yo", en: "The bill, please" },
+        { native: "맛있어요!", pron: "ma-SI-sso-yo", en: "Delicious!" },
+        { native: "저는 채식주의자예요", pron: "jo-NEUN chae-SIK-ju-ui-ja-YE-yo", en: "I am vegetarian" },
+        { native: "글루텐 없이 주세요", pron: "geul-LU-ten op-SI JU-se-yo", en: "Gluten-free, please" },
+        { native: "커피 주세요", pron: "KO-pi JU-se-yo", en: "A coffee, please" },
+        { native: "물 주세요", pron: "mul JU-se-yo", en: "Water, please" },
+        { native: "얼마예요?", pron: "ol-MA-ye-yo", en: "How much is it?" },
+      ],
+      directions: [
+        { native: "...어디예요?", pron: "...o-DI-ye-yo", en: "Where is...?" },
+        { native: "지하철역", pron: "ji-HA-chol-yok", en: "Subway station" },
+        { native: "왼쪽", pron: "oen-JJOK", en: "Left" },
+        { native: "오른쪽", pron: "o-REUN-jjok", en: "Right" },
+        { native: "직진", pron: "jik-JIN", en: "Straight ahead" },
+        { native: "가까워요", pron: "ga-GGA-wo-yo", en: "It's near" },
+        { native: "멀어요", pron: "mo-RO-yo", en: "It's far" },
+        { native: "길을 잃었어요", pron: "gi-REUL i-ROSS-so-yo", en: "I am lost" },
+        { native: "도와주세요", pron: "do-WA-ju-se-yo", en: "Please help me" },
+        { native: "티켓 한 장 주세요", pron: "ti-KET han JANG JU-se-yo", en: "One ticket, please" },
+        { native: "화장실이 어디예요?", pron: "hwa-JANG-si-ri o-DI-ye-yo", en: "Where is the toilet?" },
+      ],
+      shopping: [
+        { native: "얼마예요?", pron: "ol-MA-ye-yo", en: "How much does this cost?" },
+        { native: "너무 비싸요", pron: "no-MU BI-ssa-yo", en: "It's too expensive" },
+        { native: "그냥 구경하는 거예요", pron: "geu-NYANG gu-GYONG-ha-neun go-YE-yo", en: "I'm just looking" },
+        { native: "...있어요?", pron: "...i-SSO-yo", en: "Do you have...?" },
+        { native: "무슨 사이즈예요?", pron: "mu-SEUN SA-i-jeu-ye-yo", en: "What size?" },
+        { native: "이걸로 할게요", pron: "i-GOL-lo hal-GE-yo", en: "I'll take this" },
+        { native: "카드 돼요?", pron: "KA-deu dwae-YO", en: "Do you accept cards?" },
+        { native: "영수증 주세요", pron: "yong-SU-jeung JU-se-yo", en: "A receipt, please" },
+        { native: "열었어요 / 닫혔어요?", pron: "yo-ROSS-so-yo / da-CHYO-sso-yo", en: "Is it open / closed?" },
+        { native: "와이파이 비밀번호가 뭐예요?", pron: "wa-I-pa-i bi-MIL-bon-ho-ga mwo-YE-yo", en: "What's the wifi password?" },
+      ],
+      numbers: [
+        { native: "일", pron: "il", en: "1" },
+        { native: "이", pron: "i", en: "2" },
+        { native: "삼", pron: "sam", en: "3" },
+        { native: "사", pron: "sa", en: "4" },
+        { native: "오", pron: "o", en: "5" },
+        { native: "육", pron: "yuk", en: "6" },
+        { native: "칠", pron: "chil", en: "7" },
+        { native: "팔", pron: "pal", en: "8" },
+        { native: "구", pron: "gu", en: "9" },
+        { native: "십", pron: "sip", en: "10" },
+        { native: "십일", pron: "si-BIL", en: "11" },
+        { native: "십이", pron: "si-BI", en: "12" },
+        { native: "이십", pron: "i-SIP", en: "20" },
+        { native: "오십", pron: "o-SIP", en: "50" },
+        { native: "백", pron: "baek", en: "100" },
+      ],
+      emergency: [
+        { native: "살려주세요!", pron: "sal-LYO-ju-se-yo", en: "Help!" },
+        { native: "경찰 불러주세요!", pron: "gyong-CHAL bul-LO-ju-se-yo", en: "Call the police!" },
+        { native: "구급차 불러주세요!", pron: "gu-GEUP-cha bul-LO-ju-se-yo", en: "Call an ambulance!" },
+        { native: "의사가 필요해요", pron: "ui-SA-ga pil-LYO-hae-yo", en: "I need a doctor" },
+        { native: "저는 ...에 알레르기가 있어요", pron: "jo-NEUN ...e al-LE-reu-gi-ga i-SSO-yo", en: "I am allergic to..." },
+        { native: "도난당했어요", pron: "do-NAN-dang-hae-sso-yo", en: "I've been robbed" },
+        { native: "병원이 어디예요?", pron: "byong-WON-i o-DI-ye-yo", en: "Where is the hospital?" },
+      ],
+    },
+  },
+
+  indonesia: {
+    name: "Indonesia", flag: "🇮🇩", lang: "Bahasa Indonesia", langCode: "id-ID", latinScript: true,
+    tips: {
+      greetings: '💡 Adding <em>"Pak"</em> (for older men) or <em>"Bu"</em> (for older women) after a greeting shows respect and is always appreciated.',
+      food: '💡 Indonesia has one of the world\'s great street food cultures. Nasi goreng (fried rice) and mie goreng (fried noodles) are safe bets anywhere in the country.',
+      directions: '💡 Ojek (motorbike taxis via Gojek or Grab) are the fastest way through traffic. Always use the app for pricing transparency.',
+      numbers: '💡 Indonesian numbers are completely regular — "dua puluh lima" is literally "two tens five" (25). Very logical and easy to learn.',
+      emergency: '💡 Emergency: <strong>112</strong>. Police: <strong>110</strong>. Ambulance: <strong>118</strong>.',
+    },
+    data: {
+      greetings: [
+        { native: "Halo / Selamat pagi", pron: "HAH-loh / suh-LAH-mat PAH-gee", en: "Hello / Good morning" },
+        { native: "Selamat sore", pron: "suh-LAH-mat SOH-reh", en: "Good afternoon / evening" },
+        { native: "Selamat malam", pron: "suh-LAH-mat MAH-lam", en: "Good night" },
+        { native: "Sampai jumpa", pron: "sahm-PAI JOOM-pah", en: "Goodbye" },
+        { native: "Terima kasih", pron: "tuh-REE-mah KAH-see", en: "Thank you" },
+        { native: "Terima kasih banyak", pron: "tuh-REE-mah KAH-see BAH-nyak", en: "Thank you very much" },
+        { native: "Sama-sama", pron: "SAH-mah SAH-mah", en: "You're welcome" },
+        { native: "Tolong", pron: "TOH-long", en: "Please" },
+        { native: "Maaf", pron: "MAH-af", en: "Sorry / Excuse me" },
+        { native: "Apakah Anda bisa berbahasa Inggris?", pron: "ah-PAH-kah AHN-dah BEE-sah", en: "Do you speak English?" },
+        { native: "Saya tidak mengerti", pron: "SAH-yah tee-DAHK meng-ER-tee", en: "I don't understand" },
+        { native: "Bisa diulang?", pron: "BEE-sah dee-OO-lang", en: "Can you repeat that?" },
+        { native: "Nama saya...", pron: "NAH-mah SAH-yah", en: "My name is..." },
+      ],
+      food: [
+        { native: "Meja untuk dua orang, tolong", pron: "MEH-jah OON-took DOO-ah OH-rang", en: "A table for two, please" },
+        { native: "Menu, tolong", pron: "MEH-noo TOH-long", en: "The menu, please" },
+        { native: "Saya mau...", pron: "SAH-yah MAH-oo", en: "I would like..." },
+        { native: "Tolong minta bon", pron: "TOH-long MIN-tah bon", en: "The bill, please" },
+        { native: "Enak sekali!", pron: "EH-nak suh-KAH-lee", en: "Delicious!" },
+        { native: "Saya vegetarian", pron: "SAH-yah veh-juh-TAY-ree-an", en: "I am vegetarian" },
+        { native: "Tanpa gluten, tolong", pron: "TAHN-pah GLOO-ten TOH-long", en: "Gluten-free, please" },
+        { native: "Kopi, tolong", pron: "KOH-pee TOH-long", en: "A coffee, please" },
+        { native: "Air putih, tolong", pron: "ah-EAR POO-tih TOH-long", en: "Water, please" },
+        { native: "Berapa harganya?", pron: "buh-RAH-pah har-GAH-nyah", en: "How much?" },
+      ],
+      directions: [
+        { native: "Di mana...?", pron: "dee MAH-nah", en: "Where is...?" },
+        { native: "Stasiun kereta", pron: "stah-see-OON kuh-REH-tah", en: "Train station" },
+        { native: "Ke kiri", pron: "kuh KEE-ree", en: "To the left" },
+        { native: "Ke kanan", pron: "kuh KAH-nan", en: "To the right" },
+        { native: "Lurus", pron: "LOO-roos", en: "Straight ahead" },
+        { native: "Dekat sini", pron: "duh-KAHT SEE-nee", en: "Near here" },
+        { native: "Jauh", pron: "JAH-ooh", en: "Far" },
+        { native: "Saya tersesat", pron: "SAH-yah tuh-suh-SAHT", en: "I am lost" },
+        { native: "Bisakah Anda membantu saya?", pron: "BEE-sah-kah AHN-dah mem-BAN-too SAH-yah", en: "Can you help me?" },
+        { native: "Satu tiket, tolong", pron: "SAH-too TEE-ket TOH-long", en: "A ticket, please" },
+        { native: "Di mana toilet?", pron: "dee MAH-nah TOY-let", en: "Where is the toilet?" },
+      ],
+      shopping: [
+        { native: "Berapa harganya?", pron: "buh-RAH-pah har-GAH-nyah", en: "How much does this cost?" },
+        { native: "Terlalu mahal", pron: "tuh-LAH-loo MAH-hal", en: "It's too expensive" },
+        { native: "Saya hanya melihat-lihat", pron: "SAH-yah HAH-nyah muh-LEE-hat", en: "I'm just looking" },
+        { native: "Apakah ada...?", pron: "ah-PAH-kah AH-dah", en: "Do you have...?" },
+        { native: "Ukuran apa?", pron: "oo-KOO-ran AH-pah", en: "What size?" },
+        { native: "Saya ambil ini", pron: "SAH-yah AHM-beel EE-nee", en: "I'll take it" },
+        { native: "Bisa bayar dengan kartu?", pron: "BEE-sah BAH-yar duh-NGAHN KAR-too", en: "Do you accept cards?" },
+        { native: "Struk, tolong", pron: "strook TOH-long", en: "A receipt, please" },
+        { native: "Buka / Tutup?", pron: "BOO-kah / TOO-toop", en: "Open / Closed?" },
+        { native: "Password WiFi-nya apa?", pron: "PASS-word WEE-fee-nyah AH-pah", en: "What's the wifi password?" },
+      ],
+      numbers: [
+        { native: "Satu", pron: "SAH-too", en: "1" },
+        { native: "Dua", pron: "DOO-ah", en: "2" },
+        { native: "Tiga", pron: "TEE-gah", en: "3" },
+        { native: "Empat", pron: "EM-pat", en: "4" },
+        { native: "Lima", pron: "LEE-mah", en: "5" },
+        { native: "Enam", pron: "EH-nam", en: "6" },
+        { native: "Tujuh", pron: "TOO-jooh", en: "7" },
+        { native: "Delapan", pron: "duh-LAH-pan", en: "8" },
+        { native: "Sembilan", pron: "suhm-BEE-lan", en: "9" },
+        { native: "Sepuluh", pron: "suh-POO-looh", en: "10" },
+        { native: "Sebelas", pron: "suh-BEH-lahs", en: "11" },
+        { native: "Dua belas", pron: "DOO-ah BEH-lahs", en: "12" },
+        { native: "Dua puluh", pron: "DOO-ah POO-looh", en: "20" },
+        { native: "Lima puluh", pron: "LEE-mah POO-looh", en: "50" },
+        { native: "Seratus", pron: "suh-RAH-toos", en: "100" },
+      ],
+      emergency: [
+        { native: "Tolong!", pron: "TOH-long", en: "Help!" },
+        { native: "Panggil polisi!", pron: "PAHNG-geel poh-LEE-see", en: "Call the police!" },
+        { native: "Panggil ambulans!", pron: "PAHNG-geel AM-boo-lanss", en: "Call an ambulance!" },
+        { native: "Saya butuh dokter", pron: "SAH-yah BOO-tuh DOK-ter", en: "I need a doctor" },
+        { native: "Saya alergi terhadap...", pron: "SAH-yah ah-LER-gee tuh-HA-dap", en: "I am allergic to..." },
+        { native: "Saya dirampok", pron: "SAH-yah dee-RAM-pok", en: "I've been robbed" },
+        { native: "Di mana rumah sakit?", pron: "dee MAH-nah ROO-mah SAH-kit", en: "Where is the hospital?" },
+      ],
+    },
+  },
+
+};
+
+// ─── STATE ───────────────────────────────────────────────────────────────────
+
+let currentLangCode = 'en';
+
+// ─── HOME ────────────────────────────────────────────────────────────────────
+
+function buildHome() {
+  const grid = document.getElementById('countryGrid');
+  for (const [id, c] of Object.entries(countries)) {
+    const card = document.createElement('div');
+    card.className = 'country-card';
+    card.onclick = () => selectCountry(id);
+    card.innerHTML = `
+      <span class="flag">${c.flag}</span>
+      <span class="cname">${c.name}</span>
+      <span class="clang">${c.lang}</span>
+    `;
+    grid.appendChild(card);
+  }
+}
+
+// ─── PHRASEBOOK ──────────────────────────────────────────────────────────────
+
+const SECTIONS = ['greetings','food','directions','shopping','numbers','emergency'];
+
+function selectCountry(id) {
+  const c = countries[id];
+  currentLangCode = c.langCode;
+
+  document.getElementById('pbFlag').textContent = c.flag;
+  document.getElementById('pbTitle').innerHTML = `${c.name} <em>Phrasebook</em>`;
+  document.getElementById('pbSubtitle').textContent = `${c.lang} · tap any phrase to hear it`;
+
+  const pb = document.getElementById('phrasebook');
+  pb.classList.toggle('latin', c.latinScript);
+
+  SECTIONS.forEach(s => {
+    document.getElementById(`phrases-${s}`).innerHTML = '';
+    const tip = document.getElementById(`tip-${s}`);
+    if (c.tips[s]) { tip.innerHTML = c.tips[s]; tip.style.display = ''; }
+    else tip.style.display = 'none';
+  });
+
+  buildPhrases(c);
+  showSectionById('greetings');
+
+  document.getElementById('home').style.display = 'none';
+  pb.style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function goHome() {
+  window.speechSynthesis.cancel();
+  document.getElementById('phrasebook').style.display = 'none';
+  document.getElementById('home').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function buildPhrases(country) {
+  for (const [section, phrases] of Object.entries(country.data)) {
+    const container = document.getElementById(`phrases-${section}`);
+    phrases.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'phrase-card';
+      card.innerHTML = `
+        <button class="play-btn" onclick="speak(this, ${JSON.stringify(p.native)})">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="phrase-text">
+          <div class="native">${p.native}</div>
+          <div class="pronunciation">${p.pron}</div>
+          <div class="english">${p.en}</div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+}
+
+// ─── TABS ────────────────────────────────────────────────────────────────────
+
+function showSection(id, e) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  e.target.classList.add('active');
+}
+
+function showSectionById(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    t.classList.toggle('active', SECTIONS[i] === id);
+  });
+}
+
+// ─── SPEECH ──────────────────────────────────────────────────────────────────
+
+function speak(btn, text) {
+  if (!('speechSynthesis' in window)) {
+    document.getElementById('noSpeech').style.display = 'block';
+    return;
+  }
+  window.speechSynthesis.cancel();
+  document.querySelectorAll('.play-btn').forEach(b => b.classList.remove('speaking'));
+
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = currentLangCode;
+  utter.rate = 0.85;
+
+  const voices = window.speechSynthesis.getVoices();
+  const voice = voices.find(v => v.lang.startsWith(currentLangCode.split('-')[0]));
+  if (voice) utter.voice = voice;
+
+  btn.classList.add('speaking');
+  utter.onend  = () => btn.classList.remove('speaking');
+  utter.onerror = () => btn.classList.remove('speaking');
+  window.speechSynthesis.speak(utter);
+}
+
+window.speechSynthesis.onvoiceschanged = () => {};
+buildHome();
+</script>
+</body>
+</html>
