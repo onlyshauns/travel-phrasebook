@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travel Phrasebook</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#c0392b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Phrasebook">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -271,6 +275,179 @@
   .store-badge:hover { opacity: 0.78; }
   .store-badge.ios { background: #000; color: #fff; }
   .store-badge.gplay { background: #fff; color: #222; border: 1px solid #d8d0c4; }
+
+  /* ── SEARCH ── */
+  .search-wrap { position: relative; margin-bottom: 20px; }
+  .search-input {
+    width: 100%; padding: 10px 36px 10px 14px;
+    border: 1.5px solid var(--border); border-radius: 100px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+    background: #fff; color: var(--dark); outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-input:focus { border-color: var(--rouge); }
+  .search-clear {
+    position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+    background: none; border: none; cursor: pointer; color: var(--muted);
+    font-size: 1rem; display: none; padding: 2px;
+  }
+  .search-results { display: none; }
+  .search-group-label {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--muted); margin: 18px 0 8px;
+  }
+
+  /* ── FAVOURITES ── */
+  .fav-btn {
+    flex-shrink: 0; background: none; border: none; cursor: pointer;
+    font-size: 1.15rem; padding: 4px; opacity: 0.35; transition: opacity 0.2s, transform 0.15s;
+    line-height: 1;
+  }
+  .fav-btn:hover { opacity: 0.7; }
+  .fav-btn.active { opacity: 1; transform: scale(1.15); }
+  .saved-empty {
+    text-align: center; color: var(--muted); font-size: 0.88rem;
+    padding: 48px 20px;
+  }
+  .saved-empty .se-icon { font-size: 2.4rem; display: block; margin-bottom: 12px; }
+
+  /* ── QUICK FACTS STRIP ── */
+  .quick-facts {
+    display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px;
+    margin-bottom: 24px; scrollbar-width: none;
+  }
+  .quick-facts::-webkit-scrollbar { display: none; }
+  .qf-chip {
+    flex-shrink: 0; display: flex; align-items: center; gap: 5px;
+    background: #fff; border: 1px solid var(--border); border-radius: 100px;
+    padding: 6px 12px; font-size: 0.75rem; line-height: 1.2;
+  }
+  .qf-chip .qf-icon { font-size: 0.95rem; }
+  .qf-chip .qf-label { color: var(--muted); font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase; display: block; }
+  .qf-chip .qf-val { font-weight: 600; color: var(--dark); }
+
+  /* ── FOOD CARDS ── */
+  .food-item {
+    padding: 14px 0 14px 18px; border-left: 3px solid var(--gold);
+    margin-left: 2px; border-bottom: 1px solid var(--border);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .food-item:last-child { border-bottom: none; }
+  .food-item .fi-emoji { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+  .food-item .fi-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 3px; }
+  .food-item .fi-what { font-size: 0.79rem; color: var(--muted); line-height: 1.5; margin-bottom: 3px; }
+  .food-item .fi-tip { font-size: 0.75rem; color: #9a6f2a; font-style: italic; }
+
+  /* ── SAFETY ITEMS ── */
+  .safety-item {
+    padding: 14px 0 14px 18px; border-left: 3px solid var(--rouge);
+    margin-left: 2px; border-bottom: 1px solid var(--border);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .safety-item:last-child { border-bottom: none; }
+  .safety-item .si-emoji { font-size: 1.15rem; flex-shrink: 0; margin-top: 1px; }
+  .safety-item .si-rule { font-weight: 600; font-size: 0.88rem; margin-bottom: 3px; }
+  .safety-item .si-note { font-size: 0.79rem; color: var(--muted); line-height: 1.5; }
+
+  /* ── MONEY ITEMS (reuse culture style) ── */
+  .money-item {
+    padding: 14px 0 14px 18px; border-left: 3px solid #6aaa64;
+    margin-left: 2px; border-bottom: 1px solid var(--border);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .money-item:last-child { border-bottom: none; }
+  .money-item .mi-emoji { font-size: 1.15rem; flex-shrink: 0; margin-top: 1px; }
+  .money-item .mi-rule { font-weight: 600; font-size: 0.88rem; margin-bottom: 3px; }
+  .money-item .mi-note { font-size: 0.79rem; color: var(--muted); line-height: 1.5; }
+
+  /* ── QUIZ ── */
+  #quizPanel { display: none; }
+  .quiz-progress-bar {
+    height: 4px; background: var(--border); border-radius: 100px;
+    margin-bottom: 28px; overflow: hidden;
+  }
+  .quiz-progress-fill { height: 100%; background: var(--rouge); border-radius: 100px; transition: width 0.4s; }
+  .quiz-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 16px;
+    min-height: 200px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 32px 24px; cursor: pointer; text-align: center;
+    transition: box-shadow 0.2s, transform 0.15s; margin-bottom: 20px;
+    user-select: none;
+  }
+  .quiz-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .quiz-section-tag {
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--rouge); margin-bottom: 14px;
+  }
+  .quiz-en { font-size: 1.2rem; font-weight: 600; color: var(--dark); margin-bottom: 10px; }
+  .quiz-hint { font-size: 0.8rem; color: var(--muted); }
+  .quiz-native { font-size: 1.4rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+  .quiz-pron { font-size: 0.85rem; color: var(--rouge); font-style: italic; }
+  #phrasebook.latin .quiz-native { font-family: 'Playfair Display', serif; }
+  .quiz-actions { display: none; gap: 10px; margin-bottom: 24px; }
+  .quiz-actions.show { display: flex; }
+  .quiz-btn {
+    flex: 1; padding: 14px 0; border: none; border-radius: 12px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .quiz-btn.got { background: #e8f5e9; color: #2e7d32; }
+  .quiz-btn.got:hover { background: #c8e6c9; }
+  .quiz-btn.again { background: #fce4ec; color: #c62828; }
+  .quiz-btn.again:hover { background: #f8bbd0; }
+  .quiz-counter { text-align: center; font-size: 0.8rem; color: var(--muted); }
+  .quiz-done {
+    text-align: center; padding: 40px 20px;
+  }
+  .quiz-done .qd-icon { font-size: 3rem; display: block; margin-bottom: 14px; }
+  .quiz-done h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 8px; }
+  .quiz-done p { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+  .quiz-restart-btn {
+    background: var(--rouge); color: #fff; border: none; border-radius: 100px;
+    padding: 12px 28px; font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+    font-weight: 600; cursor: pointer;
+  }
+
+  /* ── EMERGENCY ── */
+  .emergency-fab {
+    position: fixed; bottom: 24px; right: 20px; z-index: 90;
+    display: none;
+    background: var(--rouge); color: #fff; border: none; border-radius: 100px;
+    padding: 12px 20px; font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem; font-weight: 700; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(192,57,43,0.45);
+    transition: transform 0.15s;
+  }
+  .emergency-fab:hover { transform: scale(1.04); }
+  .emergency-modal {
+    display: none; position: fixed; inset: 0; z-index: 200;
+    background: #111; overflow-y: auto;
+    padding: 40px 24px 60px;
+  }
+  .emergency-modal.open { display: block; }
+  .em-close {
+    position: absolute; top: 20px; right: 20px;
+    background: rgba(255,255,255,0.15); border: none; color: #fff;
+    border-radius: 100px; padding: 8px 16px; font-size: 0.82rem;
+    font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  }
+  .em-flag { font-size: 3rem; display: block; text-align: center; margin-bottom: 8px; }
+  .em-title { text-align: center; color: rgba(255,255,255,0.5); font-size: 0.75rem;
+    font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+  .em-number {
+    text-align: center; font-size: 3.6rem; font-weight: 700; color: #fff;
+    letter-spacing: -1px; margin-bottom: 4px; font-family: 'Playfair Display', serif;
+  }
+  .em-number-label { text-align: center; color: rgba(255,255,255,0.4); font-size: 0.72rem;
+    margin-bottom: 36px; }
+  .em-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 0 0 28px; }
+  .em-phrase { margin-bottom: 22px; }
+  .em-native { font-size: 1.6rem; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 4px; }
+  #phrasebook.latin .em-native { font-family: 'Playfair Display', serif; }
+  .em-pron { font-size: 0.85rem; color: var(--rouge); font-style: italic; margin-bottom: 2px; }
+  .em-en { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
 </style>
 </head>
 <body>
@@ -301,19 +478,28 @@
     <!-- MODE TOGGLE -->
     <div class="mode-toggle">
       <button class="mode-btn active" id="modePhrasesBtn" onclick="setMode('phrases')">🗣️ Phrases</button>
-      <button class="mode-btn" id="modeInfoBtn" onclick="setMode('info')">✈️ Travel Info</button>
+      <button class="mode-btn" id="modeQuizBtn" onclick="setMode('quiz')">🧠 Quiz</button>
+      <button class="mode-btn" id="modeInfoBtn" onclick="setMode('info')">✈️ Info</button>
     </div>
 
     <!-- PHRASES PANEL -->
     <div id="phrasesPanel">
       <div class="no-speech" id="noSpeech">⚠️ Your browser doesn't support text-to-speech. Try Chrome or Safari.</div>
+      <div class="search-wrap">
+        <input class="search-input" id="searchInput" type="search" placeholder="Search phrases…" oninput="onSearch(this.value)" autocomplete="off">
+        <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div id="phraseTabs">
       <div class="tabs">
-        <button class="tab active" onclick="showSection('greetings', event)">👋 Greetings</button>
-        <button class="tab" onclick="showSection('food', event)">🍽️ Food & Dining</button>
-        <button class="tab" onclick="showSection('directions', event)">🗺️ Directions</button>
-        <button class="tab" onclick="showSection('shopping', event)">🛍️ Shopping</button>
-        <button class="tab" onclick="showSection('numbers', event)">🔢 Numbers</button>
-        <button class="tab" onclick="showSection('emergency', event)">🆘 Emergency</button>
+        <button class="tab active" id="tabGreetings" onclick="showSection('greetings', event)">👋 Greetings</button>
+        <button class="tab" id="tabFood" onclick="showSection('food', event)">🍽️ Food</button>
+        <button class="tab" id="tabDirections" onclick="showSection('directions', event)">🗺️ Directions</button>
+        <button class="tab" id="tabShopping" onclick="showSection('shopping', event)">🛍️ Shopping</button>
+        <button class="tab" id="tabNumbers" onclick="showSection('numbers', event)">🔢 Numbers</button>
+        <button class="tab" id="tabEmergency" onclick="showSection('emergency', event)">🆘 Emergency</button>
+        <button class="tab" id="tabSaved" style="display:none" onclick="showSection('saved', event)">⭐ Saved</button>
+      </div>
       </div>
       <div class="section active" id="greetings">
         <div class="section-title">Greetings & Pleasantries</div>
@@ -345,25 +531,74 @@
         <div class="phrases" id="phrases-emergency"></div>
         <div class="tip-box" id="tip-emergency"></div>
       </div>
+      <div class="section" id="saved">
+        <div class="phrases" id="phrases-saved"></div>
+      </div>
+    </div>
+
+    <!-- QUIZ PANEL -->
+    <div id="quizPanel">
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizFill" style="width:0%"></div></div>
+      <div class="quiz-card" id="quizCard" onclick="flipQuizCard()">
+        <div id="quizFront">
+          <div class="quiz-section-tag" id="quizTag"></div>
+          <div class="quiz-en" id="quizEn"></div>
+          <div class="quiz-hint">Tap to reveal</div>
+        </div>
+        <div id="quizBack" style="display:none">
+          <div class="quiz-section-tag" id="quizTag2"></div>
+          <div class="quiz-native" id="quizNative"></div>
+          <div class="quiz-pron" id="quizPron"></div>
+        </div>
+      </div>
+      <div class="quiz-actions" id="quizActions">
+        <button class="quiz-btn again" onclick="quizAnswer(false)">🔁 Again</button>
+        <button class="quiz-btn got" onclick="quizAnswer(true)">✓ Got it</button>
+      </div>
+      <div class="quiz-counter" id="quizCounter"></div>
+      <div class="quiz-done" id="quizDone" style="display:none">
+        <span class="qd-icon">🎉</span>
+        <h3>All done!</h3>
+        <p>You've gone through all the phrases.</p>
+        <button class="quiz-restart-btn" onclick="startQuiz()">Shuffle & Restart</button>
+      </div>
     </div>
 
     <!-- TRAVEL INFO PANEL -->
     <div id="travelInfo">
+      <div class="quick-facts" id="quickFacts"></div>
       <div class="tabs info-tabs">
         <button class="info-tab active" id="infoTabCultureBtn" onclick="showInfoTab('culture')">🏛️ Culture</button>
-        <button class="info-tab" id="infoTabAppsBtn" onclick="showInfoTab('apps')">📱 Useful Apps</button>
+        <button class="info-tab" id="infoTabMoneyBtn" onclick="showInfoTab('money')">💰 Money</button>
+        <button class="info-tab" id="infoTabFoodBtn" onclick="showInfoTab('food')">🍜 Food</button>
+        <button class="info-tab" id="infoTabSafetyBtn" onclick="showInfoTab('safety')">🛡️ Safety</button>
+        <button class="info-tab" id="infoTabAppsBtn" onclick="showInfoTab('apps')">📱 Apps</button>
       </div>
-      <div id="infoTabCulture" class="info-sub active">
-        <div class="culture-list" id="cultureList"></div>
-      </div>
-      <div id="infoTabApps" class="info-sub">
-        <div class="apps-grid" id="appsGrid"></div>
-      </div>
+      <div id="infoTabCulture" class="info-sub active"><div class="culture-list" id="cultureList"></div></div>
+      <div id="infoTabMoney" class="info-sub"><div id="moneyList"></div></div>
+      <div id="infoTabFood" class="info-sub"><div id="foodList"></div></div>
+      <div id="infoTabSafety" class="info-sub"><div id="safetyList"></div></div>
+      <div id="infoTabApps" class="info-sub"><div class="apps-grid" id="appsGrid"></div></div>
     </div>
 
   </div>
 
 </div>
+
+<!-- EMERGENCY MODAL -->
+<div class="emergency-modal" id="emergencyModal">
+  <button class="em-close" onclick="closeEmergency()">✕ Close</button>
+  <span class="em-flag" id="emFlag"></span>
+  <div class="em-title">Emergency Number</div>
+  <div class="em-number" id="emNumber"></div>
+  <div class="em-number-label">Tap the number to call</div>
+  <hr class="em-divider">
+  <div id="emPhrases"></div>
+</div>
+
+<!-- EMERGENCY FAB -->
+<button class="emergency-fab" id="emergencyFab" onclick="openEmergency()">🆘 Emergency</button>
+
 <script>
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -386,6 +621,36 @@ const countries = {
       { e: "🥖", rule: "Bread goes on the table, not a plate", note: "Place it directly on the tablecloth. Don't ask for butter — it's not typically offered with meals." },
       { e: "🚶", rule: "Don't eat while walking", note: "Eating on the go is considered uncivilised. Sit down, even at a café terrace." },
       { e: "👗", rule: "Dress up a little", note: "Parisians tend to dress with intention. Smart-casual goes a long way in restaurants and galleries." },
+    ],
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type C/E" },
+      { icon: "💵", label: "Currency", value: "Euro (€)" },
+      { icon: "🚑", label: "Emergency", value: "112" },
+      { icon: "🚗", label: "Driving", value: "Right" },
+      { icon: "💧", label: "Tap Water", value: "Safe" },
+      { icon: "🛂", label: "Visa", value: "90 days (Schengen)" },
+    ],
+    money: [
+      { e: "💳", rule: "Card accepted almost everywhere", note: "Contactless is the norm. Keep €20–50 cash for markets and small village shops." },
+      { e: "🏧", rule: "Use bank ATMs, not airport kiosks", note: "Travelex and airport machines charge excessive fees. Find a regular bank ATM." },
+      { e: "🤑", rule: "Tipping is optional", note: "Service is legally included. Rounding up €1–2 for good service is generous — Americans sometimes over-tip which can feel awkward." },
+      { e: "❌", rule: "Decline dynamic currency conversion", note: "Always pay in euros when asked 'euros or your home currency?' — your bank rate is better." },
+      { e: "🧾", rule: "Keep receipts from shops", note: "Required for tax-free VAT refund at the airport if you're a non-EU visitor." },
+    ],
+    food: [
+      { e: "🥐", name: "Croissant", what: "Buttery flaky pastry — buy from a boulangerie, not a supermarket", tip: "Best eaten warm at breakfast, no butter needed." },
+      { e: "🥩", name: "Steak tartare", what: "Raw minced beef with capers and egg yolk — a Parisian bistro staple", tip: "Order it only at reputable restaurants." },
+      { e: "🧅", name: "French onion soup", what: "Slow-caramelised onion broth topped with crouton and melted Gruyère", tip: "A classic winter dish, find it at any traditional bistro." },
+      { e: "🐌", name: "Escargot", what: "Snails baked in garlic and herb butter — more butter than snail, in a good way", tip: "Best tried at a traditional brasserie." },
+      { e: "🍮", name: "Crème brûlée", what: "Rich vanilla custard with a caramelised sugar crust — crack it with your spoon", tip: "The custard should wobble slightly in the centre." },
+      { e: "🍷", name: "Vin de maison", what: "House wine served by carafe — often the best value on the menu", tip: "Ask for 'un pichet de rouge/blanc' — cheaper than a bottle, surprisingly good." },
+    ],
+    safety: [
+      { e: "📋", rule: "Petition scam", note: "Someone asks you to sign a petition for a charity, then demands a donation. Walk away — it's always a scam." },
+      { e: "💍", rule: "Gold ring scam", note: "'Did you drop this ring?' They claim to have found it and pressure you to buy it. Ignore and keep walking." },
+      { e: "🚔", rule: "Fake plainclothes police", note: "Someone flashes a badge and asks to inspect your wallet or passport. Real police don't do this — refuse and walk to a public place." },
+      { e: "🚇", rule: "Metro pickpockets", note: "Line 1 (tourist corridor) and Sacré-Cœur are notorious. Keep bags in front, zip all pockets before entering crowded cars." },
+      { e: "🚕", rule: "Use official taxis or apps", note: "From CDG airport, use marked taxi lanes (beige cars) or pre-book Bolt/Uber. Unlicensed drivers approach in arrivals — ignore them." },
     ],
     apps: [
       { e: "🗺️", cat: "Transit", name: "Citymapper", desc: "Best for Paris metro, RER, bus, and Vélib' bike routes.", ios: "https://apps.apple.com/app/id469463298", android: "https://play.google.com/store/apps/details?id=com.citymapper.app.release" },
@@ -485,6 +750,36 @@ const countries = {
       numbers: '💡 Malay numbers are logical — "dua puluh lima" = 25 (two tens five). Easy to learn.',
       emergency: '💡 Emergency in Malaysia: <strong>999</strong> for police, fire, and ambulance.',
     },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type G (British)" },
+      { icon: "💵", label: "Currency", value: "Ringgit (RM)" },
+      { icon: "🚑", label: "Emergency", value: "999" },
+      { icon: "🚗", label: "Driving", value: "Left" },
+      { icon: "💧", label: "Tap Water", value: "Boil/bottle" },
+      { icon: "🛂", label: "Visa", value: "30–90 days (most)" },
+    ],
+    money: [
+      { e: "💵", rule: "Cash is still king outside KL", note: "Carry RM 50–100 for markets and smaller towns. Cards work well in malls and chain restaurants." },
+      { e: "🏧", rule: "Use Maybank or CIMB ATMs", note: "These are the most reliable for foreign cards with reasonable fees." },
+      { e: "🛒", rule: "Bargain at markets, not malls", note: "Pasar malam (night markets) expect negotiation. Start at 60% of asking price and meet in the middle." },
+      { e: "🍽️", rule: "Service charge already added", note: "Most restaurants add 10% service charge + 6% tax. Tipping on top is not expected." },
+      { e: "❌", rule: "Decline dynamic currency conversion", note: "Always pay in Ringgit. If asked to pay in your home currency, say no — the rate is always worse." },
+    ],
+    food: [
+      { e: "🍚", name: "Nasi lemak", what: "Coconut rice with sambal, anchovies, peanuts, boiled egg — the national dish, eaten for breakfast", tip: "Best from a humble warung (food stall), not a restaurant." },
+      { e: "🍜", name: "Char kway teow", what: "Wok-fried flat rice noodles with egg, bean sprouts, prawns and soy sauce", tip: "The best ones have wok hei — that smoky charred flavour from high heat." },
+      { e: "🫓", name: "Roti canai", what: "Flaky flatbread served with dhal or curry sauce — eaten any time of day", tip: "Tear with your right hand and dip. Order 'roti telur' (with egg) for a heartier version." },
+      { e: "🍵", name: "Teh tarik", what: "'Pulled tea' — strong sweetened milk tea poured between cups to create a frothy top", tip: "A national ritual. Ask for 'kurang manis' (less sweet) if you prefer." },
+      { e: "🍢", name: "Satay", what: "Grilled meat skewers served with peanut sauce, cucumber, and rice cakes (ketupat)", tip: "Kajang satay (from Kajang town) is considered the best in Malaysia." },
+      { e: "👑", name: "Durian", what: "The spiky 'King of Fruits' with a pungent smell and rich custardy flesh", tip: "Banned in many hotels and public transport. Try Musang King variety for the best flavour." },
+    ],
+    safety: [
+      { e: "👜", rule: "Snatch theft on pavement", note: "Walk on the inner side of the pavement (away from traffic), bag on the wall side. Motorbike snatchers grab from the road side." },
+      { e: "🚗", rule: "Always use Grab, never hail random taxis", note: "Metered taxis frequently overcharge tourists. Grab shows the price upfront." },
+      { e: "💊", rule: "Drug laws are extremely strict", note: "Possession of even small amounts can lead to long prison sentences. Trafficking carries the death penalty." },
+      { e: "🌧️", rule: "Check the monsoon season", note: "East coast floods Nov–Mar; West coast (KL, Penang) can flood Oct–Nov. Check before travel." },
+      { e: "🏖️", rule: "Secure valuables on beaches", note: "Don't leave bags unattended at beach resorts — opportunistic theft is common." },
+    ],
     culture: [
       { e: "👗", rule: "Dress modestly, especially at religious sites", note: "Cover knees and shoulders when visiting mosques or temples. Many sites provide sarongs at the entrance." },
       { e: "👟", rule: "Remove shoes before entering homes and temples", note: "Always remove footwear at the door. You'll usually see a pile of shoes outside as a signal." },
@@ -584,6 +879,36 @@ const countries = {
       numbers: '💡 Prices are almost always shown in Arabic numerals. Focus on learning the spoken words.',
       emergency: '💡 Police: <strong>191</strong>. Tourist Police (English): <strong>1155</strong>. Ambulance: <strong>1669</strong>.',
     },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type A/B/C" },
+      { icon: "💵", label: "Currency", value: "Thai Baht (฿)" },
+      { icon: "🚑", label: "Emergency", value: "191 / 1669" },
+      { icon: "🚗", label: "Driving", value: "Left" },
+      { icon: "💧", label: "Tap Water", value: "Do NOT drink" },
+      { icon: "🛂", label: "Visa", value: "60 days on arrival" },
+    ],
+    money: [
+      { e: "💵", rule: "Cash-heavy economy outside Bangkok", note: "Street food, tuk-tuks, and local markets are cash only. Keep ฿500–1,000 on you at all times." },
+      { e: "🏧", rule: "ATM fee is ฿220 per withdrawal", note: "That's about $6 — take out more at once rather than multiple small withdrawals. Kasikorn Bank is reliable." },
+      { e: "💱", rule: "Super Rich money changers give the best rates", note: "Look for 'Super Rich' exchange booths in Bangkok — consistently better than banks or airport counters." },
+      { e: "🎯", rule: "Bargaining expected in markets", note: "Chatuchak Weekend Market and street stalls — start at 50–60% of the asking price. Smile and be friendly." },
+      { e: "🍽️", rule: "Tipping is appreciated, not expected", note: "฿20–50 for good restaurant service, ฿100 for a massage. Round up taxi fares." },
+    ],
+    food: [
+      { e: "🍜", name: "Pad Thai", what: "Stir-fried rice noodles with egg, tofu or shrimp, bean sprouts, and crushed peanuts", tip: "Always customise with the condiment tray: fish sauce, chilli, sugar, and vinegar." },
+      { e: "🌶️", name: "Tom yum goong", what: "Spicy lemongrass and lime prawn soup — intensely aromatic and sour", tip: "Ask for 'mai phet' (not spicy) if needed. The galangal and lemongrass are not meant to be eaten." },
+      { e: "🥭", name: "Mango sticky rice", what: "Sweet glutinous rice soaked in coconut milk served with fresh mango slices", tip: "Best in mango season (March–June). A must-try dessert." },
+      { e: "🥗", name: "Som tam", what: "Green papaya salad pounded with chilli, lime, fish sauce, tomatoes, and dried shrimp", tip: "Specify your spice level upfront — even 'medium' can be very hot by Western standards." },
+      { e: "🥥", name: "Massaman curry", what: "Mild, rich coconut curry with potato and peanuts — Persian-influenced and fragrant", tip: "Less common than green curry but arguably more complex. Best with beef or lamb." },
+      { e: "🛵", name: "Street food safety", what: "Eat where locals eat — high turnover means fresh food, even from roadside stalls", tip: "If it smells amazing and has a queue, it's good. Cooked-to-order is always safer than pre-made." },
+    ],
+    safety: [
+      { e: "💎", rule: "Gem scam", note: "A friendly local tells you about a 'once-in-a-lifetime' sale on rubies or sapphires you can resell for profit. 100% a scam — the gems are worthless." },
+      { e: "🛺", rule: "Tuk-tuk 'temple tour' scam", note: "Driver offers a very cheap tour, then takes you to shops where he gets a commission. Politely decline and use Grab instead." },
+      { e: "🙏", rule: "Closed temple scam", note: "'That temple is closed today — I'll take you to a special one.' It's never closed. Always verify yourself before changing plans." },
+      { e: "🚔", rule: "Tourist police number: 1155", note: "Tourist police speak English and are specifically trained to help foreigners. Save this number." },
+      { e: "👘", rule: "Dress codes at major temples", note: "Wat Phra Kaew (Grand Palace) enforces strict rules — no sleeveless tops or shorts. Wraps are available to rent at the entrance." },
+    ],
     culture: [
       { e: "🙏", rule: "The wai is the standard greeting", note: "Press your palms together at chest level and bow slightly. Return a wai when someone offers one to you." },
       { e: "👑", rule: "Never criticise the monarchy", note: "Lèse-majesté laws are strictly enforced. Any criticism of the royal family is illegal and taken very seriously." },
@@ -682,6 +1007,36 @@ const countries = {
       numbers: '💡 Korean has two number systems. These Sino-Korean ones (일이삼) cover most travel needs — money, floors, dates.',
       emergency: '💡 Police: <strong>112</strong>. Fire & Ambulance: <strong>119</strong>. Tourist helpline (English 24/7): <strong>1330</strong>.',
     },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type C/F (220V)" },
+      { icon: "💵", label: "Currency", value: "Won (₩)" },
+      { icon: "🚑", label: "Emergency", value: "112 / 119" },
+      { icon: "🚗", label: "Driving", value: "Right" },
+      { icon: "💧", label: "Tap Water", value: "Safe to drink" },
+      { icon: "🛂", label: "Visa", value: "K-ETA required (most)" },
+    ],
+    money: [
+      { e: "💳", rule: "Card accepted almost everywhere", note: "Korea is nearly cashless — cards work at convenience stores, taxis, and most restaurants. Still carry ₩20,000–30,000 for small stalls." },
+      { e: "🏧", rule: "7-Eleven and GS25 ATMs accept foreign cards", note: "These convenience store ATMs are the most reliable for international cards. Available 24/7 nationwide." },
+      { e: "🚌", rule: "Load a T-money card", note: "Rechargeable transit card used on all buses, metro, and even some taxis. Saves time and gives a small discount per trip." },
+      { e: "🙅", rule: "Never tip", note: "Tipping is genuinely not done in Korea. In some contexts it can feel awkward or even insulting — just don't." },
+      { e: "🛍️", rule: "Tax refund at department stores", note: "Non-Korean visitors can get 10% VAT back on purchases over ₩30,000. Show your passport at checkout." },
+    ],
+    food: [
+      { e: "🥩", name: "Korean BBQ (삼겹살)", what: "Thick-cut pork belly grilled at your table, wrapped in lettuce with garlic and gochujang paste", tip: "The scissors are for cutting meat — let the staff do the first cut if you're new to it." },
+      { e: "🍲", name: "Bibimbap (비빔밥)", what: "Rice bowl topped with seasoned vegetables, a fried egg, and gochujang — mix everything together before eating", tip: "Order the dolsot (hot stone pot) version for crispy rice at the bottom." },
+      { e: "🌶️", name: "Tteokbokki (떡볶이)", what: "Chewy rice cakes in a spicy-sweet gochujang sauce — the most popular street food", tip: "Pairs well with a fish cake skewer and a cup of the broth." },
+      { e: "🥒", name: "Kimchi (김치)", what: "Fermented cabbage with gochugaru, garlic, and ginger — comes free with every Korean meal", tip: "Hundreds of varieties exist. The aged kimchi (geotjeori vs. kimchi) has a deeper, more sour flavour." },
+      { e: "🍶", name: "Soju (소주)", what: "Korea's beloved clear rice spirit, typically 16–25% ABV — almost always drunk with food", tip: "Never pour your own glass. Always pour for others first and let them pour for you." },
+      { e: "☕", name: "Korean café culture", what: "Seoul has the highest café density of any city in the world — unique themed cafés everywhere", tip: "Many cafés require you to order at least one drink. Most have beautiful interiors worth a visit." },
+    ],
+    safety: [
+      { e: "🛡️", rule: "Korea is exceptionally safe", note: "It consistently ranks among the world's safest countries for tourists. Violent crime targeting visitors is extremely rare." },
+      { e: "📱", rule: "Lost items are almost always returned", note: "If you leave your phone or wallet somewhere, there's a very good chance it will be handed in to staff or police." },
+      { e: "🌃", rule: "Nightlife areas can be rowdy late", note: "Hongdae and Itaewon are lively until 5am on weekends. Keep an eye on your drinks and belongings in crowded clubs." },
+      { e: "🚇", rule: "Always give up priority seats on the metro", note: "Elderly and disabled priority seats (pink/yellow) must be vacated — Koreans take this seriously." },
+      { e: "📞", rule: "Tourist helpline: 1330", note: "English-speaking operators available 24/7 for travel assistance, emergencies, and questions. Free to call." },
+    ],
     culture: [
       { e: "🙇", rule: "Bowing is the standard greeting", note: "A slight head nod works for casual interactions. Deeper bows show more respect to elders or seniors." },
       { e: "👴", rule: "Age and hierarchy matter", note: "Korea has a strong Confucian culture. Always show deference to older people — let them sit first, pour their drink first." },
@@ -781,6 +1136,36 @@ const countries = {
       numbers: '💡 "Dua puluh lima" = 25 (two tens five). Completely regular and easy to learn.',
       emergency: '💡 Emergency: <strong>112</strong>. Police: <strong>110</strong>. Ambulance: <strong>118</strong>.',
     },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type C/F (220V)" },
+      { icon: "💵", label: "Currency", value: "Rupiah (Rp)" },
+      { icon: "🚑", label: "Emergency", value: "112 / 118" },
+      { icon: "🚗", label: "Driving", value: "Left" },
+      { icon: "💧", label: "Tap Water", value: "Do NOT drink" },
+      { icon: "🛂", label: "Visa", value: "Rp 500k on arrival" },
+    ],
+    money: [
+      { e: "💵", rule: "Cash is essential outside Bali/Jakarta", note: "Rural areas, local warungs, and markets are cash only. Always keep Rp 100,000–200,000 on hand." },
+      { e: "🏧", rule: "BCA and Mandiri ATMs most reliable", note: "These two banks accept foreign cards most consistently. Avoid smaller ATMs in tourist areas — fees are higher." },
+      { e: "💱", rule: "Watch those zeroes", note: "Rp 1,000 is about $0.06. Rp 500,000 notes are the largest — count your change carefully as the denominations look similar." },
+      { e: "🛒", rule: "Bargain in markets, not shops", note: "Night markets and craft stalls expect negotiation. Malls and restaurants with printed menus don't. Start at 50% and be friendly." },
+      { e: "💸", rule: "Visa on arrival fee: Rp 500,000", note: "Payable in cash at the airport — exact change preferred. Some nationalities are exempt. Check before you travel." },
+    ],
+    food: [
+      { e: "🍳", name: "Nasi goreng", what: "Fried rice with sweet soy sauce (kecap manis), egg, and vegetables — Indonesia's national dish", tip: "Available everywhere, any time of day. Order it with a fried egg on top." },
+      { e: "🍢", name: "Satay (sate)", what: "Grilled skewers of marinated meat served with peanut sauce and lontong (rice cake)", tip: "Sate Madura (from Madura island) is considered the best — often sold by street cart vendors." },
+      { e: "🥜", name: "Gado-gado", what: "Blanched vegetables with hard-boiled egg in a rich peanut sauce dressing", tip: "A great vegetarian option that's filling and widely available." },
+      { e: "🥩", name: "Rendang", what: "Slow-cooked beef in coconut milk and spices until dry and intensely flavoured — a Padang specialty", tip: "Best eaten with steamed rice. The Padang restaurant chain (Restoran Padang) is everywhere." },
+      { e: "🐷", name: "Babi guling (Bali only)", what: "Whole spit-roasted suckling pig stuffed with Balinese spices — a ceremonial dish now widely available", tip: "Not halal — only available in Bali and at non-Muslim establishments. Ibu Oka in Ubud is famous for it." },
+      { e: "☕", name: "Kopi tubruk", what: "Traditional Indonesian coffee — finely ground beans brewed directly in the cup with hot water", tip: "Wait for the grounds to settle before drinking. Kopi luwak (civet coffee) is a pricey local novelty." },
+    ],
+    safety: [
+      { e: "🛵", rule: "Motorbike rental risks", note: "Ensure you have insurance before renting. Helmets are mandatory and enforced. Check the bike thoroughly for existing damage before riding off." },
+      { e: "💊", rule: "Drug laws carry severe penalties", note: "Indonesia has some of the world's strictest drug laws. Trafficking can result in the death penalty. Possession carries long jail terms." },
+      { e: "🏖️", rule: "Secure valuables at beach resorts", note: "Petty theft is common on popular beaches in Bali. Don't leave bags, electronics, or passports unattended." },
+      { e: "🕌", rule: "Respect religious spaces", note: "Dress modestly near mosques and Hindu temples. Do not enter active ceremonies without invitation. Remove shoes always." },
+      { e: "🌊", rule: "Bali ocean currents are dangerous", note: "Several beaches have powerful rip currents. Only swim at beaches with lifeguards and flags. Kuta and Seminyak can be treacherous." },
+    ],
     culture: [
       { e: "🤝", rule: "Use your right hand — always", note: "The left hand is considered unclean. Use your right hand to eat, give gifts, money, or shake hands." },
       { e: "👗", rule: "Dress modestly, especially in Bali", note: "Cover shoulders and knees at temples. A sash or sarong is often required — and usually provided at the gate." },
@@ -872,12 +1257,618 @@ const countries = {
     },
   },
 
+  japan: {
+    name: "Japan", flag: "🇯🇵", lang: "日本語", langCode: "ja-JP", latinScript: false,
+    tips: {
+      greetings: '💡 Saying <em>Sumimasen</em> first (excuse me) before any request is the polite way to get someone\'s attention.',
+      food: '💡 Many ramen shops use vending machines at the entrance — buy your ticket before sitting. Slurping noodles is a compliment.',
+      directions: '💡 Japanese addresses work by block, not street name. Always save your destination in Google Maps before leaving your hotel.',
+      numbers: '💡 Japanese uses two number systems. <em>Ichi, ni, san</em> (Chinese-origin) works for almost all travel situations.',
+      emergency: '💡 Police: <strong>110</strong>. Fire & Ambulance: <strong>119</strong>. Police boxes (<em>koban</em>) are everywhere and officers are helpful.',
+    },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type A (2-pin flat)" },
+      { icon: "💵", label: "Currency", value: "Yen (¥)" },
+      { icon: "🚑", label: "Emergency", value: "110 / 119" },
+      { icon: "🚗", label: "Driving", value: "Left" },
+      { icon: "💧", label: "Tap Water", value: "Excellent quality" },
+      { icon: "🛂", label: "Visa", value: "90 days, most nations" },
+    ],
+    culture: [
+      { e: "🙇", rule: "Bowing is the universal greeting", note: "A small nod works for tourists. A deeper bow shows more respect. Handshakes are uncommon — let locals lead." },
+      { e: "🚫", rule: "No eating while walking", note: "Eating on the go is considered rude. Finish your food at the stall or find a bench. Exception: festival (matsuri) food stalls." },
+      { e: "🚇", rule: "Silence on public transport", note: "No phone calls on trains. Keep voices low. Phones on silent or vibrate — it's an unspoken rule everyone follows." },
+      { e: "💴", rule: "Cash is still essential", note: "Japan is surprisingly cash-heavy. Many restaurants, small shops, and temples don't accept cards. Keep ¥5,000–10,000 on you." },
+      { e: "🗑️", rule: "Almost no public rubbish bins", note: "Bins are rare outside convenience stores and train stations. Carry your rubbish — everyone does." },
+      { e: "♨️", rule: "Onsen etiquette is strict", note: "Shower thoroughly before entering the communal bath. Tattoos are banned at most onsens — check in advance." },
+    ],
+    money: [
+      { e: "💴", rule: "Cash culture — carry always", note: "Many izakayas, ramen shops, and smaller restaurants are cash only. Keep ¥5,000–10,000 at all times." },
+      { e: "🏧", rule: "7-Eleven and Japan Post ATMs are your friends", note: "These accept foreign cards with fair fees (~¥220/withdrawal). Take out more at once to minimise charges." },
+      { e: "🚃", rule: "Load a Suica IC card", note: "Loaded via iPhone Wallet or at station machines. Used on all trains, buses, and convenience stores across Japan." },
+      { e: "🏬", rule: "Tax-free shopping available", note: "Non-resident visitors get 10% consumption tax back at department stores and electronics shops — show your passport." },
+      { e: "🙅", rule: "Never tip", note: "Tipping is not just unnecessary — it can genuinely confuse or embarrass service staff. Great service is simply expected." },
+    ],
+    food: [
+      { e: "🍜", name: "Ramen", what: "Regional broth-based noodle soup — tonkotsu (Hakata), miso (Sapporo), shoyu (Tokyo)", tip: "Follow the locals and use the vending machine to order. Eat it hot and finish quickly." },
+      { e: "🍣", name: "Kaiten-zushi", what: "Conveyor belt sushi — affordable, fun, and surprisingly high quality at chain restaurants like Sushiro", tip: "Plates are colour-coded by price. Order hot items via the touchscreen tablet." },
+      { e: "🍡", name: "Takoyaki", what: "Osaka street food — octopus-filled batter balls topped with mayo, bonito flakes, and takoyaki sauce", tip: "Blow on them — they stay piping hot inside long after the outside cools." },
+      { e: "🍱", name: "Convenience store food", what: "7-Eleven, Lawson, FamilyMart onigiri, sandwiches, and hot foods are genuinely delicious", tip: "Onigiri (rice balls) make perfect cheap breakfasts. The tuna mayo is a classic." },
+      { e: "🍵", name: "Matcha everything", what: "Green tea flavour in ice cream, KitKats, lattes, cakes — uniquely Japanese and worth trying", tip: "Uji (near Kyoto) is Japan's matcha heartland for the most authentic versions." },
+      { e: "🥃", name: "Japanese whisky", what: "World-class single malts from Nikka and Suntory — smoother and more delicate than Scotch", tip: "Try it at a whisky bar in Ginza or Shinjuku. Prices are much better than buying abroad." },
+    ],
+    safety: [
+      { e: "🛡️", rule: "Japan is exceptionally safe", note: "One of the world's safest countries. Violent crime targeting tourists is virtually unheard of." },
+      { e: "📦", rule: "Lost items are almost always returned", note: "Leave something on a train or in a café — go back and it will almost certainly still be there or handed to staff." },
+      { e: "🌏", rule: "Earthquake preparedness", note: "Download the NHK World app for earthquake alerts. Know your hotel's evacuation plan. Keep shoes near your bed." },
+      { e: "🎰", rule: "Pachinko and gambling laws", note: "Casino gambling is technically illegal (though being liberalised). Pachinko parlours are loud and smoky — enter with curiosity." },
+      { e: "📵", rule: "Phone calls on transport", note: "Making or receiving calls on public transport is a social no-no. Text instead. Priority seats are for elderly and pregnant — vacate immediately." },
+    ],
+    apps: [
+      { e: "🚃", cat: "Transit", name: "Hyperdia", desc: "The gold standard for train routes, IC fares, and bullet train schedules.", ios: "https://apps.apple.com/app/id404913424", android: "https://play.google.com/store/apps/details?id=com.hyperdia.android.activity" },
+      { e: "🗺️", cat: "Navigation", name: "Google Maps", desc: "Works well in Japan with full transit integration. Download Tokyo offline.", ios: "https://apps.apple.com/app/id585027354", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.maps" },
+      { e: "💬", cat: "Language", name: "Google Translate", desc: "Camera mode reads kanji menus and signs in real time. Download Japanese offline pack.", ios: "https://apps.apple.com/app/id414681729", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.translate" },
+      { e: "💴", cat: "Money", name: "Wise", desc: "Best exchange rates for converting to Yen. Set up before you leave.", ios: "https://apps.apple.com/app/id612261027", android: "https://play.google.com/store/apps/details?id=com.transferwise.android" },
+      { e: "🎫", cat: "Activities", name: "Klook", desc: "Pre-book teamLab, teamLab Borderless, Ghibli Museum, and bullet train tickets.", ios: "https://apps.apple.com/app/id1208769098", android: "https://play.google.com/store/apps/details?id=com.klook.app" },
+      { e: "🏨", cat: "Stay", name: "Booking.com", desc: "Free cancellation filters are essential in Japan where plans can change.", ios: "https://apps.apple.com/app/id367003839", android: "https://play.google.com/store/apps/details?id=com.booking" },
+    ],
+    data: {
+      greetings: [
+        { native: "こんにちは", pron: "kon-ni-chi-WA", en: "Hello / Good afternoon" },
+        { native: "おはようございます", pron: "o-ha-YO go-zai-mas", en: "Good morning" },
+        { native: "こんばんは", pron: "kon-BAN-wa", en: "Good evening" },
+        { native: "ありがとうございます", pron: "a-ri-ga-TO go-zai-mas", en: "Thank you very much" },
+        { native: "すみません", pron: "su-mi-MA-sen", en: "Excuse me / Sorry" },
+        { native: "はじめまして", pron: "ha-ji-me-MASH-te", en: "Nice to meet you" },
+        { native: "さようなら", pron: "sa-yo-NA-ra", en: "Goodbye" },
+        { native: "はい / いいえ", pron: "hai / ii-e", en: "Yes / No" },
+        { native: "英語を話せますか？", pron: "ei-go o ha-na-se-MAS ka", en: "Do you speak English?" },
+      ],
+      food: [
+        { native: "一つください", pron: "hi-to-tsu ku-da-SAI", en: "One of these, please" },
+        { native: "おすすめは何ですか？", pron: "o-su-su-me wa NAN des ka", en: "What do you recommend?" },
+        { native: "アレルギーがあります", pron: "a-re-ru-GI ga a-ri-mas", en: "I have an allergy" },
+        { native: "お会計をお願いします", pron: "o-kai-KEI o o-ne-gai shi-MAS", en: "The bill, please" },
+        { native: "おいしい！", pron: "oi-SHI!", en: "Delicious!" },
+        { native: "辛くしないでください", pron: "ka-ra-ku shi-nai-de ku-da-SAI", en: "Not spicy, please" },
+        { native: "ベジタリアンです", pron: "be-ji-ta-ri-AN des", en: "I am vegetarian" },
+      ],
+      directions: [
+        { native: "〜はどこですか？", pron: "~ wa DO-ko des ka", en: "Where is ~?" },
+        { native: "迷子になりました", pron: "mai-go ni na-ri-MASH-ta", en: "I'm lost" },
+        { native: "右 / 左", pron: "mi-GI / hi-da-RI", en: "Right / Left" },
+        { native: "まっすぐ", pron: "MAS-su-gu", en: "Straight ahead" },
+        { native: "駅はどこですか？", pron: "E-ki wa DO-ko des ka", en: "Where is the station?" },
+        { native: "近いですか？", pron: "chi-KAI des ka", en: "Is it nearby?" },
+        { native: "地図を見せてください", pron: "chi-zu o mi-SE-te ku-da-SAI", en: "Show me on the map, please" },
+      ],
+      shopping: [
+        { native: "いくらですか？", pron: "i-KU-ra des ka", en: "How much is this?" },
+        { native: "試着できますか？", pron: "shi-CHA-ku de-ki-MAS ka", en: "Can I try this on?" },
+        { native: "カードで払えますか？", pron: "KA-do de ha-ra-e-MAS ka", en: "Can I pay by card?" },
+        { native: "袋はいりません", pron: "fu-KU-ro wa i-ri-MA-sen", en: "No bag needed" },
+        { native: "免税はできますか？", pron: "men-ZEI wa de-ki-MAS ka", en: "Is tax-free shopping available?" },
+        { native: "これをください", pron: "ko-RE o ku-da-SAI", en: "I'll take this one" },
+        { native: "領収書をください", pron: "ryo-SHU-sho o ku-da-SAI", en: "A receipt, please" },
+      ],
+      numbers: [
+        { native: "一 (いち)", pron: "i-chi", en: "1" },
+        { native: "二 (に)", pron: "ni", en: "2" },
+        { native: "三 (さん)", pron: "san", en: "3" },
+        { native: "四 (し/よん)", pron: "shi / yon", en: "4" },
+        { native: "五 (ご)", pron: "go", en: "5" },
+        { native: "六 (ろく)", pron: "ro-ku", en: "6" },
+        { native: "七 (なな/しち)", pron: "na-na / shi-chi", en: "7" },
+        { native: "八 (はち)", pron: "ha-chi", en: "8" },
+        { native: "九 (く/きゅう)", pron: "ku / kyu", en: "9" },
+        { native: "十 (じゅう)", pron: "ju", en: "10" },
+        { native: "百 (ひゃく)", pron: "hya-ku", en: "100" },
+        { native: "千 (せん)", pron: "sen", en: "1,000" },
+      ],
+      emergency: [
+        { native: "助けて！", pron: "ta-SU-ke-te!", en: "Help!" },
+        { native: "警察を呼んでください", pron: "ke-SA-tsu o YON-de ku-da-SAI", en: "Call the police!" },
+        { native: "救急車を呼んでください", pron: "kyu-KYU-sha o YON-de ku-da-SAI", en: "Call an ambulance!" },
+        { native: "病院はどこですか？", pron: "BYO-in wa DO-ko des ka", en: "Where is the hospital?" },
+        { native: "アレルギーがあります", pron: "a-re-ru-GI ga a-ri-mas", en: "I have an allergy" },
+        { native: "盗難にあいました", pron: "TO-nan ni ai-MASH-ta", en: "I've been robbed" },
+        { native: "薬が必要です", pron: "ku-SU-ri ga hi-tsu-YO des", en: "I need medicine" },
+      ],
+    },
+  },
+
+  vietnam: {
+    name: "Vietnam", flag: "🇻🇳", lang: "Tiếng Việt", langCode: "vi-VN", latinScript: true,
+    tips: {
+      greetings: '💡 Vietnamese has tones — the same syllable in different tones means different things. Don\'t worry, locals will appreciate any attempt.',
+      food: '💡 Phở is pronounced more like "fuh" than "foe". Street food is safe — follow the queue of locals.',
+      directions: '💡 Always use Grab in Vietnam — fixed price, no negotiation needed. Cross roads slowly and steadily, traffic flows around you.',
+      numbers: '💡 Prices are in thousands (ngàn) — "ba mươi" (30) usually means 30,000 đồng (~$1.20).',
+      emergency: '💡 Police: <strong>113</strong>. Ambulance: <strong>115</strong>. Fire: <strong>114</strong>.',
+    },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type A/C (220V)" },
+      { icon: "💵", label: "Currency", value: "Dong (₫)" },
+      { icon: "🚑", label: "Emergency", value: "113 / 115" },
+      { icon: "🚗", label: "Driving", value: "Right" },
+      { icon: "💧", label: "Tap Water", value: "Do NOT drink" },
+      { icon: "🛂", label: "Visa", value: "E-visa 90 days" },
+    ],
+    culture: [
+      { e: "🤲", rule: "Use two hands when giving or receiving", note: "Especially with elders. Giving money, business cards, or gifts with one hand is considered casual or disrespectful." },
+      { e: "👟", rule: "Remove shoes at homes and some temples", note: "Look for shoes at the entrance — it's the universal signal. Always follow the lead of your host." },
+      { e: "😐", rule: "Saving face matters deeply", note: "Avoid public confrontation or expressing frustration. Criticism should be gentle and private — public embarrassment is taken seriously." },
+      { e: "👨‍👩‍👦", rule: "Respect for elders is paramount", note: "Vietnamese society is family-first and deeply Confucian. Address older people respectfully and defer to them in social situations." },
+      { e: "🛍️", rule: "Bargaining is expected at markets", note: "Smile, be friendly, and start at 50–60% of asking price. It's a social ritual — enjoy it." },
+      { e: "⛩️", rule: "Dress modestly at temples and pagodas", note: "Cover shoulders and knees. Most temples have wraps available to borrow." },
+    ],
+    money: [
+      { e: "💵", rule: "USD is also accepted in tourist areas", note: "Especially in Hanoi's Old Quarter and Ho Chi Minh City. However, you'll often get worse value than paying in dong." },
+      { e: "🏧", rule: "Vietcombank ATMs are best for foreigners", note: "Look for Vietcombank or Techcombank. Withdrawal limits vary — try ₫3,000,000 (~$120) per transaction." },
+      { e: "🛒", rule: "Bargain hard at markets", note: "Ben Thanh Market and Hanoi's Old Quarter — start at 40–50% of asking. Walking away often brings the price down further." },
+      { e: "💱", rule: "Exchange at banks or official kiosks only", note: "Street money changers sometimes shortchange tourists by using trick counting. Always use a licensed exchanger." },
+      { e: "🍽️", rule: "Tipping is not traditional but appreciated", note: "₫20,000–50,000 at restaurants is generous. Guides and drivers who perform well deserve more." },
+    ],
+    food: [
+      { e: "🍜", name: "Phở", what: "Rice noodle soup with beef or chicken, herbs, lime, and bean sprouts — the national breakfast dish", tip: "Add basil, bean sprouts, and a squeeze of lime. Ask for 'tái' (rare beef) to cook in the hot broth." },
+      { e: "🥖", name: "Bánh mì", what: "Vietnamese baguette stuffed with pork, pâté, pickled vegetables, coriander, and chilli — a French colonial legacy done better", tip: "The best ones are from street carts, not cafés. Bánh Mì 25 in Hanoi is famous." },
+      { e: "🥗", name: "Gỏi cuốn", what: "Fresh (unfried) spring rolls with shrimp, pork, herbs, and rice noodles wrapped in rice paper", tip: "Dip in peanut sauce, not fish sauce. A lighter option when the heat gets to you." },
+      { e: "🍳", name: "Bánh xèo", what: "Sizzling rice flour crêpe filled with pork, shrimp, and bean sprouts — eaten wrapped in lettuce with dipping sauce", tip: "Tear pieces off with your hands and wrap in the accompanying lettuce and herbs." },
+      { e: "☕", name: "Cà phê trứng", what: "Hanoi's famous egg coffee — a thick, custardy foam of whisked egg yolk and condensed milk over espresso", tip: "Try it at Café Giang or Café Dinh in Hanoi's Old Quarter — the originators." },
+      { e: "🍌", name: "Sinh tố (fruit smoothie)", what: "Fresh tropical fruit blended with condensed milk and ice — avocado, mango, soursop, dragonfruit", tip: "Available everywhere for under ₫30,000. The avocado smoothie (sinh tố bơ) is surprisingly delicious." },
+    ],
+    safety: [
+      { e: "🚦", rule: "Traffic is the real hazard", note: "Roads are chaotic with motorbikes flowing in all directions. Cross slowly and steadily — traffic flows around you. Never freeze or run." },
+      { e: "🚗", rule: "Always use Grab for taxis", note: "Metered taxis frequently overcharge tourists. Grab shows the fixed price upfront — use it every time." },
+      { e: "👜", rule: "Bag snatching from motorbikes", note: "Keep bags on your inside shoulder away from the road. Phone thieves on motorbikes target people looking at their phones while walking." },
+      { e: "💱", rule: "Avoid street money changers", note: "Sleight-of-hand counting tricks are common. Use bank ATMs or official exchange kiosks only." },
+      { e: "🌊", rule: "Check sea conditions in coastal areas", note: "Red flag days at Đà Nẵng and Mũi Né beaches mean dangerous conditions — local lifeguards enforce this." },
+    ],
+    apps: [
+      { e: "🚗", cat: "Rides", name: "Grab", desc: "Essential in Vietnam — fixed-price rides, food delivery, and bike-hailing all in one.", ios: "https://apps.apple.com/app/id647268330", android: "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger" },
+      { e: "🗺️", cat: "Navigation", name: "Google Maps", desc: "Works well in Vietnam. Download Ho Chi Minh City or Hanoi offline maps.", ios: "https://apps.apple.com/app/id585027354", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.maps" },
+      { e: "💬", cat: "Language", name: "Google Translate", desc: "Camera mode reads Vietnamese menus. Download the offline language pack.", ios: "https://apps.apple.com/app/id414681729", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.translate" },
+      { e: "💵", cat: "Money", name: "Wise", desc: "Best exchange rates for spending dong. Set up your account before travelling.", ios: "https://apps.apple.com/app/id612261027", android: "https://play.google.com/store/apps/details?id=com.transferwise.android" },
+      { e: "🎫", cat: "Activities", name: "Klook", desc: "Ha Long Bay cruises, cooking classes, and motorbike tours — book in advance.", ios: "https://apps.apple.com/app/id1208769098", android: "https://play.google.com/store/apps/details?id=com.klook.app" },
+      { e: "🏨", cat: "Stay", name: "Booking.com", desc: "Free cancellation filters. Vietnam has excellent budget guesthouses (nhà nghỉ).", ios: "https://apps.apple.com/app/id367003839", android: "https://play.google.com/store/apps/details?id=com.booking" },
+    ],
+    data: {
+      greetings: [
+        { native: "Xin chào", pron: "sin CHOW", en: "Hello" },
+        { native: "Cảm ơn", pron: "GAM uhn", en: "Thank you" },
+        { native: "Xin lỗi", pron: "sin LOY", en: "Sorry / Excuse me" },
+        { native: "Tạm biệt", pron: "TAM byet", en: "Goodbye" },
+        { native: "Không", pron: "KHOM", en: "No" },
+        { native: "Vâng / Được", pron: "VANG / duoc", en: "Yes / OK" },
+        { native: "Tôi không hiểu", pron: "toy KHOM hyew", en: "I don't understand" },
+        { native: "Bạn nói tiếng Anh không?", pron: "BAN noy tyeng Anh KHOM", en: "Do you speak English?" },
+        { native: "Tên tôi là...", pron: "TEN toy la...", en: "My name is..." },
+      ],
+      food: [
+        { native: "Cho tôi xem thực đơn", pron: "cho toy SEM thuc don", en: "Can I see the menu?" },
+        { native: "Tôi muốn cái này", pron: "toy MWON kai NAY", en: "I want this one" },
+        { native: "Không có thịt", pron: "KHOM co TIT", en: "No meat please" },
+        { native: "Cay quá!", pron: "KAY kwa", en: "Too spicy!" },
+        { native: "Ngon lắm!", pron: "NGON lam", en: "Delicious!" },
+        { native: "Cho tôi hóa đơn", pron: "cho toy HWA don", en: "The bill, please" },
+        { native: "Tôi bị dị ứng...", pron: "toy bee YEE ung", en: "I am allergic to..." },
+      ],
+      directions: [
+        { native: "...ở đâu?", pron: "...uh DOW?", en: "Where is...?" },
+        { native: "Tôi bị lạc", pron: "toy bee LAC", en: "I'm lost" },
+        { native: "Rẽ phải / Rẽ trái", pron: "re FAI / re CHAI", en: "Turn right / left" },
+        { native: "Đi thẳng", pron: "dee TANG", en: "Go straight" },
+        { native: "Gần đây không?", pron: "GUN day KHOM", en: "Is it nearby?" },
+        { native: "Dừng lại ở đây", pron: "DUNG lai uh DAY", en: "Stop here, please" },
+        { native: "Bản đồ", pron: "BAN do", en: "Map" },
+      ],
+      shopping: [
+        { native: "Cái này bao nhiêu?", pron: "kai NAY bow NYEW?", en: "How much is this?" },
+        { native: "Đắt quá", pron: "DAT kwa", en: "Too expensive" },
+        { native: "Giảm giá được không?", pron: "YAM ya DUOC KHOM?", en: "Can you lower the price?" },
+        { native: "Tôi chỉ xem thôi", pron: "toy chi SEM toy", en: "Just looking" },
+        { native: "Mua cái này", pron: "MWA kai NAY", en: "I'll take this" },
+        { native: "Có túi không?", pron: "co TOO-ee KHOM?", en: "Do you have a bag?" },
+        { native: "Cho tôi hóa đơn", pron: "cho toy HWA don", en: "A receipt, please" },
+      ],
+      numbers: [
+        { native: "Một", pron: "MOT", en: "1" },
+        { native: "Hai", pron: "HI", en: "2" },
+        { native: "Ba", pron: "BA", en: "3" },
+        { native: "Bốn", pron: "BON", en: "4" },
+        { native: "Năm", pron: "NAM", en: "5" },
+        { native: "Sáu", pron: "SOW", en: "6" },
+        { native: "Bảy", pron: "BAY", en: "7" },
+        { native: "Tám", pron: "TAM", en: "8" },
+        { native: "Chín", pron: "JIN", en: "9" },
+        { native: "Mười", pron: "MUOI", en: "10" },
+        { native: "Một trăm", pron: "mot TRAM", en: "100" },
+        { native: "Một nghìn", pron: "mot NYIN", en: "1,000" },
+      ],
+      emergency: [
+        { native: "Cứu tôi với!", pron: "KUU toy voi!", en: "Help!" },
+        { native: "Gọi cảnh sát!", pron: "GOY kang SAT!", en: "Call the police!" },
+        { native: "Gọi cấp cứu!", pron: "GOY kap KUU!", en: "Call an ambulance!" },
+        { native: "Bệnh viện ở đâu?", pron: "BEN vyen uh DOW?", en: "Where is the hospital?" },
+        { native: "Tôi bị cướp", pron: "toy bee KOOP", en: "I've been robbed" },
+        { native: "Tôi cần bác sĩ", pron: "toy KAN bak SEE", en: "I need a doctor" },
+        { native: "Tôi bị dị ứng", pron: "toy bee YEE ung", en: "I have an allergy" },
+      ],
+    },
+  },
+
+  spain: {
+    name: "Spain", flag: "🇪🇸", lang: "Español", langCode: "es-ES", latinScript: true,
+    tips: {
+      greetings: '💡 <em>Hola</em> works everywhere. Spaniards are warm — a smile and an attempt at Spanish goes a very long way.',
+      food: '💡 Lunch (2–4pm) is the main meal. Dinner rarely starts before 9pm. Many kitchens close between 4–8pm.',
+      directions: '💡 Spanish cities have excellent metro systems. Buy a 10-trip card (Tarjeta Multi) in Madrid — much cheaper per ride.',
+      numbers: '💡 Spanish numbers are logical and regular from 1–30, then follow a consistent pattern.',
+      emergency: '💡 Emergency: <strong>112</strong> (all services). Tourist police in Barcelona: <strong>092</strong>.',
+    },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type C/F (220V)" },
+      { icon: "💵", label: "Currency", value: "Euro (€)" },
+      { icon: "🚑", label: "Emergency", value: "112" },
+      { icon: "🚗", label: "Driving", value: "Right" },
+      { icon: "💧", label: "Tap Water", value: "Safe (locals prefer bottled)" },
+      { icon: "🛂", label: "Visa", value: "90 days (Schengen)" },
+    ],
+    culture: [
+      { e: "💋", rule: "Cheek-to-cheek kiss as greeting", note: "Two kisses (right cheek first) between friends, even if meeting for the first time. Men often kiss women; men may hug each other." },
+      { e: "🌙", rule: "Dinner is late — really late", note: "Restaurants fill up after 9pm. Eating before 8pm marks you as a tourist. Clubs don't get busy until 2am." },
+      { e: "😴", rule: "Siesta is real", note: "Many shops close 2–5pm, especially outside major cities. Plan your shopping around it." },
+      { e: "🍺", rule: "Tapa with every drink in some cities", note: "In Granada, Seville, and smaller cities, ordering a drink often comes with a free tapa. In Barcelona, it usually doesn't." },
+      { e: "⚽", rule: "Football allegiances run deep", note: "Real Madrid vs Barça is more than sport — it's political. Read the room before expressing opinions." },
+      { e: "🗣️", rule: "Speak up — noise is normal", note: "Spanish social culture is lively and loud by Northern European standards. Don't mistake volume for argument." },
+    ],
+    money: [
+      { e: "💳", rule: "Cards widely accepted", note: "Contactless works nearly everywhere in cities. Some rural restaurants and markets are cash-only — carry €20–40." },
+      { e: "🍽️", rule: "Menú del día is incredible value", note: "A set lunch menu (starter, main, dessert, drink) for €10–15 at local restaurants. Only available at lunchtime." },
+      { e: "🏬", rule: "VAT refund for non-EU visitors", note: "Claim IVA tax back (21%) at the airport for purchases over €90 at eligible shops. Ask for a 'Tax Free' form." },
+      { e: "🚫", rule: "Avoid plaza mayor tourist traps", note: "Restaurants on the main plazas charge 2–3x what you'd pay one street back. Walk away from the square." },
+      { e: "🎯", rule: "Tipping is modest, not mandatory", note: "Round up or leave 5–10% for good service. Leaving nothing is acceptable. American-style 20% tipping is not expected." },
+    ],
+    food: [
+      { e: "🥩", name: "Jamón ibérico", what: "World-class air-cured ham from acorn-fed black pigs — one of Spain's greatest exports", tip: "Splurge on Jamón ibérico de bellota (acorn-fed). Slice thin and eat at room temperature." },
+      { e: "🥔", name: "Patatas bravas", what: "Fried potato cubes with spicy tomato sauce and/or aioli — the quintessential tapa", tip: "Every bar makes them slightly differently. Finding your favourite version is a worthy quest." },
+      { e: "🍤", name: "Gambas al ajillo", what: "Prawns sizzled in olive oil with garlic and dried chilli — served in a clay dish", tip: "Mop up every drop of the oil with bread. The best part." },
+      { e: "🥘", name: "Paella valenciana", what: "Saffron rice with rabbit, chicken, and green beans — the original paella from Valencia", tip: "If a paella is ready in under 20 minutes, it's frozen. Proper paella takes 40+ minutes." },
+      { e: "🍫", name: "Churros con chocolate", what: "Fried dough sticks dunked in thick, dark hot chocolate — breakfast or late-night snack", tip: "Best at a chocolatería on a cold morning. Not the thin churros — the thick porras version is better." },
+      { e: "🍷", name: "Rioja / Cava", what: "Spain's world-famous red wine from La Rioja, or Cava sparkling wine from Catalonia", tip: "Order house wine by the glass — quality is high and the price is low. Vermut (vermouth) is the local aperitif." },
+    ],
+    safety: [
+      { e: "🎒", rule: "Pickpockets on Las Ramblas & Gran Vía", note: "Barcelona's Las Ramblas and Madrid's Gran Vía are among Europe's worst for pickpocketing. Use a cross-body bag, zip all pockets." },
+      { e: "👕", rule: "Distraction scam — 'bird poo'", note: "Someone claims you have something on your jacket and 'helps' clean it while an accomplice goes through your bag. Refuse any contact." },
+      { e: "🌙", rule: "Drink spiking in clubs", note: "Keep your drink in hand in Ibiza, Magaluf, and Barcelona's tourist clubs. Don't leave drinks unattended." },
+      { e: "🚗", rule: "Don't leave anything visible in rental cars", note: "Smash-and-grab theft from parked cars is common in tourist areas. Take everything out, even bags from the boot." },
+      { e: "🌡️", rule: "Summer heat in Andalucía", note: "Temperatures exceed 40°C in Seville, Córdoba, and Granada in July–August. Stay hydrated and avoid midday sun." },
+    ],
+    apps: [
+      { e: "🚇", cat: "Transit", name: "Moovit", desc: "Covers metro, bus, and tram in Madrid, Barcelona, and major Spanish cities.", ios: "https://apps.apple.com/app/id498477945", android: "https://play.google.com/store/apps/details?id=com.tranzmate" },
+      { e: "🚕", cat: "Rides", name: "Cabify", desc: "Spain's dominant ride-hailing alternative to Uber. Works across major cities.", ios: "https://apps.apple.com/app/id476087442", android: "https://play.google.com/store/apps/details?id=cabify.mobile.app" },
+      { e: "💬", cat: "Language", name: "Google Translate", desc: "Camera mode reads menus and signs. Download the Spanish offline pack.", ios: "https://apps.apple.com/app/id414681729", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.translate" },
+      { e: "💶", cat: "Money", name: "Revolut", desc: "Excellent euro exchange rates with no foreign transaction fees.", ios: "https://apps.apple.com/app/id1086924912", android: "https://play.google.com/store/apps/details?id=com.revolut.revolut" },
+      { e: "🎫", cat: "Activities", name: "GetYourGuide", desc: "Skip-the-line tickets for Sagrada Família, Alhambra, and Prado Museum.", ios: "https://apps.apple.com/app/id657741529", android: "https://play.google.com/store/apps/details?id=com.getyourguide.android" },
+      { e: "🏨", cat: "Stay", name: "Booking.com", desc: "Free cancellation filters. Spain has excellent boutique hotels and paradors.", ios: "https://apps.apple.com/app/id367003839", android: "https://play.google.com/store/apps/details?id=com.booking" },
+    ],
+    data: {
+      greetings: [
+        { native: "Hola", pron: "O-la", en: "Hello" },
+        { native: "Buenos días", pron: "BWE-nos DEE-as", en: "Good morning" },
+        { native: "Buenas tardes", pron: "BWE-nas TAR-des", en: "Good afternoon / evening" },
+        { native: "Gracias", pron: "GRA-syas", en: "Thank you" },
+        { native: "De nada", pron: "de NA-da", en: "You're welcome" },
+        { native: "Por favor", pron: "por fa-VOR", en: "Please" },
+        { native: "Perdona", pron: "per-DO-na", en: "Excuse me" },
+        { native: "No entiendo", pron: "no en-TYEN-do", en: "I don't understand" },
+        { native: "¿Hablas inglés?", pron: "AB-las een-GLES?", en: "Do you speak English?" },
+      ],
+      food: [
+        { native: "La carta, por favor", pron: "la KAR-ta por fa-VOR", en: "The menu, please" },
+        { native: "¿Qué recomienda?", pron: "ke re-ko-MYEN-da?", en: "What do you recommend?" },
+        { native: "Soy vegetariano/a", pron: "soy ve-he-ta-RYA-no/a", en: "I'm vegetarian" },
+        { native: "¡Está delicioso!", pron: "es-TA de-li-SYO-so!", en: "This is delicious!" },
+        { native: "La cuenta, por favor", pron: "la KWEN-ta por fa-VOR", en: "The bill, please" },
+        { native: "Sin gluten", pron: "sin GLOO-ten", en: "Gluten-free" },
+        { native: "Tengo alergia a...", pron: "TEN-go a-LER-hya a...", en: "I'm allergic to..." },
+      ],
+      directions: [
+        { native: "¿Dónde está...?", pron: "DON-de es-TA...?", en: "Where is...?" },
+        { native: "Estoy perdido/a", pron: "es-TOY per-DEE-do/a", en: "I'm lost" },
+        { native: "A la derecha", pron: "a la de-RE-cha", en: "To the right" },
+        { native: "A la izquierda", pron: "a la ees-KYER-da", en: "To the left" },
+        { native: "Todo recto", pron: "TO-do REK-to", en: "Straight ahead" },
+        { native: "¿Hay un metro cerca?", pron: "eye oon ME-tro SER-ka?", en: "Is there a metro nearby?" },
+        { native: "¿Cuánto tarda?", pron: "KWAN-to TAR-da?", en: "How long does it take?" },
+      ],
+      shopping: [
+        { native: "¿Cuánto cuesta?", pron: "KWAN-to KWES-ta?", en: "How much is this?" },
+        { native: "Es demasiado caro", pron: "es de-ma-SYA-do KA-ro", en: "It's too expensive" },
+        { native: "¿Puedo pagar con tarjeta?", pron: "PWE-do pa-GAR kon tar-HE-ta?", en: "Can I pay by card?" },
+        { native: "Solo estoy mirando", pron: "SO-lo es-TOY mi-RAN-do", en: "Just browsing" },
+        { native: "Me llevo esto", pron: "me YE-vo ES-to", en: "I'll take this" },
+        { native: "¿Tiene otra talla?", pron: "TYE-ne O-tra TA-ya?", en: "Do you have another size?" },
+        { native: "¿Puede darme un recibo?", pron: "PWE-de DAR-me oon re-SI-bo?", en: "Can I have a receipt?" },
+      ],
+      numbers: [
+        { native: "Uno", pron: "OO-no", en: "1" },
+        { native: "Dos", pron: "dos", en: "2" },
+        { native: "Tres", pron: "tres", en: "3" },
+        { native: "Cuatro", pron: "KWA-tro", en: "4" },
+        { native: "Cinco", pron: "SEEN-ko", en: "5" },
+        { native: "Seis", pron: "seis", en: "6" },
+        { native: "Siete", pron: "SYE-te", en: "7" },
+        { native: "Ocho", pron: "O-cho", en: "8" },
+        { native: "Nueve", pron: "NWE-ve", en: "9" },
+        { native: "Diez", pron: "dyes", en: "10" },
+        { native: "Cien", pron: "syen", en: "100" },
+        { native: "Mil", pron: "mil", en: "1,000" },
+      ],
+      emergency: [
+        { native: "¡Ayuda!", pron: "a-YOO-da!", en: "Help!" },
+        { native: "¡Llame a la policía!", pron: "YA-me a la po-li-SEE-a!", en: "Call the police!" },
+        { native: "¡Llame a una ambulancia!", pron: "YA-me a OO-na am-boo-LAN-sya!", en: "Call an ambulance!" },
+        { native: "¿Dónde está el hospital?", pron: "DON-de es-TA el os-pi-TAL?", en: "Where is the hospital?" },
+        { native: "Me han robado", pron: "me an ro-BA-do", en: "I've been robbed" },
+        { native: "Necesito un médico", pron: "ne-se-SI-to oon ME-di-ko", en: "I need a doctor" },
+        { native: "Tengo una alergia", pron: "TEN-go OO-na a-LER-hya", en: "I have an allergy" },
+      ],
+    },
+  },
+
+  italy: {
+    name: "Italy", flag: "🇮🇹", lang: "Italiano", langCode: "it-IT", latinScript: true,
+    tips: {
+      greetings: '💡 <em>Ciao</em> is informal — use <em>Buongiorno</em> or <em>Buonasera</em> with strangers and in shops.',
+      food: '💡 <em>Coperto</em> (cover charge, €1–3) is legal and normal — it\'s in the menu. Service is separate from tipping.',
+      directions: '💡 ZTL zones (restricted traffic areas) in historic centres are camera-enforced. Never drive into them — fines follow you home.',
+      numbers: '💡 Italian numbers are irregular 11–19 then follow a logical pattern. Learn <em>venti</em> (20) and build from there.',
+      emergency: '💡 General emergency: <strong>112</strong>. Police (Carabinieri): <strong>112</strong>. Medical emergency: <strong>118</strong>.',
+    },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type C/F/L (220V)" },
+      { icon: "💵", label: "Currency", value: "Euro (€)" },
+      { icon: "🚑", label: "Emergency", value: "112 / 118" },
+      { icon: "🚗", label: "Driving", value: "Right" },
+      { icon: "💧", label: "Tap Water", value: "Safe (Rome's is excellent)" },
+      { icon: "🛂", label: "Visa", value: "90 days (Schengen)" },
+    ],
+    culture: [
+      { e: "☕", rule: "Cappuccino only before noon", note: "Ordering a cappuccino after a meal marks you immediately as a tourist. Espresso is what Italians drink after lunch and dinner." },
+      { e: "⛪", rule: "Strict dress codes at churches", note: "Cover shoulders and knees at all churches and the Vatican. Many enforce this at the entrance — wraps are often available to rent." },
+      { e: "🤌", rule: "Gestures are communication", note: "Italians use their hands extensively when speaking — it's warmth, not agitation. Don't be alarmed." },
+      { e: "🕐", rule: "Kitchens close between lunch and dinner", note: "Most trattorias and restaurants don't serve food from 3–7pm. Aperitivo time (6–8pm) fills the gap." },
+      { e: "👔", rule: "Use Lei (formal you) with strangers", note: "Using the informal 'tu' with shopkeepers or strangers can come across as rude. 'Lei' is the safe default." },
+      { e: "🚰", rule: "Nasoni fountains in Rome are drinkable", note: "The street fountains (nasoni) throughout Rome dispense excellent cold drinking water — bring a refillable bottle." },
+    ],
+    money: [
+      { e: "💶", rule: "Coperto is legal — not a scam", note: "The cover charge (€1–3 per person) is printed in the menu and legally required to be disclosed. It's not a tip." },
+      { e: "💵", rule: "Cash-only at many trattorias", note: "Smaller family-run restaurants outside tourist centres often don't take cards. Carry €30–50 cash." },
+      { e: "🚫", rule: "Avoid piazza restaurants", note: "Restaurants on famous squares (Campo de' Fiori, Piazza Navona) are tourist traps — same food, double the price. Walk one block away." },
+      { e: "💧", rule: "Acqua naturale o frizzante?", note: "Always specify: naturale (still) or frizzante (sparkling). Tap water (acqua del rubinetto) is free if you ask." },
+      { e: "🎯", rule: "Tipping is not expected", note: "Round up or leave small change if happy. 5–10% for exceptional service. Never feel obligated." },
+    ],
+    food: [
+      { e: "🍝", name: "Cacio e pepe", what: "Rome's simplest and greatest pasta — just Pecorino cheese and black pepper, nothing else", tip: "Only order this in Rome. Anywhere else it's likely pre-made. The best versions have a silky, emulsified sauce." },
+      { e: "🍕", name: "Pizza Napoletana", what: "Soft, chewy, slightly charred at the edges — wet in the centre by design. Only from Naples.", tip: "The thick, pillowy Neapolitan style is the original. Tonda Romana (thin and crispy) is Rome's version." },
+      { e: "🍨", name: "Gelato", what: "Italy's dense, slow-churned ice cream — far less air than regular ice cream", tip: "Avoid gelato in bright mounds or plastic tubs — look for metal containers with lids (pastoso style). Price reflects quality." },
+      { e: "🍊", name: "Aperitivo (Spritz)", what: "Campari or Aperol with prosecco and soda — Italy's pre-dinner ritual, often with free bar snacks", tip: "Best watched at sunset in Venice or at a bar in Milan's Brera district. Aperitivo hour is 6–8pm." },
+      { e: "🥩", name: "Bistecca alla Fiorentina", what: "Thick-cut T-bone steak from Chianina cattle, grilled rare — a Florentine institution", tip: "Priced by the kilo (usually 800g–1.2kg). Order 'al sangue' (rare) — it's the only proper way." },
+      { e: "🍞", name: "Supplì (Rome) / Arancini (Sicily)", what: "Fried rice balls filled with ragù and mozzarella — perfect street food", tip: "In Rome: supplì al telefono (the cheese stretches like a phone cord). In Sicily: arancini (cone-shaped, larger)." },
+    ],
+    safety: [
+      { e: "🎒", rule: "Colosseum and Vatican area pickpockets", note: "Extremely active around major tourist sites. Use a cross-body bag, keep phones in front pockets, and stay alert in crowds." },
+      { e: "🌸", rule: "The rose scam", note: "Someone places a rose in your hand or on your partner — then aggressively demands payment. Drop it and walk away." },
+      { e: "🚕", rule: "Agree on taxi price before getting in", note: "Especially from airports and train stations. Official taxis have set rates to city centre — insist on the meter or confirm the fixed rate." },
+      { e: "🚗", rule: "ZTL fines are automatic", note: "Historic centres have camera-enforced restricted zones. If you drive in with a rental car, fines arrive weeks later — often €100+." },
+      { e: "🛍️", rule: "Buying fake goods is illegal", note: "Purchasing counterfeit bags or goods from street sellers is illegal in Italy — tourists have been fined on the spot." },
+    ],
+    apps: [
+      { e: "🚇", cat: "Transit", name: "Moovit", desc: "Best for Rome metro, Milan subway, and bus connections across all Italian cities.", ios: "https://apps.apple.com/app/id498477945", android: "https://play.google.com/store/apps/details?id=com.tranzmate" },
+      { e: "🚕", cat: "Rides", name: "itTaxi", desc: "Official taxi app across Italy — metered, licensed, no surge pricing.", ios: "https://apps.apple.com/app/id581701170", android: "https://play.google.com/store/apps/details?id=com.ittaxi.passenger" },
+      { e: "💬", cat: "Language", name: "Google Translate", desc: "Camera mode reads Italian menus. Download offline pack for connectivity-free use.", ios: "https://apps.apple.com/app/id414681729", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.translate" },
+      { e: "💶", cat: "Money", name: "Revolut", desc: "Excellent euro rates, contactless, and fee-free spending across Italy.", ios: "https://apps.apple.com/app/id1086924912", android: "https://play.google.com/store/apps/details?id=com.revolut.revolut" },
+      { e: "🎫", cat: "Activities", name: "GetYourGuide", desc: "Skip-the-line access to the Colosseum, Vatican Museums, and Uffizi Gallery.", ios: "https://apps.apple.com/app/id657741529", android: "https://play.google.com/store/apps/details?id=com.getyourguide.android" },
+      { e: "🏨", cat: "Stay", name: "Booking.com", desc: "Free cancellation filters. Italy has excellent agriturismi (farm stays) worth booking early.", ios: "https://apps.apple.com/app/id367003839", android: "https://play.google.com/store/apps/details?id=com.booking" },
+    ],
+    data: {
+      greetings: [
+        { native: "Ciao", pron: "chow", en: "Hi / Bye (informal)" },
+        { native: "Buongiorno", pron: "bwon-JOR-no", en: "Good morning" },
+        { native: "Buonasera", pron: "bwona-SE-ra", en: "Good evening" },
+        { native: "Grazie", pron: "GRA-tsye", en: "Thank you" },
+        { native: "Prego", pron: "PRE-go", en: "You're welcome" },
+        { native: "Per favore", pron: "per fa-VO-re", en: "Please" },
+        { native: "Mi scusi", pron: "mi SKOO-zi", en: "Excuse me (formal)" },
+        { native: "Non capisco", pron: "non ka-PEE-sko", en: "I don't understand" },
+        { native: "Parla inglese?", pron: "PAR-la een-GLE-ze?", en: "Do you speak English?" },
+      ],
+      food: [
+        { native: "Il menù, per favore", pron: "il me-NU per fa-VO-re", en: "The menu, please" },
+        { native: "Cosa mi consiglia?", pron: "KO-za mi kon-SI-lya?", en: "What do you recommend?" },
+        { native: "Sono vegetariano/a", pron: "SO-no ve-je-ta-RYA-no/a", en: "I'm vegetarian" },
+        { native: "È delizioso!", pron: "e de-li-TSYO-zo!", en: "It's delicious!" },
+        { native: "Il conto, per favore", pron: "il KON-to per fa-VO-re", en: "The bill, please" },
+        { native: "Acqua naturale", pron: "AK-wa na-too-RA-le", en: "Still water" },
+        { native: "Sono allergico/a a...", pron: "SO-no al-LER-ji-ko/a a...", en: "I'm allergic to..." },
+      ],
+      directions: [
+        { native: "Dov'è...?", pron: "do-VE?", en: "Where is...?" },
+        { native: "Mi sono perso/a", pron: "mi SO-no PER-so/a", en: "I'm lost" },
+        { native: "A destra", pron: "a DES-tra", en: "To the right" },
+        { native: "A sinistra", pron: "a si-NIS-tra", en: "To the left" },
+        { native: "Dritto", pron: "DRIT-to", en: "Straight ahead" },
+        { native: "È lontano?", pron: "e lon-TA-no?", en: "Is it far?" },
+        { native: "La stazione", pron: "la sta-TSYO-ne", en: "The train station" },
+      ],
+      shopping: [
+        { native: "Quanto costa?", pron: "KWAN-to KOS-ta?", en: "How much does it cost?" },
+        { native: "È troppo caro", pron: "e TROP-po KA-ro", en: "It's too expensive" },
+        { native: "Posso pagare con carta?", pron: "POS-so pa-GA-re kon KAR-ta?", en: "Can I pay by card?" },
+        { native: "Sto solo guardando", pron: "sto SO-lo gwar-DAN-do", en: "Just browsing" },
+        { native: "Lo prendo", pron: "lo PREN-do", en: "I'll take it" },
+        { native: "Ha un'altra taglia?", pron: "a oo-NAL-tra TA-lya?", en: "Another size?" },
+        { native: "Uno scontrino, per favore", pron: "OO-no skon-TRI-no per fa-VO-re", en: "A receipt, please" },
+      ],
+      numbers: [
+        { native: "Uno", pron: "OO-no", en: "1" },
+        { native: "Due", pron: "DOO-e", en: "2" },
+        { native: "Tre", pron: "tre", en: "3" },
+        { native: "Quattro", pron: "KWAT-tro", en: "4" },
+        { native: "Cinque", pron: "CHEEN-kwe", en: "5" },
+        { native: "Sei", pron: "sei", en: "6" },
+        { native: "Sette", pron: "SET-te", en: "7" },
+        { native: "Otto", pron: "OT-to", en: "8" },
+        { native: "Nove", pron: "NO-ve", en: "9" },
+        { native: "Dieci", pron: "DYE-chi", en: "10" },
+        { native: "Cento", pron: "CHEN-to", en: "100" },
+        { native: "Mille", pron: "MIL-le", en: "1,000" },
+      ],
+      emergency: [
+        { native: "Aiuto!", pron: "a-YOO-to!", en: "Help!" },
+        { native: "Chiamate la polizia!", pron: "kya-MA-te la po-LI-tsya!", en: "Call the police!" },
+        { native: "Chiamate un'ambulanza!", pron: "kya-MA-te oon am-boo-LAN-tsa!", en: "Call an ambulance!" },
+        { native: "Dov'è l'ospedale?", pron: "do-VE los-pe-DA-le?", en: "Where is the hospital?" },
+        { native: "Mi hanno derubato", pron: "mi AN-no de-roo-BA-to", en: "I've been robbed" },
+        { native: "Ho bisogno di un medico", pron: "o bi-ZO-nyo di oon ME-di-ko", en: "I need a doctor" },
+        { native: "Sono allergico/a a...", pron: "SO-no al-LER-ji-ko/a a...", en: "I'm allergic to..." },
+      ],
+    },
+  },
+
+  germany: {
+    name: "Germany", flag: "🇩🇪", lang: "Deutsch", langCode: "de-DE", latinScript: true,
+    tips: {
+      greetings: '💡 Germans value directness — "Guten Tag" in a shop before speaking is polite. Small talk is less common than in southern Europe.',
+      food: '💡 Most restaurants add Trinkgeld (tip) expectations of 5–10%. Give cash directly to the server — don\'t leave it on the table.',
+      directions: '💡 Germany\'s train system (Deutsche Bahn) is excellent but notoriously delayed. Always build buffer time for connections.',
+      numbers: '💡 Germans write 1 with a serif (looks like 7 to some). A slash through 7 distinguishes it. Ask if unsure.',
+      emergency: '💡 General emergency: <strong>112</strong>. Police: <strong>110</strong>.',
+    },
+    quickFacts: [
+      { icon: "🔌", label: "Plug", value: "Type C/F (220V)" },
+      { icon: "💵", label: "Currency", value: "Euro (€)" },
+      { icon: "🚑", label: "Emergency", value: "112 / 110" },
+      { icon: "🚗", label: "Driving", value: "Right" },
+      { icon: "💧", label: "Tap Water", value: "Excellent quality" },
+      { icon: "🛂", label: "Visa", value: "90 days (Schengen)" },
+    ],
+    culture: [
+      { e: "⏰", rule: "Punctuality is non-negotiable", note: "Being on time is not polite — it is the minimum expectation. Being 5 minutes late requires a brief apology." },
+      { e: "🗣️", rule: "Directness is a virtue, not rudeness", note: "Germans say exactly what they mean. Don't mistake bluntness for unfriendliness — it's genuine and they prefer it." },
+      { e: "🛍️", rule: "Almost everything is closed on Sundays", note: "Sunday is legally protected rest time. Stock up on groceries Saturday. Petrol stations and some bakeries remain open." },
+      { e: "♻️", rule: "Recycling is serious", note: "Separate your waste into paper, plastic, bio, and glass. The Pfand (deposit) bottle system means you return bottles to the supermarket." },
+      { e: "👁️", rule: "Eye contact when toasting", note: "Hold eye contact with every person when clinking glasses. Breaking eye contact during a toast is considered bad luck." },
+      { e: "🚴", rule: "Respect the cycle lane", note: "Cycling lanes are often next to the pavement and not always clearly marked. Walking in them will earn you an angry bell." },
+    ],
+    money: [
+      { e: "💵", rule: "Germany is more cash-oriented than expected", note: "Many restaurants, cafés, and smaller shops don't accept cards. Carry €30–50 cash, especially outside major cities." },
+      { e: "💳", rule: "EC (Girocard) is preferred over Visa/Mastercard", note: "German debit cards work on a different network. Your foreign Visa/Mastercard should still work at most terminals — but not always." },
+      { e: "🍺", rule: "Tip directly to the server in cash", note: "Say the amount you want to pay (e.g., 'Achtzehn Euro' for an €16 bill + €2 tip). Don't leave cash on the table after you've left." },
+      { e: "🔄", rule: "Pfand — bottle deposit is real", note: "Pay a deposit (€0.08–0.25) on plastic/glass bottles. Return them at supermarket machines for credit. Locals do it religiously." },
+      { e: "☀️", rule: "Plan shopping around Sunday", note: "Shops are legally required to close on Sundays. Plan grocery shopping for Saturday or use petrol station shops in emergencies." },
+    ],
+    food: [
+      { e: "🌭", name: "Currywurst", what: "Sliced pork sausage smothered in curried ketchup — Berlin's iconic street food", tip: "Best from a Imbiss (street kiosk) with a plastic fork and chips (Pommes). Curry 36 in Berlin is legendary." },
+      { e: "🥨", name: "Brezel (Pretzel)", what: "Soft, chewy baked pretzel with coarse salt — the perfect beer hall snack", tip: "Best eaten warm with butter. Order 'mit Butter' at a Bavarian bakery in the morning." },
+      { e: "🍺", name: "Regional beer culture", what: "Each region has its own style — Bavarian Helles (lager), Berliner Weisse (sour wheat), Cologne's Kölsch (served in tiny 200ml glasses)", tip: "In Cologne, waiters refill your Kölsch automatically until you put a coaster on top of your glass." },
+      { e: "🥩", name: "Schnitzel", what: "Breaded and pan-fried veal or pork cutlet — best at a traditional Gasthaus (pub-restaurant)", tip: "Authentic Wiener Schnitzel must be veal. Schnitzel Wiener Art (pork) is common and nearly as good." },
+      { e: "🧀", name: "Käsespätzle", what: "Swabian egg noodles baked with melted cheese and topped with fried onions — Germany's answer to mac and cheese", tip: "A Baden-Württemberg staple. Rich and filling — one portion is usually enough for a full meal." },
+      { e: "🥐", name: "Bäckerei (bakery) breakfast", what: "Fresh bread rolls (Brötchen) with cold cuts, cheese, and butter — Germany's daily breakfast ritual", tip: "Buy from a proper Bäckerei, not a supermarket. Germans are passionate about their bread — over 300 varieties." },
+    ],
+    safety: [
+      { e: "🛡️", rule: "Germany is very safe overall", note: "Low violent crime. The main tourist concerns are petty theft in crowded city centres and train stations." },
+      { e: "🚲", rule: "Cycling lanes are enforced", note: "Walking in a cycling lane risks a collision — cyclists move fast and have right of way. Always check before stepping off the pavement." },
+      { e: "📋", rule: "Rules are followed and expected", note: "Germans follow rules closely. Jaywalking, skipping queues, or loud behaviour in residential areas will draw visible disapproval." },
+      { e: "🚂", rule: "Validate your train ticket", note: "Regional trains (not ICE) often require you to validate (stamp) your ticket before boarding. Inspectors check — fine is €60 on the spot." },
+      { e: "🌙", rule: "Ruhezeit (quiet hours)", note: "Noise restrictions apply 10pm–6am and all day Sunday. Loud parties, power tools, or music will upset neighbours — and it's enforceable." },
+    ],
+    apps: [
+      { e: "🚂", cat: "Transit", name: "DB Navigator", desc: "Deutsche Bahn's official app — essential for train tickets, platform info, and delay alerts.", ios: "https://apps.apple.com/app/id343555245", android: "https://play.google.com/store/apps/details?id=de.hafas.android.db" },
+      { e: "🚕", cat: "Rides", name: "Bolt", desc: "Cheaper than Uber across Germany. Works in Berlin, Hamburg, Munich, and major cities.", ios: "https://apps.apple.com/app/id675033630", android: "https://play.google.com/store/apps/details?id=ee.mtakso.client" },
+      { e: "💬", cat: "Language", name: "DeepL", desc: "Germany's own AI translator — better than Google Translate for German. Download the offline pack.", ios: "https://apps.apple.com/app/id1245403386", android: "https://play.google.com/store/apps/details?id=com.deepl.mobiletranslator" },
+      { e: "💶", cat: "Money", name: "Wise", desc: "Best euro exchange rates. Set up before you leave — saves on ATM fees.", ios: "https://apps.apple.com/app/id612261027", android: "https://play.google.com/store/apps/details?id=com.transferwise.android" },
+      { e: "🎫", cat: "Activities", name: "GetYourGuide", desc: "Berlin Wall tours, Neuschwanstein tickets, and Rhine River cruises — book ahead.", ios: "https://apps.apple.com/app/id657741529", android: "https://play.google.com/store/apps/details?id=com.getyourguide.android" },
+      { e: "🏨", cat: "Stay", name: "Booking.com", desc: "Free cancellation filters. Germany's hotel scene ranges from youth hostels to castle hotels.", ios: "https://apps.apple.com/app/id367003839", android: "https://play.google.com/store/apps/details?id=com.booking" },
+    ],
+    data: {
+      greetings: [
+        { native: "Guten Tag", pron: "GOO-ten takh", en: "Good day / Hello" },
+        { native: "Guten Morgen", pron: "GOO-ten MOR-gen", en: "Good morning" },
+        { native: "Guten Abend", pron: "GOO-ten AH-bent", en: "Good evening" },
+        { native: "Danke schön", pron: "DAN-ke shern", en: "Thank you very much" },
+        { native: "Bitte", pron: "BIT-te", en: "Please / You're welcome" },
+        { native: "Entschuldigung", pron: "ent-SHOOL-di-gung", en: "Excuse me / Sorry" },
+        { native: "Auf Wiedersehen", pron: "owf VEE-der-zayn", en: "Goodbye" },
+        { native: "Ich verstehe nicht", pron: "ikh fer-SHTAY-e nikht", en: "I don't understand" },
+        { native: "Sprechen Sie Englisch?", pron: "SHPRE-khen zee ENG-lish?", en: "Do you speak English?" },
+      ],
+      food: [
+        { native: "Die Speisekarte, bitte", pron: "dee SHPAI-ze-kar-te BIT-te", en: "The menu, please" },
+        { native: "Was empfehlen Sie?", pron: "vas em-PFAY-len zee?", en: "What do you recommend?" },
+        { native: "Ich bin Vegetarier/in", pron: "ikh bin ve-ge-TA-ri-er/in", en: "I'm vegetarian" },
+        { native: "Das schmeckt sehr gut!", pron: "das shmekt zayr goot!", en: "This tastes very good!" },
+        { native: "Die Rechnung, bitte", pron: "dee REK-nung BIT-te", en: "The bill, please" },
+        { native: "Ohne Gluten", pron: "O-ne GLOO-ten", en: "Without gluten" },
+        { native: "Ich bin allergisch gegen...", pron: "ikh bin a-LER-gish GAY-gen...", en: "I'm allergic to..." },
+      ],
+      directions: [
+        { native: "Wo ist...?", pron: "vo ist?", en: "Where is...?" },
+        { native: "Ich habe mich verirrt", pron: "ikh HA-be mikh fer-IRT", en: "I'm lost" },
+        { native: "Rechts", pron: "rekhts", en: "Right" },
+        { native: "Links", pron: "links", en: "Left" },
+        { native: "Geradeaus", pron: "ge-RA-de-ows", en: "Straight ahead" },
+        { native: "Wie weit ist es?", pron: "vee vait ist es?", en: "How far is it?" },
+        { native: "Der Bahnhof", pron: "der BAN-hof", en: "The train station" },
+      ],
+      shopping: [
+        { native: "Was kostet das?", pron: "vas KOS-tet das?", en: "How much does this cost?" },
+        { native: "Das ist zu teuer", pron: "das ist tsoo TOY-er", en: "That's too expensive" },
+        { native: "Kann ich mit Karte zahlen?", pron: "kan ikh mit KAR-te TSA-len?", en: "Can I pay by card?" },
+        { native: "Ich schaue nur", pron: "ikh SHOW-e noor", en: "Just browsing" },
+        { native: "Ich nehme das", pron: "ikh NAY-me das", en: "I'll take this" },
+        { native: "Haben Sie eine andere Größe?", pron: "HA-ben zee EI-ne AN-de-re GER-se?", en: "Do you have another size?" },
+        { native: "Einen Kassenbon, bitte", pron: "EI-nen KA-sen-bon BIT-te", en: "A receipt, please" },
+      ],
+      numbers: [
+        { native: "Eins", pron: "ains", en: "1" },
+        { native: "Zwei", pron: "tsvai", en: "2" },
+        { native: "Drei", pron: "drai", en: "3" },
+        { native: "Vier", pron: "fear", en: "4" },
+        { native: "Fünf", pron: "fewnf", en: "5" },
+        { native: "Sechs", pron: "zeks", en: "6" },
+        { native: "Sieben", pron: "ZEE-ben", en: "7" },
+        { native: "Acht", pron: "akht", en: "8" },
+        { native: "Neun", pron: "noyn", en: "9" },
+        { native: "Zehn", pron: "tsayn", en: "10" },
+        { native: "Hundert", pron: "HOON-dert", en: "100" },
+        { native: "Tausend", pron: "TOW-zent", en: "1,000" },
+      ],
+      emergency: [
+        { native: "Hilfe!", pron: "HIL-fe!", en: "Help!" },
+        { native: "Rufen Sie die Polizei!", pron: "ROO-fen zee dee po-li-TSAI!", en: "Call the police!" },
+        { native: "Rufen Sie einen Krankenwagen!", pron: "ROO-fen zee EI-nen KRAN-ken-va-gen!", en: "Call an ambulance!" },
+        { native: "Wo ist das Krankenhaus?", pron: "vo ist das KRAN-ken-hows?", en: "Where is the hospital?" },
+        { native: "Ich wurde bestohlen", pron: "ikh VOOR-de be-SHTO-len", en: "I've been robbed" },
+        { native: "Ich brauche einen Arzt", pron: "ikh BROW-khe EI-nen artst", en: "I need a doctor" },
+        { native: "Ich bin allergisch gegen...", pron: "ikh bin a-LER-gish GAY-gen...", en: "I'm allergic to..." },
+      ],
+    },
+  },
+
 };
 
 // ─── STATE ───────────────────────────────────────────────────────────────────
 
 let currentLangCode = 'en';
+let currentCountryId = null;
+let quizQueue = [], quizIdx = 0, quizFlipped = false;
 const SECTIONS = ['greetings','food','directions','shopping','numbers','emergency'];
+const FAV_KEY = 'tpb_favs';
+
+function getFavs() { try { return JSON.parse(localStorage.getItem(FAV_KEY)||'{}'); } catch(e){ return {}; } }
+function saveFavs(f) { localStorage.setItem(FAV_KEY, JSON.stringify(f)); }
 
 // ─── HOME ────────────────────────────────────────────────────────────────────
 
@@ -896,6 +1887,7 @@ function buildHome() {
 
 function selectCountry(id) {
   const c = countries[id];
+  currentCountryId = id;
   currentLangCode = c.langCode;
 
   document.getElementById('pbFlag').textContent = c.flag;
@@ -908,17 +1900,20 @@ function selectCountry(id) {
   SECTIONS.forEach(s => {
     document.getElementById(`phrases-${s}`).innerHTML = '';
     const tip = document.getElementById(`tip-${s}`);
-    if (c.tips[s]) { tip.innerHTML = c.tips[s]; tip.style.display = ''; }
+    if (c.tips && c.tips[s]) { tip.innerHTML = c.tips[s]; tip.style.display = ''; }
     else tip.style.display = 'none';
   });
 
+  clearSearch();
   buildPhrases(c);
   buildTravelInfo(c);
+  updateSavedTab();
   showSectionById('greetings');
   setMode('phrases');
 
   document.getElementById('home').style.display = 'none';
   pb.style.display = 'block';
+  document.getElementById('emergencyFab').style.display = 'flex';
   window.scrollTo(0, 0);
 }
 
@@ -926,29 +1921,115 @@ function goHome() {
   window.speechSynthesis.cancel();
   document.getElementById('phrasebook').style.display = 'none';
   document.getElementById('home').style.display = 'block';
+  document.getElementById('emergencyFab').style.display = 'none';
   window.scrollTo(0, 0);
 }
 
 // ─── PHRASES ─────────────────────────────────────────────────────────────────
 
+function makePhraseCard(p, section, countryId) {
+  const favs = getFavs();
+  const key = `${countryId}:${section}:${p.native}`;
+  const isFav = !!favs[key];
+  const card = document.createElement('div');
+  card.className = 'phrase-card';
+  card.innerHTML = `
+    <button class="play-btn" onclick="speak(this, ${JSON.stringify(p.native)})">
+      <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <div class="phrase-text">
+      <div class="native">${p.native}</div>
+      <div class="pronunciation">${p.pron}</div>
+      <div class="english">${p.en}</div>
+    </div>
+    <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(this,${JSON.stringify(key)})" title="Save phrase">★</button>`;
+  return card;
+}
+
 function buildPhrases(country) {
   for (const [section, phrases] of Object.entries(country.data)) {
     const container = document.getElementById(`phrases-${section}`);
+    phrases.forEach(p => container.appendChild(makePhraseCard(p, section, currentCountryId)));
+  }
+}
+
+// ─── FAVOURITES ──────────────────────────────────────────────────────────────
+
+function toggleFav(btn, key) {
+  const favs = getFavs();
+  if (favs[key]) { delete favs[key]; btn.classList.remove('active'); }
+  else { favs[key] = true; btn.classList.add('active'); }
+  saveFavs(favs);
+  updateSavedTab();
+  if (document.getElementById('saved').classList.contains('active')) buildSavedSection();
+}
+
+function updateSavedTab() {
+  const favs = getFavs();
+  const hasFavs = Object.keys(favs).some(k => k.startsWith(currentCountryId + ':'));
+  document.getElementById('tabSaved').style.display = hasFavs ? '' : 'none';
+}
+
+function buildSavedSection() {
+  const favs = getFavs();
+  const container = document.getElementById('phrases-saved');
+  container.innerHTML = '';
+  const c = countries[currentCountryId];
+  let count = 0;
+  for (const [section, phrases] of Object.entries(c.data)) {
     phrases.forEach(p => {
-      const card = document.createElement('div');
-      card.className = 'phrase-card';
-      card.innerHTML = `
-        <button class="play-btn" onclick="speak(this, ${JSON.stringify(p.native)})">
-          <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-        <div class="phrase-text">
-          <div class="native">${p.native}</div>
-          <div class="pronunciation">${p.pron}</div>
-          <div class="english">${p.en}</div>
-        </div>`;
-      container.appendChild(card);
+      const key = `${currentCountryId}:${section}:${p.native}`;
+      if (favs[key]) { container.appendChild(makePhraseCard(p, section, currentCountryId)); count++; }
     });
   }
+  if (count === 0) {
+    container.innerHTML = `<div class="saved-empty"><span class="se-icon">⭐</span>Tap the ★ on any phrase to save it here.</div>`;
+  }
+}
+
+// ─── SEARCH ──────────────────────────────────────────────────────────────────
+
+function onSearch(val) {
+  const clear = document.getElementById('searchClear');
+  const results = document.getElementById('searchResults');
+  const tabs = document.getElementById('phraseTabs');
+  const sectionDivs = document.querySelectorAll('.section');
+  clear.style.display = val ? 'block' : 'none';
+  if (!val.trim()) {
+    results.style.display = 'none';
+    tabs.style.display = '';
+    sectionDivs.forEach(s => { if (s.id !== 'saved') s.style.display = ''; });
+    return;
+  }
+  tabs.style.display = 'none';
+  sectionDivs.forEach(s => s.style.display = 'none');
+  results.style.display = 'block';
+  results.innerHTML = '';
+  const q = val.toLowerCase();
+  const c = countries[currentCountryId];
+  let total = 0;
+  for (const [section, phrases] of Object.entries(c.data)) {
+    const matches = phrases.filter(p =>
+      p.native.toLowerCase().includes(q) || p.pron.toLowerCase().includes(q) || p.en.toLowerCase().includes(q)
+    );
+    if (!matches.length) continue;
+    const label = document.createElement('div');
+    label.className = 'search-group-label';
+    label.textContent = section.charAt(0).toUpperCase() + section.slice(1);
+    results.appendChild(label);
+    matches.forEach(p => { results.appendChild(makePhraseCard(p, section, currentCountryId)); total++; });
+  }
+  if (!total) results.innerHTML = '<div class="saved-empty"><span class="se-icon">🔍</span>No phrases match that search.</div>';
+}
+
+function clearSearch() {
+  const el = document.getElementById('searchInput');
+  if (el) el.value = '';
+  document.getElementById('searchClear').style.display = 'none';
+  document.getElementById('searchResults').style.display = 'none';
+  document.getElementById('searchResults').innerHTML = '';
+  document.getElementById('phraseTabs').style.display = '';
+  document.querySelectorAll('.section').forEach(s => s.style.display = '');
 }
 
 // ─── TRAVEL INFO ─────────────────────────────────────────────────────────────
@@ -965,23 +2046,62 @@ function showInfoTab(tab) {
 }
 
 function buildTravelInfo(country) {
-  // Reset to Culture tab
   showInfoTab('culture');
 
+  // Quick facts strip
+  const qf = document.getElementById('quickFacts');
+  qf.innerHTML = '';
+  if (country.quickFacts) country.quickFacts.forEach(f => {
+    const chip = document.createElement('div');
+    chip.className = 'qf-chip';
+    chip.innerHTML = `<span class="qf-icon">${f.icon}</span><div><span class="qf-label">${f.label}</span><span class="qf-val">${f.value}</span></div>`;
+    qf.appendChild(chip);
+  });
+
+  // Culture
   const cultureEl = document.getElementById('cultureList');
   cultureEl.innerHTML = '';
-  country.culture.forEach(item => {
+  if (country.culture) country.culture.forEach(item => {
     const el = document.createElement('div');
     el.className = 'culture-item';
-    el.innerHTML = `
-      <span class="ci-emoji">${item.e}</span>
-      <div><div class="ci-rule">${item.rule}</div><div class="ci-note">${item.note}</div></div>`;
+    el.innerHTML = `<span class="ci-emoji">${item.e}</span><div><div class="ci-rule">${item.rule}</div><div class="ci-note">${item.note}</div></div>`;
     cultureEl.appendChild(el);
   });
 
+  // Money
+  const moneyEl = document.getElementById('moneyList');
+  moneyEl.innerHTML = '';
+  if (country.money) country.money.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'money-item';
+    el.innerHTML = `<span class="mi-emoji">${item.e}</span><div><div class="mi-rule">${item.rule}</div><div class="mi-note">${item.note}</div></div>`;
+    moneyEl.appendChild(el);
+  });
+
+  // Food
+  const foodEl = document.getElementById('foodList');
+  foodEl.innerHTML = '';
+  if (country.food) country.food.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'food-item';
+    el.innerHTML = `<span class="fi-emoji">${item.e}</span><div><div class="fi-name">${item.name}</div><div class="fi-what">${item.what}</div>${item.tip?`<div class="fi-tip">${item.tip}</div>`:''}</div>`;
+    foodEl.appendChild(el);
+  });
+
+  // Safety
+  const safetyEl = document.getElementById('safetyList');
+  safetyEl.innerHTML = '';
+  if (country.safety) country.safety.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'safety-item';
+    el.innerHTML = `<span class="si-emoji">${item.e}</span><div><div class="si-rule">${item.rule}</div><div class="si-note">${item.note}</div></div>`;
+    safetyEl.appendChild(el);
+  });
+
+  // Apps
   const appsEl = document.getElementById('appsGrid');
   appsEl.innerHTML = '';
-  country.apps.forEach(app => {
+  if (country.apps) country.apps.forEach(app => {
     const el = document.createElement('div');
     el.className = 'app-tile';
     el.innerHTML = `
@@ -1001,12 +2121,95 @@ function buildTravelInfo(country) {
 // ─── MODE TOGGLE ─────────────────────────────────────────────────────────────
 
 function setMode(mode) {
-  const isPhrase = mode === 'phrases';
-  document.getElementById('phrasesPanel').style.display = isPhrase ? 'block' : 'none';
-  document.getElementById('travelInfo').style.display  = isPhrase ? 'none' : 'block';
-  document.getElementById('modePhrasesBtn').classList.toggle('active', isPhrase);
-  document.getElementById('modeInfoBtn').classList.toggle('active', !isPhrase);
-  if (isPhrase) window.speechSynthesis.cancel();
+  document.getElementById('phrasesPanel').style.display = mode === 'phrases' ? 'block' : 'none';
+  document.getElementById('quizPanel').style.display    = mode === 'quiz'    ? 'block' : 'none';
+  document.getElementById('travelInfo').style.display   = mode === 'info'    ? 'block' : 'none';
+  document.getElementById('modePhrasesBtn').classList.toggle('active', mode === 'phrases');
+  document.getElementById('modeQuizBtn').classList.toggle('active',    mode === 'quiz');
+  document.getElementById('modeInfoBtn').classList.toggle('active',    mode === 'info');
+  if (mode !== 'phrases') window.speechSynthesis.cancel();
+  if (mode === 'quiz') startQuiz();
+}
+
+// ─── QUIZ ─────────────────────────────────────────────────────────────────────
+
+function startQuiz() {
+  const c = countries[currentCountryId];
+  quizQueue = [];
+  for (const [section, phrases] of Object.entries(c.data)) {
+    phrases.forEach(p => quizQueue.push({ ...p, section }));
+  }
+  // Shuffle
+  for (let i = quizQueue.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [quizQueue[i], quizQueue[j]] = [quizQueue[j], quizQueue[i]];
+  }
+  quizIdx = 0;
+  document.getElementById('quizDone').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'flex';
+  document.getElementById('quizActions').classList.remove('show');
+  showQuizCard();
+}
+
+function showQuizCard() {
+  if (quizIdx >= quizQueue.length) {
+    document.getElementById('quizCard').style.display = 'none';
+    document.getElementById('quizActions').classList.remove('show');
+    document.getElementById('quizCounter').textContent = '';
+    document.getElementById('quizFill').style.width = '100%';
+    document.getElementById('quizDone').style.display = 'block';
+    return;
+  }
+  const p = quizQueue[quizIdx];
+  quizFlipped = false;
+  document.getElementById('quizFront').style.display = '';
+  document.getElementById('quizBack').style.display = 'none';
+  document.getElementById('quizActions').classList.remove('show');
+  document.getElementById('quizTag').textContent = p.section;
+  document.getElementById('quizTag2').textContent = p.section;
+  document.getElementById('quizEn').textContent = p.en;
+  document.getElementById('quizNative').textContent = p.native;
+  document.getElementById('quizPron').textContent = p.pron;
+  const pct = Math.round((quizIdx / quizQueue.length) * 100);
+  document.getElementById('quizFill').style.width = pct + '%';
+  document.getElementById('quizCounter').textContent = `${quizIdx + 1} of ${quizQueue.length}`;
+}
+
+function flipQuizCard() {
+  if (quizFlipped) return;
+  quizFlipped = true;
+  document.getElementById('quizFront').style.display = 'none';
+  document.getElementById('quizBack').style.display = '';
+  document.getElementById('quizActions').classList.add('show');
+}
+
+function quizAnswer(got) {
+  if (!got) quizQueue.push(quizQueue[quizIdx]); // add to end
+  quizIdx++;
+  showQuizCard();
+}
+
+// ─── EMERGENCY ────────────────────────────────────────────────────────────────
+
+function openEmergency() {
+  const c = countries[currentCountryId];
+  document.getElementById('emFlag').textContent = c.flag;
+  const qf = c.quickFacts ? c.quickFacts.find(f => f.label === 'Emergency') : null;
+  document.getElementById('emNumber').textContent = qf ? qf.value : '112';
+  const emPhrases = document.getElementById('emPhrases');
+  emPhrases.innerHTML = '';
+  const ep = c.data.emergency || [];
+  ep.slice(0, 5).forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'em-phrase';
+    div.innerHTML = `<div class="em-native">${p.native}</div><div class="em-pron">${p.pron}</div><div class="em-en">${p.en}</div>`;
+    emPhrases.appendChild(div);
+  });
+  document.getElementById('emergencyModal').classList.add('open');
+}
+
+function closeEmergency() {
+  document.getElementById('emergencyModal').classList.remove('open');
 }
 
 // ─── TABS ────────────────────────────────────────────────────────────────────
@@ -1016,12 +2219,17 @@ function showSection(id, e) {
   document.getElementById(id).classList.add('active');
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   e.target.classList.add('active');
+  if (id === 'saved') buildSavedSection();
 }
 
 function showSectionById(id) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', SECTIONS[i] === id));
+  const allTabs = ['greetings','food','directions','shopping','numbers','emergency','saved'];
+  document.querySelectorAll('.tab').forEach(t => {
+    const tid = t.id.replace('tab','').toLowerCase();
+    t.classList.toggle('active', tid === id);
+  });
 }
 
 // ─── SPEECH ──────────────────────────────────────────────────────────────────
@@ -1044,6 +2252,11 @@ function speak(btn, text) {
 
 window.speechSynthesis.onvoiceschanged = () => {};
 buildHome();
+
+// ─── PWA ─────────────────────────────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+}
 </script>
 </body>
 </html>
