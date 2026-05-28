@@ -448,9 +448,184 @@
   #phrasebook.latin .em-native { font-family: 'Playfair Display', serif; }
   .em-pron { font-size: 0.85rem; color: var(--rouge); font-style: italic; margin-bottom: 2px; }
   .em-en { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+
+  /* ── DARK MODE ── */
+  [data-theme="dark"] { --cream:#1a1612; --dark:#f0ebe3; --card:#242018; --border:#3a3428; --muted:#9a9080; }
+  [data-theme="dark"] .tip-box { background:#2a2318; }
+  [data-theme="dark"] .mode-toggle { background:#2a2318; }
+  [data-theme="dark"] .culture-item,[data-theme="dark"] .money-item,[data-theme="dark"] .safety-item { background:var(--card); }
+  [data-theme="dark"] .app-card { background:var(--card); }
+  [data-theme="dark"] .quick-facts { background:#2a2318; }
+  [data-theme="dark"] .pron-guide { background:#2a2318; border-color:#3a3428; }
+  [data-theme="dark"] .curr-input-wrap { background:#111; }
+  [data-theme="dark"] .food-item { background:var(--card); }
+  .dark-toggle {
+    position:fixed; top:14px; right:14px; z-index:100;
+    background:var(--card); border:1.5px solid var(--border); border-radius:100px;
+    padding:7px 13px; font-size:0.78rem; cursor:pointer;
+    font-family:'DM Sans',sans-serif; color:var(--muted); font-weight:500;
+    transition:all 0.2s; box-shadow:0 2px 8px rgba(0,0,0,0.07);
+  }
+  .dark-toggle:hover { color:var(--dark); border-color:var(--dark); }
+
+  /* ── PRONUNCIATION GUIDE ── */
+  details.pron-guide {
+    background:linear-gradient(135deg,#fdf6e8,#fff); border:1px solid var(--border);
+    border-left:4px solid var(--gold); border-radius:12px; padding:14px 16px; margin-bottom:18px;
+  }
+  details.pron-guide summary {
+    font-weight:600; font-size:0.86rem; cursor:pointer; list-style:none;
+    display:flex; align-items:center; gap:8px;
+  }
+  details.pron-guide summary::-webkit-details-marker { display:none; }
+  details.pron-guide summary::after { content:"▾"; margin-left:auto; color:var(--muted); font-size:0.75rem; transition:transform 0.2s; }
+  details.pron-guide[open] summary::after { transform:rotate(180deg); }
+  .pron-tips { padding-top:10px; border-top:1px solid var(--border); margin-top:10px; }
+  .pron-tip { font-size:0.81rem; color:var(--muted); line-height:1.6; padding:3px 0; }
+
+  /* ── SHOW-TO-LOCAL OVERLAY ── */
+  .stl-modal {
+    display:none; position:fixed; inset:0; z-index:300; background:#080808;
+    flex-direction:column; align-items:center; justify-content:center; padding:40px 28px;
+  }
+  .stl-modal.open { display:flex; }
+  .stl-close {
+    position:absolute; top:20px; right:20px; background:rgba(255,255,255,0.12);
+    border:none; color:#fff; border-radius:100px; padding:10px 18px;
+    font-size:0.84rem; font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif;
+  }
+  .stl-label { color:rgba(255,255,255,0.35); font-size:0.68rem; letter-spacing:0.13em;
+    text-transform:uppercase; margin-bottom:28px; }
+  .stl-native {
+    font-size:clamp(2.2rem,9vw,4.8rem); font-weight:700; color:#fff;
+    text-align:center; line-height:1.25; margin-bottom:18px;
+  }
+  .stl-modal.latin-mode .stl-native { font-family:'Playfair Display',serif; }
+  .stl-pron { font-size:1.05rem; color:var(--rouge); font-style:italic; text-align:center; margin-bottom:12px; }
+  .stl-en { font-size:0.9rem; color:rgba(255,255,255,0.3); text-align:center; }
+  .stl-hint { position:absolute; bottom:28px; color:rgba(255,255,255,0.18); font-size:0.73rem; }
+
+  /* ── QUIZ — 3D FLIP (overrides earlier .quiz-card styles) ── */
+  .quiz-card { perspective:1200px; cursor:pointer; margin-bottom:20px;
+    background:none; border:none; box-shadow:none; padding:0; min-height:auto;
+    display:block; transform:none !important; }
+  .quiz-card:hover { box-shadow:none; transform:none; }
+  .quiz-card-inner {
+    position:relative; min-height:190px; border-radius:20px;
+    transform-style:preserve-3d; transition:transform 0.45s cubic-bezier(0.4,0.2,0.2,1);
+  }
+  .quiz-card.flipped .quiz-card-inner { transform:rotateY(180deg); }
+  .quiz-card-front,.quiz-card-back {
+    position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
+    background:var(--card); border:1.5px solid var(--border); border-radius:20px;
+    padding:32px 24px; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; text-align:center;
+    box-shadow:0 2px 16px rgba(0,0,0,0.06);
+  }
+  .quiz-card-back { transform:rotateY(180deg); }
+  .quiz-streak { display:flex; align-items:center; gap:8px; font-size:0.8rem;
+    color:var(--muted); margin-bottom:14px; justify-content:center; }
+  .streak-badge { background:var(--gold); color:#fff; border-radius:100px;
+    padding:2px 10px; font-size:0.73rem; font-weight:700; }
+
+  /* ── CURRENCY CALCULATOR ── */
+  .curr-modal {
+    display:none; position:fixed; inset:0; z-index:200;
+    background:rgba(0,0,0,0.52); align-items:flex-end; justify-content:center;
+  }
+  .curr-modal.open { display:flex; }
+  .curr-sheet {
+    background:var(--card); border-radius:24px 24px 0 0;
+    padding:26px 24px 48px; width:100%; max-width:620px;
+    animation:slideUp 0.22s ease;
+  }
+  @keyframes slideUp { from{transform:translateY(100%)} to{transform:translateY(0)} }
+  .curr-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+  .curr-title { font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; }
+  .curr-close { background:none; border:none; font-size:1.3rem; cursor:pointer; color:var(--muted); line-height:1; }
+  .curr-rate { font-size:0.76rem; color:var(--muted); margin-bottom:18px; }
+  .curr-row { display:grid; grid-template-columns:1fr 28px 1fr; gap:8px; align-items:center; }
+  .curr-box { background:var(--cream); border:1.5px solid var(--border); border-radius:12px; padding:14px 14px; }
+  [data-theme="dark"] .curr-box { background:#111; }
+  .curr-box-label { font-size:0.68rem; color:var(--muted); font-weight:600;
+    text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px; }
+  .curr-box-input { background:none; border:none; font-size:1.5rem; font-weight:700;
+    color:var(--dark); font-family:'DM Sans',sans-serif; width:100%; outline:none; }
+  .curr-arrow { text-align:center; color:var(--muted); font-size:1rem; }
+  .curr-note { font-size:0.7rem; color:var(--muted); margin-top:12px; text-align:center; }
+
+  /* ── ONBOARDING ── */
+  .onboard-modal {
+    display:none; position:fixed; inset:0; z-index:400;
+    background:rgba(15,12,9,0.82); align-items:flex-end; justify-content:center;
+  }
+  .onboard-modal.open { display:flex; }
+  .onboard-sheet {
+    background:var(--card); border-radius:28px 28px 0 0;
+    padding:34px 26px 52px; width:100%; max-width:620px; text-align:center;
+  }
+  .onboard-dots { display:flex; gap:6px; justify-content:center; margin-bottom:26px; }
+  .onboard-dot { width:7px; height:7px; border-radius:50%; background:var(--border); transition:background 0.2s; }
+  .onboard-dot.active { background:var(--rouge); }
+  .onboard-icon { font-size:3rem; display:block; margin-bottom:14px; }
+  .onboard-h { font-family:'Playfair Display',serif; font-size:1.45rem; font-weight:700; margin-bottom:8px; }
+  .onboard-p { color:var(--muted); font-size:0.88rem; line-height:1.65; margin-bottom:26px; }
+  .onboard-next { background:var(--rouge); color:#fff; border:none; border-radius:100px;
+    padding:13px 36px; font-family:'DM Sans',sans-serif; font-size:0.92rem;
+    font-weight:600; cursor:pointer; width:100%; }
+  .onboard-skip { background:none; border:none; color:var(--muted); font-size:0.8rem;
+    cursor:pointer; margin-top:12px; font-family:'DM Sans',sans-serif; display:block; width:100%; }
+
+  /* ── RECENT COUNTRIES ── */
+  .recents-section { margin-bottom:24px; }
+  .recents-label { font-size:0.7rem; font-weight:600; color:var(--muted);
+    text-transform:uppercase; letter-spacing:0.09em; margin-bottom:10px; }
+  .recents-row { display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; scrollbar-width:none; }
+  .recents-row::-webkit-scrollbar { display:none; }
+  .recent-chip { flex-shrink:0; background:var(--card); border:1.5px solid var(--border);
+    border-radius:100px; padding:7px 14px; cursor:pointer; font-size:0.83rem;
+    font-weight:500; transition:all 0.2s; white-space:nowrap; }
+  .recent-chip:hover { border-color:var(--rouge); color:var(--rouge); }
+
+  /* ── TRIP PLANNER ── */
+  .trip-toggle-btn {
+    display:block; width:100%; margin-top:20px; padding:13px;
+    background:var(--card); border:1.5px dashed var(--border); border-radius:14px;
+    cursor:pointer; font-family:'DM Sans',sans-serif; font-size:0.88rem;
+    color:var(--muted); font-weight:500; transition:all 0.2s; text-align:center;
+  }
+  .trip-toggle-btn:hover { border-color:var(--rouge); color:var(--rouge); }
+  .trip-selecting .country-card { opacity:0.5; transition:opacity 0.2s; }
+  .trip-selecting .country-card.selected { opacity:1; border:2.5px solid var(--rouge); }
+  .trip-bar {
+    display:none; position:fixed; bottom:0; left:0; right:0; z-index:88;
+    background:var(--rouge); color:#fff; padding:15px 22px;
+    align-items:center; justify-content:space-between; font-family:'DM Sans',sans-serif;
+  }
+  .trip-bar.show { display:flex; }
+  .trip-bar-label { font-size:0.85rem; font-weight:500; }
+  .trip-bar-btn { background:#fff; color:var(--rouge); border:none; border-radius:100px;
+    padding:7px 18px; font-family:'DM Sans',sans-serif; font-size:0.8rem; font-weight:700; cursor:pointer; }
+  .trip-plan { display:none; background:var(--card); border:1px solid var(--border);
+    border-radius:16px; padding:20px; margin-top:16px; }
+  .trip-plan.open { display:block; }
+  .trip-entry { padding:16px 0; border-bottom:1px solid var(--border); }
+  .trip-entry:last-child { border-bottom:none; }
+  .trip-entry-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .trip-entry-flag { font-size:1.6rem; }
+  .trip-entry-name { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; }
+  .trip-entry-num { font-size:1.3rem; font-weight:700; color:var(--rouge); }
+  .trip-entry-apps { font-size:0.78rem; color:var(--muted); margin-top:4px; }
+
+  /* ── SHARE BUTTON ── */
+  .share-btn { background:none; border:none; color:var(--muted); cursor:pointer;
+    font-size:0.75rem; padding:3px 5px; border-radius:5px; transition:color 0.15s; }
+  .share-btn:hover { color:var(--dark); }
+  .card-btns { display:flex; align-items:center; gap:2px; }
 </style>
 </head>
 <body>
+<button class="dark-toggle" id="darkToggle" onclick="toggleDarkMode()">🌙 Dark</button>
 <div class="container">
 
   <!-- HOME -->
@@ -461,7 +636,15 @@
       <p>Pick a country to get started</p>
       <div class="divider"></div>
     </div>
+    <!-- RECENT COUNTRIES -->
+    <div class="recents-section" id="recentsSection" style="display:none">
+      <div class="recents-label">Recently visited</div>
+      <div class="recents-row" id="recentsRow"></div>
+    </div>
     <div class="country-grid" id="countryGrid"></div>
+    <!-- TRIP PLANNER -->
+    <button class="trip-toggle-btn" id="tripToggleBtn" onclick="toggleTripSelect()">🗺️ Plan a multi-country trip</button>
+    <div class="trip-plan" id="tripPlan"></div>
   </div>
 
   <!-- PHRASEBOOK -->
@@ -485,6 +668,11 @@
     <!-- PHRASES PANEL -->
     <div id="phrasesPanel">
       <div class="no-speech" id="noSpeech">⚠️ Your browser doesn't support text-to-speech. Try Chrome or Safari.</div>
+      <!-- PRONUNCIATION GUIDE -->
+      <details class="pron-guide" id="pronGuide" style="display:none">
+        <summary>🗣️ <span id="pronGuideTitle">Pronunciation tips</span></summary>
+        <div class="pron-tips" id="pronGuideTips"></div>
+      </details>
       <div class="search-wrap">
         <input class="search-input" id="searchInput" type="search" placeholder="Search phrases…" oninput="onSearch(this.value)" autocomplete="off">
         <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
@@ -498,6 +686,8 @@
         <button class="tab" id="tabShopping" onclick="showSection('shopping', event)">🛍️ Shopping</button>
         <button class="tab" id="tabNumbers" onclick="showSection('numbers', event)">🔢 Numbers</button>
         <button class="tab" id="tabEmergency" onclick="showSection('emergency', event)">🆘 Emergency</button>
+        <button class="tab" id="tabMedical" onclick="showSection('medical', event)">🏥 Medical</button>
+        <button class="tab" id="tabImmigration" onclick="showSection('immigration', event)">🛂 Immigration</button>
         <button class="tab" id="tabSaved" style="display:none" onclick="showSection('saved', event)">⭐ Saved</button>
       </div>
       </div>
@@ -531,6 +721,16 @@
         <div class="phrases" id="phrases-emergency"></div>
         <div class="tip-box" id="tip-emergency"></div>
       </div>
+      <div class="section" id="medical">
+        <div class="section-title">Medical & Health</div>
+        <div class="phrases" id="phrases-medical"></div>
+        <div class="tip-box" id="tip-medical"></div>
+      </div>
+      <div class="section" id="immigration">
+        <div class="section-title">Customs & Immigration</div>
+        <div class="phrases" id="phrases-immigration"></div>
+        <div class="tip-box" id="tip-immigration"></div>
+      </div>
       <div class="section" id="saved">
         <div class="phrases" id="phrases-saved"></div>
       </div>
@@ -538,17 +738,23 @@
 
     <!-- QUIZ PANEL -->
     <div id="quizPanel">
+      <div class="quiz-streak" id="quizStreak" style="display:none">
+        <span>🔥 Streak</span><span class="streak-badge" id="streakCount">0</span>
+        <span style="margin-left:auto" id="learnedCount"></span>
+      </div>
       <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizFill" style="width:0%"></div></div>
       <div class="quiz-card" id="quizCard" onclick="flipQuizCard()">
-        <div id="quizFront">
-          <div class="quiz-section-tag" id="quizTag"></div>
-          <div class="quiz-en" id="quizEn"></div>
-          <div class="quiz-hint">Tap to reveal</div>
-        </div>
-        <div id="quizBack" style="display:none">
-          <div class="quiz-section-tag" id="quizTag2"></div>
-          <div class="quiz-native" id="quizNative"></div>
-          <div class="quiz-pron" id="quizPron"></div>
+        <div class="quiz-card-inner" id="quizCardInner">
+          <div class="quiz-card-front" id="quizFront">
+            <div class="quiz-section-tag" id="quizTag"></div>
+            <div class="quiz-en" id="quizEn"></div>
+            <div class="quiz-hint">Tap to reveal</div>
+          </div>
+          <div class="quiz-card-back" id="quizBack">
+            <div class="quiz-section-tag" id="quizTag2"></div>
+            <div class="quiz-native" id="quizNative"></div>
+            <div class="quiz-pron" id="quizPron"></div>
+          </div>
         </div>
       </div>
       <div class="quiz-actions" id="quizActions">
@@ -559,7 +765,7 @@
       <div class="quiz-done" id="quizDone" style="display:none">
         <span class="qd-icon">🎉</span>
         <h3>All done!</h3>
-        <p>You've gone through all the phrases.</p>
+        <p id="quizDoneMsg">You've gone through all the phrases.</p>
         <button class="quiz-restart-btn" onclick="startQuiz()">Shuffle & Restart</button>
       </div>
     </div>
@@ -598,6 +804,61 @@
 
 <!-- EMERGENCY FAB -->
 <button class="emergency-fab" id="emergencyFab" onclick="openEmergency()">🆘 Emergency</button>
+
+<!-- SHOW-TO-LOCAL OVERLAY -->
+<div class="stl-modal" id="stlModal">
+  <button class="stl-close" onclick="closeToLocal()">✕ Close</button>
+  <div class="stl-label">SHOW THIS TO A LOCAL</div>
+  <div class="stl-native" id="stlNative"></div>
+  <div class="stl-pron" id="stlPron"></div>
+  <div class="stl-en" id="stlEn"></div>
+  <div class="stl-hint">Tap anywhere to close</div>
+</div>
+
+<!-- CURRENCY CALCULATOR -->
+<div class="curr-modal" id="currModal" onclick="closeCurrencyCalc(event)">
+  <div class="curr-sheet" onclick="event.stopPropagation()">
+    <div class="curr-header">
+      <span class="curr-title" id="currTitle">Currency</span>
+      <button class="curr-close" onclick="closeCurrencyCalc()">×</button>
+    </div>
+    <div class="curr-rate" id="currRate"></div>
+    <div class="curr-row">
+      <div class="curr-box">
+        <div class="curr-box-label">USD $</div>
+        <input class="curr-box-input" id="currUSD" type="number" inputmode="decimal" placeholder="0" oninput="calcCurrency('usd')">
+      </div>
+      <div class="curr-arrow">⇄</div>
+      <div class="curr-box">
+        <div class="curr-box-label" id="currLocalLabel">Local</div>
+        <input class="curr-box-input" id="currLocal" type="number" inputmode="decimal" placeholder="0" oninput="calcCurrency('local')">
+      </div>
+    </div>
+    <div class="curr-note">Indicative rates only — check your bank for exact figures</div>
+  </div>
+</div>
+
+<!-- ONBOARDING -->
+<div class="onboard-modal" id="onboardModal">
+  <div class="onboard-sheet">
+    <div class="onboard-dots">
+      <div class="onboard-dot active" id="ob0"></div>
+      <div class="onboard-dot" id="ob1"></div>
+      <div class="onboard-dot" id="ob2"></div>
+    </div>
+    <span class="onboard-icon" id="obIcon">🗣️</span>
+    <div class="onboard-h" id="obTitle">Phrases in 10 languages</div>
+    <div class="onboard-p" id="obBody">Tap any phrase card to hear it spoken aloud. Works even when you're offline — no roaming needed.</div>
+    <button class="onboard-next" id="obNext" onclick="onboardNext()">Next</button>
+    <button class="onboard-skip" onclick="closeOnboarding()">Skip intro</button>
+  </div>
+</div>
+
+<!-- TRIP PLANNER BAR -->
+<div class="trip-bar" id="tripBar">
+  <span class="trip-bar-label" id="tripBarLabel">0 countries selected</span>
+  <button class="trip-bar-btn" onclick="showTripPlan()">View Trip Plan →</button>
+</div>
 
 <script>
 // ─── DATA ────────────────────────────────────────────────────────────────────
@@ -1859,13 +2120,293 @@ const countries = {
 
 };
 
+// ─── COUNTRY PATCHES (timezone · currency · pronGuide · medical · immigration)
+
+const patches = {
+  france: {
+    timezone:'Europe/Paris', currency:{code:'EUR',symbol:'€',rate:0.93,label:'1 USD ≈ 0.93 EUR'},
+    pronGuide:{title:'French Sounds',tips:['Silent letters everywhere — <em>bonjour</em> is bon-ZHOOR, the R is a soft throat sound','Nasal vowels: AN, ON, IN — let air flow through your nose','Stress always falls on the last syllable of a word','The U (as in <em>tu</em>) is not like any English vowel — round lips and say "ee"']},
+    data:{
+      medical:[
+        {native:"Je ne me sens pas bien",pron:"zhuh nuh muh sohn pah BYEHN",en:"I don't feel well"},
+        {native:"J'ai besoin d'un médecin",pron:"zhay buh-ZWAHN dun may-duh-SAN",en:"I need a doctor"},
+        {native:"Appelez une ambulance",pron:"ah-puh-LAY oon am-boo-LAHNS",en:"Call an ambulance"},
+        {native:"Où est l'hôpital le plus proche?",pron:"oo ay lo-pee-TAL luh ploo PROSH",en:"Where's the nearest hospital?"},
+        {native:"J'ai de la fièvre",pron:"zhay duh lah FYEV-ruh",en:"I have a fever"},
+        {native:"Je suis allergique à...",pron:"zhuh swee ah-lair-ZHEEK ah",en:"I'm allergic to..."},
+        {native:"J'ai besoin de ce médicament",pron:"zhay buh-ZWAHN duh suh may-dee-kah-MOHN",en:"I need this medicine"},
+        {native:"Y a-t-il une pharmacie?",pron:"ee ah-TEEL oon far-mah-SEE",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"Je suis touriste",pron:"zhuh swee too-REEST",en:"I'm a tourist"},
+        {native:"Je reste [X] jours",pron:"zhuh REST [X] ZHOOR",en:"I'm staying [X] days"},
+        {native:"Je n'ai rien à déclarer",pron:"zhuh nay RYEHN ah day-klah-RAY",en:"Nothing to declare"},
+        {native:"Où est la livraison des bagages?",pron:"oo ay lah leev-ray-ZOHN day bah-GAZH",en:"Where's baggage claim?"},
+        {native:"Je voyage seul(e)",pron:"zhuh voy-YAZH sul",en:"I'm travelling alone"},
+        {native:"C'est mon hôtel",pron:"say mon no-TEL",en:"This is my hotel"},
+        {native:"Pouvez-vous répéter?",pron:"poo-VAY-voo ray-pay-TAY",en:"Could you repeat that?"},
+        {native:"J'ai besoin d'un interprète",pron:"zhay buh-ZWAHN dun an-tair-PRET",en:"I need an interpreter"}
+      ]
+    }
+  },
+  malaysia: {
+    timezone:'Asia/Kuala_Lumpur', currency:{code:'MYR',symbol:'RM',rate:4.47,label:'1 USD ≈ 4.47 MYR'},
+    pronGuide:{title:'Malay Sounds',tips:['Pronunciation is mostly phonetic — say it as it looks','C is always "ch" (as in <em>cinta</em> = chin-tah)','Stress usually falls on the second-to-last syllable','NG at the start of a word sounds like singing (ng-ah = yes)']},
+    data:{
+      medical:[
+        {native:"Saya tidak sihat",pron:"sah-YAH TEE-dak see-HAT",en:"I don't feel well"},
+        {native:"Saya perlukan doktor",pron:"sah-YAH per-loo-KAN dok-TOR",en:"I need a doctor"},
+        {native:"Tolong panggil ambulans",pron:"TO-long PANG-ghil am-BOO-lans",en:"Call an ambulance"},
+        {native:"Di mana hospital terdekat?",pron:"dee MAH-nah hos-PEE-tal ter-deh-KAT",en:"Where's the nearest hospital?"},
+        {native:"Saya demam",pron:"sah-YAH DEH-mam",en:"I have a fever"},
+        {native:"Saya alah kepada...",pron:"sah-YAH AH-lah keh-PAH-dah",en:"I'm allergic to..."},
+        {native:"Saya perlukan ubat ini",pron:"sah-YAH per-loo-KAN OO-bat ee-NEE",en:"I need this medicine"},
+        {native:"Ada farmasi berhampiran?",pron:"AH-dah far-MAH-see ber-ham-PEE-ran",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"Saya seorang pelancong",pron:"sah-YAH seh-OR-ang peh-LAN-chong",en:"I'm a tourist"},
+        {native:"Saya di sini [X] hari",pron:"sah-YAH dee SEE-nee [X] HAH-ree",en:"I'm staying [X] days"},
+        {native:"Tiada apa untuk diperiksa",pron:"tee-AH-dah AH-pah oon-TUCK dee-peh-REEK-sah",en:"Nothing to declare"},
+        {native:"Di mana tuntutan bagasi?",pron:"dee MAH-nah toon-too-TAN bah-GAH-see",en:"Where's baggage claim?"},
+        {native:"Saya berseorangan",pron:"sah-YAH ber-seh-or-ANG-an",en:"I'm travelling alone"},
+        {native:"Ini hotel saya",pron:"EE-nee ho-TEL sah-YAH",en:"This is my hotel"},
+        {native:"Boleh ulang?",pron:"BO-leh OO-lang",en:"Could you repeat that?"},
+        {native:"Saya perlukan jurubahasa",pron:"sah-YAH per-loo-KAN joo-roo-bah-HA-sah",en:"I need an interpreter"}
+      ]
+    }
+  },
+  thailand: {
+    timezone:'Asia/Bangkok', currency:{code:'THB',symbol:'฿',rate:35,label:'1 USD ≈ 35 THB'},
+    pronGuide:{title:'Thai Sounds',tips:['Thai has 5 tones — for tourists, a flat (mid) tone works for most common words','Rising tone for yes/no questions sounds more natural','Avoid strong falling tones on greetings — it can sound impatient','Double consonants like "kk" represent a brief stop before the sound']},
+    data:{
+      medical:[
+        {native:"ฉันไม่สบาย",pron:"chán mâi sà-baai",en:"I don't feel well"},
+        {native:"ฉันต้องการหมอ",pron:"chán dtông-gaan mor",en:"I need a doctor"},
+        {native:"เรียกรถพยาบาล",pron:"rîak rót pha-yaa-baan",en:"Call an ambulance"},
+        {native:"โรงพยาบาลอยู่ที่ไหน?",pron:"rohng pha-yaa-baan yùu têe-nǎi",en:"Where's the hospital?"},
+        {native:"ฉันมีไข้",pron:"chán mii kâi",en:"I have a fever"},
+        {native:"ฉันแพ้...",pron:"chán pâe...",en:"I'm allergic to..."},
+        {native:"ฉันต้องการยานี้",pron:"chán dtông-gaan yaa née",en:"I need this medicine"},
+        {native:"มีร้านขายยาใกล้นี้ไหม?",pron:"mii ráan kǎai yaa glâi née mǎi",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"ฉันมาท่องเที่ยว",pron:"chán maa tông-têeo",en:"I'm a tourist"},
+        {native:"ฉันอยู่ [X] วัน",pron:"chán yùu [X] wan",en:"I'm staying [X] days"},
+        {native:"ฉันไม่มีสิ่งของต้องแจ้ง",pron:"chán mâi mii sìng-kǎwng dtông jâeng",en:"Nothing to declare"},
+        {native:"รับกระเป๋าที่ไหน?",pron:"ráp grà-bǎo têe-nǎi",en:"Where's baggage claim?"},
+        {native:"ฉันเดินทางคนเดียว",pron:"chán dern-taang kon-dieo",en:"I'm travelling alone"},
+        {native:"นี่คือโรงแรมของฉัน",pron:"nîi keu rohng-raem kǎwng chán",en:"This is my hotel"},
+        {native:"ช่วยพูดซ้ำได้ไหม?",pron:"chûay phûut sám dâi mǎi",en:"Could you repeat that?"},
+        {native:"ฉันต้องการล่าม",pron:"chán dtông-gaan lâam",en:"I need an interpreter"}
+      ]
+    }
+  },
+  korea: {
+    timezone:'Asia/Seoul', currency:{code:'KRW',symbol:'₩',rate:1320,label:'1 USD ≈ 1,320 KRW'},
+    pronGuide:{title:'Korean Sounds',tips:['Consonants come in plain / aspirated / tense pairs: ㅂ(b) ㅍ(p) ㅃ(pp)','Each syllable block is one beat — no heavy stress like English','ㄹ is between English L and R — tongue tip behind upper teeth','Vowel ㅓ (eo) sounds like "uh" in butter']},
+    data:{
+      medical:[
+        {native:"몸이 안 좋아요",pron:"mom-i an jo-a-yo",en:"I don't feel well"},
+        {native:"의사가 필요해요",pron:"eui-sa-ga pil-yo-hae-yo",en:"I need a doctor"},
+        {native:"구급차를 불러주세요",pron:"gu-geup-cha-reul bul-leo-ju-se-yo",en:"Call an ambulance"},
+        {native:"가장 가까운 병원이 어디예요?",pron:"ga-jang ga-kka-un byeong-won-i eo-di-ye-yo",en:"Where's the nearest hospital?"},
+        {native:"열이 있어요",pron:"yeol-i iss-eo-yo",en:"I have a fever"},
+        {native:"저는 ...에 알레르기가 있어요",pron:"jeo-neun ...e al-le-reu-gi-ga iss-eo-yo",en:"I'm allergic to..."},
+        {native:"이 약이 필요해요",pron:"i yak-i pil-yo-hae-yo",en:"I need this medicine"},
+        {native:"근처에 약국이 있어요?",pron:"geun-cheo-e yak-guk-i iss-eo-yo",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"저는 관광객이에요",pron:"jeo-neun gwan-gwang-gaek-i-e-yo",en:"I'm a tourist"},
+        {native:"[X]일 머물 예정이에요",pron:"[X]-il meo-mul ye-jeong-i-e-yo",en:"I'm staying [X] days"},
+        {native:"신고할 것이 없어요",pron:"sin-go-hal geot-i eops-eo-yo",en:"Nothing to declare"},
+        {native:"수화물 찾는 곳이 어디예요?",pron:"su-hwa-mul chat-neun got-i eo-di-ye-yo",en:"Where's baggage claim?"},
+        {native:"혼자 여행 중이에요",pron:"hon-ja yeo-haeng jung-i-e-yo",en:"I'm travelling alone"},
+        {native:"여기가 제 호텔이에요",pron:"yeo-gi-ga je ho-tel-i-e-yo",en:"This is my hotel"},
+        {native:"다시 말씀해 주세요",pron:"da-si mal-sseum-hae ju-se-yo",en:"Could you repeat that?"},
+        {native:"통역사가 필요해요",pron:"tong-yeok-sa-ga pil-yo-hae-yo",en:"I need an interpreter"}
+      ]
+    }
+  },
+  indonesia: {
+    timezone:'Asia/Jakarta', currency:{code:'IDR',symbol:'Rp',rate:15800,label:'1 USD ≈ 15,800 IDR'},
+    pronGuide:{title:'Indonesian Sounds',tips:['Mostly phonetic — read it like Spanish','C is always "ch" (<em>coba</em> = cho-bah)','NG at the start of a word is valid (like "singing")','Stress the second-to-last syllable in most words']},
+    data:{
+      medical:[
+        {native:"Saya tidak sehat",pron:"SAH-yah TEE-dak SEH-hat",en:"I don't feel well"},
+        {native:"Saya butuh dokter",pron:"SAH-yah BOO-too DOK-ter",en:"I need a doctor"},
+        {native:"Tolong panggil ambulans",pron:"TO-long PANG-ghil am-BOO-lans",en:"Call an ambulance"},
+        {native:"Di mana rumah sakit terdekat?",pron:"dee MAH-nah ROO-mah SAH-kit ter-deh-KAT",en:"Where's the nearest hospital?"},
+        {native:"Saya demam",pron:"SAH-yah DEH-mam",en:"I have a fever"},
+        {native:"Saya alergi terhadap...",pron:"SAH-yah ah-LER-gee ter-HAH-dap",en:"I'm allergic to..."},
+        {native:"Saya butuh obat ini",pron:"SAH-yah BOO-too OH-bat EE-nee",en:"I need this medicine"},
+        {native:"Ada apotek di dekat sini?",pron:"AH-dah ah-poh-TEK dee deh-KAT SEE-nee",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"Saya turis",pron:"SAH-yah TOO-ris",en:"I'm a tourist"},
+        {native:"Saya di sini [X] hari",pron:"SAH-yah dee SEE-nee [X] HAH-ree",en:"I'm staying [X] days"},
+        {native:"Tidak ada yang dideklarasikan",pron:"TEE-dak AH-dah yang dee-deh-klah-rah-SEE-kan",en:"Nothing to declare"},
+        {native:"Di mana pengambilan bagasi?",pron:"dee MAH-nah peng-am-BEE-lan bah-GAH-see",en:"Where's baggage claim?"},
+        {native:"Saya bepergian sendiri",pron:"SAH-yah beh-per-GEE-an SEN-dee-ree",en:"I'm travelling alone"},
+        {native:"Ini hotel saya",pron:"EE-nee ho-TEL SAH-yah",en:"This is my hotel"},
+        {native:"Bisa diulangi?",pron:"BEE-sah dee-oo-LANG-ee",en:"Could you repeat that?"},
+        {native:"Saya butuh penerjemah",pron:"SAH-yah BOO-too peh-ner-JEH-mah",en:"I need an interpreter"}
+      ]
+    }
+  },
+  japan: {
+    timezone:'Asia/Tokyo', currency:{code:'JPY',symbol:'¥',rate:155,label:'1 USD ≈ 155 JPY'},
+    pronGuide:{title:'Japanese Sounds',tips:['Each mora (syllable unit) gets equal time — no heavy stress','Double consonants (kk, tt, ss) get a brief pause before them','R is between English L and R — tongue tip near the roof of the mouth','Long vowels (aa, oo, uu) are held twice as long as short ones']},
+    data:{
+      medical:[
+        {native:"気分が悪いです",pron:"ki-bun ga WAR-ui des",en:"I don't feel well"},
+        {native:"医者が必要です",pron:"i-sha ga hi-TSU-yo des",en:"I need a doctor"},
+        {native:"救急車を呼んでください",pron:"kyuu-kyuu-sha o YON-de ku-da-SAI",en:"Call an ambulance"},
+        {native:"一番近い病院はどこですか?",pron:"i-chi-ban chi-KA-i BYO-in wa DO-ko des ka",en:"Where's the nearest hospital?"},
+        {native:"熱があります",pron:"ne-tsu ga a-ri-MAS",en:"I have a fever"},
+        {native:"私は...にアレルギーがあります",pron:"wa-ta-shi wa...ni a-RE-ru-gii ga a-ri-MAS",en:"I'm allergic to..."},
+        {native:"この薬が必要です",pron:"ko-no ku-su-ri ga hi-TSU-yo des",en:"I need this medicine"},
+        {native:"近くに薬局はありますか?",pron:"chi-KA-ku ni yak-KYO-ku wa a-ri-MAS ka",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"私は観光客です",pron:"wa-ta-shi wa KAN-kou-kya-ku des",en:"I'm a tourist"},
+        {native:"[X]日間滞在します",pron:"[X]-ni-chi-kan TAI-zai shi-MAS",en:"I'm staying [X] days"},
+        {native:"申告するものはありません",pron:"shin-ko-ku su-ru mo-no wa a-ri-ma-SEN",en:"Nothing to declare"},
+        {native:"手荷物受取所はどこですか?",pron:"te-ni-mo-tsu u-ke-TO-ri-sho wa DO-ko des ka",en:"Where's baggage claim?"},
+        {native:"一人で旅行しています",pron:"hi-to-ri de RYO-ko shi-te i-MAS",en:"I'm travelling alone"},
+        {native:"これが私のホテルです",pron:"ko-re ga wa-ta-shi no HO-te-ru des",en:"This is my hotel"},
+        {native:"もう一度おっしゃっていただけますか?",pron:"mo-u i-chi-do os-SHAT-te i-ta-da-ke-MAS ka",en:"Could you repeat that?"},
+        {native:"通訳が必要です",pron:"tsuu-YA-ku ga hi-TSU-yo des",en:"I need an interpreter"}
+      ]
+    }
+  },
+  vietnam: {
+    timezone:'Asia/Ho_Chi_Minh', currency:{code:'VND',symbol:'₫',rate:25000,label:'1 USD ≈ 25,000 VND'},
+    pronGuide:{title:'Vietnamese Sounds',tips:['6 tones marked by accent marks — flat (no mark) is your safe default','Rising tone (á) goes up, like asking a question in English','The letter D is "z" in northern Vietnam, "y" in the south','Ơ sounds like "uh" in bird, Ư is like "oo" with rounded lips forward']},
+    data:{
+      medical:[
+        {native:"Tôi không khỏe",pron:"toy khong KHWAY",en:"I don't feel well"},
+        {native:"Tôi cần bác sĩ",pron:"toy kun BAK see",en:"I need a doctor"},
+        {native:"Gọi xe cứu thương",pron:"goy seh koo TONG",en:"Call an ambulance"},
+        {native:"Bệnh viện gần đây ở đâu?",pron:"ben VYEN gun day uh DOW",en:"Where's the nearest hospital?"},
+        {native:"Tôi bị sốt",pron:"toy bee SOT",en:"I have a fever"},
+        {native:"Tôi bị dị ứng với...",pron:"toy bee zee OONG voy",en:"I'm allergic to..."},
+        {native:"Tôi cần thuốc này",pron:"toy kun TWOK nay",en:"I need this medicine"},
+        {native:"Có nhà thuốc gần đây không?",pron:"ko nya TWOK gun day khong",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"Tôi là khách du lịch",pron:"toy la khak zoo LIK",en:"I'm a tourist"},
+        {native:"Tôi ở đây [X] ngày",pron:"toy uh day [X] ngay",en:"I'm staying [X] days"},
+        {native:"Tôi không có gì để khai báo",pron:"toy khong ko zee deh khai BAO",en:"Nothing to declare"},
+        {native:"Khu vực lấy hành lý ở đâu?",pron:"koo vuk lay han lee uh DOW",en:"Where's baggage claim?"},
+        {native:"Tôi đi một mình",pron:"toy dee mot MIN",en:"I'm travelling alone"},
+        {native:"Đây là khách sạn của tôi",pron:"day la khak SAN kua toy",en:"This is my hotel"},
+        {native:"Xin lặp lại được không?",pron:"sin lup LAI duk khong",en:"Could you repeat that?"},
+        {native:"Tôi cần phiên dịch",pron:"toy kun FYEN dik",en:"I need an interpreter"}
+      ]
+    }
+  },
+  spain: {
+    timezone:'Europe/Madrid', currency:{code:'EUR',symbol:'€',rate:0.93,label:'1 USD ≈ 0.93 EUR'},
+    pronGuide:{title:'Spanish Sounds',tips:['In Spain, C before E/I = "th" — Barcelona = Bar-theh-LO-nah','V and B sound almost identical in Spanish','Stress the second-to-last syllable in most words','LL and Y both sound like "y" (as in yes) in most of Spain']},
+    data:{
+      medical:[
+        {native:"No me encuentro bien",pron:"no meh en-KWEN-tro BYEHN",en:"I don't feel well"},
+        {native:"Necesito un médico",pron:"neh-seh-SEE-toh oon MEH-dee-koh",en:"I need a doctor"},
+        {native:"Llamen una ambulancia",pron:"YAH-men OO-nah am-boo-LAN-thya",en:"Call an ambulance"},
+        {native:"¿Dónde está el hospital más cercano?",pron:"DON-deh es-TAH el os-pee-TAL mas ser-KAH-no",en:"Where's the nearest hospital?"},
+        {native:"Tengo fiebre",pron:"TEN-go FYEH-breh",en:"I have a fever"},
+        {native:"Soy alérgico/a a...",pron:"soy ah-LER-hee-koh ah",en:"I'm allergic to..."},
+        {native:"Necesito este medicamento",pron:"neh-seh-SEE-toh ES-teh meh-dee-kah-MEN-toh",en:"I need this medicine"},
+        {native:"¿Hay una farmacia cerca?",pron:"ay OO-nah far-MAH-thya THER-ka",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"Soy turista",pron:"soy too-REES-tah",en:"I'm a tourist"},
+        {native:"Me quedo [X] días",pron:"meh KEH-doh [X] DEE-as",en:"I'm staying [X] days"},
+        {native:"No tengo nada que declarar",pron:"no TEN-go NAH-dah keh deh-klah-RAR",en:"Nothing to declare"},
+        {native:"¿Dónde es la recogida de equipajes?",pron:"DON-deh es la reh-koh-HEE-dah deh eh-kee-PAH-hes",en:"Where's baggage claim?"},
+        {native:"Viajo solo/a",pron:"BYAH-ho SO-loh",en:"I'm travelling alone"},
+        {native:"Este es mi hotel",pron:"ES-teh es mee oh-TEL",en:"This is my hotel"},
+        {native:"¿Puede repetir?",pron:"PWEH-deh reh-peh-TEER",en:"Could you repeat that?"},
+        {native:"Necesito un intérprete",pron:"neh-seh-SEE-toh oon in-TER-preh-teh",en:"I need an interpreter"}
+      ]
+    }
+  },
+  italy: {
+    timezone:'Europe/Rome', currency:{code:'EUR',symbol:'€',rate:0.93,label:'1 USD ≈ 0.93 EUR'},
+    pronGuide:{title:'Italian Sounds',tips:['Mostly phonetic — vowels are pure (A=ah, E=eh, I=ee, O=oh, U=oo)','C before E/I = "ch" (ciao, grazie) — before A/O/U = hard K','Double consonants are held longer — <em>penne</em> vs <em>pene</em> is a very different word!','GN = "ny" (gnocchi = NYOK-kee), GLI = "ly" (famiglia = fah-MEE-lyah)']},
+    data:{
+      medical:[
+        {native:"Non mi sento bene",pron:"non mee SEN-toh BEH-neh",en:"I don't feel well"},
+        {native:"Ho bisogno di un medico",pron:"o bee-ZON-yo dee oon MEH-dee-koh",en:"I need a doctor"},
+        {native:"Chiamate un'ambulanza",pron:"kya-MAH-teh oon am-boo-LAN-tsa",en:"Call an ambulance"},
+        {native:"Dov'è l'ospedale più vicino?",pron:"doh-VEH los-peh-DAH-leh pyoo vee-CHEE-noh",en:"Where's the nearest hospital?"},
+        {native:"Ho la febbre",pron:"o la FEB-breh",en:"I have a fever"},
+        {native:"Sono allergico/a a...",pron:"SO-noh al-LER-jee-koh ah",en:"I'm allergic to..."},
+        {native:"Ho bisogno di questa medicina",pron:"o bee-ZON-yo dee KWES-tah meh-dee-CHEE-nah",en:"I need this medicine"},
+        {native:"C'è una farmacia vicino?",pron:"cheh OO-nah far-MAH-chya vee-CHEE-noh",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"Sono un turista",pron:"SO-noh oon too-REES-tah",en:"I'm a tourist"},
+        {native:"Mi fermo [X] giorni",pron:"mee FER-moh [X] JOR-nee",en:"I'm staying [X] days"},
+        {native:"Non ho nulla da dichiarare",pron:"non o NOOL-lah dah dee-kya-RAH-reh",en:"Nothing to declare"},
+        {native:"Dove si ritira il bagaglio?",pron:"DOH-veh see REE-tee-rah eel bah-GAL-yoh",en:"Where's baggage claim?"},
+        {native:"Viaggio da solo/a",pron:"VYAJ-jo dah SO-loh",en:"I'm travelling alone"},
+        {native:"Questo è il mio hotel",pron:"KWES-toh eh eel MEE-oh oh-TEL",en:"This is my hotel"},
+        {native:"Può ripetere?",pron:"pwo ree-peh-TEH-reh",en:"Could you repeat that?"},
+        {native:"Ho bisogno di un interprete",pron:"o bee-ZON-yo dee oon in-TER-preh-teh",en:"I need an interpreter"}
+      ]
+    }
+  },
+  germany: {
+    timezone:'Europe/Berlin', currency:{code:'EUR',symbol:'€',rate:0.93,label:'1 USD ≈ 0.93 EUR'},
+    pronGuide:{title:'German Sounds',tips:['W = "v" (Wasser = VASS-er), V = "f" (Vater = FAH-ter)','CH after A/O/U is throaty (Bach), after E/I it\'s soft (ich)','Ü = purse your lips and say "ee"; Ö = round lips and say "eh"','Final voiced consonants go unvoiced — B→P, D→T, G→K']},
+    data:{
+      medical:[
+        {native:"Ich fühle mich nicht wohl",pron:"ikh FÜ-leh mikh nikht VOL",en:"I don't feel well"},
+        {native:"Ich brauche einen Arzt",pron:"ikh BROW-kheh AI-nen ARTST",en:"I need a doctor"},
+        {native:"Rufen Sie einen Krankenwagen",pron:"ROO-fen zee AI-nen KRAN-ken-vah-gen",en:"Call an ambulance"},
+        {native:"Wo ist das nächste Krankenhaus?",pron:"vo ist das NEKH-steh KRAN-ken-hows",en:"Where's the nearest hospital?"},
+        {native:"Ich habe Fieber",pron:"ikh HAH-beh FEE-ber",en:"I have a fever"},
+        {native:"Ich bin allergisch gegen...",pron:"ikh bin ah-LER-gish GAY-gen",en:"I'm allergic to..."},
+        {native:"Ich brauche dieses Medikament",pron:"ikh BROW-kheh DEE-zes meh-dee-kah-MENT",en:"I need this medicine"},
+        {native:"Gibt es eine Apotheke in der Nähe?",pron:"gipt es AI-neh ah-poh-TAY-keh in der NAY-eh",en:"Is there a pharmacy?"}
+      ],
+      immigration:[
+        {native:"Ich bin Tourist",pron:"ikh bin too-RIST",en:"I'm a tourist"},
+        {native:"Ich bleibe [X] Tage",pron:"ikh BLY-beh [X] TAH-geh",en:"I'm staying [X] days"},
+        {native:"Ich habe nichts zu verzollen",pron:"ikh HAH-beh nikhts tsoo fer-TSOL-en",en:"Nothing to declare"},
+        {native:"Wo ist die Gepäckausgabe?",pron:"vo ist dee geh-PEK-ows-gah-beh",en:"Where's baggage claim?"},
+        {native:"Ich reise alleine",pron:"ikh RY-zeh ah-LY-neh",en:"I'm travelling alone"},
+        {native:"Das ist mein Hotel",pron:"das ist myn ho-TEL",en:"This is my hotel"},
+        {native:"Könnten Sie das wiederholen?",pron:"KUN-ten zee das VEE-der-ho-len",en:"Could you repeat that?"},
+        {native:"Ich brauche einen Dolmetscher",pron:"ikh BROW-kheh AI-nen DOL-met-sher",en:"I need an interpreter"}
+      ]
+    }
+  }
+};
+
+// Apply patches to countries
+for (const [id, patch] of Object.entries(patches)) {
+  if (!countries[id]) continue;
+  const {data: pData, ...rest} = patch;
+  Object.assign(countries[id], rest);
+  Object.assign(countries[id].data, pData);
+}
+
 // ─── STATE ───────────────────────────────────────────────────────────────────
 
 let currentLangCode = 'en';
 let currentCountryId = null;
 let quizQueue = [], quizIdx = 0, quizFlipped = false;
-const SECTIONS = ['greetings','food','directions','shopping','numbers','emergency'];
+let quizLearned = 0, quizStreak = 0;
+let tripSelecting = false, tripSelected = new Set();
+let currRateToLocal = 1, currSymbol = '$';
+const SECTIONS = ['greetings','food','directions','shopping','numbers','emergency','medical','immigration'];
 const FAV_KEY = 'tpb_favs';
+const RECENTS_KEY = 'tpb_recents';
+const QUIZ_KEY = 'tpb_quiz';
+const DARK_KEY = 'tpb_dark';
+const ONBOARD_KEY = 'tpb_onboarded';
 
 function getFavs() { try { return JSON.parse(localStorage.getItem(FAV_KEY)||'{}'); } catch(e){ return {}; } }
 function saveFavs(f) { localStorage.setItem(FAV_KEY, JSON.stringify(f)); }
@@ -1877,10 +2418,12 @@ function buildHome() {
   for (const [id, c] of Object.entries(countries)) {
     const card = document.createElement('div');
     card.className = 'country-card';
-    card.onclick = () => selectCountry(id);
+    card.id = `card-${id}`;
+    card.onclick = () => tripSelecting ? toggleTripCountry(id) : selectCountry(id);
     card.innerHTML = `<span class="flag">${c.flag}</span><span class="cname">${c.name}</span><span class="clang">${c.lang}</span>`;
     grid.appendChild(card);
   }
+  renderRecents();
 }
 
 // ─── COUNTRY ─────────────────────────────────────────────────────────────────
@@ -1898,11 +2441,23 @@ function selectCountry(id) {
   pb.classList.toggle('latin', c.latinScript);
 
   SECTIONS.forEach(s => {
-    document.getElementById(`phrases-${s}`).innerHTML = '';
+    const el = document.getElementById(`phrases-${s}`);
+    if (el) el.innerHTML = '';
     const tip = document.getElementById(`tip-${s}`);
-    if (c.tips && c.tips[s]) { tip.innerHTML = c.tips[s]; tip.style.display = ''; }
-    else tip.style.display = 'none';
+    if (tip) { if (c.tips && c.tips[s]) { tip.innerHTML = c.tips[s]; tip.style.display = ''; } else tip.style.display = 'none'; }
   });
+
+  // Pronunciation guide
+  if (c.pronGuide) {
+    const pg = document.getElementById('pronGuide');
+    document.getElementById('pronGuideTitle').textContent = c.pronGuide.title;
+    document.getElementById('pronGuideTips').innerHTML = c.pronGuide.tips.map(t => `<div class="pron-tip">• ${t}</div>`).join('');
+    pg.style.display = '';
+    pg.removeAttribute('open');
+  } else { document.getElementById('pronGuide').style.display = 'none'; }
+
+  // Local time chip update
+  updateLocalTime(c.timezone);
 
   clearSearch();
   buildPhrases(c);
@@ -1910,6 +2465,7 @@ function selectCountry(id) {
   updateSavedTab();
   showSectionById('greetings');
   setMode('phrases');
+  saveRecent(id);
 
   document.getElementById('home').style.display = 'none';
   pb.style.display = 'block';
@@ -1928,6 +2484,7 @@ function goHome() {
 // ─── PHRASES ─────────────────────────────────────────────────────────────────
 
 function makePhraseCard(p, section, countryId) {
+  const c = countries[countryId];
   const favs = getFavs();
   const key = `${countryId}:${section}:${p.native}`;
   const isFav = !!favs[key];
@@ -1942,7 +2499,17 @@ function makePhraseCard(p, section, countryId) {
       <div class="pronunciation">${p.pron}</div>
       <div class="english">${p.en}</div>
     </div>
-    <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(this,${JSON.stringify(key)})" title="Save phrase">★</button>`;
+    <div class="card-btns">
+      <button class="share-btn" onclick="sharePhrase(${JSON.stringify(p.native)},${JSON.stringify(p.en)})" title="Share">⬆</button>
+      <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(this,${JSON.stringify(key)})" title="Save phrase">★</button>
+    </div>`;
+  // Show-to-local — tap the native text
+  card.querySelector('.native').style.cursor = 'pointer';
+  card.querySelector('.native').title = 'Show to a local';
+  card.querySelector('.native').onclick = (e) => {
+    e.stopPropagation();
+    showToLocal(p.native, p.pron, p.en, c.latinScript);
+  };
   return card;
 }
 
@@ -2128,10 +2695,24 @@ function setMode(mode) {
   document.getElementById('modeQuizBtn').classList.toggle('active',    mode === 'quiz');
   document.getElementById('modeInfoBtn').classList.toggle('active',    mode === 'info');
   if (mode !== 'phrases') window.speechSynthesis.cancel();
-  if (mode === 'quiz') startQuiz();
+  if (mode === 'quiz') initQuiz();
 }
 
 // ─── QUIZ ─────────────────────────────────────────────────────────────────────
+
+function initQuiz() {
+  // Restore saved progress for this country, otherwise start fresh
+  const saved = getSavedQuiz();
+  if (saved && saved.id === currentCountryId && saved.queue && saved.queue.length) {
+    quizQueue = saved.queue; quizIdx = saved.idx || 0;
+    quizLearned = saved.learned || 0; quizStreak = saved.streak || 0;
+    document.getElementById('quizDone').style.display = 'none';
+    document.getElementById('quizCard').style.display = 'block';
+    document.getElementById('quizActions').classList.remove('show');
+    document.getElementById('quizCard').classList.remove('flipped');
+    showQuizCard();
+  } else { startQuiz(); }
+}
 
 function startQuiz() {
   const c = countries[currentCountryId];
@@ -2139,14 +2720,14 @@ function startQuiz() {
   for (const [section, phrases] of Object.entries(c.data)) {
     phrases.forEach(p => quizQueue.push({ ...p, section }));
   }
-  // Shuffle
   for (let i = quizQueue.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [quizQueue[i], quizQueue[j]] = [quizQueue[j], quizQueue[i]];
   }
-  quizIdx = 0;
+  quizIdx = 0; quizLearned = 0; quizStreak = 0;
   document.getElementById('quizDone').style.display = 'none';
-  document.getElementById('quizCard').style.display = 'flex';
+  document.getElementById('quizCard').style.display = 'block';
+  document.getElementById('quizCard').classList.remove('flipped');
   document.getElementById('quizActions').classList.remove('show');
   showQuizCard();
 }
@@ -2157,37 +2738,48 @@ function showQuizCard() {
     document.getElementById('quizActions').classList.remove('show');
     document.getElementById('quizCounter').textContent = '';
     document.getElementById('quizFill').style.width = '100%';
+    document.getElementById('quizDoneMsg').textContent = `You learned ${quizLearned} phrases this session! 🎉`;
     document.getElementById('quizDone').style.display = 'block';
+    clearSavedQuiz();
     return;
   }
   const p = quizQueue[quizIdx];
   quizFlipped = false;
-  document.getElementById('quizFront').style.display = '';
-  document.getElementById('quizBack').style.display = 'none';
+  document.getElementById('quizCard').classList.remove('flipped');
   document.getElementById('quizActions').classList.remove('show');
   document.getElementById('quizTag').textContent = p.section;
   document.getElementById('quizTag2').textContent = p.section;
   document.getElementById('quizEn').textContent = p.en;
   document.getElementById('quizNative').textContent = p.native;
   document.getElementById('quizPron').textContent = p.pron;
-  const pct = Math.round((quizIdx / quizQueue.length) * 100);
+  const total = quizQueue.length;
+  const pct = Math.round((quizIdx / total) * 100);
   document.getElementById('quizFill').style.width = pct + '%';
-  document.getElementById('quizCounter').textContent = `${quizIdx + 1} of ${quizQueue.length}`;
+  document.getElementById('quizCounter').textContent = `${quizIdx + 1} of ${total}`;
+  const streak = document.getElementById('quizStreak');
+  streak.style.display = quizLearned > 0 ? 'flex' : 'none';
+  document.getElementById('streakCount').textContent = quizStreak;
+  document.getElementById('learnedCount').textContent = `${quizLearned} learned`;
 }
 
 function flipQuizCard() {
   if (quizFlipped) return;
   quizFlipped = true;
-  document.getElementById('quizFront').style.display = 'none';
-  document.getElementById('quizBack').style.display = '';
+  document.getElementById('quizCard').classList.add('flipped');
   document.getElementById('quizActions').classList.add('show');
 }
 
 function quizAnswer(got) {
-  if (!got) quizQueue.push(quizQueue[quizIdx]); // add to end
+  if (got) { quizLearned++; quizStreak++; }
+  else { quizStreak = 0; quizQueue.push(quizQueue[quizIdx]); }
   quizIdx++;
+  saveQuizProgress();
   showQuizCard();
 }
+
+function getSavedQuiz() { try { return JSON.parse(localStorage.getItem(QUIZ_KEY)||'null'); } catch(e) { return null; } }
+function saveQuizProgress() { try { localStorage.setItem(QUIZ_KEY, JSON.stringify({id:currentCountryId,queue:quizQueue,idx:quizIdx,learned:quizLearned,streak:quizStreak})); } catch(e){} }
+function clearSavedQuiz() { try { localStorage.removeItem(QUIZ_KEY); } catch(e){} }
 
 // ─── EMERGENCY ────────────────────────────────────────────────────────────────
 
@@ -2224,8 +2816,8 @@ function showSection(id, e) {
 
 function showSectionById(id) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  const allTabs = ['greetings','food','directions','shopping','numbers','emergency','saved'];
+  const sec = document.getElementById(id);
+  if (sec) sec.classList.add('active');
   document.querySelectorAll('.tab').forEach(t => {
     const tid = t.id.replace('tab','').toLowerCase();
     t.classList.toggle('active', tid === id);
@@ -2251,7 +2843,215 @@ function speak(btn, text) {
 }
 
 window.speechSynthesis.onvoiceschanged = () => {};
+
+// ─── DARK MODE ────────────────────────────────────────────────────────────────
+function toggleDarkMode() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  document.getElementById('darkToggle').textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
+  try { localStorage.setItem(DARK_KEY, next); } catch(e){}
+}
+function initDarkMode() {
+  const saved = localStorage.getItem(DARK_KEY);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const mode = saved || (prefersDark ? 'dark' : 'light');
+  if (mode === 'dark') { document.documentElement.setAttribute('data-theme','dark'); document.getElementById('darkToggle').textContent = '☀️ Light'; }
+}
+
+// ─── SHOW-TO-LOCAL ────────────────────────────────────────────────────────────
+function showToLocal(native, pron, en, isLatin) {
+  const m = document.getElementById('stlModal');
+  document.getElementById('stlNative').textContent = native;
+  document.getElementById('stlPron').textContent = pron;
+  document.getElementById('stlEn').textContent = en;
+  m.classList.toggle('latin-mode', !!isLatin);
+  m.classList.add('open');
+  m.onclick = closeToLocal;
+  document.querySelector('.stl-close').onclick = e => { e.stopPropagation(); closeToLocal(); };
+}
+function closeToLocal() { document.getElementById('stlModal').classList.remove('open'); }
+
+// ─── CURRENCY CALCULATOR ──────────────────────────────────────────────────────
+function openCurrencyCalc() {
+  const c = countries[currentCountryId];
+  if (!c || !c.currency) return;
+  currRateToLocal = c.currency.rate;
+  currSymbol = c.currency.symbol;
+  document.getElementById('currTitle').textContent = `${c.currency.code} Calculator`;
+  document.getElementById('currRate').textContent = c.currency.label;
+  document.getElementById('currLocalLabel').textContent = `${c.currency.code} ${c.currency.symbol}`;
+  document.getElementById('currUSD').value = '';
+  document.getElementById('currLocal').value = '';
+  document.getElementById('currModal').classList.add('open');
+}
+function closeCurrencyCalc(e) {
+  if (e && e.target !== document.getElementById('currModal')) return;
+  document.getElementById('currModal').classList.remove('open');
+  document.getElementById('currUSD').value = '';
+  document.getElementById('currLocal').value = '';
+}
+function calcCurrency(dir) {
+  const usdEl = document.getElementById('currUSD');
+  const localEl = document.getElementById('currLocal');
+  if (dir === 'usd') {
+    const v = parseFloat(usdEl.value);
+    localEl.value = isNaN(v) ? '' : (v * currRateToLocal).toFixed(currRateToLocal >= 100 ? 0 : 2);
+  } else {
+    const v = parseFloat(localEl.value);
+    usdEl.value = isNaN(v) ? '' : (v / currRateToLocal).toFixed(2);
+  }
+}
+
+// ─── LOCAL TIME ───────────────────────────────────────────────────────────────
+function updateLocalTime(tz) {
+  if (!tz) return;
+  try {
+    const time = new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:tz}).format(new Date());
+    // Update the time chip in quick facts (patched in after buildTravelInfo)
+    const chip = document.getElementById('timeChip');
+    if (chip) chip.textContent = time;
+  } catch(e){}
+}
+
+// ─── SHARE PHRASE ─────────────────────────────────────────────────────────────
+async function sharePhrase(native, en) {
+  const text = `${native}\n"${en}"\n— Travel Phrasebook`;
+  try {
+    if (navigator.share) {
+      await navigator.share({ text });
+    } else if (navigator.clipboard) {
+      await navigator.clipboard.writeText(text);
+      // Brief visual feedback
+      const btns = document.querySelectorAll('.share-btn');
+      btns.forEach(b => { if (b.textContent === '⬆') { b.textContent = '✓'; setTimeout(() => b.textContent = '⬆', 1200); } });
+    }
+  } catch(e){}
+}
+
+// ─── RECENT COUNTRIES ─────────────────────────────────────────────────────────
+function getRecents() { try { return JSON.parse(localStorage.getItem(RECENTS_KEY)||'[]'); } catch(e) { return []; } }
+function saveRecent(id) {
+  let r = getRecents().filter(x => x !== id);
+  r.unshift(id); r = r.slice(0,5);
+  try { localStorage.setItem(RECENTS_KEY, JSON.stringify(r)); } catch(e){}
+  renderRecents();
+}
+function renderRecents() {
+  const recents = getRecents().filter(id => countries[id]);
+  const sec = document.getElementById('recentsSection');
+  const row = document.getElementById('recentsRow');
+  if (!recents.length) { sec.style.display = 'none'; return; }
+  sec.style.display = '';
+  row.innerHTML = recents.map(id => {
+    const c = countries[id];
+    return `<button class="recent-chip" onclick="selectCountry('${id}')">${c.flag} ${c.name}</button>`;
+  }).join('');
+}
+
+// ─── ONBOARDING ───────────────────────────────────────────────────────────────
+const ONBOARD_SLIDES = [
+  { icon:'🗣️', title:'Phrases in 10 languages', body:'Tap any phrase to hear it spoken aloud. Works offline — no roaming needed.' },
+  { icon:'✈️', title:'Deep travel intel', body:'Every country has Culture, Money, Food, Safety tips + the best apps to download before you fly.' },
+  { icon:'🧠', title:'Learn before you land', body:'Quiz mode shuffles every phrase into a flashcard deck. Streak counter keeps you honest.' }
+];
+let onboardIdx = 0;
+function checkOnboarding() {
+  if (localStorage.getItem(ONBOARD_KEY)) return;
+  onboardIdx = 0; showOnboardSlide(0);
+  document.getElementById('onboardModal').classList.add('open');
+}
+function showOnboardSlide(i) {
+  const s = ONBOARD_SLIDES[i];
+  document.getElementById('obIcon').textContent = s.icon;
+  document.getElementById('obTitle').textContent = s.title;
+  document.getElementById('obBody').textContent = s.body;
+  document.getElementById('obNext').textContent = i < ONBOARD_SLIDES.length - 1 ? 'Next →' : 'Get started';
+  document.querySelectorAll('.onboard-dot').forEach((d,idx) => d.classList.toggle('active', idx === i));
+}
+function onboardNext() {
+  if (onboardIdx < ONBOARD_SLIDES.length - 1) { onboardIdx++; showOnboardSlide(onboardIdx); }
+  else closeOnboarding();
+}
+function closeOnboarding() {
+  document.getElementById('onboardModal').classList.remove('open');
+  try { localStorage.setItem(ONBOARD_KEY, '1'); } catch(e){}
+}
+
+// ─── TRIP PLANNER ─────────────────────────────────────────────────────────────
+function toggleTripSelect() {
+  tripSelecting = !tripSelecting;
+  tripSelected.clear();
+  document.getElementById('countryGrid').classList.toggle('trip-selecting', tripSelecting);
+  document.getElementById('tripToggleBtn').textContent = tripSelecting ? '✕ Cancel trip planning' : '🗺️ Plan a multi-country trip';
+  document.getElementById('tripBar').classList.toggle('show', tripSelecting);
+  document.getElementById('tripPlan').classList.remove('open');
+  document.querySelectorAll('.country-card').forEach(c => c.classList.remove('selected'));
+  updateTripBar();
+}
+function toggleTripCountry(id) {
+  if (tripSelected.has(id)) { tripSelected.delete(id); document.getElementById(`card-${id}`).classList.remove('selected'); }
+  else { tripSelected.add(id); document.getElementById(`card-${id}`).classList.add('selected'); }
+  updateTripBar();
+}
+function updateTripBar() {
+  const n = tripSelected.size;
+  document.getElementById('tripBarLabel').textContent = n === 0 ? 'Select countries' : `${n} countr${n===1?'y':'ies'} selected`;
+}
+function showTripPlan() {
+  if (!tripSelected.size) return;
+  const plan = document.getElementById('tripPlan');
+  plan.innerHTML = [...tripSelected].map(id => {
+    const c = countries[id];
+    const qf = c.quickFacts ? c.quickFacts.find(f => f.label === 'Emergency') : null;
+    const topApps = c.apps ? c.apps.slice(0,3).map(a => a.name).join(', ') : '';
+    return `<div class="trip-entry">
+      <div class="trip-entry-head"><span class="trip-entry-flag">${c.flag}</span><span class="trip-entry-name">${c.name}</span></div>
+      <div>🚑 Emergency: <span class="trip-entry-num">${qf ? qf.value : '112'}</span></div>
+      <div style="font-size:0.8rem;color:var(--muted);margin-top:4px">💵 ${c.currency ? c.currency.label : ''}</div>
+      ${topApps ? `<div class="trip-entry-apps">📱 Top apps: ${topApps}</div>` : ''}
+    </div>`;
+  }).join('');
+  plan.classList.add('open');
+  plan.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  // Exit selecting mode
+  document.getElementById('countryGrid').classList.remove('trip-selecting');
+  document.getElementById('tripBar').classList.remove('show');
+  document.getElementById('tripToggleBtn').textContent = '🗺️ Plan a multi-country trip';
+  tripSelecting = false;
+}
+
+// ─── QUICK FACT — CURRENCY CHIP CLICK ────────────────────────────────────────
+// Override buildTravelInfo to make currency chip clickable + add local time chip
+const _origBuildTravelInfo = buildTravelInfo;
+buildTravelInfo = function(country) {
+  _origBuildTravelInfo(country);
+  // Make currency chip clickable
+  const chips = document.querySelectorAll('.qf-chip');
+  chips.forEach(chip => {
+    if (chip.querySelector('.qf-label')?.textContent === 'CURRENCY') {
+      chip.style.cursor = 'pointer';
+      chip.title = 'Open currency calculator';
+      chip.onclick = openCurrencyCalc;
+    }
+  });
+  // Add/update local time chip
+  const qf = document.getElementById('quickFacts');
+  if (qf && country.timezone) {
+    let timeChip = document.getElementById('timeChip');
+    if (!timeChip) {
+      const chipEl = document.createElement('div');
+      chipEl.className = 'qf-chip';
+      chipEl.innerHTML = `<span class="qf-icon">🕐</span><div><span class="qf-label">LOCAL TIME</span><span class="qf-value" id="timeChip">--:--</span></div>`;
+      qf.appendChild(chipEl);
+    }
+    updateLocalTime(country.timezone);
+  }
+};
+
 buildHome();
+initDarkMode();
+checkOnboarding();
 
 // ─── PWA ─────────────────────────────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
