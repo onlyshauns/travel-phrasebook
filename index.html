@@ -28,53 +28,16 @@
 
   .container { max-width: 620px; margin: 0 auto; }
 
-  /* HOME */
-  .home-header {
-    text-align: center;
-    margin-bottom: 44px;
-  }
-
-  .home-header .globe {
-    font-size: 2.4rem;
-    display: block;
-    margin-bottom: 12px;
-  }
-
-  .home-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-  }
-
+  /* ── HOME ── */
+  .home-header { text-align: center; margin-bottom: 44px; }
+  .home-header .globe { font-size: 2.4rem; display: block; margin-bottom: 12px; }
+  .home-header h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; line-height: 1.1; }
   .home-header h1 em { font-style: italic; color: var(--rouge); }
+  .home-header p { color: var(--muted); font-size: 0.9rem; margin-top: 10px; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
+  .divider { width: 40px; height: 2px; background: var(--gold); margin: 14px auto 0; }
 
-  .home-header p {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-top: 10px;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .divider {
-    width: 40px;
-    height: 2px;
-    background: var(--gold);
-    margin: 14px auto 0;
-  }
-
-  .country-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-
-  @media (min-width: 460px) {
-    .country-grid { grid-template-columns: repeat(3, 1fr); }
-  }
+  .country-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  @media (min-width: 460px) { .country-grid { grid-template-columns: repeat(3, 1fr); } }
 
   .country-card {
     background: var(--card);
@@ -85,24 +48,12 @@
     cursor: pointer;
     transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
   }
-
-  .country-card:hover {
-    box-shadow: 0 6px 24px rgba(0,0,0,0.09);
-    transform: translateY(-2px);
-    border-color: var(--gold);
-  }
-
+  .country-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); transform: translateY(-2px); border-color: var(--gold); }
   .country-card .flag { font-size: 2.6rem; display: block; margin-bottom: 10px; }
-  .country-card .cname {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 4px;
-  }
+  .country-card .cname { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; display: block; margin-bottom: 4px; }
   .country-card .clang { font-size: 0.75rem; color: var(--muted); font-style: italic; }
 
-  /* PHRASEBOOK */
+  /* ── PHRASEBOOK ── */
   #phrasebook { display: none; }
 
   .back-btn {
@@ -123,27 +74,37 @@
   }
   .back-btn:hover { border-color: var(--dark); color: var(--dark); }
 
-  .pb-header {
-    text-align: center;
-    margin-bottom: 32px;
-  }
+  .pb-header { text-align: center; margin-bottom: 28px; }
   .pb-header .flag-lg { font-size: 2.6rem; display: block; margin-bottom: 10px; }
-  .pb-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    line-height: 1.1;
-  }
+  .pb-header h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; line-height: 1.1; }
   .pb-header h2 em { font-style: italic; color: var(--rouge); }
-  .pb-header p {
-    color: var(--muted);
-    font-size: 0.85rem;
-    margin-top: 8px;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
+  .pb-header p { color: var(--muted); font-size: 0.85rem; margin-top: 8px; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
 
+  /* ── MODE TOGGLE ── */
+  .mode-toggle {
+    display: flex;
+    background: #ede8df;
+    border-radius: 100px;
+    padding: 4px;
+    margin-bottom: 24px;
+    gap: 4px;
+  }
+  .mode-btn {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+    color: var(--muted);
+    transition: all 0.18s;
+  }
+  .mode-btn.active { background: #fff; color: var(--dark); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+
+  /* ── PHRASE TABS ── */
   .tabs {
     display: flex;
     flex-wrap: wrap;
@@ -151,7 +112,6 @@
     justify-content: center;
     margin-bottom: 32px;
   }
-
   .tab {
     padding: 8px 18px;
     border: 1.5px solid var(--border);
@@ -182,8 +142,8 @@
     border-bottom: 1px solid var(--border);
   }
 
+  /* ── PHRASE CARDS ── */
   .phrases { display: grid; gap: 12px; }
-
   .phrase-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -194,31 +154,21 @@
     gap: 16px;
     transition: box-shadow 0.2s, transform 0.2s;
   }
-  .phrase-card:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-    transform: translateY(-1px);
-  }
+  .phrase-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-1px); }
 
   .play-btn {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     border-radius: 50%;
     background: var(--rouge);
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     transition: background 0.2s, transform 0.1s;
-    color: white;
   }
   .play-btn:hover { background: #a93226; }
   .play-btn:active { transform: scale(0.94); }
-  .play-btn.speaking {
-    background: var(--gold);
-    animation: pulse 0.8s ease-in-out infinite alternate;
-  }
+  .play-btn.speaking { background: var(--gold); animation: pulse 0.8s ease-in-out infinite alternate; }
   @keyframes pulse {
     from { box-shadow: 0 0 0 0 rgba(201,168,76,0.4); }
     to   { box-shadow: 0 0 0 8px rgba(201,168,76,0); }
@@ -226,24 +176,9 @@
   .play-icon { width: 14px; height: 14px; }
 
   .phrase-text { flex: 1; min-width: 0; }
-
-  .native {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 3px;
-    line-height: 1.3;
-  }
-
-  /* Use serif only for Latin-script languages */
+  .native { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 3px; line-height: 1.3; }
   #phrasebook.latin .native { font-family: 'Playfair Display', serif; }
-
-  .pronunciation {
-    font-size: 0.78rem;
-    color: var(--rouge);
-    font-style: italic;
-    margin-bottom: 4px;
-  }
+  .pronunciation { font-size: 0.78rem; color: var(--rouge); font-style: italic; margin-bottom: 4px; }
   .english { font-size: 0.82rem; color: var(--muted); }
 
   .tip-box {
@@ -269,6 +204,78 @@
     margin-bottom: 20px;
     text-align: center;
   }
+
+  /* ── TRAVEL INFO ── */
+  #travelInfo { display: none; }
+
+  .info-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Culture — gold rule list */
+  .culture-list { margin-bottom: 36px; }
+  .culture-item {
+    padding: 14px 0 14px 18px;
+    border-left: 3px solid var(--gold);
+    margin-left: 2px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .culture-item:last-child { border-bottom: none; }
+  .culture-item .ci-emoji { font-size: 1.15rem; flex-shrink: 0; margin-top: 1px; }
+  .culture-item .ci-rule { font-weight: 600; font-size: 0.88rem; margin-bottom: 3px; line-height: 1.3; }
+  .culture-item .ci-note { font-size: 0.79rem; color: var(--muted); line-height: 1.5; }
+
+  /* Apps — 2-column grid */
+  .apps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .app-tile {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  .app-tile-top { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+  .app-tile-icon {
+    width: 36px; height: 36px;
+    border-radius: 9px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .app-tile-cat { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--rouge); margin-bottom: 1px; }
+  .app-tile-name { font-weight: 600; font-size: 0.85rem; line-height: 1.2; }
+  .app-tile-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.45; flex: 1; margin-bottom: 10px; }
+
+  .store-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; }
+  .store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 4px 9px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-decoration: none;
+    background: var(--cream);
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .store-link:hover { border-color: var(--dark); color: var(--dark); background: #fff; }
 </style>
 </head>
 <body>
@@ -288,51 +295,71 @@
   <!-- PHRASEBOOK -->
   <div id="phrasebook">
     <button class="back-btn" onclick="goHome()">← All Countries</button>
+
     <div class="pb-header">
       <span class="flag-lg" id="pbFlag"></span>
       <h2 id="pbTitle"></h2>
       <p id="pbSubtitle"></p>
       <div class="divider"></div>
     </div>
-    <div class="no-speech" id="noSpeech">⚠️ Your browser doesn't support text-to-speech. Try Chrome or Safari.</div>
-    <div class="tabs">
-      <button class="tab active" onclick="showSection('greetings', event)">👋 Greetings</button>
-      <button class="tab" onclick="showSection('food', event)">🍽️ Food & Dining</button>
-      <button class="tab" onclick="showSection('directions', event)">🗺️ Directions</button>
-      <button class="tab" onclick="showSection('shopping', event)">🛍️ Shopping</button>
-      <button class="tab" onclick="showSection('numbers', event)">🔢 Numbers</button>
-      <button class="tab" onclick="showSection('emergency', event)">🆘 Emergency</button>
+
+    <!-- MODE TOGGLE -->
+    <div class="mode-toggle">
+      <button class="mode-btn active" id="modePhrasesBtn" onclick="setMode('phrases')">🗣️ Phrases</button>
+      <button class="mode-btn" id="modeInfoBtn" onclick="setMode('info')">✈️ Travel Info</button>
     </div>
-    <div class="section active" id="greetings">
-      <div class="section-title">Greetings & Pleasantries</div>
-      <div class="phrases" id="phrases-greetings"></div>
-      <div class="tip-box" id="tip-greetings"></div>
+
+    <!-- PHRASES PANEL -->
+    <div id="phrasesPanel">
+      <div class="no-speech" id="noSpeech">⚠️ Your browser doesn't support text-to-speech. Try Chrome or Safari.</div>
+      <div class="tabs">
+        <button class="tab active" onclick="showSection('greetings', event)">👋 Greetings</button>
+        <button class="tab" onclick="showSection('food', event)">🍽️ Food & Dining</button>
+        <button class="tab" onclick="showSection('directions', event)">🗺️ Directions</button>
+        <button class="tab" onclick="showSection('shopping', event)">🛍️ Shopping</button>
+        <button class="tab" onclick="showSection('numbers', event)">🔢 Numbers</button>
+        <button class="tab" onclick="showSection('emergency', event)">🆘 Emergency</button>
+      </div>
+      <div class="section active" id="greetings">
+        <div class="section-title">Greetings & Pleasantries</div>
+        <div class="phrases" id="phrases-greetings"></div>
+        <div class="tip-box" id="tip-greetings"></div>
+      </div>
+      <div class="section" id="food">
+        <div class="section-title">Food & Dining</div>
+        <div class="phrases" id="phrases-food"></div>
+        <div class="tip-box" id="tip-food"></div>
+      </div>
+      <div class="section" id="directions">
+        <div class="section-title">Getting Around</div>
+        <div class="phrases" id="phrases-directions"></div>
+        <div class="tip-box" id="tip-directions"></div>
+      </div>
+      <div class="section" id="shopping">
+        <div class="section-title">Shopping</div>
+        <div class="phrases" id="phrases-shopping"></div>
+        <div class="tip-box" id="tip-shopping"></div>
+      </div>
+      <div class="section" id="numbers">
+        <div class="section-title">Numbers & Counting</div>
+        <div class="phrases" id="phrases-numbers"></div>
+        <div class="tip-box" id="tip-numbers"></div>
+      </div>
+      <div class="section" id="emergency">
+        <div class="section-title">Emergency & Help</div>
+        <div class="phrases" id="phrases-emergency"></div>
+        <div class="tip-box" id="tip-emergency"></div>
+      </div>
     </div>
-    <div class="section" id="food">
-      <div class="section-title">Food & Dining</div>
-      <div class="phrases" id="phrases-food"></div>
-      <div class="tip-box" id="tip-food"></div>
+
+    <!-- TRAVEL INFO PANEL -->
+    <div id="travelInfo">
+      <div class="info-section-title">Culture & Etiquette</div>
+      <div class="culture-list" id="cultureList"></div>
+      <div class="info-section-title">Useful Apps</div>
+      <div class="apps-grid" id="appsGrid"></div>
     </div>
-    <div class="section" id="directions">
-      <div class="section-title">Getting Around</div>
-      <div class="phrases" id="phrases-directions"></div>
-      <div class="tip-box" id="tip-directions"></div>
-    </div>
-    <div class="section" id="shopping">
-      <div class="section-title">Shopping</div>
-      <div class="phrases" id="phrases-shopping"></div>
-      <div class="tip-box" id="tip-shopping"></div>
-    </div>
-    <div class="section" id="numbers">
-      <div class="section-title">Numbers & Counting</div>
-      <div class="phrases" id="phrases-numbers"></div>
-      <div class="tip-box" id="tip-numbers"></div>
-    </div>
-    <div class="section" id="emergency">
-      <div class="section-title">Emergency & Help</div>
-      <div class="phrases" id="phrases-emergency"></div>
-      <div class="tip-box" id="tip-emergency"></div>
-    </div>
+
   </div>
 
 </div>
@@ -350,6 +377,23 @@ const countries = {
       numbers: '💡 After 60, French gets quirky — 70 is <em>"soixante-dix"</em> (sixty-ten), 80 is <em>"quatre-vingts"</em> (four-twenties).',
       emergency: '💡 Emergency: <strong>112</strong>. Police: <strong>17</strong>. Ambulance (SAMU): <strong>15</strong>.',
     },
+    culture: [
+      { e: "🗣️", rule: "Always greet before you speak", note: "Bonjour before any request in a shop, café, or pharmacy. Skipping it is genuinely considered rude — not just impolite." },
+      { e: "🍽️", rule: "Ask for the bill — it won't come to you", note: "Meals are leisurely by design. Flag the waiter and say l'addition — waving or snapping fingers is an insult." },
+      { e: "💶", rule: "Tipping is optional, not expected", note: "Service is already included in the bill. Rounding up €1–2 is perfectly generous." },
+      { e: "🤫", rule: "Keep your voice down in public", note: "Loud conversations in cafés or on the metro mark you immediately as a tourist." },
+      { e: "🥖", rule: "Bread goes on the table, not a plate", note: "Place it directly on the tablecloth. Don't ask for butter — it's not typically offered with meals." },
+      { e: "🚶", rule: "Don't eat while walking", note: "Eating on the go is considered uncivilised. Sit down, even at a café terrace." },
+      { e: "👗", rule: "Dress up a little", note: "Parisians tend to dress with intention. Smart-casual goes a long way in restaurants and galleries." },
+    ],
+    apps: [
+      { e: "🗺️", cat: "Transit", name: "Citymapper", desc: "Best for Paris metro, RER, bus, and Vélib' bike routes.", ios: "https://apps.apple.com/app/id469463298", android: "https://play.google.com/store/apps/details?id=com.citymapper.app.release" },
+      { e: "🚕", cat: "Rides", name: "Bolt", desc: "Cheaper than Uber. Both work well in Paris.", ios: "https://apps.apple.com/app/id675033630", android: "https://play.google.com/store/apps/details?id=ee.mtakso.client" },
+      { e: "💬", cat: "Language", name: "Google Translate", desc: "Camera mode reads menus. Download the French offline pack.", ios: "https://apps.apple.com/app/id414681729", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.translate" },
+      { e: "💶", cat: "Money", name: "Wise", desc: "Best exchange rates for spending euros abroad.", ios: "https://apps.apple.com/app/id612261027", android: "https://play.google.com/store/apps/details?id=com.transferwise.android" },
+      { e: "🎫", cat: "Activities", name: "GetYourGuide", desc: "Skip-the-line tickets for the Louvre, Eiffel Tower, and day trips.", ios: "https://apps.apple.com/app/id657741529", android: "https://play.google.com/store/apps/details?id=com.getyourguide.android" },
+      { e: "🏨", cat: "Stay", name: "Booking.com", desc: "Free cancellation filters keep your plans flexible.", ios: "https://apps.apple.com/app/id367003839", android: "https://play.google.com/store/apps/details?id=com.booking" },
+    ],
     data: {
       greetings: [
         { native: "Bonjour", pron: "bon-ZHOOR", en: "Hello / Good morning" },
@@ -407,28 +451,17 @@ const countries = {
         { native: "Le wifi, c'est quoi ?", pron: "luh WEE-fee say kwah", en: "What's the wifi password?" },
       ],
       numbers: [
-        { native: "Un / Une", pron: "un / oon", en: "1" },
-        { native: "Deux", pron: "duh", en: "2" },
-        { native: "Trois", pron: "trwah", en: "3" },
-        { native: "Quatre", pron: "KAH-truh", en: "4" },
-        { native: "Cinq", pron: "sank", en: "5" },
-        { native: "Six", pron: "sees", en: "6" },
-        { native: "Sept", pron: "set", en: "7" },
-        { native: "Huit", pron: "weet", en: "8" },
-        { native: "Neuf", pron: "nuhf", en: "9" },
-        { native: "Dix", pron: "dees", en: "10" },
-        { native: "Onze", pron: "onz", en: "11" },
-        { native: "Douze", pron: "dooz", en: "12" },
-        { native: "Treize", pron: "trez", en: "13" },
-        { native: "Quatorze", pron: "ka-TORZ", en: "14" },
-        { native: "Quinze", pron: "kanz", en: "15" },
-        { native: "Seize", pron: "sez", en: "16" },
-        { native: "Dix-sept", pron: "dee-SET", en: "17" },
-        { native: "Dix-huit", pron: "dee-ZWEET", en: "18" },
-        { native: "Dix-neuf", pron: "dee-ZNUHF", en: "19" },
-        { native: "Vingt", pron: "van", en: "20" },
-        { native: "Cinquante", pron: "san-KONT", en: "50" },
-        { native: "Cent", pron: "son", en: "100" },
+        { native: "Un / Une", pron: "un / oon", en: "1" }, { native: "Deux", pron: "duh", en: "2" },
+        { native: "Trois", pron: "trwah", en: "3" }, { native: "Quatre", pron: "KAH-truh", en: "4" },
+        { native: "Cinq", pron: "sank", en: "5" }, { native: "Six", pron: "sees", en: "6" },
+        { native: "Sept", pron: "set", en: "7" }, { native: "Huit", pron: "weet", en: "8" },
+        { native: "Neuf", pron: "nuhf", en: "9" }, { native: "Dix", pron: "dees", en: "10" },
+        { native: "Onze", pron: "onz", en: "11" }, { native: "Douze", pron: "dooz", en: "12" },
+        { native: "Treize", pron: "trez", en: "13" }, { native: "Quatorze", pron: "ka-TORZ", en: "14" },
+        { native: "Quinze", pron: "kanz", en: "15" }, { native: "Seize", pron: "sez", en: "16" },
+        { native: "Dix-sept", pron: "dee-SET", en: "17" }, { native: "Dix-huit", pron: "dee-ZWEET", en: "18" },
+        { native: "Dix-neuf", pron: "dee-ZNUHF", en: "19" }, { native: "Vingt", pron: "van", en: "20" },
+        { native: "Cinquante", pron: "san-KONT", en: "50" }, { native: "Cent", pron: "son", en: "100" },
       ],
       emergency: [
         { native: "Au secours !", pron: "oh suh-KOOR", en: "Help!" },
@@ -445,12 +478,28 @@ const countries = {
   malaysia: {
     name: "Malaysia", flag: "🇲🇾", lang: "Bahasa Melayu", langCode: "ms-MY", latinScript: true,
     tips: {
-      greetings: '💡 <strong>Selamat</strong> is the all-purpose greeting prefix. Locals will always appreciate you trying a few words of Malay — even a simple terima kasih earns a smile.',
-      food: '💡 Malaysian food is often served family-style. Nasi lemak (coconut rice with sambal) is the national dish and available everywhere, even for breakfast.',
-      directions: '💡 Grab (Southeast Asia\'s ride-hailing app) is the easiest way to get around KL. Just show the driver your destination on the screen.',
-      numbers: '💡 Malay numbers are logical — once you know 1–10 and "puluh" (tens), you can build any number. "Dua puluh lima" = 25.',
-      emergency: '💡 Emergency number in Malaysia: <strong>999</strong> for police, fire, and ambulance.',
+      greetings: '💡 <strong>Selamat</strong> is the all-purpose greeting prefix. Locals will always appreciate you trying a few words of Malay.',
+      food: '💡 Malaysian food is often served family-style. Nasi lemak (coconut rice with sambal) is the national dish — available everywhere, even for breakfast.',
+      directions: '💡 Grab is the easiest way around KL. Just show the driver your destination on the screen.',
+      numbers: '💡 Malay numbers are logical — "dua puluh lima" = 25 (two tens five). Easy to learn.',
+      emergency: '💡 Emergency in Malaysia: <strong>999</strong> for police, fire, and ambulance.',
     },
+    culture: [
+      { e: "👗", rule: "Dress modestly, especially at religious sites", note: "Cover knees and shoulders when visiting mosques or temples. Many sites provide sarongs at the entrance." },
+      { e: "👟", rule: "Remove shoes before entering homes and temples", note: "Always remove footwear at the door. You'll usually see a pile of shoes outside as a signal." },
+      { e: "🤝", rule: "Use your right hand for eating and greeting", note: "The left hand is considered unclean. Use your right hand to eat, give, and receive things." },
+      { e: "🧕", rule: "Most restaurants in KL are halal", note: "Pork and alcohol are absent from halal establishments. Look for non-halal or Chinese restaurants if you need them." },
+      { e: "🛒", rule: "Bargaining is fine in markets, not malls", note: "Night markets and street stalls expect it. Fixed-price shops and malls do not." },
+      { e: "😊", rule: "Malaysians are warm and helpful", note: "Don't hesitate to ask for help — people will often go out of their way to assist tourists." },
+    ],
+    apps: [
+      { e: "🚗", cat: "Rides", name: "Grab", desc: "The dominant ride-hailing app across all of Southeast Asia.", ios: "https://apps.apple.com/app/id647268330", android: "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger" },
+      { e: "🗺️", cat: "Navigation", name: "Google Maps", desc: "Works well in Malaysia. Download offline maps for KL.", ios: "https://apps.apple.com/app/id585027354", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.maps" },
+      { e: "💬", cat: "Language", name: "Google Translate", desc: "Download Malay offline. Camera mode works on menus and signs.", ios: "https://apps.apple.com/app/id414681729", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.translate" },
+      { e: "💵", cat: "Money", name: "Wise", desc: "Best rates for spending Malaysian Ringgit abroad.", ios: "https://apps.apple.com/app/id612261027", android: "https://play.google.com/store/apps/details?id=com.transferwise.android" },
+      { e: "🏨", cat: "Stay", name: "Agoda", desc: "Strong in Southeast Asia — often cheaper than other booking sites.", ios: "https://apps.apple.com/app/id479753889", android: "https://play.google.com/store/apps/details?id=com.agoda.nuobo" },
+      { e: "🎫", cat: "Activities", name: "Klook", desc: "Best for day trips, theme parks, and local experiences.", ios: "https://apps.apple.com/app/id1099611444", android: "https://play.google.com/store/apps/details?id=com.klook.klook" },
+    ],
     data: {
       greetings: [
         { native: "Selamat pagi", pron: "suh-LAH-mat PAH-gee", en: "Good morning" },
@@ -504,20 +553,13 @@ const countries = {
         { native: "Kata laluan WiFi?", pron: "KAH-tah LAH-loo-an WEE-fee", en: "What's the wifi password?" },
       ],
       numbers: [
-        { native: "Satu", pron: "SAH-too", en: "1" },
-        { native: "Dua", pron: "DOO-ah", en: "2" },
-        { native: "Tiga", pron: "TEE-gah", en: "3" },
-        { native: "Empat", pron: "EM-pat", en: "4" },
-        { native: "Lima", pron: "LEE-mah", en: "5" },
-        { native: "Enam", pron: "EH-nam", en: "6" },
-        { native: "Tujuh", pron: "TOO-jooh", en: "7" },
-        { native: "Lapan", pron: "LAH-pan", en: "8" },
-        { native: "Sembilan", pron: "suhm-BEE-lan", en: "9" },
-        { native: "Sepuluh", pron: "suh-POO-looh", en: "10" },
-        { native: "Sebelas", pron: "suh-BEH-lahs", en: "11" },
-        { native: "Dua belas", pron: "DOO-ah BEH-lahs", en: "12" },
-        { native: "Dua puluh", pron: "DOO-ah POO-looh", en: "20" },
-        { native: "Lima puluh", pron: "LEE-mah POO-looh", en: "50" },
+        { native: "Satu", pron: "SAH-too", en: "1" }, { native: "Dua", pron: "DOO-ah", en: "2" },
+        { native: "Tiga", pron: "TEE-gah", en: "3" }, { native: "Empat", pron: "EM-pat", en: "4" },
+        { native: "Lima", pron: "LEE-mah", en: "5" }, { native: "Enam", pron: "EH-nam", en: "6" },
+        { native: "Tujuh", pron: "TOO-jooh", en: "7" }, { native: "Lapan", pron: "LAH-pan", en: "8" },
+        { native: "Sembilan", pron: "suhm-BEE-lan", en: "9" }, { native: "Sepuluh", pron: "suh-POO-looh", en: "10" },
+        { native: "Sebelas", pron: "suh-BEH-lahs", en: "11" }, { native: "Dua belas", pron: "DOO-ah BEH-lahs", en: "12" },
+        { native: "Dua puluh", pron: "DOO-ah POO-looh", en: "20" }, { native: "Lima puluh", pron: "LEE-mah POO-looh", en: "50" },
         { native: "Seratus", pron: "suh-RAH-toos", en: "100" },
       ],
       emergency: [
@@ -535,12 +577,28 @@ const countries = {
   thailand: {
     name: "Thailand", flag: "🇹🇭", lang: "ภาษาไทย", langCode: "th-TH", latinScript: false,
     tips: {
-      greetings: '💡 Add <strong>krap</strong> (men) or <strong>ka</strong> (women) to the end of any phrase to make it polite — it\'s the Thai equivalent of a respectful tone.',
-      food: '💡 For spice level: <em>"mai phet"</em> = not spicy, <em>"phet nit noi"</em> = a little spicy. Street food is safe and delicious — always go where locals are eating.',
-      directions: '💡 Agree on a tuk-tuk price before getting in. Bangkok\'s BTS Skytrain and MRT are far easier — signs are also in English.',
-      numbers: '💡 Thai has its own numerals (๑๒๓) but prices are almost always shown in Arabic numerals. Focus on learning the spoken words.',
+      greetings: '💡 Add <strong>krap</strong> (men) or <strong>ka</strong> (women) to the end of any phrase to make it polite.',
+      food: '💡 <em>"Mai phet"</em> = not spicy. <em>"Phet nit noi"</em> = a little spicy. Street food is safe and delicious — go where locals eat.',
+      directions: '💡 Agree on a tuk-tuk price before getting in. Bangkok\'s BTS Skytrain and MRT are far easier — signs are in English.',
+      numbers: '💡 Prices are almost always shown in Arabic numerals. Focus on learning the spoken words.',
       emergency: '💡 Police: <strong>191</strong>. Tourist Police (English): <strong>1155</strong>. Ambulance: <strong>1669</strong>.',
     },
+    culture: [
+      { e: "🙏", rule: "The wai is the standard greeting", note: "Press your palms together at chest level and bow slightly. Return a wai when someone offers one to you." },
+      { e: "👑", rule: "Never criticise the monarchy", note: "Lèse-majesté laws are strictly enforced. Any criticism of the royal family is illegal and taken very seriously." },
+      { e: "🦶", rule: "Feet are considered low and unclean", note: "Never point your feet at people, sacred images, or monks. Don't prop your feet on tables or chairs." },
+      { e: "🧢", rule: "Never touch anyone's head", note: "The head is considered the most sacred part of the body. Even patting a child on the head is inappropriate." },
+      { e: "⛩️", rule: "Cover up at temples", note: "Shoulders and knees must be covered. Many temples provide wraps at the entrance for a small fee." },
+      { e: "🧘", rule: "Women must not touch monks", note: "Female travellers should not hand anything directly to a monk or make physical contact." },
+    ],
+    apps: [
+      { e: "🚗", cat: "Rides", name: "Grab", desc: "Most reliable ride-hailing across Bangkok and major cities.", ios: "https://apps.apple.com/app/id647268330", android: "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger" },
+      { e: "🗺️", cat: "Navigation", name: "Google Maps", desc: "Works well in Thailand. Download Bangkok offline maps.", ios: "https://apps.apple.com/app/id585027354", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.maps" },
+      { e: "💬", cat: "Language", name: "Google Translate", desc: "Camera mode reads Thai script on menus and signs.", ios: "https://apps.apple.com/app/id414681729", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.translate" },
+      { e: "💵", cat: "Money", name: "Wise", desc: "Best rates for spending Thai Baht. Set up before you leave.", ios: "https://apps.apple.com/app/id612261027", android: "https://play.google.com/store/apps/details?id=com.transferwise.android" },
+      { e: "🏨", cat: "Stay", name: "Agoda", desc: "Headquartered in Bangkok — often has the best Thai hotel deals.", ios: "https://apps.apple.com/app/id479753889", android: "https://play.google.com/store/apps/details?id=com.agoda.nuobo" },
+      { e: "🎫", cat: "Activities", name: "Klook", desc: "Skip-the-line tickets, temple tours, and island day trips.", ios: "https://apps.apple.com/app/id1099611444", android: "https://play.google.com/store/apps/details?id=com.klook.klook" },
+    ],
     data: {
       greetings: [
         { native: "สวัสดี", pron: "sah-WAHT-dee (krap/ka)", en: "Hello / Good day" },
@@ -593,20 +651,13 @@ const countries = {
         { native: "รหัส WiFi คืออะไร", pron: "rá-hàt WEE-fai kuue à-RAI", en: "What's the wifi password?" },
       ],
       numbers: [
-        { native: "หนึ่ง", pron: "nùeng", en: "1" },
-        { native: "สอง", pron: "sŏng", en: "2" },
-        { native: "สาม", pron: "sǎam", en: "3" },
-        { native: "สี่", pron: "sèe", en: "4" },
-        { native: "ห้า", pron: "hâa", en: "5" },
-        { native: "หก", pron: "hòk", en: "6" },
-        { native: "เจ็ด", pron: "jèt", en: "7" },
-        { native: "แปด", pron: "bpàet", en: "8" },
-        { native: "เก้า", pron: "gâo", en: "9" },
-        { native: "สิบ", pron: "sìp", en: "10" },
-        { native: "สิบเอ็ด", pron: "sìp-èt", en: "11" },
-        { native: "สิบสอง", pron: "sìp-sŏng", en: "12" },
-        { native: "ยี่สิบ", pron: "yêe-sìp", en: "20" },
-        { native: "ห้าสิบ", pron: "hâa-sìp", en: "50" },
+        { native: "หนึ่ง", pron: "nùeng", en: "1" }, { native: "สอง", pron: "sŏng", en: "2" },
+        { native: "สาม", pron: "sǎam", en: "3" }, { native: "สี่", pron: "sèe", en: "4" },
+        { native: "ห้า", pron: "hâa", en: "5" }, { native: "หก", pron: "hòk", en: "6" },
+        { native: "เจ็ด", pron: "jèt", en: "7" }, { native: "แปด", pron: "bpàet", en: "8" },
+        { native: "เก้า", pron: "gâo", en: "9" }, { native: "สิบ", pron: "sìp", en: "10" },
+        { native: "สิบเอ็ด", pron: "sìp-èt", en: "11" }, { native: "สิบสอง", pron: "sìp-sŏng", en: "12" },
+        { native: "ยี่สิบ", pron: "yêe-sìp", en: "20" }, { native: "ห้าสิบ", pron: "hâa-sìp", en: "50" },
         { native: "หนึ่งร้อย", pron: "nùeng-rói", en: "100" },
       ],
       emergency: [
@@ -624,12 +675,28 @@ const countries = {
   korea: {
     name: "Korea", flag: "🇰🇷", lang: "한국어", langCode: "ko-KR", latinScript: false,
     tips: {
-      greetings: '💡 Koreans genuinely appreciate foreigners trying Korean. Even <strong>안녕하세요</strong> and <strong>감사합니다</strong> will earn you a warm response.',
-      food: '💡 Banchan (side dishes) are free and refillable — just ask. Tipping is not customary in Korea and can sometimes cause awkwardness.',
-      directions: '💡 Seoul\'s metro is world-class and signs are in English. Kakao Maps and Naver Maps are more accurate than Google Maps for Korea.',
-      numbers: '💡 Korean has two number systems — Sino-Korean (일이삼, used for money and dates) and Native Korean (하나둘셋, for counting objects). These Sino-Korean ones cover most travel needs.',
+      greetings: '💡 Koreans appreciate when foreigners try Korean. Even a simple 안녕하세요 earns a warm response.',
+      food: '💡 Banchan (side dishes) are free and refillable. Tipping is not customary and can cause awkwardness.',
+      directions: '💡 Seoul\'s metro is world-class with English signs. Kakao Maps and Naver Maps are more accurate than Google Maps in Korea.',
+      numbers: '💡 Korean has two number systems. These Sino-Korean ones (일이삼) cover most travel needs — money, floors, dates.',
       emergency: '💡 Police: <strong>112</strong>. Fire & Ambulance: <strong>119</strong>. Tourist helpline (English 24/7): <strong>1330</strong>.',
     },
+    culture: [
+      { e: "🙇", rule: "Bowing is the standard greeting", note: "A slight head nod works for casual interactions. Deeper bows show more respect to elders or seniors." },
+      { e: "👴", rule: "Age and hierarchy matter", note: "Korea has a strong Confucian culture. Always show deference to older people — let them sit first, pour their drink first." },
+      { e: "🍶", rule: "Pour drinks for others, not yourself", note: "It's polite to pour for the people around you and let others pour for you. Never fill your own glass." },
+      { e: "🙌", rule: "Two hands when giving or receiving", note: "Use both hands — or support your right arm with your left — when giving or receiving objects, gifts, or money." },
+      { e: "💴", rule: "Don't tip", note: "Tipping is not part of Korean culture and can sometimes cause confusion or embarrassment." },
+      { e: "👟", rule: "Remove shoes at the entrance of homes", note: "Slippers will usually be provided. Always wait for a cue from your host." },
+    ],
+    apps: [
+      { e: "🗺️", cat: "Navigation", name: "Kakao Maps", desc: "The go-to navigation app in Korea — far more accurate than Google Maps.", ios: "https://apps.apple.com/app/id304608425", android: "https://play.google.com/store/apps/details?id=net.daum.android.map" },
+      { e: "🗺️", cat: "Navigation", name: "Naver Maps", desc: "Great alternative with transit and walking directions.", ios: "https://apps.apple.com/app/id311867728", android: "https://play.google.com/store/apps/details?id=com.nhn.android.nmap" },
+      { e: "🚕", cat: "Rides", name: "Kakao T", desc: "The dominant taxi-hailing app in Korea. Works across all major cities.", ios: "https://apps.apple.com/app/id981110422", android: "https://play.google.com/store/apps/details?id=com.kakao.taxi" },
+      { e: "💬", cat: "Language", name: "Papago", desc: "Better than Google Translate for Korean. Made by Naver.", ios: "https://apps.apple.com/app/id1147874819", android: "https://play.google.com/store/apps/details?id=com.naver.labs.translator" },
+      { e: "💵", cat: "Money", name: "Wise", desc: "Best rates for spending Korean Won. Set up before you leave.", ios: "https://apps.apple.com/app/id612261027", android: "https://play.google.com/store/apps/details?id=com.transferwise.android" },
+      { e: "🎫", cat: "Activities", name: "Klook", desc: "K-pop experiences, DMZ tours, and skip-the-line passes.", ios: "https://apps.apple.com/app/id1099611444", android: "https://play.google.com/store/apps/details?id=com.klook.klook" },
+    ],
     data: {
       greetings: [
         { native: "안녕하세요", pron: "an-NYONG-ha-se-yo", en: "Hello" },
@@ -683,20 +750,13 @@ const countries = {
         { native: "와이파이 비밀번호가 뭐예요?", pron: "wa-I-pa-i bi-MIL-bon-ho-ga mwo-YE-yo", en: "What's the wifi password?" },
       ],
       numbers: [
-        { native: "일", pron: "il", en: "1" },
-        { native: "이", pron: "i", en: "2" },
-        { native: "삼", pron: "sam", en: "3" },
-        { native: "사", pron: "sa", en: "4" },
-        { native: "오", pron: "o", en: "5" },
-        { native: "육", pron: "yuk", en: "6" },
-        { native: "칠", pron: "chil", en: "7" },
-        { native: "팔", pron: "pal", en: "8" },
-        { native: "구", pron: "gu", en: "9" },
-        { native: "십", pron: "sip", en: "10" },
-        { native: "십일", pron: "si-BIL", en: "11" },
-        { native: "십이", pron: "si-BI", en: "12" },
-        { native: "이십", pron: "i-SIP", en: "20" },
-        { native: "오십", pron: "o-SIP", en: "50" },
+        { native: "일", pron: "il", en: "1" }, { native: "이", pron: "i", en: "2" },
+        { native: "삼", pron: "sam", en: "3" }, { native: "사", pron: "sa", en: "4" },
+        { native: "오", pron: "o", en: "5" }, { native: "육", pron: "yuk", en: "6" },
+        { native: "칠", pron: "chil", en: "7" }, { native: "팔", pron: "pal", en: "8" },
+        { native: "구", pron: "gu", en: "9" }, { native: "십", pron: "sip", en: "10" },
+        { native: "십일", pron: "si-BIL", en: "11" }, { native: "십이", pron: "si-BI", en: "12" },
+        { native: "이십", pron: "i-SIP", en: "20" }, { native: "오십", pron: "o-SIP", en: "50" },
         { native: "백", pron: "baek", en: "100" },
       ],
       emergency: [
@@ -714,12 +774,28 @@ const countries = {
   indonesia: {
     name: "Indonesia", flag: "🇮🇩", lang: "Bahasa Indonesia", langCode: "id-ID", latinScript: true,
     tips: {
-      greetings: '💡 Adding <em>"Pak"</em> (for older men) or <em>"Bu"</em> (for older women) after a greeting shows respect and is always appreciated.',
-      food: '💡 Indonesia has one of the world\'s great street food cultures. Nasi goreng (fried rice) and mie goreng (fried noodles) are safe bets anywhere in the country.',
-      directions: '💡 Ojek (motorbike taxis via Gojek or Grab) are the fastest way through traffic. Always use the app for pricing transparency.',
-      numbers: '💡 Indonesian numbers are completely regular — "dua puluh lima" is literally "two tens five" (25). Very logical and easy to learn.',
+      greetings: '💡 Adding <em>"Pak"</em> (older men) or <em>"Bu"</em> (older women) after a greeting shows respect.',
+      food: '💡 Nasi goreng (fried rice) and mie goreng (fried noodles) are safe bets anywhere in the country.',
+      directions: '💡 Ojek (motorbike taxis via Gojek or Grab) are fastest through traffic. Always use the app for pricing.',
+      numbers: '💡 "Dua puluh lima" = 25 (two tens five). Completely regular and easy to learn.',
       emergency: '💡 Emergency: <strong>112</strong>. Police: <strong>110</strong>. Ambulance: <strong>118</strong>.',
     },
+    culture: [
+      { e: "🤝", rule: "Use your right hand — always", note: "The left hand is considered unclean. Use your right hand to eat, give gifts, money, or shake hands." },
+      { e: "👗", rule: "Dress modestly, especially in Bali", note: "Cover shoulders and knees at temples. A sash or sarong is often required — and usually provided at the gate." },
+      { e: "👟", rule: "Remove shoes before entering homes and temples", note: "A pile of shoes outside is the universal signal. Always follow the lead of your hosts." },
+      { e: "🕌", rule: "Respect prayer times", note: "The call to prayer happens five times a day. Be patient if shops pause briefly — it's usually just a few minutes." },
+      { e: "☝️", rule: "Point with your thumb, not your finger", note: "Pointing with your index finger is considered rude. Use your right thumb to gesture direction." },
+      { e: "🛒", rule: "Bargaining is expected in markets", note: "Start at about half the asking price in street markets and work from there. Fixed-price signs mean no negotiation." },
+    ],
+    apps: [
+      { e: "🛵", cat: "Rides", name: "Gojek", desc: "Indonesia's super-app — rides, food delivery, payments, and more.", ios: "https://apps.apple.com/app/id944875099", android: "https://play.google.com/store/apps/details?id=com.gojek.app" },
+      { e: "🚗", cat: "Rides", name: "Grab", desc: "Great alternative to Gojek, especially outside Java.", ios: "https://apps.apple.com/app/id647268330", android: "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger" },
+      { e: "🗺️", cat: "Navigation", name: "Google Maps", desc: "Works well in Indonesia. Download city maps offline.", ios: "https://apps.apple.com/app/id585027354", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.maps" },
+      { e: "💬", cat: "Language", name: "Google Translate", desc: "Download Indonesian offline. Camera mode handles menus and signs.", ios: "https://apps.apple.com/app/id414681729", android: "https://play.google.com/store/apps/details?id=com.google.android.apps.translate" },
+      { e: "🏨", cat: "Stay", name: "Agoda", desc: "Strong in Southeast Asia — often has the best deals for Indonesia.", ios: "https://apps.apple.com/app/id479753889", android: "https://play.google.com/store/apps/details?id=com.agoda.nuobo" },
+      { e: "🎫", cat: "Activities", name: "Klook", desc: "Bali temple tours, volcano hikes, and island-hopping trips.", ios: "https://apps.apple.com/app/id1099611444", android: "https://play.google.com/store/apps/details?id=com.klook.klook" },
+    ],
     data: {
       greetings: [
         { native: "Halo / Selamat pagi", pron: "HAH-loh / suh-LAH-mat PAH-gee", en: "Hello / Good morning" },
@@ -774,20 +850,13 @@ const countries = {
         { native: "Password WiFi-nya apa?", pron: "PASS-word WEE-fee-nyah AH-pah", en: "What's the wifi password?" },
       ],
       numbers: [
-        { native: "Satu", pron: "SAH-too", en: "1" },
-        { native: "Dua", pron: "DOO-ah", en: "2" },
-        { native: "Tiga", pron: "TEE-gah", en: "3" },
-        { native: "Empat", pron: "EM-pat", en: "4" },
-        { native: "Lima", pron: "LEE-mah", en: "5" },
-        { native: "Enam", pron: "EH-nam", en: "6" },
-        { native: "Tujuh", pron: "TOO-jooh", en: "7" },
-        { native: "Delapan", pron: "duh-LAH-pan", en: "8" },
-        { native: "Sembilan", pron: "suhm-BEE-lan", en: "9" },
-        { native: "Sepuluh", pron: "suh-POO-looh", en: "10" },
-        { native: "Sebelas", pron: "suh-BEH-lahs", en: "11" },
-        { native: "Dua belas", pron: "DOO-ah BEH-lahs", en: "12" },
-        { native: "Dua puluh", pron: "DOO-ah POO-looh", en: "20" },
-        { native: "Lima puluh", pron: "LEE-mah POO-looh", en: "50" },
+        { native: "Satu", pron: "SAH-too", en: "1" }, { native: "Dua", pron: "DOO-ah", en: "2" },
+        { native: "Tiga", pron: "TEE-gah", en: "3" }, { native: "Empat", pron: "EM-pat", en: "4" },
+        { native: "Lima", pron: "LEE-mah", en: "5" }, { native: "Enam", pron: "EH-nam", en: "6" },
+        { native: "Tujuh", pron: "TOO-jooh", en: "7" }, { native: "Delapan", pron: "duh-LAH-pan", en: "8" },
+        { native: "Sembilan", pron: "suhm-BEE-lan", en: "9" }, { native: "Sepuluh", pron: "suh-POO-looh", en: "10" },
+        { native: "Sebelas", pron: "suh-BEH-lahs", en: "11" }, { native: "Dua belas", pron: "DOO-ah BEH-lahs", en: "12" },
+        { native: "Dua puluh", pron: "DOO-ah POO-looh", en: "20" }, { native: "Lima puluh", pron: "LEE-mah POO-looh", en: "50" },
         { native: "Seratus", pron: "suh-RAH-toos", en: "100" },
       ],
       emergency: [
@@ -807,6 +876,7 @@ const countries = {
 // ─── STATE ───────────────────────────────────────────────────────────────────
 
 let currentLangCode = 'en';
+const SECTIONS = ['greetings','food','directions','shopping','numbers','emergency'];
 
 // ─── HOME ────────────────────────────────────────────────────────────────────
 
@@ -816,18 +886,12 @@ function buildHome() {
     const card = document.createElement('div');
     card.className = 'country-card';
     card.onclick = () => selectCountry(id);
-    card.innerHTML = `
-      <span class="flag">${c.flag}</span>
-      <span class="cname">${c.name}</span>
-      <span class="clang">${c.lang}</span>
-    `;
+    card.innerHTML = `<span class="flag">${c.flag}</span><span class="cname">${c.name}</span><span class="clang">${c.lang}</span>`;
     grid.appendChild(card);
   }
 }
 
-// ─── PHRASEBOOK ──────────────────────────────────────────────────────────────
-
-const SECTIONS = ['greetings','food','directions','shopping','numbers','emergency'];
+// ─── COUNTRY ─────────────────────────────────────────────────────────────────
 
 function selectCountry(id) {
   const c = countries[id];
@@ -848,7 +912,9 @@ function selectCountry(id) {
   });
 
   buildPhrases(c);
+  buildTravelInfo(c);
   showSectionById('greetings');
+  setMode('phrases');
 
   document.getElementById('home').style.display = 'none';
   pb.style.display = 'block';
@@ -861,6 +927,8 @@ function goHome() {
   document.getElementById('home').style.display = 'block';
   window.scrollTo(0, 0);
 }
+
+// ─── PHRASES ─────────────────────────────────────────────────────────────────
 
 function buildPhrases(country) {
   for (const [section, phrases] of Object.entries(country.data)) {
@@ -876,11 +944,54 @@ function buildPhrases(country) {
           <div class="native">${p.native}</div>
           <div class="pronunciation">${p.pron}</div>
           <div class="english">${p.en}</div>
-        </div>
-      `;
+        </div>`;
       container.appendChild(card);
     });
   }
+}
+
+// ─── TRAVEL INFO ─────────────────────────────────────────────────────────────
+
+function buildTravelInfo(country) {
+  const cultureEl = document.getElementById('cultureList');
+  cultureEl.innerHTML = '';
+  country.culture.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'culture-item';
+    el.innerHTML = `
+      <span class="ci-emoji">${item.e}</span>
+      <div><div class="ci-rule">${item.rule}</div><div class="ci-note">${item.note}</div></div>`;
+    cultureEl.appendChild(el);
+  });
+
+  const appsEl = document.getElementById('appsGrid');
+  appsEl.innerHTML = '';
+  country.apps.forEach(app => {
+    const el = document.createElement('div');
+    el.className = 'app-tile';
+    el.innerHTML = `
+      <div class="app-tile-top">
+        <div class="app-tile-icon">${app.e}</div>
+        <div><div class="app-tile-cat">${app.cat}</div><div class="app-tile-name">${app.name}</div></div>
+      </div>
+      <div class="app-tile-desc">${app.desc}</div>
+      <div class="store-links">
+        <a class="store-link" href="${app.ios}" target="_blank" rel="noopener">🍎 App Store</a>
+        <a class="store-link" href="${app.android}" target="_blank" rel="noopener">▶ Google Play</a>
+      </div>`;
+    appsEl.appendChild(el);
+  });
+}
+
+// ─── MODE TOGGLE ─────────────────────────────────────────────────────────────
+
+function setMode(mode) {
+  const isPhrase = mode === 'phrases';
+  document.getElementById('phrasesPanel').style.display = isPhrase ? 'block' : 'none';
+  document.getElementById('travelInfo').style.display  = isPhrase ? 'none' : 'block';
+  document.getElementById('modePhrasesBtn').classList.toggle('active', isPhrase);
+  document.getElementById('modeInfoBtn').classList.toggle('active', !isPhrase);
+  if (isPhrase) window.speechSynthesis.cancel();
 }
 
 // ─── TABS ────────────────────────────────────────────────────────────────────
@@ -895,29 +1006,21 @@ function showSection(id, e) {
 function showSectionById(id) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.tab').forEach((t, i) => {
-    t.classList.toggle('active', SECTIONS[i] === id);
-  });
+  document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', SECTIONS[i] === id));
 }
 
 // ─── SPEECH ──────────────────────────────────────────────────────────────────
 
 function speak(btn, text) {
-  if (!('speechSynthesis' in window)) {
-    document.getElementById('noSpeech').style.display = 'block';
-    return;
-  }
+  if (!('speechSynthesis' in window)) { document.getElementById('noSpeech').style.display = 'block'; return; }
   window.speechSynthesis.cancel();
   document.querySelectorAll('.play-btn').forEach(b => b.classList.remove('speaking'));
-
   const utter = new SpeechSynthesisUtterance(text);
   utter.lang = currentLangCode;
   utter.rate = 0.85;
-
   const voices = window.speechSynthesis.getVoices();
   const voice = voices.find(v => v.lang.startsWith(currentLangCode.split('-')[0]));
   if (voice) utter.voice = voice;
-
   btn.classList.add('speaking');
   utter.onend  = () => btn.classList.remove('speaking');
   utter.onerror = () => btn.classList.remove('speaking');
