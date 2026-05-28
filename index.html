@@ -104,7 +104,7 @@
   }
   .mode-btn.active { background: #fff; color: var(--dark); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
 
-  /* ── PHRASE TABS ── */
+  /* ── PHRASE TABS + INFO TABS ── */
   .tabs {
     display: flex;
     flex-wrap: wrap;
@@ -112,7 +112,7 @@
     justify-content: center;
     margin-bottom: 32px;
   }
-  .tab {
+  .tab, .info-tab {
     padding: 8px 18px;
     border: 1.5px solid var(--border);
     background: transparent;
@@ -125,8 +125,8 @@
     color: var(--muted);
     transition: all 0.2s;
   }
-  .tab:hover { border-color: var(--rouge); color: var(--rouge); }
-  .tab.active { background: var(--rouge); border-color: var(--rouge); color: #fff; }
+  .tab:hover, .info-tab:hover { border-color: var(--rouge); color: var(--rouge); }
+  .tab.active, .info-tab.active { background: var(--rouge); border-color: var(--rouge); color: #fff; }
 
   .section { display: none; }
   .section.active { display: block; }
@@ -208,19 +208,13 @@
   /* ── TRAVEL INFO ── */
   #travelInfo { display: none; }
 
-  .info-section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    font-style: italic;
-    color: var(--muted);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
-  }
+  .info-tabs { margin-bottom: 28px; }
+
+  .info-sub { display: none; }
+  .info-sub.active { display: block; }
 
   /* Culture — gold rule list */
-  .culture-list { margin-bottom: 36px; }
+  .culture-list { margin-bottom: 8px; }
   .culture-item {
     padding: 14px 0 14px 18px;
     border-left: 3px solid var(--gold);
@@ -260,22 +254,23 @@
   .app-tile-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.45; flex: 1; margin-bottom: 10px; }
 
   .store-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; }
-  .store-link {
+  .store-badge {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    font-size: 0.65rem;
+    gap: 5px;
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-size: 0.64rem;
     font-weight: 600;
-    padding: 4px 9px;
-    border-radius: 100px;
-    border: 1px solid var(--border);
-    color: var(--muted);
     text-decoration: none;
-    background: var(--cream);
-    transition: all 0.15s;
     white-space: nowrap;
+    letter-spacing: 0.02em;
+    transition: opacity 0.15s;
+    line-height: 1;
   }
-  .store-link:hover { border-color: var(--dark); color: var(--dark); background: #fff; }
+  .store-badge:hover { opacity: 0.78; }
+  .store-badge.ios { background: #000; color: #fff; }
+  .store-badge.gplay { background: #fff; color: #222; border: 1px solid #d8d0c4; }
 </style>
 </head>
 <body>
@@ -354,10 +349,16 @@
 
     <!-- TRAVEL INFO PANEL -->
     <div id="travelInfo">
-      <div class="info-section-title">Culture & Etiquette</div>
-      <div class="culture-list" id="cultureList"></div>
-      <div class="info-section-title">Useful Apps</div>
-      <div class="apps-grid" id="appsGrid"></div>
+      <div class="tabs info-tabs">
+        <button class="info-tab active" id="infoTabCultureBtn" onclick="showInfoTab('culture')">🏛️ Culture</button>
+        <button class="info-tab" id="infoTabAppsBtn" onclick="showInfoTab('apps')">📱 Useful Apps</button>
+      </div>
+      <div id="infoTabCulture" class="info-sub active">
+        <div class="culture-list" id="cultureList"></div>
+      </div>
+      <div id="infoTabApps" class="info-sub">
+        <div class="apps-grid" id="appsGrid"></div>
+      </div>
     </div>
 
   </div>
@@ -952,7 +953,21 @@ function buildPhrases(country) {
 
 // ─── TRAVEL INFO ─────────────────────────────────────────────────────────────
 
+const APPLE_SVG = `<svg width="10" height="12" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>`;
+
+const GPLAY_SVG = `<svg width="12" height="13" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M0 0 L0 12 L8 12 Z"/><path fill="#FBBC04" d="M0 0 L8 12 L24 12 Z"/><path fill="#EA4335" d="M8 12 L24 12 L0 24 Z"/><path fill="#34A853" d="M0 12 L8 12 L0 24 Z"/></svg>`;
+
+function showInfoTab(tab) {
+  document.querySelectorAll('.info-sub').forEach(s => s.classList.remove('active'));
+  document.getElementById('infoTab' + tab[0].toUpperCase() + tab.slice(1)).classList.add('active');
+  document.querySelectorAll('.info-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('infoTab' + tab[0].toUpperCase() + tab.slice(1) + 'Btn').classList.add('active');
+}
+
 function buildTravelInfo(country) {
+  // Reset to Culture tab
+  showInfoTab('culture');
+
   const cultureEl = document.getElementById('cultureList');
   cultureEl.innerHTML = '';
   country.culture.forEach(item => {
@@ -976,8 +991,8 @@ function buildTravelInfo(country) {
       </div>
       <div class="app-tile-desc">${app.desc}</div>
       <div class="store-links">
-        <a class="store-link" href="${app.ios}" target="_blank" rel="noopener">🍎 App Store</a>
-        <a class="store-link" href="${app.android}" target="_blank" rel="noopener">▶ Google Play</a>
+        <a class="store-badge ios" href="${app.ios}" target="_blank" rel="noopener">${APPLE_SVG} App Store</a>
+        <a class="store-badge gplay" href="${app.android}" target="_blank" rel="noopener">${GPLAY_SVG} Google Play</a>
       </div>`;
     appsEl.appendChild(el);
   });
