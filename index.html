@@ -319,7 +319,7 @@
   .quick-facts::-webkit-scrollbar { display: none; }
   .qf-chip {
     flex-shrink: 0; display: flex; align-items: center; gap: 5px;
-    background: #fff; border: 1px solid var(--border); border-radius: 100px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 100px;
     padding: 6px 12px; font-size: 0.75rem; line-height: 1.2;
   }
   .qf-chip .qf-icon { font-size: 0.95rem; }
@@ -454,7 +454,7 @@
   [data-theme="dark"] .tip-box { background:#2a2318; }
   [data-theme="dark"] .mode-toggle { background:#2a2318; }
   [data-theme="dark"] .culture-item,[data-theme="dark"] .money-item,[data-theme="dark"] .safety-item { background:var(--card); }
-  [data-theme="dark"] .app-card { background:var(--card); }
+  [data-theme="dark"] .app-tile { background:var(--card); }
   [data-theme="dark"] .quick-facts { background:#2a2318; }
   [data-theme="dark"] .pron-guide { background:#2a2318; border-color:#3a3428; }
   [data-theme="dark"] .curr-input-wrap { background:#111; }
@@ -2456,9 +2456,6 @@ function selectCountry(id) {
     pg.removeAttribute('open');
   } else { document.getElementById('pronGuide').style.display = 'none'; }
 
-  // Local time chip update
-  updateLocalTime(c.timezone);
-
   clearSearch();
   buildPhrases(c);
   buildTravelInfo(c);
@@ -2500,7 +2497,7 @@ function makePhraseCard(p, section, countryId) {
       <div class="english">${p.en}</div>
     </div>
     <div class="card-btns">
-      <button class="share-btn" onclick="sharePhrase(${JSON.stringify(p.native)},${JSON.stringify(p.en)})" title="Share">⬆</button>
+      <button class="share-btn" onclick="sharePhrase(this,${JSON.stringify(p.native)},${JSON.stringify(p.en)})" title="Share">⬆</button>
       <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(this,${JSON.stringify(key)})" title="Save phrase">★</button>
     </div>`;
   // Show-to-local — tap the native text
@@ -2915,16 +2912,16 @@ function updateLocalTime(tz) {
 }
 
 // ─── SHARE PHRASE ─────────────────────────────────────────────────────────────
-async function sharePhrase(native, en) {
+async function sharePhrase(btn, native, en) {
   const text = `${native}\n"${en}"\n— Travel Phrasebook`;
   try {
     if (navigator.share) {
       await navigator.share({ text });
     } else if (navigator.clipboard) {
       await navigator.clipboard.writeText(text);
-      // Brief visual feedback
-      const btns = document.querySelectorAll('.share-btn');
-      btns.forEach(b => { if (b.textContent === '⬆') { b.textContent = '✓'; setTimeout(() => b.textContent = '⬆', 1200); } });
+      const orig = btn.textContent;
+      btn.textContent = '✓';
+      setTimeout(() => { btn.textContent = orig; }, 1200);
     }
   } catch(e){}
 }
@@ -3014,10 +3011,12 @@ function showTripPlan() {
   }).join('');
   plan.classList.add('open');
   plan.scrollIntoView({ behavior:'smooth', block:'nearest' });
-  // Exit selecting mode
+  // Exit selecting mode and clean up visual state
   document.getElementById('countryGrid').classList.remove('trip-selecting');
   document.getElementById('tripBar').classList.remove('show');
   document.getElementById('tripToggleBtn').textContent = '🗺️ Plan a multi-country trip';
+  document.querySelectorAll('.country-card.selected').forEach(c => c.classList.remove('selected'));
+  tripSelected.clear();
   tripSelecting = false;
 }
 
@@ -3029,7 +3028,7 @@ buildTravelInfo = function(country) {
   // Make currency chip clickable
   const chips = document.querySelectorAll('.qf-chip');
   chips.forEach(chip => {
-    if (chip.querySelector('.qf-label')?.textContent === 'CURRENCY') {
+    if (chip.querySelector('.qf-label')?.textContent?.toLowerCase() === 'currency') {
       chip.style.cursor = 'pointer';
       chip.title = 'Open currency calculator';
       chip.onclick = openCurrencyCalc;
@@ -3042,7 +3041,7 @@ buildTravelInfo = function(country) {
     if (!timeChip) {
       const chipEl = document.createElement('div');
       chipEl.className = 'qf-chip';
-      chipEl.innerHTML = `<span class="qf-icon">🕐</span><div><span class="qf-label">LOCAL TIME</span><span class="qf-value" id="timeChip">--:--</span></div>`;
+      chipEl.innerHTML = `<span class="qf-icon">🕐</span><div><span class="qf-label">Local Time</span><span class="qf-val" id="timeChip">--:--</span></div>`;
       qf.appendChild(chipEl);
     }
     updateLocalTime(country.timezone);
