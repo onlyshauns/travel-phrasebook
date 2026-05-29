@@ -126,7 +126,7 @@
     transition: all 0.18s;
   }
   .mode-btn.active { background: #fff; color: var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
-  [data-theme="dark"] .mode-btn.active { background: #3a3a3c; color: var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+  [data-theme="dark"] .mode-btn.active { background: #38383f; color: var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
 
   /* ── PHRASE TABS + INFO TABS ── */
   .tabs {
@@ -473,15 +473,15 @@
   .em-en { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
 
   /* ── DARK MODE ── */
-  [data-theme="dark"] { --cream:#000; --dark:#f5f5f7; --card:#1c1c1e; --border:rgba(255,255,255,0.1); --muted:rgba(235,235,245,0.55); --shadow-sm:0 1px 3px rgba(0,0,0,0.3); --shadow-md:0 4px 20px rgba(0,0,0,0.4); }
-  [data-theme="dark"] .tip-box { background:#2a2318; }
-  [data-theme="dark"] .no-speech { background:#2a1a1a; border-color:#5a2a2a; }
-  [data-theme="dark"] .store-badge.gplay { background:#2c2c2e; color:#f5f5f7; border-color:rgba(255,255,255,0.12); }
+  [data-theme="dark"] { --cream:#1a1a1f; --dark:#e8e8ed; --card:#26262c; --border:rgba(255,255,255,0.08); --muted:rgba(232,232,237,0.5); --shadow-sm:0 1px 4px rgba(0,0,0,0.35); --shadow-md:0 6px 24px rgba(0,0,0,0.45); }
+  [data-theme="dark"] .tip-box { background:#2e2c24; }
+  [data-theme="dark"] .no-speech { background:#2e2020; border-color:#5a2a2a; }
+  [data-theme="dark"] .store-badge.gplay { background:#32323a; color:#e8e8ed; border-color:rgba(255,255,255,0.1); }
   [data-theme="dark"] .culture-item,[data-theme="dark"] .money-item,[data-theme="dark"] .safety-item { background:var(--card); }
   [data-theme="dark"] .app-tile { background:var(--card); }
   [data-theme="dark"] .quick-facts { background:transparent; }
-  [data-theme="dark"] .pron-guide { background:#2a2318; border-color:#3a3428; }
-  [data-theme="dark"] .curr-input-wrap { background:#111; }
+  [data-theme="dark"] .pron-guide { background:#2e2c24; border-color:#3e3c30; }
+  [data-theme="dark"] .curr-input-wrap { background:#16161a; }
   [data-theme="dark"] .food-item { background:var(--card); }
   .dark-toggle {
     position:fixed; top:14px; right:14px; z-index:100;
@@ -570,7 +570,7 @@
   .curr-rate { font-size:0.76rem; color:var(--muted); margin-bottom:18px; }
   .curr-row { display:grid; grid-template-columns:1fr 28px 1fr; gap:8px; align-items:center; }
   .curr-box { background:var(--cream); border:1.5px solid var(--border); border-radius:12px; padding:14px 14px; }
-  [data-theme="dark"] .curr-box { background:#111; }
+  [data-theme="dark"] .curr-box { background:#16161a; }
   .curr-box-label { font-size:0.68rem; color:var(--muted); font-weight:600;
     text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px; }
   .curr-box-input { background:none; border:none; font-size:1.5rem; font-weight:700;
@@ -2153,6 +2153,1016 @@ const countries = {
     },
   },
 
+  // ── NEW COUNTRIES ──────────────────────────────────────────────
+
+  singapore: {
+    name:"Singapore", flag:"🇸🇬", lang:"Bahasa Melayu", langCode:"ms-MY", latinScript:true,
+    tips:{
+      greetings:'💡 "Selamat pagi" covers morning until noon. Singaporeans often greet with "Have you eaten?" — a sign of warmth, not a literal question.',
+      food:'💡 Hawker centres are the soul of Singapore dining — cheap, delicious, and safe. Point-and-order works fine at most stalls.',
+      directions:'💡 MRT (subway) announcements are in English. Say "MRT station" or "Grab" (rideshare) to get around easily.',
+      numbers:'💡 Prices are in Singapore dollars (SGD). Hawker food starts at ~$3–5 SGD. Always carry small change.',
+      emergency:'💡 Dial 999 (police), 995 (fire/ambulance). Singapore is very safe — petty crime is rare.'
+    },
+    culture:[
+      {e:'🙏',rule:'Respect elders',note:'Address older people first; use both hands when giving or receiving items.'},
+      {e:'🚫',rule:'No durian indoors',note:'Durian is banned on the MRT and in many hotels due to its strong smell.'},
+      {e:'👟',rule:'Remove shoes',note:'Take off shoes before entering homes and some traditional shops.'},
+      {e:'🍽️',rule:'Chope a table',note:'At hawker centres, reserve a table by leaving a packet of tissues on it — this is called "chope-ing."'},
+      {e:'🤝',rule:'Handshakes are common',note:'A light handshake is standard; Malay Muslims may not shake hands across genders.'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type G (240V)'},
+      {icon:'💵',label:'Currency',value:'SGD (S$)'},
+      {icon:'🚑',label:'Emergency',value:'999 / 995'},
+      {icon:'🚗',label:'Driving',value:'Left side'},
+      {icon:'💧',label:'Tap Water',value:'Safe to drink'},
+      {icon:'🛂',label:'Visa',value:'Visa-free (many countries, 30–90 days)'},
+    ],
+    money:[
+      {e:'💳',rule:'Cards widely accepted',note:'Singapore is very cashless — most hawker centres now accept PayNow / NETS.'},
+      {e:'🏧',rule:'ATMs everywhere',note:'Use ATMs at 7-Eleven or bank branches for best rates; avoid airport currency desks.'},
+      {e:'🚫',rule:'No tipping culture',note:'Tipping is not expected and sometimes refused. Service charge is often included.'},
+    ],
+    food:[
+      {e:'🍜',name:'Laksa',what:'Spicy coconut noodle soup',tip:'Order at hawker centres — Katong laksa is iconic.'},
+      {e:'🍗',name:'Hainanese Chicken Rice',what:'National dish: poached chicken over fragrant rice',tip:'Try Tian Tian at Maxwell Food Centre.'},
+      {e:'🦀',name:'Chilli Crab',what:'Stir-fried crab in tangy chilli sauce',tip:'Pricey but worth it — order mantou buns to dip in the sauce.'},
+      {e:'🥞',name:'Roti Prata',what:'Flaky flatbread with curry dip',tip:'Best eaten for breakfast. Ask for "kosong" (plain) or "telur" (egg).'},
+      {e:'🍢',name:'Satay',what:'Grilled skewers with peanut sauce',tip:'Satay Street at Lau Pa Sat is great for evenings.'},
+    ],
+    safety:[
+      {e:'✅',rule:'Very safe',note:'Singapore has some of the lowest crime rates in Asia. Scams are rare.'},
+      {e:'⚠️',rule:'Strict laws',note:'Fines for littering, jaywalking, and chewing gum (importing gum is banned). Follow signs.'},
+      {e:'🌧️',rule:'Tropical weather',note:'It rains year-round; carry a small umbrella. Heat and humidity are intense.'},
+      {e:'🦟',rule:'Dengue awareness',note:'Apply mosquito repellent, especially in residential areas.'},
+    ],
+    apps:[
+      {e:'🚗',cat:'Rideshare',name:'Grab',desc:'Dominant rideshare and food delivery app in SEA',ios:'https://apps.apple.com/app/grab/id647268330',android:'https://play.google.com/store/apps/details?id=com.grabtaxi.passenger'},
+      {e:'🚇',cat:'Transit',name:'SG Buses',desc:'Bus arrival timings and MRT maps',ios:'https://apps.apple.com/sg/app/sg-buses/id392719982',android:'https://play.google.com/store/apps/details?id=sg.com.mytransport.bussingapore'},
+      {e:'🗺️',cat:'Maps',name:'Google Maps',desc:'Works great in Singapore with MRT directions',ios:'https://apps.apple.com/app/google-maps/id585027354',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.maps'},
+      {e:'💱',cat:'Finance',name:'Wise',desc:'Best rates for currency exchange',ios:'https://apps.apple.com/app/wise/id612261027',android:'https://play.google.com/store/apps/details?id=com.transferwise.android'},
+    ],
+    data:{
+      greetings:[
+        {native:"Selamat pagi",pron:"se-LAH-mat PAH-gee",en:"Good morning"},
+        {native:"Selamat petang",pron:"se-LAH-mat pe-TANG",en:"Good evening"},
+        {native:"Apa khabar?",pron:"ah-PAH KHA-bar",en:"How are you?"},
+        {native:"Khabar baik",pron:"KHA-bar BIKE",en:"I'm fine"},
+        {native:"Terima kasih",pron:"te-REE-ma KAH-see",en:"Thank you"},
+        {native:"Sama-sama",pron:"SAH-ma SAH-ma",en:"You're welcome"},
+        {native:"Maaf",pron:"MAH-af",en:"Sorry / Excuse me"},
+        {native:"Selamat tinggal",pron:"se-LAH-mat TING-gal",en:"Goodbye"},
+      ],
+      food:[
+        {native:"Satu laksa, tolong",pron:"SAH-too LAK-sa TOH-long",en:"One laksa, please"},
+        {native:"Tidak pedas",pron:"tee-DAK PE-das",en:"Not spicy"},
+        {native:"Pedas sikit",pron:"PE-das see-KIT",en:"A little spicy"},
+        {native:"Vegetarian",pron:"ve-je-TAH-ree-an",en:"Vegetarian"},
+        {native:"Halal?",pron:"hah-LAL",en:"Is it halal?"},
+        {native:"Sedap sekali!",pron:"se-DAP se-KAH-lee",en:"Very delicious!"},
+        {native:"Minta bill",pron:"MIN-ta bill",en:"The bill, please"},
+        {native:"Tapau",pron:"TAH-pow",en:"Takeaway / To go"},
+      ],
+      directions:[
+        {native:"Di mana MRT?",pron:"dee MAH-na em-ar-TEE",en:"Where is the MRT?"},
+        {native:"Berapa jauh?",pron:"be-RAH-pa JAH-ooh",en:"How far is it?"},
+        {native:"Belok kiri",pron:"BEH-lok KEE-ree",en:"Turn left"},
+        {native:"Belok kanan",pron:"BEH-lok KAH-nan",en:"Turn right"},
+        {native:"Terus",pron:"te-ROOS",en:"Go straight"},
+        {native:"Tolong bawa saya ke...",pron:"TOH-long BAH-wa SAH-ya ke",en:"Please take me to..."},
+        {native:"Berhenti di sini",pron:"ber-HEN-tee dee SEE-nee",en:"Stop here"},
+        {native:"Jauh lagi?",pron:"JAH-ooh LAH-gee",en:"Much further?"},
+      ],
+      shopping:[
+        {native:"Berapa harganya?",pron:"be-RAH-pa har-GA-nya",en:"How much does it cost?"},
+        {native:"Boleh tawar?",pron:"BOH-leh TAH-war",en:"Can I bargain?"},
+        {native:"Mahal sangat",pron:"MAH-hal SAH-ngat",en:"Too expensive"},
+        {native:"Ada saiz lain?",pron:"AH-da SIZE line",en:"Do you have another size?"},
+        {native:"Saya tengok-tengok dulu",pron:"SAH-ya te-NGok te-NGok DOO-loo",en:"Just browsing"},
+        {native:"Saya ambil ini",pron:"SAH-ya AM-bil EE-nee",en:"I'll take this one"},
+        {native:"Ada diskaun?",pron:"AH-da DIS-kown",en:"Any discount?"},
+        {native:"Boleh bayar dengan kad?",pron:"BOH-leh BAH-yar de-NGAN kad",en:"Can I pay by card?"},
+      ],
+      numbers:[
+        {native:"Satu",pron:"SAH-too",en:"One"},
+        {native:"Dua",pron:"DOO-a",en:"Two"},
+        {native:"Tiga",pron:"TEE-ga",en:"Three"},
+        {native:"Empat",pron:"em-PAT",en:"Four"},
+        {native:"Lima",pron:"LEE-ma",en:"Five"},
+        {native:"Sepuluh",pron:"se-POO-looh",en:"Ten"},
+        {native:"Seratus",pron:"se-RAH-toos",en:"One hundred"},
+        {native:"Seribu",pron:"se-REE-boo",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"Tolong!",pron:"TOH-long",en:"Help!"},
+        {native:"Panggil polis!",pron:"PANG-gil POH-lis",en:"Call the police!"},
+        {native:"Panggil ambulans!",pron:"PANG-gil am-boo-LANS",en:"Call an ambulance!"},
+        {native:"Ada kebakaran!",pron:"AH-da ke-ba-KAH-ran",en:"There's a fire!"},
+        {native:"Saya sakit",pron:"SAH-ya SAH-kit",en:"I'm sick"},
+        {native:"Tolong saya!",pron:"TOH-long SAH-ya",en:"Please help me!"},
+        {native:"Di mana hospital?",pron:"dee MAH-na hos-PEE-tal",en:"Where is the hospital?"},
+        {native:"Saya hilang dompet",pron:"SAH-ya HEE-lang DOM-pet",en:"I've lost my wallet"},
+      ],
+    },
+  },
+
+  china: {
+    name:"China", flag:"🇨🇳", lang:"普通话 (Mandarin)", langCode:"zh-CN", latinScript:false,
+    tips:{
+      greetings:'💡 "你好" (nǐ hǎo) is universal. Add the person\'s title (老师 teacher, 先生 Mr) to show extra respect.',
+      food:'💡 Menus often have pictures — point confidently. Say "辣不辣?" to ask if it\'s spicy before ordering.',
+      directions:'💡 Subway maps are in English and Chinese. Show your destination written in Chinese characters to taxi drivers.',
+      numbers:'💡 The number 4 is unlucky (sounds like "death"). Eight is very lucky. Prices are in Yuan (¥ / RMB).',
+      emergency:'💡 Dial 110 (police), 120 (ambulance), 119 (fire). WeChat and Alipay are essential — carry little cash.'
+    },
+    culture:[
+      {e:'🥢',rule:'Chopstick etiquette',note:'Never stick chopsticks upright in rice — it resembles funeral incense. Pass food with serving chopsticks.'},
+      {e:'🎁',rule:'Gift giving',note:'Use both hands to give and receive. Don\'t open gifts immediately in front of the giver.'},
+      {e:'📱',rule:'WeChat is everything',note:'Get WeChat before arrival — it\'s used for payments, maps, translation, and communication.'},
+      {e:'🔴',rule:'Lucky red',note:'Red envelopes (红包) are given for luck. Wear red for celebrations, avoid white at them.'},
+      {e:'🤝',rule:'Face (面子)',note:'Avoid public criticism or arguing — causing someone to lose face is deeply offensive.'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type A/C/I (220V)'},
+      {icon:'💵',label:'Currency',value:'CNY / RMB (¥)'},
+      {icon:'🚑',label:'Emergency',value:'110 / 120'},
+      {icon:'🚗',label:'Driving',value:'Right side'},
+      {icon:'💧',label:'Tap Water',value:'Do not drink'},
+      {icon:'🛂',label:'Visa',value:'Visa required (most countries)'},
+    ],
+    money:[
+      {e:'📱',rule:'Go cashless',note:'WeChat Pay and Alipay are used almost everywhere. Set up one before you arrive.'},
+      {e:'🏧',rule:'Bank ATMs only',note:'Use Bank of China or ICBC ATMs — they reliably accept foreign cards.'},
+      {e:'💴',rule:'Carry some cash',note:'Small vendors and rural areas may be cash only. ¥100 bills are widely accepted.'},
+    ],
+    food:[
+      {e:'🥟',name:'Dumplings (饺子)',what:'Pan-fried or boiled pockets of meat and veg',tip:'Order jiānjiǎo (pan-fried) for crispy bottoms. Perfect with black vinegar.'},
+      {e:'🍜',name:'Peking Duck (北京烤鸭)',what:'Crispy roasted duck with pancakes and hoisin',tip:'Order at Quanjude or Da Dong in Beijing. Book ahead.'},
+      {e:'🌶️',name:'Mapo Tofu (麻婆豆腐)',what:'Silken tofu in fiery Sichuan chilli sauce',tip:'Numbing and spicy — warn staff if you cannot handle heat.'},
+      {e:'🥣',name:'Congee (粥)',what:'Rice porridge, a popular breakfast',tip:'Customize with century egg, pork, or preserved vegetables.'},
+      {e:'🍢',name:'Street Skewers (串串)',what:'Grilled meat and veg on sticks',tip:'Night markets are the place to try these. Always delicious.'},
+    ],
+    safety:[
+      {e:'🌐',rule:'VPN needed',note:'Google, WhatsApp, Facebook, and Instagram are blocked. Download a VPN before arrival.'},
+      {e:'✅',rule:'Generally safe',note:'Violent crime against tourists is rare. Watch your belongings in crowded markets.'},
+      {e:'📋',rule:'Register with hotel',note:'Your hotel will register you with local authorities — this is routine and required by law.'},
+      {e:'🚦',rule:'Traffic is chaotic',note:'Pedestrians do not always have right of way — look both ways, even on green.'},
+    ],
+    apps:[
+      {e:'💬',cat:'Essential',name:'WeChat',desc:'Messaging, payments, maps — your lifeline in China',ios:'https://apps.apple.com/app/wechat/id414478124',android:'https://play.google.com/store/apps/details?id=com.tencent.mm'},
+      {e:'🗺️',cat:'Maps',name:'Baidu Maps',desc:'Best navigation in China (Chinese UI)',ios:'https://apps.apple.com/app/baidu-maps/id452186370',android:'https://play.google.com/store/apps/details?id=com.baidu.BaiduMap'},
+      {e:'🔒',cat:'VPN',name:'ExpressVPN',desc:'Access Google and social media in China',ios:'https://apps.apple.com/app/expressvpn/id886492891',android:'https://play.google.com/store/apps/details?id=com.expressvpn.vpn'},
+      {e:'🌍',cat:'Translate',name:'Pleco',desc:'Offline Chinese dictionary and translator',ios:'https://apps.apple.com/app/pleco-chinese-dictionary/id309226768',android:'https://play.google.com/store/apps/details?id=com.pleco.chinesesystem'},
+    ],
+    data:{
+      greetings:[
+        {native:"你好",pron:"nǐ hǎo",en:"Hello"},
+        {native:"早上好",pron:"zǎo shàng hǎo",en:"Good morning"},
+        {native:"晚上好",pron:"wǎn shàng hǎo",en:"Good evening"},
+        {native:"你好吗？",pron:"nǐ hǎo ma",en:"How are you?"},
+        {native:"我很好",pron:"wǒ hěn hǎo",en:"I'm fine"},
+        {native:"谢谢",pron:"xiè xiè",en:"Thank you"},
+        {native:"不客气",pron:"bù kè qì",en:"You're welcome"},
+        {native:"再见",pron:"zài jiàn",en:"Goodbye"},
+      ],
+      food:[
+        {native:"一份这个，谢谢",pron:"yī fèn zhè gè xiè xiè",en:"One of this, please"},
+        {native:"不辣",pron:"bù là",en:"Not spicy"},
+        {native:"辣不辣？",pron:"là bù là",en:"Is it spicy?"},
+        {native:"我吃素",pron:"wǒ chī sù",en:"I'm vegetarian"},
+        {native:"好吃！",pron:"hǎo chī",en:"Delicious!"},
+        {native:"买单",pron:"mǎi dān",en:"The bill, please"},
+        {native:"打包",pron:"dǎ bāo",en:"Takeaway"},
+        {native:"菜单",pron:"cài dān",en:"Menu"},
+      ],
+      directions:[
+        {native:"地铁站在哪里？",pron:"dì tiě zhàn zài nǎ lǐ",en:"Where is the subway?"},
+        {native:"多远？",pron:"duō yuǎn",en:"How far?"},
+        {native:"左转",pron:"zuǒ zhuǎn",en:"Turn left"},
+        {native:"右转",pron:"yòu zhuǎn",en:"Turn right"},
+        {native:"直走",pron:"zhí zǒu",en:"Go straight"},
+        {native:"请带我去...",pron:"qǐng dài wǒ qù",en:"Please take me to..."},
+        {native:"在这里停车",pron:"zài zhè lǐ tíng chē",en:"Stop here"},
+        {native:"还有多远？",pron:"hái yǒu duō yuǎn",en:"How much further?"},
+      ],
+      shopping:[
+        {native:"多少钱？",pron:"duō shǎo qián",en:"How much is this?"},
+        {native:"太贵了",pron:"tài guì le",en:"Too expensive"},
+        {native:"可以便宜一点吗？",pron:"kě yǐ pián yí yī diǎn ma",en:"Can you lower the price?"},
+        {native:"有其他颜色吗？",pron:"yǒu qí tā yán sè ma",en:"Other colours?"},
+        {native:"我只是看看",pron:"wǒ zhǐ shì kàn kàn",en:"Just browsing"},
+        {native:"我要这个",pron:"wǒ yào zhè gè",en:"I'll take this"},
+        {native:"可以刷卡吗？",pron:"kě yǐ shuā kǎ ma",en:"Can I pay by card?"},
+        {native:"有收据吗？",pron:"yǒu shōu jù ma",en:"Can I have a receipt?"},
+      ],
+      numbers:[
+        {native:"一",pron:"yī",en:"One"},
+        {native:"二",pron:"èr",en:"Two"},
+        {native:"三",pron:"sān",en:"Three"},
+        {native:"四",pron:"sì",en:"Four"},
+        {native:"五",pron:"wǔ",en:"Five"},
+        {native:"十",pron:"shí",en:"Ten"},
+        {native:"一百",pron:"yī bǎi",en:"One hundred"},
+        {native:"一千",pron:"yī qiān",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"救命！",pron:"jiù mìng",en:"Help!"},
+        {native:"叫警察！",pron:"jiào jǐng chá",en:"Call the police!"},
+        {native:"叫救护车！",pron:"jiào jiù hù chē",en:"Call an ambulance!"},
+        {native:"着火了！",pron:"zháo huǒ le",en:"Fire!"},
+        {native:"我生病了",pron:"wǒ shēng bìng le",en:"I'm sick"},
+        {native:"请帮我！",pron:"qǐng bāng wǒ",en:"Please help me!"},
+        {native:"医院在哪里？",pron:"yī yuàn zài nǎ lǐ",en:"Where is the hospital?"},
+        {native:"我的钱包丢了",pron:"wǒ de qián bāo diū le",en:"I've lost my wallet"},
+      ],
+    },
+  },
+
+  india: {
+    name:"India", flag:"🇮🇳", lang:"हिन्दी (Hindi)", langCode:"hi-IN", latinScript:false,
+    tips:{
+      greetings:'💡 "Namaste" with pressed palms is universally understood and appreciated across India. English is widely spoken in cities.',
+      food:'💡 Ask "Veg or non-veg?" when ordering — many restaurants are pure vegetarian. Spice levels vary hugely by region.',
+      directions:'💡 Uber and Ola work well in cities. Auto-rickshaws should use meters — insist on it or agree on price before riding.',
+      numbers:'💡 Currency is Indian Rupees (₹). Bargaining is expected at markets but not in shops with price tags.',
+      emergency:'💡 Dial 112 (universal emergency). Tourist police helplines exist in major cities — save the local number.'
+    },
+    culture:[
+      {e:'🙏',rule:'Namaste greeting',note:'Press palms together and say "Namaste" — always respectful and appreciated everywhere.'},
+      {e:'👟',rule:'Remove shoes',note:'Always remove shoes before entering temples, mosques, and many homes.'},
+      {e:'🐄',rule:'Cows are sacred',note:'Don\'t honk at cows on roads. Beef is avoided by Hindus — check menus carefully.'},
+      {e:'🫱',rule:'Right hand rule',note:'Use your right hand for eating, giving, and receiving — the left is considered unclean.'},
+      {e:'👗',rule:'Dress modestly',note:'Cover shoulders and knees at religious sites. Scarves are handy for temples and mosques.'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type C/D/M (230V)'},
+      {icon:'💵',label:'Currency',value:'INR (₹)'},
+      {icon:'🚑',label:'Emergency',value:'112'},
+      {icon:'🚗',label:'Driving',value:'Left side'},
+      {icon:'💧',label:'Tap Water',value:'Do not drink'},
+      {icon:'🛂',label:'Visa',value:'e-Visa available online'},
+    ],
+    money:[
+      {e:'💵',rule:'Carry cash',note:'Small towns and markets are cash-only. ATMs in cities are reliable — withdraw larger amounts at once.'},
+      {e:'💳',rule:'UPI payments',note:'Many shops accept Google Pay or PhonePe via QR code — fast and easy if you set it up.'},
+      {e:'🤝',rule:'Bargain at markets',note:'Haggling is expected at bazaars. Start at 50% of the asking price and meet in the middle.'},
+    ],
+    food:[
+      {e:'🍛',name:'Butter Chicken',what:'Creamy tomato-based chicken curry',tip:'Safe gateway dish for spice newcomers. Best with garlic naan.'},
+      {e:'🫓',name:'Thali',what:'Full-plate meal with rice, dal, curries, and bread',tip:'Unlimited refills are common — a great way to try many dishes cheaply.'},
+      {e:'🥘',name:'Biryani',what:'Fragrant spiced rice with meat or vegetables',tip:'Hyderabadi and Lucknawi styles are world-famous. Look for dum-cooked versions.'},
+      {e:'🥙',name:'Chaat',what:'Tangy, spicy street snacks like pani puri and bhel puri',tip:'Try from busy stalls — the turnaround keeps it fresh and safe.'},
+      {e:'🫖',name:'Chai',what:'Spiced milk tea, served everywhere',tip:'Say "ek cutting chai" for a small glass at street stalls.'},
+    ],
+    safety:[
+      {e:'💧',rule:'Bottled water only',note:'Never drink tap water. Check the seal on bottles. Avoid ice in drinks at unknown vendors.'},
+      {e:'⚠️',rule:'Traffic chaos',note:'Roads are hectic — always use pedestrian bridges or crossings when available.'},
+      {e:'🎒',rule:'Watch your bag',note:'Keep valuables in front pockets or a zipped bag, especially in markets and train stations.'},
+      {e:'🌡️',rule:'Heat and monsoon',note:'Summers are intensely hot. Stay hydrated and carry an umbrella during monsoon season (Jun–Sep).'},
+    ],
+    apps:[
+      {e:'🚗',cat:'Rideshare',name:'Uber / Ola',desc:'Uber and Ola both work in major Indian cities',ios:'https://apps.apple.com/app/uber/id368677368',android:'https://play.google.com/store/apps/details?id=com.ubercab'},
+      {e:'🚂',cat:'Rail',name:'IRCTC Rail Connect',desc:'Book Indian Railways tickets',ios:'https://apps.apple.com/in/app/irctc-rail-connect/id1000342875',android:'https://play.google.com/store/apps/details?id=cris.org.in.prs.ima'},
+      {e:'🗺️',cat:'Maps',name:'Google Maps',desc:'Excellent coverage across India',ios:'https://apps.apple.com/app/google-maps/id585027354',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.maps'},
+      {e:'💱',cat:'Finance',name:'Wise',desc:'Best rates for converting to INR',ios:'https://apps.apple.com/app/wise/id612261027',android:'https://play.google.com/store/apps/details?id=com.transferwise.android'},
+    ],
+    data:{
+      greetings:[
+        {native:"नमस्ते",pron:"na-MAS-tay",en:"Hello / Greetings"},
+        {native:"सुप्रभात",pron:"soo-pra-BHAT",en:"Good morning"},
+        {native:"शुभ संध्या",pron:"shubh SAND-hya",en:"Good evening"},
+        {native:"आप कैसे हैं?",pron:"aap KAY-say hain",en:"How are you?"},
+        {native:"मैं ठीक हूँ",pron:"main THEEK hoon",en:"I'm fine"},
+        {native:"धन्यवाद",pron:"DHAN-ya-vaad",en:"Thank you"},
+        {native:"कोई बात नहीं",pron:"KOH-ee baat na-HEEN",en:"You're welcome"},
+        {native:"अलविदा",pron:"al-vi-DAH",en:"Goodbye"},
+      ],
+      food:[
+        {native:"एक थाली",pron:"ek THAH-lee",en:"One thali, please"},
+        {native:"कम मसाला",pron:"kam ma-SAH-la",en:"Less spicy"},
+        {native:"शाकाहारी",pron:"sha-KAH-ha-ree",en:"Vegetarian"},
+        {native:"बहुत स्वादिष्ट!",pron:"ba-HOOT swa-DISH-ta",en:"Very delicious!"},
+        {native:"बिल लाइए",pron:"bill LAH-ee-ay",en:"The bill, please"},
+        {native:"पानी",pron:"PAH-nee",en:"Water"},
+        {native:"बिना मांस",pron:"bi-NAH maas",en:"Without meat"},
+        {native:"पैक करना",pron:"pack KAR-na",en:"To take away"},
+      ],
+      directions:[
+        {native:"मेट्रो स्टेशन कहाँ है?",pron:"METRO STAY-shun ka-HAN hai",en:"Where is the metro?"},
+        {native:"कितनी दूर है?",pron:"KIT-nee DOOR hai",en:"How far is it?"},
+        {native:"बाईं तरफ मुड़ें",pron:"bah-EEN ta-RAF MU-den",en:"Turn left"},
+        {native:"दाईं तरफ मुड़ें",pron:"dah-EEN ta-RAF MU-den",en:"Turn right"},
+        {native:"सीधे जाएं",pron:"SEE-dhay JAH-en",en:"Go straight"},
+        {native:"मुझे यहाँ ले चलो",pron:"moo-JAY ya-HAN lay CHA-lo",en:"Take me here, please"},
+        {native:"यहाँ रुकिए",pron:"ya-HAN ROO-ki-ay",en:"Stop here"},
+        {native:"अभी कितना बाकी है?",pron:"ab-HEE KIT-na BAH-kee hai",en:"How much further?"},
+      ],
+      shopping:[
+        {native:"यह कितने का है?",pron:"yeh KIT-nay ka hai",en:"How much is this?"},
+        {native:"बहुत महंगा है",pron:"ba-HOOT ma-HAN-ga hai",en:"Too expensive"},
+        {native:"कम करो",pron:"kam KAR-oh",en:"Reduce the price"},
+        {native:"दूसरा रंग है?",pron:"DOO-sa-ra RANG hai",en:"Another colour?"},
+        {native:"देख रहा हूँ",pron:"DAYKH ra-HA hoon",en:"Just browsing"},
+        {native:"यह लूँगा",pron:"yeh LOON-ga",en:"I'll take this"},
+        {native:"कार्ड चलेगा?",pron:"CARD cha-LAY-ga",en:"Card accepted?"},
+        {native:"रसीद दीजिए",pron:"ra-SEED DEE-ji-ay",en:"Please give me a receipt"},
+      ],
+      numbers:[
+        {native:"एक",pron:"ek",en:"One"},
+        {native:"दो",pron:"do",en:"Two"},
+        {native:"तीन",pron:"teen",en:"Three"},
+        {native:"चार",pron:"char",en:"Four"},
+        {native:"पाँच",pron:"paanch",en:"Five"},
+        {native:"दस",pron:"das",en:"Ten"},
+        {native:"सौ",pron:"sau",en:"One hundred"},
+        {native:"एक हज़ार",pron:"ek ha-ZAAR",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"बचाओ!",pron:"ba-CHAO",en:"Help!"},
+        {native:"पुलिस बुलाओ!",pron:"POO-lis boo-LAO",en:"Call the police!"},
+        {native:"एम्बुलेंस बुलाओ!",pron:"AMBULANCE boo-LAO",en:"Call an ambulance!"},
+        {native:"आग लगी है!",pron:"aag la-GEE hai",en:"Fire!"},
+        {native:"मैं बीमार हूँ",pron:"main BEE-maar hoon",en:"I'm sick"},
+        {native:"मेरी मदद करो!",pron:"MAY-ree ma-DAD ka-RO",en:"Please help me!"},
+        {native:"अस्पताल कहाँ है?",pron:"as-pa-TAAL ka-HAN hai",en:"Where is the hospital?"},
+        {native:"मेरा बटुआ खो गया",pron:"MAY-ra ba-TOO-a kho GA-ya",en:"I've lost my wallet"},
+      ],
+    },
+  },
+
+  brazil: {
+    name:"Brazil", flag:"🇧🇷", lang:"Português Brasileiro", langCode:"pt-BR", latinScript:true,
+    tips:{
+      greetings:'💡 "Oi" and "Olá" are both common greetings. Brazilians are warm — expect cheek kisses in social settings.',
+      food:'💡 "Prato feito" (PF) plates at lunch offer huge, cheap meals. Say "sem carne" if you\'re vegetarian.',
+      directions:'💡 Uber is reliable and widely used in Brazilian cities. Metered taxis are safe; avoid unmarked cabs.',
+      numbers:'💡 Currency is the Brazilian Real (R$). ATMs are everywhere; Nubank and Itaú are reliable.',
+      emergency:'💡 Dial 190 (police), 192 (ambulance), 193 (fire). Keep photocopies of documents — keep the original in the hotel safe.'
+    },
+    culture:[
+      {e:'💋',rule:'Cheek kisses',note:'One or two air-kisses on the cheek are the standard greeting between women, or a man and woman.'},
+      {e:'⏰',rule:'Flexible time',note:'Social events start late — arriving 30–60 minutes after the stated time is perfectly normal.'},
+      {e:'⚽',rule:'Football is sacred',note:'On match days, streets empty and bars fill. Respect the passion — join in if you can!'},
+      {e:'👗',rule:'Beach dress code',note:'Brazilians wear very little on the beach — that\'s normal. In the city, dress more modestly.'},
+      {e:'🗣️',rule:'Touchy conversations',note:'Avoid politics — it\'s a deeply divided topic. Sport, food, and travel are safer.'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type N (127V/220V)'},
+      {icon:'💵',label:'Currency',value:'BRL (R$)'},
+      {icon:'🚑',label:'Emergency',value:'190 / 192'},
+      {icon:'🚗',label:'Driving',value:'Right side'},
+      {icon:'💧',label:'Tap Water',value:'Varies — bottle safe'},
+      {icon:'🛂',label:'Visa',value:'Visa-free (many countries)'},
+    ],
+    money:[
+      {e:'💳',rule:'Cards widely accepted',note:'Major cards work in cities. Pix (instant transfer) is extremely popular — even street vendors use it.'},
+      {e:'🏧',rule:'ATM fees',note:'Many ATMs charge high fees. Banco do Brasil and Bradesco are most foreigner-friendly.'},
+      {e:'💵',rule:'USD not accepted',note:'Always exchange to Reais — shops don\'t accept USD. Casas de câmbio at airports are acceptable.'},
+    ],
+    food:[
+      {e:'🥩',name:'Churrasco',what:'Brazilian BBQ — various meats slow-grilled over fire',tip:'Visit a churrascaria (rodízio) for unlimited meats. Pace yourself!'},
+      {e:'🫘',name:'Feijoada',what:'Black bean stew with pork, typically served Saturdays',tip:'Eaten with rice, farofa (toasted cassava), and oranges. Very filling.'},
+      {e:'🧃',name:'Açaí Bowl',what:'Purple Amazon berry served as a thick, iced bowl',tip:'A post-beach staple. Ask for "granola e banana" on top.'},
+      {e:'🥟',name:'Coxinha',what:'Fried dough stuffed with shredded chicken',tip:'The classic Brazilian street snack — sold at every padaria (bakery).'},
+      {e:'🍹',name:'Caipirinha',what:'Brazil\'s national cocktail: cachaça, lime, and sugar',tip:'Ask for "morango" (strawberry) or "maracujá" (passion fruit) variations.'},
+    ],
+    safety:[
+      {e:'📱',rule:'Don\'t flash valuables',note:'Keep phones away when walking. Use a cheap phone or leave the good one at the hotel.'},
+      {e:'🏖️',rule:'Beach safety',note:'Don\'t leave belongings unattended on the beach. Use hotel safe for passports and cash.'},
+      {e:'🚕',rule:'Use official transport',note:'Always use Uber or booked taxis. Never get into an unofficial cab, especially at night.'},
+      {e:'🌙',rule:'Avoid dark streets at night',note:'Stay in well-lit, populated areas after dark. Ask locals for neighbourhood safety tips.'},
+    ],
+    apps:[
+      {e:'🚗',cat:'Rideshare',name:'Uber',desc:'Dominant rideshare app in Brazil',ios:'https://apps.apple.com/app/uber/id368677368',android:'https://play.google.com/store/apps/details?id=com.ubercab'},
+      {e:'🍔',cat:'Food',name:'iFood',desc:'Brazil\'s top food delivery platform',ios:'https://apps.apple.com/br/app/ifood/id483017570',android:'https://play.google.com/store/apps/details?id=br.com.brainweb.ifood'},
+      {e:'🗺️',cat:'Maps',name:'Google Maps',desc:'Works great across Brazil',ios:'https://apps.apple.com/app/google-maps/id585027354',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.maps'},
+      {e:'💱',cat:'Finance',name:'Wise',desc:'Best exchange rates for BRL',ios:'https://apps.apple.com/app/wise/id612261027',android:'https://play.google.com/store/apps/details?id=com.transferwise.android'},
+    ],
+    data:{
+      greetings:[
+        {native:"Olá",pron:"oh-LAH",en:"Hello"},
+        {native:"Bom dia",pron:"bom JEE-a",en:"Good morning"},
+        {native:"Boa noite",pron:"BOH-a NOY-chee",en:"Good evening"},
+        {native:"Como vai?",pron:"KOH-moo vai",en:"How are you?"},
+        {native:"Tudo bem",pron:"TOO-doo beng",en:"I'm fine / All good"},
+        {native:"Obrigado / Obrigada",pron:"oh-bree-GAH-doo / oh-bree-GAH-da",en:"Thank you (m/f)"},
+        {native:"De nada",pron:"jee NAH-da",en:"You're welcome"},
+        {native:"Até logo",pron:"ah-TAY LOH-goo",en:"Goodbye"},
+      ],
+      food:[
+        {native:"Uma cerveja, por favor",pron:"OO-ma ser-VAY-zha por fa-VOR",en:"One beer, please"},
+        {native:"Sem pimenta",pron:"seng pee-MEN-ta",en:"Without spice"},
+        {native:"Sou vegetariano/a",pron:"soh veh-jeh-ta-ree-AH-noo/na",en:"I'm vegetarian"},
+        {native:"Está delicioso!",pron:"es-TAH de-lee-see-OH-zoo",en:"It's delicious!"},
+        {native:"A conta, por favor",pron:"a KON-ta por fa-VOR",en:"The bill, please"},
+        {native:"Para viagem",pron:"PAH-ra vee-AH-zheng",en:"To take away"},
+        {native:"Cardápio",pron:"kar-DAH-pee-oo",en:"Menu"},
+        {native:"Sem glúten",pron:"seng GLOO-teng",en:"Gluten-free"},
+      ],
+      directions:[
+        {native:"Onde fica o metrô?",pron:"ON-jee FEE-ka oo me-TROH",en:"Where is the metro?"},
+        {native:"Fica longe?",pron:"FEE-ka LONG-zhee",en:"Is it far?"},
+        {native:"Vire à esquerda",pron:"VEE-ree a es-KER-da",en:"Turn left"},
+        {native:"Vire à direita",pron:"VEE-ree a jee-RAY-ta",en:"Turn right"},
+        {native:"Siga em frente",pron:"SEE-ga eng FREN-chee",en:"Go straight"},
+        {native:"Me leve para...",pron:"mee LEH-vee PAH-ra",en:"Take me to..."},
+        {native:"Para aqui",pron:"PAH-ra a-KEE",en:"Stop here"},
+        {native:"Quanto falta?",pron:"KWAN-too FAL-ta",en:"How much further?"},
+      ],
+      shopping:[
+        {native:"Quanto custa?",pron:"KWAN-too KUS-ta",en:"How much does it cost?"},
+        {native:"Muito caro",pron:"MWEE-too KAH-roo",en:"Too expensive"},
+        {native:"Pode fazer um desconto?",pron:"POH-jee fa-ZER oong des-KON-too",en:"Can you discount?"},
+        {native:"Tem outro tamanho?",pron:"teng OW-troo ta-MAH-nyoo",en:"Another size?"},
+        {native:"Só estou olhando",pron:"soh es-TOH oh-LYAN-doo",en:"Just browsing"},
+        {native:"Vou levar este",pron:"voh le-VAR ES-chee",en:"I'll take this"},
+        {native:"Aceita cartão?",pron:"a-SAY-ta kar-TOWNG",en:"Do you accept card?"},
+        {native:"Recibo, por favor",pron:"reh-SEE-boo por fa-VOR",en:"Receipt, please"},
+      ],
+      numbers:[
+        {native:"Um",pron:"oong",en:"One"},
+        {native:"Dois",pron:"doish",en:"Two"},
+        {native:"Três",pron:"trays",en:"Three"},
+        {native:"Quatro",pron:"KWA-troo",en:"Four"},
+        {native:"Cinco",pron:"SING-koo",en:"Five"},
+        {native:"Dez",pron:"desh",en:"Ten"},
+        {native:"Cem",pron:"seng",en:"One hundred"},
+        {native:"Mil",pron:"meel",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"Socorro!",pron:"soh-KOR-roo",en:"Help!"},
+        {native:"Chame a polícia!",pron:"SHA-mee a po-LEE-see-a",en:"Call the police!"},
+        {native:"Chame uma ambulância!",pron:"SHA-mee OO-ma am-boo-LAN-see-a",en:"Call an ambulance!"},
+        {native:"Fogo!",pron:"FOH-goo",en:"Fire!"},
+        {native:"Estou doente",pron:"es-TOH doo-EN-chee",en:"I'm sick"},
+        {native:"Me ajude!",pron:"mee a-ZHOO-jee",en:"Please help me!"},
+        {native:"Onde fica o hospital?",pron:"ON-jee FEE-ka oo os-pee-TAL",en:"Where is the hospital?"},
+        {native:"Fui roubado/a",pron:"fwee roh-BAH-doo/da",en:"I've been robbed"},
+      ],
+    },
+  },
+
+  mexico: {
+    name:"Mexico", flag:"🇲🇽", lang:"Español (México)", langCode:"es-MX", latinScript:true,
+    tips:{
+      greetings:'💡 "Buenos días/tardes/noches" match the time of day. A handshake is standard; close friends hug and sometimes do a single cheek kiss.',
+      food:'💡 Street tacos are safe and incredible — look for busy stalls with high turnover. Ask "¿Pica mucho?" to gauge spice level.',
+      directions:'💡 Uber is available in major cities. Metro in Mexico City is extremely cheap and efficient.',
+      numbers:'💡 Currency is Mexican Peso (MXN, $). Many places accept USD, but change is given in Pesos.',
+      emergency:'💡 Dial 911 (all emergencies). LOCATEL (5658-1111 in CDMX) is a tourist help line.'
+    },
+    culture:[
+      {e:'🤝',rule:'Greet everyone',note:'In Mexico it\'s rude to walk into a room without greeting everyone individually. Take the time.'},
+      {e:'⏰',rule:'Flexible time',note:'"Ahorita" can mean now, later, or never. Mexicans are warm hosts but timing is relaxed.'},
+      {e:'🙏',rule:'Religion is important',note:'Lower your voice and dress modestly in churches. Many are active places of worship.'},
+      {e:'🎵',rule:'Mariachi culture',note:'If mariachis play at your table, it\'s expected to pay them ~100 MXN per song. Enjoy!'},
+      {e:'🌮',rule:'Food is identity',note:'Complimenting the food is always appreciated. Never say Mexican food is "just like Taco Bell."'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type A/B (127V)'},
+      {icon:'💵',label:'Currency',value:'MXN ($)'},
+      {icon:'🚑',label:'Emergency',value:'911'},
+      {icon:'🚗',label:'Driving',value:'Right side'},
+      {icon:'💧',label:'Tap Water',value:'Do not drink'},
+      {icon:'🛂',label:'Visa',value:'Visa-free (most countries)'},
+    ],
+    money:[
+      {e:'💵',rule:'Mix of cash and card',note:'Markets and small restaurants are cash-only. Cards work in hotels and chains. Carry MXN.'},
+      {e:'🏧',rule:'Use bank ATMs',note:'HSBC, Santander, and Banamex ATMs are safest. Avoid standalone machines in tourist areas.'},
+      {e:'💱',rule:'USD widely accepted',note:'Many tourist areas take USD, but pay in MXN to avoid bad exchange rates at the register.'},
+    ],
+    food:[
+      {e:'🌮',name:'Tacos al Pastor',what:'Marinated pork on a vertical spit, with pineapple',tip:'The pinnacle of Mexico City street food. Order three to start.'},
+      {e:'🫔',name:'Tamales',what:'Masa dough stuffed with meat, wrapped in corn husks',tip:'Sold in the morning from street carts. "Tamal de rajas" (cheese and chilli) is vegetarian.'},
+      {e:'🥑',name:'Guacamole',what:'Fresh avocado dip with lime, onion, and chilli',tip:'Order it freshly made tableside at sit-down restaurants.'},
+      {e:'🍜',name:'Pozole',what:'Hominy corn soup with meat — red, white, or green',tip:'A hearty Mexican staple. Perfect on a cold day or after a night out.'},
+      {e:'🧇',name:'Chilaquiles',what:'Fried tortilla strips in salsa with eggs and cream',tip:'The ultimate Mexican breakfast. Order "rojos" (red) or "verdes" (green).'},
+    ],
+    safety:[
+      {e:'💧',rule:'No tap water',note:'Only drink bottled or filtered water. Avoid salads and fresh juices from unknown vendors.'},
+      {e:'🚕',rule:'Use Uber',note:'Hail Uber over street taxis, especially at night. Never take unofficial cabs from airports.'},
+      {e:'🎒',rule:'Minimal valuables',note:'Leave expensive jewellery at the hotel. Keep your phone in your pocket, not in your hand.'},
+      {e:'🌆',rule:'Know your neighbourhood',note:'Tourist zones are generally safe. Ask locals or your hotel about which areas to avoid.'},
+    ],
+    apps:[
+      {e:'🚗',cat:'Rideshare',name:'Uber',desc:'Safest way to get around Mexican cities',ios:'https://apps.apple.com/app/uber/id368677368',android:'https://play.google.com/store/apps/details?id=com.ubercab'},
+      {e:'🍔',cat:'Food',name:'Rappi',desc:'Popular food and grocery delivery in Latin America',ios:'https://apps.apple.com/app/rappi/id1091829841',android:'https://play.google.com/store/apps/details?id=com.grability.rappi'},
+      {e:'🗺️',cat:'Maps',name:'Google Maps',desc:'Excellent for Mexico City and major cities',ios:'https://apps.apple.com/app/google-maps/id585027354',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.maps'},
+      {e:'💱',cat:'Finance',name:'Wise',desc:'Good rates for MXN exchange',ios:'https://apps.apple.com/app/wise/id612261027',android:'https://play.google.com/store/apps/details?id=com.transferwise.android'},
+    ],
+    data:{
+      greetings:[
+        {native:"¡Hola!",pron:"OH-la",en:"Hello!"},
+        {native:"Buenos días",pron:"BWEH-nos DEE-as",en:"Good morning"},
+        {native:"Buenas noches",pron:"BWEH-nas NOH-ches",en:"Good evening"},
+        {native:"¿Cómo está?",pron:"KOH-moh es-TAH",en:"How are you?"},
+        {native:"Muy bien, gracias",pron:"mwee BYEN GRAH-see-as",en:"Very well, thank you"},
+        {native:"Gracias",pron:"GRAH-see-as",en:"Thank you"},
+        {native:"De nada",pron:"de NAH-da",en:"You're welcome"},
+        {native:"Hasta luego",pron:"AS-ta LWEH-go",en:"Goodbye"},
+      ],
+      food:[
+        {native:"Una orden de tacos",pron:"OO-na OR-den de TAH-kos",en:"An order of tacos"},
+        {native:"Sin picante",pron:"seen pee-KAN-te",en:"Not spicy"},
+        {native:"¿Pica mucho?",pron:"PEE-ka MOO-cho",en:"Is it very spicy?"},
+        {native:"Soy vegetariano/a",pron:"soy veh-he-ta-RYAH-no/na",en:"I'm vegetarian"},
+        {native:"¡Está delicioso!",pron:"es-TAH de-lee-SYOH-so",en:"It's delicious!"},
+        {native:"La cuenta, por favor",pron:"la KWEN-ta por fa-VOR",en:"The bill, please"},
+        {native:"Para llevar",pron:"PAH-ra yeh-VAR",en:"To go"},
+        {native:"¿Tienen menú?",pron:"TYEH-nen me-NOO",en:"Do you have a menu?"},
+      ],
+      directions:[
+        {native:"¿Dónde está el metro?",pron:"DON-de es-TAH el MEH-tro",en:"Where is the metro?"},
+        {native:"¿Está lejos?",pron:"es-TAH LEH-hos",en:"Is it far?"},
+        {native:"Doble a la izquierda",pron:"DOH-bleh a la ees-KYEHR-da",en:"Turn left"},
+        {native:"Doble a la derecha",pron:"DOH-bleh a la deh-REH-cha",en:"Turn right"},
+        {native:"Siga derecho",pron:"SEE-ga deh-REH-cho",en:"Go straight"},
+        {native:"Lléveme a...",pron:"YEH-veh-meh a",en:"Take me to..."},
+        {native:"Pare aquí",pron:"PAH-reh a-KEE",en:"Stop here"},
+        {native:"¿Cuánto falta?",pron:"KWAN-to FAL-ta",en:"How much further?"},
+      ],
+      shopping:[
+        {native:"¿Cuánto cuesta?",pron:"KWAN-to KWES-ta",en:"How much does it cost?"},
+        {native:"Está muy caro",pron:"es-TAH mwee KAH-ro",en:"It's too expensive"},
+        {native:"¿Me da un descuento?",pron:"meh da oon des-KWEN-to",en:"Can you give a discount?"},
+        {native:"¿Tiene otra talla?",pron:"TYEH-neh OH-tra TAH-ya",en:"Another size?"},
+        {native:"Solo estoy mirando",pron:"SOH-lo es-TOY mee-RAN-do",en:"Just browsing"},
+        {native:"Me lo llevo",pron:"meh lo YEH-vo",en:"I'll take it"},
+        {native:"¿Acepta tarjeta?",pron:"a-SEP-ta tar-HEH-ta",en:"Do you accept card?"},
+        {native:"¿Me da un recibo?",pron:"meh da oon reh-SEE-bo",en:"Can I have a receipt?"},
+      ],
+      numbers:[
+        {native:"Uno",pron:"OO-no",en:"One"},
+        {native:"Dos",pron:"dos",en:"Two"},
+        {native:"Tres",pron:"tres",en:"Three"},
+        {native:"Cuatro",pron:"KWAH-tro",en:"Four"},
+        {native:"Cinco",pron:"SEEN-ko",en:"Five"},
+        {native:"Diez",pron:"dyez",en:"Ten"},
+        {native:"Cien",pron:"syen",en:"One hundred"},
+        {native:"Mil",pron:"meel",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"¡Ayuda!",pron:"a-YOO-da",en:"Help!"},
+        {native:"¡Llame a la policía!",pron:"YAH-meh a la po-lee-SEE-a",en:"Call the police!"},
+        {native:"¡Llame a una ambulancia!",pron:"YAH-meh a OO-na am-boo-LAN-sya",en:"Call an ambulance!"},
+        {native:"¡Fuego!",pron:"FWEH-go",en:"Fire!"},
+        {native:"Estoy enfermo/a",pron:"es-TOY en-FER-mo/ma",en:"I'm sick"},
+        {native:"¡Ayúdeme, por favor!",pron:"a-YOO-deh-meh por fa-VOR",en:"Please help me!"},
+        {native:"¿Dónde está el hospital?",pron:"DON-de es-TAH el os-pee-TAL",en:"Where is the hospital?"},
+        {native:"Me robaron",pron:"meh ro-BAH-ron",en:"I've been robbed"},
+      ],
+    },
+  },
+
+  portugal: {
+    name:"Portugal", flag:"🇵🇹", lang:"Português", langCode:"pt-PT", latinScript:true,
+    tips:{
+      greetings:'💡 "Olá" is always safe. "Bom dia/tarde/noite" for morning/afternoon/evening. Address strangers politely as "senhor/senhora".',
+      food:'💡 Lunch is the main meal — restaurants have excellent "menu do dia" (daily set menu) with two courses and drink for ~€12.',
+      directions:'💡 Lisbon\'s trams are iconic but slow. Use Uber or the Metro for efficiency. Porto is very walkable.',
+      numbers:'💡 Euro (€) is the currency. Tipping ~10% is appreciated but not mandatory.',
+      emergency:'💡 Dial 112 for all emergencies. Portugal is very safe for tourists.'
+    },
+    culture:[
+      {e:'🎵',rule:'Saudade',note:'The concept of nostalgic longing — central to fado music and Portuguese identity. Ask about it!'},
+      {e:'☕',rule:'Coffee culture',note:'A "bica" is an espresso, "meia de leite" a milky coffee. Coffee shops are for lingering, not rushing.'},
+      {e:'🍷',rule:'Wine and food',note:'Portugal has outstanding local wines and pastéis. Asking for recommendations shows respect.'},
+      {e:'🤝',rule:'Reserved but warm',note:'Portuguese people are initially reserved but become very friendly once comfortable. Don\'t rush.'},
+      {e:'⏰',rule:'Dinner is late',note:'Restaurants don\'t fill up until 8–9pm. Arriving at 7pm, you\'ll often be the only table.'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type F (230V)'},
+      {icon:'💵',label:'Currency',value:'EUR (€)'},
+      {icon:'🚑',label:'Emergency',value:'112'},
+      {icon:'🚗',label:'Driving',value:'Right side'},
+      {icon:'💧',label:'Tap Water',value:'Safe to drink'},
+      {icon:'🛂',label:'Visa',value:'Schengen rules apply'},
+    ],
+    money:[
+      {e:'💳',rule:'Cards accepted',note:'Cards work in nearly all restaurants, shops, and transport. Contactless is widespread.'},
+      {e:'💵',rule:'Carry some cash',note:'Small cafés and market vendors prefer cash. Have €20–50 on hand for small purchases.'},
+      {e:'🧾',rule:'Ask for NIF',note:'If you\'re an EU resident, ask for a NIF (tax number) on receipts to enter a tax lottery.'},
+    ],
+    food:[
+      {e:'🥧',name:'Pastel de Nata',what:'Flaky custard tart with cinnamon',tip:'Best at Pastéis de Belém in Lisbon. Eat warm with cinnamon and powdered sugar.'},
+      {e:'🐟',name:'Bacalhau (Salt Cod)',what:'Dried and salted cod — Portugal\'s national ingredient',tip:'Said to have 365 recipes. Try bacalhau com natas (creamy bake).'},
+      {e:'🦞',name:'Marisco',what:'Fresh seafood — clams, prawns, barnacles',tip:'Marisqueiras (seafood restaurants) are best value at lunch near the coast.'},
+      {e:'🥣',name:'Caldo Verde',what:'Kale and potato soup with chorizo',tip:'The quintessential Portuguese comfort food. Perfect in colder months.'},
+      {e:'🍷',name:'Vinho Verde',what:'Light, slightly sparkling white wine from northern Portugal',tip:'"Green wine" is named for youth, not colour. Excellent with seafood.'},
+    ],
+    safety:[
+      {e:'✅',rule:'Very safe',note:'Portugal consistently ranks among Europe\'s safest countries. Crime against tourists is rare.'},
+      {e:'🚋',rule:'Tram pickpockets',note:'Lisbon\'s iconic Tram 28 is a known pickpocket hotspot. Keep bags in front and stay alert.'},
+      {e:'🌊',rule:'Atlantic coast rips',note:'Ocean beaches can have strong rip currents. Always swim at flagged beaches (green or yellow).'},
+      {e:'☀️',rule:'Strong summer sun',note:'The Algarve gets intense UV in summer. Use SPF 50 and avoid midday sun on beaches.'},
+    ],
+    apps:[
+      {e:'🚗',cat:'Rideshare',name:'Uber',desc:'Works in Lisbon, Porto, and major cities',ios:'https://apps.apple.com/app/uber/id368677368',android:'https://play.google.com/store/apps/details?id=com.ubercab'},
+      {e:'🚇',cat:'Transit',name:'Carris Metropolitana',desc:'Lisbon public transport app',ios:'https://apps.apple.com/pt/app/carris-metropolitana/id1464860780',android:'https://play.google.com/store/apps/details?id=pt.carrismetropolitana.app'},
+      {e:'🗺️',cat:'Maps',name:'Google Maps',desc:'Reliable across Portugal',ios:'https://apps.apple.com/app/google-maps/id585027354',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.maps'},
+      {e:'🍽️',cat:'Food',name:'Zomato',desc:'Restaurant discovery and reviews in Portugal',ios:'https://apps.apple.com/app/zomato/id434613896',android:'https://play.google.com/store/apps/details?id=com.application.zomato'},
+    ],
+    data:{
+      greetings:[
+        {native:"Olá",pron:"oh-LAH",en:"Hello"},
+        {native:"Bom dia",pron:"bong JEE-a",en:"Good morning"},
+        {native:"Boa tarde",pron:"BOH-a TAR-de",en:"Good afternoon"},
+        {native:"Como está?",pron:"KOH-moo esh-TAH",en:"How are you?"},
+        {native:"Estou bem",pron:"esh-TOH beng",en:"I'm fine"},
+        {native:"Obrigado / Obrigada",pron:"oh-bree-GAH-doo / oh-bree-GAH-da",en:"Thank you (m/f)"},
+        {native:"De nada",pron:"de NAH-da",en:"You're welcome"},
+        {native:"Até logo",pron:"a-TAY LOH-goo",en:"Goodbye"},
+      ],
+      food:[
+        {native:"Uma bica, por favor",pron:"OO-ma BEE-ka por fa-VOR",en:"An espresso, please"},
+        {native:"Queria o prato do dia",pron:"ke-REE-a oo PRAH-too doo JEE-a",en:"I'd like the dish of the day"},
+        {native:"Sou vegetariano/a",pron:"soh veh-jeh-ta-ree-AH-noo/na",en:"I'm vegetarian"},
+        {native:"Está delicioso!",pron:"esh-TAH deh-lee-see-OH-zoo",en:"It's delicious!"},
+        {native:"A conta, por favor",pron:"a KON-ta por fa-VOR",en:"The bill, please"},
+        {native:"Sem glúten",pron:"seng GLOO-teng",en:"Gluten-free"},
+        {native:"Está muito bom",pron:"esh-TAH MWEE-too bong",en:"This is very good"},
+        {native:"Para levar",pron:"PAH-ra le-VAR",en:"To take away"},
+      ],
+      directions:[
+        {native:"Onde fica o metro?",pron:"ON-de FEE-ka oo MEH-troo",en:"Where is the metro?"},
+        {native:"Está longe?",pron:"esh-TAH LON-je",en:"Is it far?"},
+        {native:"Vire à esquerda",pron:"VEE-re a esh-KER-da",en:"Turn left"},
+        {native:"Vire à direita",pron:"VEE-re a dee-RAY-ta",en:"Turn right"},
+        {native:"Em frente",pron:"eng FREN-te",en:"Straight ahead"},
+        {native:"Leve-me a...",pron:"LEH-ve-me a",en:"Take me to..."},
+        {native:"Pare aqui",pron:"PAH-re a-KEE",en:"Stop here"},
+        {native:"Quanto falta?",pron:"KWAN-too FAL-ta",en:"How much further?"},
+      ],
+      shopping:[
+        {native:"Quanto custa?",pron:"KWAN-too KUSH-ta",en:"How much is this?"},
+        {native:"É muito caro",pron:"eh MWEE-too KAH-roo",en:"It's too expensive"},
+        {native:"Tem outro tamanho?",pron:"teng OH-troo ta-MAH-nyoo",en:"Another size?"},
+        {native:"Só estou a ver",pron:"soh esh-TOH a vair",en:"Just browsing"},
+        {native:"Vou levar este",pron:"voh le-VAR ESH-te",en:"I'll take this"},
+        {native:"Aceita cartão?",pron:"a-SAY-ta kar-TOWNG",en:"Do you take cards?"},
+        {native:"Posso ter um recibo?",pron:"POH-soo tair oong reh-SEE-boo",en:"Can I have a receipt?"},
+        {native:"Tem desconto?",pron:"teng desh-KON-too",en:"Is there a discount?"},
+      ],
+      numbers:[
+        {native:"Um",pron:"oong",en:"One"},
+        {native:"Dois",pron:"doysh",en:"Two"},
+        {native:"Três",pron:"traysh",en:"Three"},
+        {native:"Quatro",pron:"KWAH-troo",en:"Four"},
+        {native:"Cinco",pron:"SING-koo",en:"Five"},
+        {native:"Dez",pron:"desh",en:"Ten"},
+        {native:"Cem",pron:"sang",en:"One hundred"},
+        {native:"Mil",pron:"meel",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"Socorro!",pron:"soo-KOH-roo",en:"Help!"},
+        {native:"Chame a polícia!",pron:"SHA-me a poo-LEE-sya",en:"Call the police!"},
+        {native:"Chame uma ambulância!",pron:"SHA-me OO-ma am-boo-LAN-sya",en:"Call an ambulance!"},
+        {native:"Fogo!",pron:"FOH-goo",en:"Fire!"},
+        {native:"Estou doente",pron:"esh-TOH doo-EN-te",en:"I'm sick"},
+        {native:"Ajude-me, por favor!",pron:"a-ZHOO-de-me por fa-VOR",en:"Help me, please!"},
+        {native:"Onde fica o hospital?",pron:"ON-de FEE-ka oo osh-pee-TAL",en:"Where is the hospital?"},
+        {native:"Fui roubado/a",pron:"fwee roh-BAH-doo/da",en:"I've been robbed"},
+      ],
+    },
+  },
+
+  greece: {
+    name:"Greece", flag:"🇬🇷", lang:"Ελληνικά", langCode:"el-GR", latinScript:false,
+    tips:{
+      greetings:'💡 "Γεια σας" (YAH-sas) is formal/plural; "Γεια σου" (YAH-soo) for friends. Greek people are very friendly — a smile goes a long way.',
+      food:'💡 Ask "Τι συνιστάτε;" (What do you recommend?) — Greeks love sharing food culture. Never rush a meal.',
+      directions:'💡 Athens metro is modern and cheap. Greek islands require ferries — book ahead in summer.',
+      numbers:'💡 Currency is Euro (€). Credit cards are now widely accepted, but carry cash for small islands.',
+      emergency:'💡 Dial 112 (EU emergency), 100 (police), 166 (ambulance). Tourist police number: 1571.'
+    },
+    culture:[
+      {e:'🤝',rule:'Philoxenia',note:'The ancient Greek concept of hospitality to strangers is alive today. Expect generosity and warmth.'},
+      {e:'🍽️',rule:'Sharing plates',note:'Greek dining is communal — order mezedes (small plates) for the table. Don\'t eat alone.'},
+      {e:'🙅',rule:'Head tilt means no',note:'A slight backward tilt of the head means "no" in Greece. Nodding down means "yes."'},
+      {e:'🪔',rule:'Church etiquette',note:'Dress modestly in churches — cover shoulders and knees. Candle lighting is a local ritual.'},
+      {e:'☕',rule:'Coffee is slow',note:'Greek coffee is never rushed. Sitting at a kafeneio for hours is perfectly normal.'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type C/F (230V)'},
+      {icon:'💵',label:'Currency',value:'EUR (€)'},
+      {icon:'🚑',label:'Emergency',value:'112 / 166'},
+      {icon:'🚗',label:'Driving',value:'Right side'},
+      {icon:'💧',label:'Tap Water',value:'Safe in cities'},
+      {icon:'🛂',label:'Visa',value:'Schengen rules apply'},
+    ],
+    money:[
+      {e:'💳',rule:'Cards mostly accepted',note:'Cities and resorts are card-friendly. Smaller islands and cafés may prefer cash.'},
+      {e:'🏧',rule:'ATMs on islands',note:'ATMs exist on most tourist islands but can run out of cash in peak season. Withdraw early.'},
+      {e:'🧾',rule:'Ask for a receipt',note:'By law you must be given a receipt. If a shop "forgets," they may be avoiding taxes.'},
+    ],
+    food:[
+      {e:'🥙',name:'Souvlaki',what:'Grilled meat skewers, often in pita with tzatziki',tip:'The Greek fast food. Order at a souvlatzidiko — eat standing up for the full experience.'},
+      {e:'🧀',name:'Spanakopita',what:'Filo pastry stuffed with spinach and feta',tip:'Best from a bakery in the morning. Tiropita (cheese only) is equally good.'},
+      {e:'🫒',name:'Greek Salad',what:'Tomato, cucumber, feta, olives, olive oil',tip:'Never ask for dressing — the olive oil, oregano, and salt are the dressing.'},
+      {e:'🍮',name:'Loukoumades',what:'Honey-drenched fried dough balls',tip:'A street food staple since ancient times. Get them hot with cinnamon.'},
+      {e:'🐙',name:'Grilled Octopus',what:'Char-grilled with lemon and olive oil',tip:'Find it drying on a line outside tavernas — a fresh sign. Best at coastal villages.'},
+    ],
+    safety:[
+      {e:'✅',rule:'Very safe',note:'Greece is among Europe\'s safest countries. Violent crime is extremely rare.'},
+      {e:'🌊',rule:'Sea safety',note:'Strong winds (meltemi) can make seas choppy. Check forecasts before ferry travel.'},
+      {e:'🌡️',rule:'Summer heat',note:'July–August temperatures reach 40°C. Hydrate, use sunscreen, and avoid peak midday hours.'},
+      {e:'🚗',rule:'Mountain road driving',note:'Island roads can be narrow and winding. Drive carefully and hire a car with full insurance.'},
+    ],
+    apps:[
+      {e:'⛴️',cat:'Ferries',name:'Ferryhopper',desc:'Book Greek island ferry tickets online',ios:'https://apps.apple.com/gr/app/ferryhopper/id1108268174',android:'https://play.google.com/store/apps/details?id=com.ferryhopper.app'},
+      {e:'🚗',cat:'Rideshare',name:'Uber',desc:'Available in Athens and Thessaloniki',ios:'https://apps.apple.com/app/uber/id368677368',android:'https://play.google.com/store/apps/details?id=com.ubercab'},
+      {e:'🗺️',cat:'Maps',name:'Google Maps',desc:'Reliable across Greece including islands',ios:'https://apps.apple.com/app/google-maps/id585027354',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.maps'},
+      {e:'🌤️',cat:'Weather',name:'Meteo.gr',desc:'Greek national weather service app',ios:'https://apps.apple.com/gr/app/meteo-gr/id504741781',android:'https://play.google.com/store/apps/details?id=gr.meteo.app'},
+    ],
+    data:{
+      greetings:[
+        {native:"Γεια σας",pron:"YAH-sas",en:"Hello (formal)"},
+        {native:"Καλημέρα",pron:"kah-lee-MEH-ra",en:"Good morning"},
+        {native:"Καλησπέρα",pron:"kah-lee-SPEH-ra",en:"Good evening"},
+        {native:"Πώς είστε;",pron:"pos EE-ste",en:"How are you?"},
+        {native:"Είμαι καλά",pron:"EE-me ka-LAH",en:"I'm fine"},
+        {native:"Ευχαριστώ",pron:"ef-ha-ri-STOH",en:"Thank you"},
+        {native:"Παρακαλώ",pron:"pa-ra-ka-LOH",en:"You're welcome"},
+        {native:"Αντίο",pron:"an-DEE-oh",en:"Goodbye"},
+      ],
+      food:[
+        {native:"Ένα σουβλάκι, παρακαλώ",pron:"EH-na soov-LAH-kee pa-ra-ka-LOH",en:"One souvlaki, please"},
+        {native:"Χωρίς κρέας",pron:"cho-REES KREH-as",en:"Without meat"},
+        {native:"Είναι πικάντικο;",pron:"EE-ne pi-KAN-di-ko",en:"Is it spicy?"},
+        {native:"Πολύ νόστιμο!",pron:"po-LEE NOS-ti-mo",en:"Very delicious!"},
+        {native:"Τον λογαριασμό, παρακαλώ",pron:"ton lo-ga-RYAZ-mo pa-ra-ka-LOH",en:"The bill, please"},
+        {native:"Είμαι χορτοφάγος",pron:"EE-me hor-to-FAH-gos",en:"I'm vegetarian"},
+        {native:"Νερό, παρακαλώ",pron:"ne-ROH pa-ra-ka-LOH",en:"Water, please"},
+        {native:"Τι συνιστάτε;",pron:"ti si-ni-STAH-te",en:"What do you recommend?"},
+      ],
+      directions:[
+        {native:"Πού είναι το μετρό;",pron:"poo EE-ne to me-TROH",en:"Where is the metro?"},
+        {native:"Είναι μακριά;",pron:"EE-ne ma-KRYAH",en:"Is it far?"},
+        {native:"Στρίψτε αριστερά",pron:"STREEP-ste a-ri-ste-RAH",en:"Turn left"},
+        {native:"Στρίψτε δεξιά",pron:"STREEP-ste dek-SYAH",en:"Turn right"},
+        {native:"Ευθεία",pron:"ef-THEE-a",en:"Straight ahead"},
+        {native:"Πάμε στο...",pron:"PAH-me sto",en:"Take me to..."},
+        {native:"Σταματήστε εδώ",pron:"sta-ma-TEE-ste e-DOH",en:"Stop here"},
+        {native:"Πόσο ακόμα;",pron:"POH-so a-KOH-ma",en:"How much further?"},
+      ],
+      shopping:[
+        {native:"Πόσο κάνει;",pron:"POH-so KAH-ni",en:"How much is this?"},
+        {native:"Είναι πολύ ακριβό",pron:"EE-ne po-LEE a-kri-VOH",en:"It's too expensive"},
+        {native:"Έχετε άλλο νούμερο;",pron:"EH-he-te AH-lo NOO-me-ro",en:"Another size?"},
+        {native:"Απλώς κοιτάζω",pron:"ap-LOHS ki-TAH-zo",en:"Just browsing"},
+        {native:"Θα το πάρω",pron:"tha to PAH-ro",en:"I'll take it"},
+        {native:"Δέχεστε κάρτα;",pron:"DEH-hes-te KAR-ta",en:"Do you accept cards?"},
+        {native:"Μπορώ να έχω απόδειξη;",pron:"bo-ROH na EH-ho a-POH-dik-see",en:"Can I have a receipt?"},
+        {native:"Έχετε έκπτωση;",pron:"EH-he-te EK-pto-si",en:"Do you have a discount?"},
+      ],
+      numbers:[
+        {native:"Ένα",pron:"EH-na",en:"One"},
+        {native:"Δύο",pron:"DEE-o",en:"Two"},
+        {native:"Τρία",pron:"TREE-a",en:"Three"},
+        {native:"Τέσσερα",pron:"TEH-se-ra",en:"Four"},
+        {native:"Πέντε",pron:"PEN-de",en:"Five"},
+        {native:"Δέκα",pron:"DEH-ka",en:"Ten"},
+        {native:"Εκατό",pron:"e-ka-TOH",en:"One hundred"},
+        {native:"Χίλια",pron:"HEE-lya",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"Βοήθεια!",pron:"vo-EE-thi-a",en:"Help!"},
+        {native:"Καλέστε την αστυνομία!",pron:"ka-LES-te tin as-ti-no-MEE-a",en:"Call the police!"},
+        {native:"Καλέστε ασθενοφόρο!",pron:"ka-LES-te as-the-no-FOH-ro",en:"Call an ambulance!"},
+        {native:"Φωτιά!",pron:"fo-TYAH",en:"Fire!"},
+        {native:"Είμαι άρρωστος",pron:"EE-me AH-ros-tos",en:"I'm sick"},
+        {native:"Βοηθήστε με!",pron:"vo-ee-THEE-ste me",en:"Please help me!"},
+        {native:"Πού είναι το νοσοκομείο;",pron:"poo EE-ne to no-so-ko-MEE-o",en:"Where is the hospital?"},
+        {native:"Με έκλεψαν",pron:"me EK-lep-san",en:"I've been robbed"},
+      ],
+    },
+  },
+
+  turkey: {
+    name:"Turkey", flag:"🇹🇷", lang:"Türkçe", langCode:"tr-TR", latinScript:true,
+    tips:{
+      greetings:'💡 "Merhaba" works everywhere. "Teşekkür ederim" is appreciated — locals love when tourists try Turkish.',
+      food:'💡 "Kebap" is not just shish — explore lahmacun, pide, and meze. Tea (çay) is offered everywhere; accepting is polite.',
+      directions:'💡 Istanbul has metro, tram, and ferry. The Istanbulkart (transit card) works on all — buy one at the airport.',
+      numbers:'💡 Currency is Turkish Lira (₺ / TRY). Carry cash for bazaars. Exchange rates vary — avoid airport desks.',
+      emergency:'💡 Dial 112 (general), 155 (police), 112 (ambulance). Tourist police in Istanbul: (0212) 527 4503.'
+    },
+    culture:[
+      {e:'🫖',rule:'Çay culture',note:'Tea (çay) is the social glue of Turkey. Declining tea multiple times may be seen as rude — accept it!'},
+      {e:'🕌',rule:'Mosque etiquette',note:'Remove shoes, cover heads (women) and shoulders. Be quiet and avoid visiting during prayer times.'},
+      {e:'🤝',rule:'Warm hospitality',note:'Turks are exceptionally hospitable. Shop owners may offer tea — it\'s social, not pressure to buy.'},
+      {e:'🛍️',rule:'Bazaar bargaining',note:'Haggling is expected at the Grand Bazaar and Spice Bazaar. Start at 50–60% of asking price.'},
+      {e:'👁️',rule:'Evil eye (Nazar)',note:'The blue eye symbol (nazar) wards off bad luck. Giving one as a gift is very welcome.'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type C/F (220V)'},
+      {icon:'💵',label:'Currency',value:'TRY (₺)'},
+      {icon:'🚑',label:'Emergency',value:'112 / 155'},
+      {icon:'🚗',label:'Driving',value:'Right side'},
+      {icon:'💧',label:'Tap Water',value:'Do not drink'},
+      {icon:'🛂',label:'Visa',value:'e-Visa required (most countries)'},
+    ],
+    money:[
+      {e:'💵',rule:'Carry lira',note:'Bazaars and smaller restaurants prefer Turkish Lira. Some accept EUR/USD but at poor rates.'},
+      {e:'🏧',rule:'ATMs everywhere',note:'ATMs are on every corner in Istanbul. Use bank-attached machines for safety.'},
+      {e:'💳',rule:'Cards in restaurants',note:'Hotels, restaurants, and major shops accept cards. Bazaar vendors prefer cash.'},
+    ],
+    food:[
+      {e:'🥙',name:'Döner Kebap',what:'Rotisserie-grilled meat shaved into bread or on a plate',tip:'The most iconic Turkish street food. Ask for "dürüm" (wrap) for the full experience.'},
+      {e:'🫓',name:'Simit',what:'Sesame-crusted bread ring — Turkey\'s breakfast staple',tip:'Sold by street carts for ~5₺. Best eaten warm with fresh white cheese.'},
+      {e:'🍆',name:'Imam Bayıldı',what:'Stuffed aubergine in olive oil and tomatoes',tip:'A classic Turkish vegetable dish — the name means "the imam fainted" (from pleasure).'},
+      {e:'🥘',name:'Mercimek Çorbası',what:'Red lentil soup',tip:'A Turkish staple, served with lemon and dried mint. Perfect cheap, warming meal.'},
+      {e:'🍬',name:'Turkish Delight (Lokum)',what:'Starch-based confection in dozens of flavours',tip:'Buy from the Spice Bazaar, not tourist shops. Rose and pomegranate are classics.'},
+    ],
+    safety:[
+      {e:'✅',rule:'Generally safe',note:'Tourist areas in Istanbul and Cappadocia are safe. Stay aware as in any major city.'},
+      {e:'💧',rule:'No tap water',note:'Tap water is not potable — always drink bottled. Ice in restaurants is usually purified.'},
+      {e:'🚕',rule:'Use metered taxis',note:'Insist the meter is running. BiTaksi (app) is the safest way to book official taxis.'},
+      {e:'🛍️',rule:'Bazaar scams',note:'Be wary of carpet shop "free tea tours" that end in high-pressure sales.'},
+    ],
+    apps:[
+      {e:'🚇',cat:'Transit',name:'Trafi',desc:'Istanbul public transport journey planner',ios:'https://apps.apple.com/app/trafi/id428837479',android:'https://play.google.com/store/apps/details?id=com.trafi.main'},
+      {e:'🚗',cat:'Taxi',name:'BiTaksi',desc:'Official taxi-hailing app in Turkey',ios:'https://apps.apple.com/tr/app/bitaksi/id567633090',android:'https://play.google.com/store/apps/details?id=com.carbonist.bitaksi'},
+      {e:'🗺️',cat:'Maps',name:'Google Maps',desc:'Works well across Turkey',ios:'https://apps.apple.com/app/google-maps/id585027354',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.maps'},
+      {e:'💱',cat:'Finance',name:'Wise',desc:'Best rates for Turkish Lira',ios:'https://apps.apple.com/app/wise/id612261027',android:'https://play.google.com/store/apps/details?id=com.transferwise.android'},
+    ],
+    data:{
+      greetings:[
+        {native:"Merhaba",pron:"mer-HA-ba",en:"Hello"},
+        {native:"Günaydın",pron:"gü-NAY-dın",en:"Good morning"},
+        {native:"İyi akşamlar",pron:"EE-yee AK-sham-lar",en:"Good evening"},
+        {native:"Nasılsınız?",pron:"na-SIL-sı-nız",en:"How are you?"},
+        {native:"İyiyim",pron:"EE-yee-yim",en:"I'm fine"},
+        {native:"Teşekkür ederim",pron:"teh-SHEK-kür eh-deh-RIM",en:"Thank you"},
+        {native:"Rica ederim",pron:"RI-ja eh-deh-RIM",en:"You're welcome"},
+        {native:"Hoşça kalın",pron:"HOSH-cha ka-LIN",en:"Goodbye"},
+      ],
+      food:[
+        {native:"Bir döner, lütfen",pron:"bir DÖ-ner LÜFT-fen",en:"One döner, please"},
+        {native:"Acısız",pron:"a-JI-sız",en:"Not spicy"},
+        {native:"Vejetaryen yemek?",pron:"veh-je-TAR-yen ye-MEK",en:"Vegetarian food?"},
+        {native:"Çok lezzetli!",pron:"chok lez-ZET-li",en:"Very delicious!"},
+        {native:"Hesabı getirir misiniz?",pron:"he-SA-bı ge-ti-RIR mi-si-NIZ",en:"The bill, please"},
+        {native:"Bir çay, lütfen",pron:"bir CHAY LÜFT-fen",en:"One tea, please"},
+        {native:"Su, lütfen",pron:"soo LÜFT-fen",en:"Water, please"},
+        {native:"Paket yapar mısınız?",pron:"pa-KET ya-PAR mı-sı-Nız",en:"Can I have it to go?"},
+      ],
+      directions:[
+        {native:"Metro nerede?",pron:"MET-ro ne-RE-de",en:"Where is the metro?"},
+        {native:"Uzak mı?",pron:"oo-ZAK mı",en:"Is it far?"},
+        {native:"Sola dönün",pron:"SO-la dö-NÜN",en:"Turn left"},
+        {native:"Sağa dönün",pron:"SA-a dö-NÜN",en:"Turn right"},
+        {native:"Düz gidin",pron:"düz gi-DIN",en:"Go straight"},
+        {native:"Beni şuraya götürün",pron:"be-NI shoo-RA-ya gö-TÜ-rün",en:"Take me here"},
+        {native:"Burada durun",pron:"boo-RA-da doo-ROON",en:"Stop here"},
+        {native:"Daha ne kadar?",pron:"DA-ha ne ka-DAR",en:"How much further?"},
+      ],
+      shopping:[
+        {native:"Bu ne kadar?",pron:"boo ne ka-DAR",en:"How much is this?"},
+        {native:"Çok pahalı",pron:"chok pa-HA-lı",en:"Too expensive"},
+        {native:"İndirim yapar mısınız?",pron:"in-di-RIM ya-PAR mı-sı-Nız",en:"Can you discount?"},
+        {native:"Başka beden var mı?",pron:"BASH-ka be-DEN var mı",en:"Another size?"},
+        {native:"Sadece bakıyorum",pron:"sa-DE-je ba-KI-yo-room",en:"Just browsing"},
+        {native:"Bunu alıyorum",pron:"boo-NOO a-LI-yo-room",en:"I'll take this"},
+        {native:"Kartla ödeyebilir miyim?",pron:"kar-TLA ö-de-YE-bi-lir mi-YIM",en:"Can I pay by card?"},
+        {native:"Fiş alabilir miyim?",pron:"FISH a-la-bi-LIR mi-YIM",en:"Can I have a receipt?"},
+      ],
+      numbers:[
+        {native:"Bir",pron:"bir",en:"One"},
+        {native:"İki",pron:"EE-ki",en:"Two"},
+        {native:"Üç",pron:"üch",en:"Three"},
+        {native:"Dört",pron:"dört",en:"Four"},
+        {native:"Beş",pron:"besh",en:"Five"},
+        {native:"On",pron:"on",en:"Ten"},
+        {native:"Yüz",pron:"yüz",en:"One hundred"},
+        {native:"Bin",pron:"bin",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"İmdat!",pron:"im-DAT",en:"Help!"},
+        {native:"Polis çağırın!",pron:"po-LIS cha-ı-RIN",en:"Call the police!"},
+        {native:"Ambulans çağırın!",pron:"am-boo-LANS cha-ı-RIN",en:"Call an ambulance!"},
+        {native:"Yangın var!",pron:"YAN-gın var",en:"Fire!"},
+        {native:"Hastayım",pron:"has-ta-YIM",en:"I'm sick"},
+        {native:"Yardım edin lütfen!",pron:"YAR-dım eh-DIN lüft-FEN",en:"Please help me!"},
+        {native:"Hastane nerede?",pron:"has-TA-ne ne-RE-de",en:"Where is the hospital?"},
+        {native:"Çantam çalındı",pron:"chan-TAM cha-LIN-dı",en:"My bag was stolen"},
+      ],
+    },
+  },
+
+  morocco: {
+    name:"Morocco", flag:"🇲🇦", lang:"Darija (Moroccan Arabic)", langCode:"ar-MA", latinScript:true,
+    tips:{
+      greetings:'💡 "La bès?" (How are you?) with "La bès, hamdullah" (Fine, thank God) is the classic Moroccan exchange. French is widely spoken.',
+      food:'💡 Eat with your right hand. Bread ("khobz") accompanies every meal — use it to scoop tagine. Mint tea is a welcome ritual.',
+      directions:'💡 Petit taxis are cheap within cities (metered). Grand taxis go between cities. Negotiate price before getting in.',
+      numbers:'💡 Currency is Moroccan Dirham (MAD). Cash is essential — many souks and riads are cash only.',
+      emergency:'💡 Dial 190 (police), 150 (fire), 141 (SAMU medical). Brigade Touristique for tourist assistance.'
+    },
+    culture:[
+      {e:'🫖',rule:'Mint tea ritual',note:'Moroccan mint tea (atay) is poured from a height — both for show and to cool it. Never refuse the first glass.'},
+      {e:'🤝',rule:'Right hand greetings',note:'Handshake with the right hand, then touch your hand to your heart. This shows sincerity.'},
+      {e:'👗',rule:'Dress modestly',note:'Cover shoulders and knees, especially in medinas and mosques. Women should carry a scarf.'},
+      {e:'💰',rule:'Bargaining is culture',note:'In souks, the first price is always negotiable. Counter with 30–40% — it\'s expected and fun.'},
+      {e:'🕌',rule:'Mosques and non-Muslims',note:'Most Moroccan mosques are closed to non-Muslims. The Hassan II mosque in Casablanca is an exception.'},
+    ],
+    quickFacts:[
+      {icon:'🔌',label:'Plug',value:'Type C/E (220V)'},
+      {icon:'💵',label:'Currency',value:'MAD (DH)'},
+      {icon:'🚑',label:'Emergency',value:'190 / 141'},
+      {icon:'🚗',label:'Driving',value:'Right side'},
+      {icon:'💧',label:'Tap Water',value:'Do not drink'},
+      {icon:'🛂',label:'Visa',value:'Visa-free (many countries, 90 days)'},
+    ],
+    money:[
+      {e:'💵',rule:'Cash is king',note:'Souks, small riads, and local restaurants are cash-only. Carry MAD in small denominations.'},
+      {e:'🏧',rule:'Withdraw in cities',note:'ATMs are reliable in Marrakech, Casablanca, and Fes. Avoid exchanging money on the street.'},
+      {e:'🤝',rule:'Tip generously',note:'10–15 MAD for guides, porters, and henna artists. Tipping is expected and forms part of their income.'},
+    ],
+    food:[
+      {e:'🫕',name:'Tagine',what:'Slow-cooked stew in a conical clay pot — lamb, chicken, or vegetables',tip:'Order at a local restaurant, not tourist spots. Ask for "beld" (traditional/local-style).'},
+      {e:'🥘',name:'Couscous',what:'Semolina grains steamed over broth with vegetables and meat',tip:'Traditionally served on Fridays. Eating couscous with family is a Moroccan ritual.'},
+      {e:'🥗',name:'Zaalouk',what:'Smoky aubergine and tomato salad',tip:'Served as a cold starter. Scoop with bread. Also try taktouka (roasted pepper version).'},
+      {e:'🧇',name:'Msemen',what:'Square flaky flatbread, often with honey or argan oil',tip:'A Moroccan breakfast staple. Pair with mint tea for the full experience.'},
+      {e:'🥜',name:'Bastilla',what:'Savoury-sweet pie with pigeon (or chicken), almonds, and cinnamon',tip:'A Fes speciality. One of Morocco\'s most complex, impressive dishes.'},
+    ],
+    safety:[
+      {e:'🧭',rule:'Medina navigation',note:'Medina alleys are a labyrinth — use Google Maps offline. Guides offering help may want a tip.'},
+      {e:'🚕',rule:'Official taxis only',note:'Use licensed petit taxis (metered) or agree a price up front. Avoid unmarked "taxis."'},
+      {e:'👁️',rule:'Henna and argan scams',note:'Free henna or argan oil "samples" come with aggressive sales. Politely decline if not interested.'},
+      {e:'👗',rule:'Dress for context',note:'Revealing clothing can attract unwanted attention in medinas. Light, modest layers work best.'},
+    ],
+    apps:[
+      {e:'🚗',cat:'Rideshare',name:'Careem',desc:'Dominant rideshare in MENA region',ios:'https://apps.apple.com/app/careem/id592978487',android:'https://play.google.com/store/apps/details?id=com.careem.acma'},
+      {e:'🗺️',cat:'Maps',name:'Google Maps',desc:'Works offline well — download Marrakech/Fes',ios:'https://apps.apple.com/app/google-maps/id585027354',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.maps'},
+      {e:'💬',cat:'Translate',name:'Google Translate',desc:'Arabic and Darija phrase help offline',ios:'https://apps.apple.com/app/google-translate/id414706506',android:'https://play.google.com/store/apps/details?id=com.google.android.apps.translate'},
+      {e:'💱',cat:'Finance',name:'Wise',desc:'Best rates for Moroccan Dirham',ios:'https://apps.apple.com/app/wise/id612261027',android:'https://play.google.com/store/apps/details?id=com.transferwise.android'},
+    ],
+    data:{
+      greetings:[
+        {native:"Salam",pron:"sa-LAM",en:"Hello"},
+        {native:"Salam alaikum",pron:"sa-LAM a-LAY-kum",en:"Peace be upon you"},
+        {native:"Sbah l-khir",pron:"sbah el-KHEER",en:"Good morning"},
+        {native:"Msa l-khir",pron:"m-sa el-KHEER",en:"Good evening"},
+        {native:"La bès?",pron:"la BESS",en:"How are you?"},
+        {native:"La bès, hamdullah",pron:"la BESS ham-DOO-lah",en:"Fine, thank God"},
+        {native:"Shukran",pron:"SHOOK-ran",en:"Thank you"},
+        {native:"Bslama",pron:"b-SLA-ma",en:"Goodbye"},
+      ],
+      food:[
+        {native:"Wahd tagine, afak",pron:"wahd ta-ZHEEN a-FAK",en:"One tagine, please"},
+        {native:"Bla l-har",pron:"bla el-HAR",en:"Without spice"},
+        {native:"Ana ma kankol l-lhem",pron:"AH-na ma kan-KOL el-LHEM",en:"I don't eat meat"},
+        {native:"Bnina bzzaf!",pron:"bni-NA bzaf",en:"Very delicious!"},
+        {native:"L-hesab, afak",pron:"el he-SAB a-FAK",en:"The bill, please"},
+        {native:"Atay, afak",pron:"a-TAY a-FAK",en:"Tea, please"},
+        {native:"L-ma, afak",pron:"el-MA a-FAK",en:"Water, please"},
+        {native:"Machi had l-khedma",pron:"MA-shee had el-KHEDma",en:"Not what I ordered"},
+      ],
+      directions:[
+        {native:"Fin kayna l-mahatta?",pron:"fin KAY-na el ma-HAt-ta",en:"Where is the station?"},
+        {native:"Ba'id bzzaf?",pron:"ba-EED bzaf",en:"Is it far?"},
+        {native:"Li l-ysar",pron:"li el-ee-SAR",en:"To the left"},
+        {native:"Li l-limin",pron:"li el-LI-min",en:"To the right"},
+        {native:"Neeshan",pron:"nee-SHAN",en:"Straight ahead"},
+        {native:"Weddni l...",pron:"wed-DNI l",en:"Take me to..."},
+        {native:"Wqef hna",pron:"wa-KEF hna",en:"Stop here"},
+        {native:"Qrib wla ba'id?",pron:"QRIB wla ba-EED",en:"Near or far?"},
+      ],
+      shopping:[
+        {native:"Bshal hada?",pron:"b-SHAL ha-DA",en:"How much is this?"},
+        {native:"Ghali bzzaf",pron:"GHA-li bzaf",en:"Too expensive"},
+        {native:"Khfef chwiya",pron:"kh-FEF shwi-YA",en:"Lower the price a little"},
+        {native:"Wash kayn numero akhar?",pron:"wash KAY-in noo-ME-ro AK-har",en:"Another size?"},
+        {native:"Ghir kantshof",pron:"ghir kant-SHOF",en:"Just browsing"},
+        {native:"Ghadi nakhud hada",pron:"GHA-di na-KHUD ha-DA",en:"I'll take this"},
+        {native:"Wash kadir nkhallas b kart?",pron:"wash ka-DIR nkh-LAS b kart",en:"Can I pay by card?"},
+        {native:"Atini wahd l-fatoura",pron:"a-TI-ni wahd el fa-TOO-ra",en:"Give me a receipt"},
+      ],
+      numbers:[
+        {native:"Wahd",pron:"wahd",en:"One"},
+        {native:"Jouj",pron:"zhoozh",en:"Two"},
+        {native:"Tlata",pron:"TLA-ta",en:"Three"},
+        {native:"Rb'a",pron:"RB-a",en:"Four"},
+        {native:"Khamsa",pron:"KHAM-sa",en:"Five"},
+        {native:"'ashra",pron:"ASH-ra",en:"Ten"},
+        {native:"Miya",pron:"MI-ya",en:"One hundred"},
+        {native:"Alf",pron:"alf",en:"One thousand"},
+      ],
+      emergency:[
+        {native:"'Aweni!",pron:"aw-NI",en:"Help!"},
+        {native:"'Ayyet l-boless!",pron:"ay-YET el bo-LESS",en:"Call the police!"},
+        {native:"'Ayyet l-is'af!",pron:"ay-YET el is-AF",en:"Call an ambulance!"},
+        {native:"Kayna l-'afya!",pron:"KAY-na el AF-ya",en:"There's a fire!"},
+        {native:"Ana mrid",pron:"AH-na m-RID",en:"I'm sick"},
+        {native:"'Aweni afak!",pron:"aw-NI a-FAK",en:"Please help me!"},
+        {native:"Fin kayn sbitar?",pron:"fin KAY-in sbi-TAR",en:"Where is the hospital?"},
+        {native:"Srqo l-bzam dyali",pron:"sr-QO el b-ZAM dya-LI",en:"My wallet was stolen"},
+      ],
+    },
+  },
+
 };
 
 // ─── COUNTRY PATCHES (timezone · currency · pronGuide · medical · immigration)
@@ -2415,6 +3425,258 @@ const patches = {
         {native:"Das ist mein Hotel",pron:"das ist myn ho-TEL",en:"This is my hotel"},
         {native:"Könnten Sie das wiederholen?",pron:"KUN-ten zee das VEE-der-ho-len",en:"Could you repeat that?"},
         {native:"Ich brauche einen Dolmetscher",pron:"ikh BROW-kheh AI-nen DOL-met-sher",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  singapore: {
+    timezone:'Asia/Singapore',
+    currency:{code:'SGD',symbol:'S$',rate:1.35,label:'1 USD ≈ 1.35 SGD'},
+    pronGuide:{title:'Malay Sounds',tips:['Stress falls on the second syllable in most words','The letter C is always pronounced "ch" as in "chair"','R is rolled slightly — softer than Spanish','Most vowels are pure: A = "ah", E = "eh", I = "ee", O = "oh", U = "oo"']},
+    data:{
+      medical:[
+        {native:"Saya tidak sihat",pron:"SAH-ya tee-DAK SEE-hat",en:"I don't feel well"},
+        {native:"Saya perlukan doktor",pron:"SAH-ya per-loo-KAN DOK-tor",en:"I need a doctor"},
+        {native:"Panggil ambulans",pron:"PANG-gil am-boo-LANS",en:"Call an ambulance"},
+        {native:"Di mana hospital terdekat?",pron:"dee MAH-na hos-PEE-tal ter-de-KAT",en:"Where's the nearest hospital?"},
+        {native:"Saya ada alahan",pron:"SAH-ya AH-da ah-LAH-han",en:"I have an allergy"},
+        {native:"Saya ada diabetes",pron:"SAH-ya AH-da dye-ah-BEE-tes",en:"I have diabetes"},
+        {native:"Saya rasa pening",pron:"SAH-ya RAH-sa pe-NING",en:"I feel dizzy"},
+        {native:"Tolong dapatkan ubat",pron:"TOH-long da-PAT-kan OO-bat",en:"Please get medicine"}
+      ],
+      immigration:[
+        {native:"Pasport saya",pron:"PAS-port SAH-ya",en:"Here is my passport"},
+        {native:"Saya datang untuk bercuti",pron:"SAH-ya da-TANG OON-took ber-COO-tee",en:"I'm here for a holiday"},
+        {native:"Saya akan tinggal [X] hari",pron:"SAH-ya ah-KAN TING-gal [X] HA-ree",en:"I'm staying [X] days"},
+        {native:"Tiada barang untuk diisytihar",pron:"tee-AH-da BA-rang OON-took dee-ish-tee-HAR",en:"Nothing to declare"},
+        {native:"Di mana tuntutan bagasi?",pron:"dee MAH-na toon-TOO-tan ba-GA-see",en:"Where's baggage claim?"},
+        {native:"Saya bersendirian",pron:"SAH-ya ber-sen-dee-ree-AN",en:"I'm travelling alone"},
+        {native:"Ini hotel saya",pron:"EE-nee ho-TEL SAH-ya",en:"This is my hotel"},
+        {native:"Saya perlukan jurubahasa",pron:"SAH-ya per-loo-KAN joo-roo-ba-HA-sa",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  china: {
+    timezone:'Asia/Shanghai',
+    currency:{code:'CNY',symbol:'¥',rate:7.24,label:'1 USD ≈ 7.24 CNY'},
+    pronGuide:{title:'Mandarin Sounds',tips:['Mandarin has four tones — the same syllable means different things at different pitches','X sounds like "sh", Q like "ch", ZH like a hard "j"','Pinyin "e" alone is like "uh", but "ei" is like "ay"','The ü sound (written u after j/q/x/y) is like French "tu" — round lips and say "ee"']},
+    data:{
+      medical:[
+        {native:"我感觉不舒服",pron:"wǒ gǎn jué bù shū fu",en:"I don't feel well"},
+        {native:"我需要看医生",pron:"wǒ xū yào kàn yī shēng",en:"I need a doctor"},
+        {native:"请叫救护车",pron:"qǐng jiào jiù hù chē",en:"Call an ambulance"},
+        {native:"最近的医院在哪里？",pron:"zuì jìn de yī yuàn zài nǎ lǐ",en:"Where's the nearest hospital?"},
+        {native:"我对...过敏",pron:"wǒ duì... guò mǐn",en:"I'm allergic to..."},
+        {native:"我有糖尿病",pron:"wǒ yǒu táng niào bìng",en:"I have diabetes"},
+        {native:"我头晕",pron:"wǒ tóu yūn",en:"I feel dizzy"},
+        {native:"我需要药",pron:"wǒ xū yào yào",en:"I need medicine"}
+      ],
+      immigration:[
+        {native:"这是我的护照",pron:"zhè shì wǒ de hù zhào",en:"Here is my passport"},
+        {native:"我来旅游",pron:"wǒ lái lǚ yóu",en:"I'm here for tourism"},
+        {native:"我住[X]天",pron:"wǒ zhù [X] tiān",en:"I'm staying [X] days"},
+        {native:"没有要申报的",pron:"méi yǒu yào shēn bào de",en:"Nothing to declare"},
+        {native:"行李提取处在哪里？",pron:"xíng lǐ tí qǔ chù zài nǎ lǐ",en:"Where's baggage claim?"},
+        {native:"我一个人旅行",pron:"wǒ yī gè rén lǚ xíng",en:"I'm travelling alone"},
+        {native:"这是我的酒店",pron:"zhè shì wǒ de jiǔ diàn",en:"This is my hotel"},
+        {native:"我需要翻译",pron:"wǒ xū yào fān yì",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  india: {
+    timezone:'Asia/Kolkata',
+    currency:{code:'INR',symbol:'₹',rate:83.5,label:'1 USD ≈ 83.50 INR'},
+    pronGuide:{title:'Hindi Sounds',tips:['Hindi has retroflex consonants — T and D can be said with the tongue curled back (ट ड) vs forward (त द)','The "h" after consonants (like "bh", "dh") adds a breathy puff of air','Stress is generally on the second-to-last syllable','The nasal anusvara (ं) nasalises the preceding vowel — like French nasal vowels']},
+    data:{
+      medical:[
+        {native:"मुझे अच्छा नहीं लग रहा",pron:"moo-JAY ach-CHA na-HEEN lag ra-HA",en:"I don't feel well"},
+        {native:"मुझे डॉक्टर चाहिए",pron:"moo-JAY DOK-ter CHA-hi-ay",en:"I need a doctor"},
+        {native:"एम्बुलेंस बुलाइए",pron:"AMBULANCE boo-LA-ee-ay",en:"Call an ambulance"},
+        {native:"सबसे नजदीक अस्पताल कहाँ है?",pron:"sab-SAY naj-DEEK as-pa-TAAL ka-HAN hai",en:"Where's the nearest hospital?"},
+        {native:"मुझे एलर्जी है",pron:"moo-JAY al-ER-jee hai",en:"I have an allergy"},
+        {native:"मुझे डायबिटीज है",pron:"moo-JAY DY-ah-bee-TEEZ hai",en:"I have diabetes"},
+        {native:"मुझे चक्कर आ रहा है",pron:"moo-JAY CHAK-kar aa ra-HA hai",en:"I feel dizzy"},
+        {native:"दवाई चाहिए",pron:"da-VAH-ee CHA-hi-ay",en:"I need medicine"}
+      ],
+      immigration:[
+        {native:"यह मेरा पासपोर्ट है",pron:"yeh MAY-ra PASS-port hai",en:"Here is my passport"},
+        {native:"मैं पर्यटन के लिए आया हूँ",pron:"main par-ya-TAN ke li-YAY AH-ya hoon",en:"I'm here for tourism"},
+        {native:"मैं [X] दिन रुकूँगा",pron:"main [X] din roo-KOON-ga",en:"I'm staying [X] days"},
+        {native:"घोषित करने के लिए कुछ नहीं",pron:"gho-SHIT kar-NAY ke li-YAY kuch na-HEEN",en:"Nothing to declare"},
+        {native:"सामान काउंटर कहाँ है?",pron:"SA-man KAW-un-ter ka-HAN hai",en:"Where's baggage claim?"},
+        {native:"मैं अकेला यात्रा कर रहा हूँ",pron:"main a-KAY-la YAH-tra kar ra-HA hoon",en:"I'm travelling alone"},
+        {native:"यह मेरा होटल है",pron:"yeh MAY-ra ho-TEL hai",en:"This is my hotel"},
+        {native:"मुझे दुभाषिया चाहिए",pron:"moo-JAY doo-BHA-shi-ya CHA-hi-ay",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  brazil: {
+    timezone:'America/Sao_Paulo',
+    currency:{code:'BRL',symbol:'R$',rate:4.97,label:'1 USD ≈ 4.97 BRL'},
+    pronGuide:{title:'Brazilian Portuguese Sounds',tips:['Nasal vowels (ã, ão, em, en) — let air flow through your nose, like "sang" without the G','The letters LH make a "ly" sound (like million) and NH makes "ny" (like canyon)','S at end of syllable sounds like "sh" in São Paulo dialect (SH-ão POW-loo)','R at start of word or doubled (rr) sounds like the English H']},
+    data:{
+      medical:[
+        {native:"Não estou me sentindo bem",pron:"nowng es-TOH mee sen-CHIN-doo beng",en:"I don't feel well"},
+        {native:"Preciso de um médico",pron:"pre-SEE-zoo jee oong MEH-ji-koo",en:"I need a doctor"},
+        {native:"Chame uma ambulância",pron:"SHA-mee OO-ma am-boo-LAN-sya",en:"Call an ambulance"},
+        {native:"Onde fica o hospital mais próximo?",pron:"ON-jee FEE-ka oo os-pee-TAL mais PRO-see-moo",en:"Where's the nearest hospital?"},
+        {native:"Tenho alergia a...",pron:"TEN-yoo ah-ler-ZHEE-a a",en:"I'm allergic to..."},
+        {native:"Tenho diabetes",pron:"TEN-yoo jee-ah-BEH-chees",en:"I have diabetes"},
+        {native:"Estou com tontura",pron:"es-TOH kong ton-TOO-ra",en:"I feel dizzy"},
+        {native:"Preciso de remédio",pron:"pre-SEE-zoo jee he-MEH-jee-oo",en:"I need medicine"}
+      ],
+      immigration:[
+        {native:"Aqui está meu passaporte",pron:"a-KEE es-TAH mew pas-a-POR-chee",en:"Here is my passport"},
+        {native:"Estou aqui a turismo",pron:"es-TOH a-KEE a too-REEZ-moo",en:"I'm here for tourism"},
+        {native:"Ficarei [X] dias",pron:"fi-ka-RAY [X] JEE-as",en:"I'm staying [X] days"},
+        {native:"Não tenho nada a declarar",pron:"nowng TEN-yoo NA-da a deh-kla-RAR",en:"Nothing to declare"},
+        {native:"Onde fica a retirada de bagagem?",pron:"ON-jee FEE-ka a heh-chee-RA-da jee ba-GA-zheng",en:"Where's baggage claim?"},
+        {native:"Estou viajando sozinho/a",pron:"es-TOH vee-a-ZHAN-doo so-ZEE-nyoo/nya",en:"I'm travelling alone"},
+        {native:"Este é meu hotel",pron:"ES-chee eh mew oh-TEL",en:"This is my hotel"},
+        {native:"Preciso de um intérprete",pron:"pre-SEE-zoo jee oong in-TER-pre-chee",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  mexico: {
+    timezone:'America/Mexico_City',
+    currency:{code:'MXN',symbol:'$',rate:17.1,label:'1 USD ≈ 17.10 MXN'},
+    pronGuide:{title:'Mexican Spanish Sounds',tips:['The letter Ñ makes a "ny" sound — España sounds like "es-PAH-nya"','LL is pronounced like a Y in Mexico — "llama" = YAH-ma','The letter J (and G before E/I) is a strong guttural H sound','Mexican Spanish is generally clear and easy to understand — a great starter for Spanish learners']},
+    data:{
+      medical:[
+        {native:"No me siento bien",pron:"no meh SYEN-to BYEN",en:"I don't feel well"},
+        {native:"Necesito un médico",pron:"neh-seh-SEE-to oon MEH-di-ko",en:"I need a doctor"},
+        {native:"Llame una ambulancia",pron:"YAH-meh OO-na am-boo-LAN-sya",en:"Call an ambulance"},
+        {native:"¿Dónde está el hospital más cercano?",pron:"DON-de es-TAH el os-pee-TAL mas ser-KAH-no",en:"Where's the nearest hospital?"},
+        {native:"Soy alérgico/a a...",pron:"soy a-LER-hi-ko/ka a",en:"I'm allergic to..."},
+        {native:"Tengo diabetes",pron:"TEN-go dye-ah-BEH-tes",en:"I have diabetes"},
+        {native:"Me siento mareado/a",pron:"meh SYEN-to ma-reh-AH-do/da",en:"I feel dizzy"},
+        {native:"Necesito medicamento",pron:"neh-seh-SEE-to meh-di-kah-MEN-to",en:"I need medicine"}
+      ],
+      immigration:[
+        {native:"Aquí está mi pasaporte",pron:"a-KEE es-TAH mee pa-sa-POR-te",en:"Here is my passport"},
+        {native:"Vengo de turismo",pron:"VEN-go de too-REEZ-mo",en:"I'm here for tourism"},
+        {native:"Me quedo [X] días",pron:"meh KED-o [X] DEE-as",en:"I'm staying [X] days"},
+        {native:"No tengo nada que declarar",pron:"no TEN-go NA-da ke deh-kla-RAR",en:"Nothing to declare"},
+        {native:"¿Dónde recojo mi equipaje?",pron:"DON-de reh-KO-ho mee eh-kee-PAH-he",en:"Where's baggage claim?"},
+        {native:"Viajo solo/a",pron:"VYAH-ho SO-lo/la",en:"I'm travelling alone"},
+        {native:"Este es mi hotel",pron:"ES-te es mee oh-TEL",en:"This is my hotel"},
+        {native:"Necesito un intérprete",pron:"neh-seh-SEE-to oon in-TER-pre-te",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  portugal: {
+    timezone:'Europe/Lisbon',
+    currency:{code:'EUR',symbol:'€',rate:0.93,label:'1 USD ≈ 0.93 EUR'},
+    pronGuide:{title:'European Portuguese Sounds',tips:['Portuguese vowels are often swallowed — unstressed E sounds almost silent ("de" = "d\'", "que" = "k\'")','The LH pair makes a "ly" sound and NH makes "ny" — like Italian','S between vowels sounds like "z"; at end of syllable it becomes "sh"','The ã and ão endings are nasal — "manhã" (morning) = man-YANG, "não" (no) = nowng']},
+    data:{
+      medical:[
+        {native:"Não me sinto bem",pron:"nowng meh SEEN-too beng",en:"I don't feel well"},
+        {native:"Preciso de um médico",pron:"preh-SEE-zoo jee oong MEH-di-koo",en:"I need a doctor"},
+        {native:"Chame uma ambulância",pron:"SHA-meh OO-ma am-boo-LAN-sya",en:"Call an ambulance"},
+        {native:"Onde fica o hospital mais próximo?",pron:"ON-deh FEE-ka oo osh-pee-TAL maish PRO-see-moo",en:"Where's the nearest hospital?"},
+        {native:"Sou alérgico/a a...",pron:"soh a-LER-ji-koo/ka a",en:"I'm allergic to..."},
+        {native:"Tenho diabetes",pron:"TEN-yoo dee-ah-BEH-tesh",en:"I have diabetes"},
+        {native:"Estou tonto/a",pron:"esh-TOH TON-too/ta",en:"I feel dizzy"},
+        {native:"Preciso de medicamento",pron:"preh-SEE-zoo jee meh-di-kah-MEN-too",en:"I need medicine"}
+      ],
+      immigration:[
+        {native:"Aqui está o meu passaporte",pron:"a-KEE esh-TAH oo mew pa-sa-POR-teh",en:"Here is my passport"},
+        {native:"Estou cá de férias",pron:"esh-TOH kah deh FEH-ree-ash",en:"I'm here for a holiday"},
+        {native:"Fico [X] dias",pron:"FEE-koo [X] JEE-ash",en:"I'm staying [X] days"},
+        {native:"Não tenho nada a declarar",pron:"nowng TEN-yoo NAH-da a deh-kla-RAR",en:"Nothing to declare"},
+        {native:"Onde é a recolha de bagagens?",pron:"ON-deh eh a reh-KO-lya de ba-GA-zhaingsh",en:"Where's baggage claim?"},
+        {native:"Viajo sozinho/a",pron:"vee-AH-zhoo soo-ZEE-nyoo/nya",en:"I'm travelling alone"},
+        {native:"Este é o meu hotel",pron:"ESH-teh eh oo mew oh-TEL",en:"This is my hotel"},
+        {native:"Preciso de um intérprete",pron:"preh-SEE-zoo jee oong in-TER-preh-teh",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  greece: {
+    timezone:'Europe/Athens',
+    currency:{code:'EUR',symbol:'€',rate:0.93,label:'1 USD ≈ 0.93 EUR'},
+    pronGuide:{title:'Greek Sounds',tips:['Greek letters look different but sounds are often familiar — Γ (gamma) before E/I makes a "y" sound','The combination ΜΠ (mp) makes a "b" sound, and ΝΤ (nt) makes a "d" sound at the start of a word','Double vowels αι = "e", οι = "ee", ου = "oo", ει = "ee"','The letter Χ (chi) is like the Scottish "loch" — a breathy H sound at the back of the throat']},
+    data:{
+      medical:[
+        {native:"Δεν αισθάνομαι καλά",pron:"den es-THA-no-me ka-LAH",en:"I don't feel well"},
+        {native:"Χρειάζομαι γιατρό",pron:"khree-AH-zo-me ya-TROH",en:"I need a doctor"},
+        {native:"Καλέστε ασθενοφόρο",pron:"ka-LES-te as-the-no-FOH-ro",en:"Call an ambulance"},
+        {native:"Πού είναι το πλησιέστερο νοσοκομείο;",pron:"poo EE-ne to plee-SYES-te-ro no-so-ko-MEE-o",en:"Where's the nearest hospital?"},
+        {native:"Είμαι αλλεργικός/ή σε...",pron:"EE-me a-ler-yi-KOS/KEE se",en:"I'm allergic to..."},
+        {native:"Έχω διαβήτη",pron:"EH-ho dya-VEE-tee",en:"I have diabetes"},
+        {native:"Ζαλίζομαι",pron:"za-LEE-zo-me",en:"I feel dizzy"},
+        {native:"Χρειάζομαι φάρμακο",pron:"khree-AH-zo-me FAR-ma-ko",en:"I need medicine"}
+      ],
+      immigration:[
+        {native:"Ορίστε το διαβατήριό μου",pron:"o-REE-ste to dya-va-TEE-ryo moo",en:"Here is my passport"},
+        {native:"Είμαι εδώ για τουρισμό",pron:"EE-me e-DOH ya too-riz-MOH",en:"I'm here for tourism"},
+        {native:"Θα μείνω [X] μέρες",pron:"tha MEE-no [X] MEH-res",en:"I'm staying [X] days"},
+        {native:"Δεν έχω τίποτα να δηλώσω",pron:"den EH-ho TEE-po-ta na dee-LOH-so",en:"Nothing to declare"},
+        {native:"Πού είναι η παραλαβή αποσκευών;",pron:"poo EE-ne ee pa-ra-la-VEE a-pos-ke-VON",en:"Where's baggage claim?"},
+        {native:"Ταξιδεύω μόνος/η",pron:"tak-si-DEH-vo MOH-nos/nee",en:"I'm travelling alone"},
+        {native:"Αυτό είναι το ξενοδοχείο μου",pron:"af-TOH EE-ne to kse-no-do-HEE-o moo",en:"This is my hotel"},
+        {native:"Χρειάζομαι διερμηνέα",pron:"khree-AH-zo-me dyer-mee-NEH-a",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  turkey: {
+    timezone:'Europe/Istanbul',
+    currency:{code:'TRY',symbol:'₺',rate:32.5,label:'1 USD ≈ 32.50 TRY'},
+    pronGuide:{title:'Turkish Sounds',tips:['Turkish is phonetically regular — every letter is pronounced the same way every time','Ş sounds like "sh", Ç like "ch", Ğ (soft G) silently lengthens the preceding vowel','The undotted ı (without a dot) is a unique central vowel — like the "u" in "circus"','Ü sounds like the French "u" or German "ü" — round your lips and say "ee"']},
+    data:{
+      medical:[
+        {native:"Kendimi iyi hissetmiyorum",pron:"ken-di-MI ee-yee his-set-mi-YO-room",en:"I don't feel well"},
+        {native:"Doktora ihtiyacım var",pron:"dok-TO-ra ih-ti-YA-jım var",en:"I need a doctor"},
+        {native:"Ambulans çağırın",pron:"am-boo-LANS cha-ı-RIN",en:"Call an ambulance"},
+        {native:"En yakın hastane nerede?",pron:"en ya-KIN has-TA-ne ne-RE-de",en:"Where's the nearest hospital?"},
+        {native:"...ya alerjim var",pron:"ya a-LER-jim var",en:"I'm allergic to..."},
+        {native:"Şeker hastasıyım",pron:"sheh-KER has-ta-SIH-yım",en:"I have diabetes"},
+        {native:"Başım dönüyor",pron:"ba-SHIM dö-NÜ-yor",en:"I feel dizzy"},
+        {native:"İlaca ihtiyacım var",pron:"ee-LA-ja ih-ti-YA-jım var",en:"I need medicine"}
+      ],
+      immigration:[
+        {native:"Pasaportunuz",pron:"pa-sa-por-TOO-nooz",en:"Here is my passport"},
+        {native:"Turizm amacıyla geldim",pron:"too-RIZM a-ma-JIH-la gel-DIM",en:"I'm here for tourism"},
+        {native:"[X] gün kalacağım",pron:"[X] gün ka-la-JA-ım",en:"I'm staying [X] days"},
+        {native:"Beyan edecek bir şeyim yok",pron:"be-YAN eh-de-JEK bir sheh-YIM yok",en:"Nothing to declare"},
+        {native:"Bagaj teslim alanı nerede?",pron:"ba-GAZH tes-LIM a-la-NI ne-RE-de",en:"Where's baggage claim?"},
+        {native:"Yalnız seyahat ediyorum",pron:"yal-NIZ sey-a-HAT eh-di-YO-room",en:"I'm travelling alone"},
+        {native:"Bu benim otelim",pron:"boo be-NIM oh-te-LIM",en:"This is my hotel"},
+        {native:"Tercümana ihtiyacım var",pron:"ter-jü-MA-na ih-ti-YA-jım var",en:"I need an interpreter"}
+      ]
+    }
+  },
+
+  morocco: {
+    timezone:'Africa/Casablanca',
+    currency:{code:'MAD',symbol:'DH',rate:10.0,label:'1 USD ≈ 10.00 MAD'},
+    pronGuide:{title:'Darija Sounds',tips:['Darija (Moroccan Arabic) borrows heavily from French and Berber — you\'ll hear French words mixed in constantly','The letters gh and kh are guttural — similar to the Spanish J or French R','Double consonants are pronounced longer, e.g. "bzzaf" (a lot) has a long Z','The H\'s in Moroccan words are real consonants — always pronounce them']},
+    data:{
+      medical:[
+        {native:"Ma kaynshi bkhir",pron:"ma KAY-nshi b-KHEER",en:"I don't feel well"},
+        {native:"Khassni tbib",pron:"KHAS-ni t-BIB",en:"I need a doctor"},
+        {native:"'Ayyet l-is'af",pron:"ay-YET el is-AF",en:"Call an ambulance"},
+        {native:"Fin kayn sbitar qrib?",pron:"fin KAY-in sbi-TAR qrib",en:"Where's the nearest hospital?"},
+        {native:"'Andi hassasiya l...",pron:"AN-di has-sa-SEE-ya l",en:"I'm allergic to..."},
+        {native:"'Andi diabit",pron:"AN-di dye-ah-BIT",en:"I have diabetes"},
+        {native:"Ra'si kaydur",pron:"ra-SEE kai-DUR",en:"I feel dizzy"},
+        {native:"Khassni dwa",pron:"KHAS-ni dwa",en:"I need medicine"}
+      ],
+      immigration:[
+        {native:"Hadchi pasporti",pron:"had-SHI pas-POR-ti",en:"Here is my passport"},
+        {native:"Jit ghir lsiyaha",pron:"jit ghir l-see-YAH-ha",en:"I'm here for tourism"},
+        {native:"Ghadi nqam [X] iyam",pron:"GHA-di n-QAM [X] ee-YAM",en:"I'm staying [X] days"},
+        {native:"Ma 'andi walu l-i'lan",pron:"ma AN-di wa-LOO l-ee-LAN",en:"Nothing to declare"},
+        {native:"Fin kayna sala t-bagaj?",pron:"fin KAY-na SA-la t-ba-GAJ",en:"Where's baggage claim?"},
+        {native:"Ana msafer wahdni",pron:"AH-na m-SA-fer wah-DNI",en:"I'm travelling alone"},
+        {native:"Hada lotili dyali",pron:"HA-da lo-TEE-li dya-LI",en:"This is my hotel"},
+        {native:"Khassni tarjman",pron:"KHAS-ni tar-JMAN",en:"I need an interpreter"}
       ]
     }
   }
