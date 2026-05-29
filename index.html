@@ -2508,6 +2508,15 @@ function selectCountry(id) {
     pg.removeAttribute('open');
   } else { document.getElementById('pronGuide').style.display = 'none'; }
 
+  // Exit trip-planning mode if active (e.g. navigating via recents while selecting)
+  if (tripSelecting) {
+    tripSelecting = false;
+    tripSelected.clear();
+    document.getElementById('countryGrid').classList.remove('trip-selecting');
+    document.getElementById('tripBar').classList.remove('show');
+    document.getElementById('tripToggleBtn').textContent = '🗺️ Plan a multi-country trip';
+  }
+
   clearSearch();
   buildPhrases(c);
   buildTravelInfo(c);
@@ -2548,10 +2557,13 @@ function makePhraseCard(p, section, countryId) {
   const favs = getFavs();
   const key = `${countryId}:${section}:${p.native}`;
   const isFav = !!favs[key];
+  // q(): safely encode a JS value for use inside a double-quoted HTML attribute.
+  // JSON.stringify wraps in "…" which would break the attribute — replace " with &quot;
+  const q = v => JSON.stringify(v).replace(/"/g, '&quot;');
   const card = document.createElement('div');
   card.className = 'phrase-card';
   card.innerHTML = `
-    <button class="play-btn" onclick="speak(this, ${JSON.stringify(p.native)})">
+    <button class="play-btn" onclick="speak(this, ${q(p.native)})">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </button>
     <div class="phrase-text">
@@ -2560,8 +2572,8 @@ function makePhraseCard(p, section, countryId) {
       <div class="english">${p.en}</div>
     </div>
     <div class="card-btns">
-      <button class="share-btn" onclick="sharePhrase(this,${JSON.stringify(p.native)},${JSON.stringify(p.en)})" title="Share">⬆</button>
-      <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(this,${JSON.stringify(key)})" title="Save phrase">★</button>
+      <button class="share-btn" onclick="sharePhrase(this,${q(p.native)},${q(p.en)})" title="Share">⬆</button>
+      <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(this,${q(key)})" title="Save phrase">★</button>
     </div>`;
   // Show-to-local — tap the native text
   card.querySelector('.native').style.cursor = 'pointer';
