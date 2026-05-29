@@ -11,13 +11,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #f5f0e8;
-    --dark: #1a1612;
+    --cream: #f5f5f7;
+    --dark: #1d1d1f;
     --rouge: #c0392b;
-    --gold: #c9a84c;
-    --muted: #8a7f72;
-    --card: #fff;
-    --border: #e0d8cc;
+    --gold: #b8860b;
+    --muted: #6e6e73;
+    --card: #ffffff;
+    --border: rgba(0,0,0,0.09);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 0 0 0.5px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.09), 0 0 0 0.5px rgba(0,0,0,0.04);
+    --radius: 14px;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,77 +30,93 @@
     color: var(--dark);
     font-family: 'DM Sans', sans-serif;
     min-height: 100vh;
-    padding: 40px 20px 60px;
+    padding: 56px 16px 80px;
+    -webkit-font-smoothing: antialiased;
   }
 
-  .container { max-width: 620px; margin: 0 auto; }
+  .container { max-width: 640px; margin: 0 auto; }
 
   /* ── HOME ── */
-  .home-header { text-align: center; margin-bottom: 44px; }
-  .home-header .globe { font-size: 2.4rem; display: block; margin-bottom: 12px; }
-  .home-header h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; line-height: 1.1; }
+  .home-header { text-align: center; margin-bottom: 32px; padding-top: 8px; }
+  .home-header .globe { font-size: 2.8rem; display: block; margin-bottom: 14px; }
+  .home-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem,8vw,3.4rem); font-weight: 700; letter-spacing: -1.5px; line-height: 1.02; }
   .home-header h1 em { font-style: italic; color: var(--rouge); }
-  .home-header p { color: var(--muted); font-size: 0.9rem; margin-top: 10px; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
-  .divider { width: 40px; height: 2px; background: var(--gold); margin: 14px auto 0; }
+  .home-header p { color: var(--muted); font-size: 0.9rem; margin-top: 10px; font-weight: 400; letter-spacing: 0.01em; }
+  .divider { width: 36px; height: 2px; background: var(--rouge); border-radius: 2px; margin: 16px auto 0; opacity: 0.25; }
 
-  .country-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  @media (min-width: 460px) { .country-grid { grid-template-columns: repeat(3, 1fr); } }
+  /* ── COUNTRY SEARCH ── */
+  .country-search-wrap {
+    position: relative; margin-bottom: 20px;
+  }
+  .country-search-icon {
+    position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+    color: var(--muted); font-size: 0.9rem; pointer-events: none;
+  }
+  .country-search {
+    width: 100%; padding: 12px 16px 12px 40px;
+    background: rgba(116,116,128,0.1); border: none; border-radius: 12px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--dark);
+    outline: none; transition: background 0.2s;
+  }
+  .country-search:focus { background: rgba(116,116,128,0.14); }
+  [data-theme="dark"] .country-search { background: rgba(255,255,255,0.08); }
+  [data-theme="dark"] .country-search:focus { background: rgba(255,255,255,0.12); }
+  .country-search::placeholder { color: var(--muted); }
+  .no-results-msg { text-align:center; color:var(--muted); padding:32px 0; font-size:0.9rem; display:none; }
+
+  .country-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (min-width: 480px) { .country-grid { grid-template-columns: repeat(3, 1fr); } }
 
   .country-card {
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px 12px 20px;
+    border: none;
+    border-radius: var(--radius);
+    padding: 22px 10px 18px;
     text-align: center;
     cursor: pointer;
-    transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.15s;
   }
-  .country-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); transform: translateY(-2px); border-color: var(--gold); }
-  .country-card .flag { font-size: 2.6rem; display: block; margin-bottom: 10px; }
-  .country-card .cname { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; display: block; margin-bottom: 4px; }
-  .country-card .clang { font-size: 0.75rem; color: var(--muted); font-style: italic; }
+  .country-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+  .country-card:active { transform: scale(0.97); }
+  .country-card .flag { font-size: 2.8rem; display: block; margin-bottom: 10px; line-height: 1; }
+  .country-card .cname { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; display: block; margin-bottom: 3px; }
+  .country-card .clang { font-size: 0.72rem; color: var(--muted); font-style: italic; }
 
   /* ── PHRASEBOOK ── */
   #phrasebook { display: none; }
 
   .back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: none;
-    border: 1.5px solid var(--border);
-    border-radius: 100px;
-    padding: 7px 16px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--muted);
-    cursor: pointer;
-    margin-bottom: 32px;
-    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 4px;
+    background: none; border: none; border-radius: 100px;
+    padding: 6px 4px; font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem; font-weight: 500; color: var(--rouge);
+    cursor: pointer; margin-bottom: 24px; transition: opacity 0.15s;
   }
-  .back-btn:hover { border-color: var(--dark); color: var(--dark); }
+  .back-btn:hover { opacity: 0.7; }
+  .back-btn::before { content: "‹"; font-size: 1.4rem; line-height: 1; font-weight: 300; }
 
   .pb-header { text-align: center; margin-bottom: 28px; }
-  .pb-header .flag-lg { font-size: 2.6rem; display: block; margin-bottom: 10px; }
-  .pb-header h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; line-height: 1.1; }
+  .pb-header .flag-lg { font-size: 3rem; display: block; margin-bottom: 12px; }
+  .pb-header h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; line-height: 1.05; letter-spacing: -0.5px; }
   .pb-header h2 em { font-style: italic; color: var(--rouge); }
-  .pb-header p { color: var(--muted); font-size: 0.85rem; margin-top: 8px; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
+  .pb-header p { color: var(--muted); font-size: 0.8rem; margin-top: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
 
-  /* ── MODE TOGGLE ── */
+  /* ── MODE TOGGLE (iOS segmented control) ── */
   .mode-toggle {
     display: flex;
-    background: #ede8df;
-    border-radius: 100px;
-    padding: 4px;
+    background: rgba(116,116,128,0.12);
+    border-radius: 10px;
+    padding: 3px;
     margin-bottom: 24px;
-    gap: 4px;
+    gap: 2px;
   }
+  [data-theme="dark"] .mode-toggle { background: rgba(255,255,255,0.08); }
   .mode-btn {
     flex: 1;
-    padding: 10px 0;
+    padding: 9px 0;
     border: none;
-    border-radius: 100px;
+    border-radius: 8px;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
@@ -106,7 +125,8 @@
     color: var(--muted);
     transition: all 0.18s;
   }
-  .mode-btn.active { background: #fff; color: var(--dark); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .mode-btn.active { background: #fff; color: var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+  [data-theme="dark"] .mode-btn.active { background: #3a3a3c; color: var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
 
   /* ── PHRASE TABS + INFO TABS ── */
   .tabs {
@@ -147,18 +167,19 @@
   }
 
   /* ── PHRASE CARDS ── */
-  .phrases { display: grid; gap: 12px; }
+  .phrases { display: grid; gap: 10px; }
   .phrase-card {
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    border: none;
+    border-radius: 14px;
     padding: 16px 18px;
     display: flex;
     align-items: center;
     gap: 16px;
-    transition: box-shadow 0.2s, transform 0.2s;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.18s;
   }
-  .phrase-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-1px); }
+  .phrase-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 
   .play-btn {
     flex-shrink: 0;
@@ -238,11 +259,12 @@
 
   .app-tile {
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow-sm);
   }
   .app-tile-top { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
   .app-tile-icon {
@@ -279,13 +301,14 @@
   /* ── SEARCH ── */
   .search-wrap { position: relative; margin-bottom: 20px; }
   .search-input {
-    width: 100%; padding: 10px 36px 10px 14px;
-    border: 1.5px solid var(--border); border-radius: 100px;
+    width: 100%; padding: 11px 36px 11px 14px;
+    border: none; border-radius: 12px;
     font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
-    background: #fff; color: var(--dark); outline: none;
-    transition: border-color 0.2s;
+    background: var(--card); color: var(--dark); outline: none;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s;
   }
-  .search-input:focus { border-color: var(--rouge); }
+  .search-input:focus { box-shadow: var(--shadow-md); }
   .search-clear {
     position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
     background: none; border: none; cursor: pointer; color: var(--muted);
@@ -450,12 +473,13 @@
   .em-en { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
 
   /* ── DARK MODE ── */
-  [data-theme="dark"] { --cream:#1a1612; --dark:#f0ebe3; --card:#242018; --border:#3a3428; --muted:#9a9080; }
+  [data-theme="dark"] { --cream:#000; --dark:#f5f5f7; --card:#1c1c1e; --border:rgba(255,255,255,0.1); --muted:rgba(235,235,245,0.55); --shadow-sm:0 1px 3px rgba(0,0,0,0.3); --shadow-md:0 4px 20px rgba(0,0,0,0.4); }
   [data-theme="dark"] .tip-box { background:#2a2318; }
-  [data-theme="dark"] .mode-toggle { background:#2a2318; }
+  [data-theme="dark"] .no-speech { background:#2a1a1a; border-color:#5a2a2a; }
+  [data-theme="dark"] .store-badge.gplay { background:#2c2c2e; color:#f5f5f7; border-color:rgba(255,255,255,0.12); }
   [data-theme="dark"] .culture-item,[data-theme="dark"] .money-item,[data-theme="dark"] .safety-item { background:var(--card); }
   [data-theme="dark"] .app-tile { background:var(--card); }
-  [data-theme="dark"] .quick-facts { background:#2a2318; }
+  [data-theme="dark"] .quick-facts { background:transparent; }
   [data-theme="dark"] .pron-guide { background:#2a2318; border-color:#3a3428; }
   [data-theme="dark"] .curr-input-wrap { background:#111; }
   [data-theme="dark"] .food-item { background:var(--card); }
@@ -517,10 +541,10 @@
   .quiz-card.flipped .quiz-card-inner { transform:rotateY(180deg); }
   .quiz-card-front,.quiz-card-back {
     position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
-    background:var(--card); border:1.5px solid var(--border); border-radius:20px;
+    background:var(--card); border:none; border-radius:20px;
     padding:32px 24px; display:flex; flex-direction:column;
     align-items:center; justify-content:center; text-align:center;
-    box-shadow:0 2px 16px rgba(0,0,0,0.06);
+    box-shadow:var(--shadow-md);
   }
   .quiz-card-back { transform:rotateY(180deg); }
   .quiz-streak { display:flex; align-items:center; gap:8px; font-size:0.8rem;
@@ -606,8 +630,10 @@
   .trip-bar-label { font-size:0.85rem; font-weight:500; }
   .trip-bar-btn { background:#fff; color:var(--rouge); border:none; border-radius:100px;
     padding:7px 18px; font-family:'DM Sans',sans-serif; font-size:0.8rem; font-weight:700; cursor:pointer; }
-  .trip-plan { display:none; background:var(--card); border:1px solid var(--border);
-    border-radius:16px; padding:20px; margin-top:16px; }
+  .trip-plan { display:none; background:var(--card); border:none;
+    border-radius:16px; padding:20px; margin-top:16px; box-shadow:var(--shadow-sm); }
+  .home-section-label { font-size:0.72rem; font-weight:600; color:var(--muted);
+    text-transform:uppercase; letter-spacing:0.09em; margin:0 0 12px; padding:0 2px; }
   .trip-plan.open { display:block; }
   .trip-entry { padding:16px 0; border-bottom:1px solid var(--border); }
   .trip-entry:last-child { border-bottom:none; }
@@ -636,11 +662,20 @@
       <p>Pick a country to get started</p>
       <div class="divider"></div>
     </div>
+    <!-- COUNTRY SEARCH -->
+    <div class="country-search-wrap">
+      <span class="country-search-icon">🔍</span>
+      <input class="country-search" id="countrySearch" type="search"
+        placeholder="Search countries…" oninput="filterCountries(this.value)"
+        autocomplete="off" spellcheck="false">
+    </div>
     <!-- RECENT COUNTRIES -->
     <div class="recents-section" id="recentsSection" style="display:none">
       <div class="recents-label">Recently visited</div>
       <div class="recents-row" id="recentsRow"></div>
     </div>
+    <div class="home-section-label" id="homeSectionLabel">All Countries</div>
+    <div class="no-results-msg" id="noResultsMsg">No countries match your search</div>
     <div class="country-grid" id="countryGrid"></div>
     <!-- TRIP PLANNER -->
     <button class="trip-toggle-btn" id="tripToggleBtn" onclick="toggleTripSelect()">🗺️ Plan a multi-country trip</button>
@@ -649,7 +684,7 @@
 
   <!-- PHRASEBOOK -->
   <div id="phrasebook">
-    <button class="back-btn" onclick="goHome()">← All Countries</button>
+    <button class="back-btn" onclick="goHome()">All Countries</button>
 
     <div class="pb-header">
       <span class="flag-lg" id="pbFlag"></span>
@@ -2415,15 +2450,32 @@ function saveFavs(f) { localStorage.setItem(FAV_KEY, JSON.stringify(f)); }
 
 function buildHome() {
   const grid = document.getElementById('countryGrid');
-  for (const [id, c] of Object.entries(countries)) {
+  const sorted = Object.entries(countries).sort(([,a],[,b]) => a.name.localeCompare(b.name));
+  for (const [id, c] of sorted) {
     const card = document.createElement('div');
     card.className = 'country-card';
     card.id = `card-${id}`;
+    card.dataset.name = c.name.toLowerCase();
     card.onclick = () => tripSelecting ? toggleTripCountry(id) : selectCountry(id);
     card.innerHTML = `<span class="flag">${c.flag}</span><span class="cname">${c.name}</span><span class="clang">${c.lang}</span>`;
     grid.appendChild(card);
   }
   renderRecents();
+}
+
+function filterCountries(q) {
+  const query = q.trim().toLowerCase();
+  const cards = document.querySelectorAll('#countryGrid .country-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const match = !query || card.dataset.name.includes(query);
+    card.style.display = match ? '' : 'none';
+    if (match) visible++;
+  });
+  const noMsg = document.getElementById('noResultsMsg');
+  const label = document.getElementById('homeSectionLabel');
+  if (noMsg) noMsg.style.display = visible === 0 ? 'block' : 'none';
+  if (label) label.textContent = query ? `Results for "${q}"` : 'All Countries';
 }
 
 // ─── COUNTRY ─────────────────────────────────────────────────────────────────
@@ -2468,6 +2520,13 @@ function selectCountry(id) {
   pb.style.display = 'block';
   document.getElementById('emergencyFab').style.display = 'flex';
   window.scrollTo(0, 0);
+
+  // URL routing
+  const slug = id.replace(/_/g, '-');
+  if (window.location.pathname !== '/' + slug) {
+    history.pushState({ country: id }, '', '/' + slug);
+  }
+  document.title = `${c.name} Phrasebook — Travel Phrasebook`;
 }
 
 function goHome() {
@@ -2476,6 +2535,10 @@ function goHome() {
   document.getElementById('home').style.display = 'block';
   document.getElementById('emergencyFab').style.display = 'none';
   window.scrollTo(0, 0);
+  if (window.location.pathname !== '/') {
+    history.pushState({}, '', '/');
+  }
+  document.title = 'Travel Phrasebook';
 }
 
 // ─── PHRASES ─────────────────────────────────────────────────────────────────
@@ -3051,6 +3114,42 @@ buildTravelInfo = function(country) {
 buildHome();
 initDarkMode();
 checkOnboarding();
+
+// ─── URL ROUTING ──────────────────────────────────────────────────────────────
+function routeFromPath() {
+  const slug = window.location.pathname.replace(/^\//, '').replace(/-/g, '_');
+  if (slug && countries[slug]) {
+    selectCountry(slug);
+  } else {
+    // Try matching by slug without underscore conversion
+    const direct = window.location.pathname.replace(/^\//, '');
+    if (direct && countries[direct]) selectCountry(direct);
+  }
+}
+
+window.addEventListener('popstate', () => {
+  const slug = window.location.pathname.replace(/^\//, '').replace(/-/g, '_');
+  const direct = window.location.pathname.replace(/^\//, '');
+  if ((slug && countries[slug]) || (direct && countries[direct])) {
+    const id = (countries[slug] ? slug : direct);
+    // Navigate without pushing new history entry
+    const origPush = history.pushState;
+    history.pushState = function() {};
+    selectCountry(id);
+    history.pushState = origPush;
+  } else {
+    // Show home without pushing
+    window.speechSynthesis.cancel();
+    document.getElementById('phrasebook').style.display = 'none';
+    document.getElementById('home').style.display = 'block';
+    document.getElementById('emergencyFab').style.display = 'none';
+    window.scrollTo(0, 0);
+    document.title = 'Travel Phrasebook';
+  }
+});
+
+// Handle initial deep link on page load
+routeFromPath();
 
 // ─── PWA ─────────────────────────────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
