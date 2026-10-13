@@ -31,7 +31,8 @@ export function scriptOf(text) {
 }
 
 export function voiceRequest(country, text) {
-  const script = scriptOf(text);
+  const value = text && typeof text === 'object' ? text.native : text;
+  const script = scriptOf(value);
   if (script === 'arab') return { lang: 'ar', label: 'Arabic' };
   if (script === 'latn' && String(country?.langCode || '').toLowerCase().startsWith('ar')) {
     return { lang: null, label: 'Darija' };

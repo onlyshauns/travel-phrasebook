@@ -18,6 +18,8 @@ assert.equal(scriptOf('عندي حجز'), 'arab');
 assert.equal(scriptOf('Bonjour'), 'latn');
 assert.deepEqual(voiceRequest({ langCode: 'ar-MA', voiceLabel: 'Darija' }, 'Bonjour'), { lang: null, label: 'Darija' });
 assert.deepEqual(voiceRequest({ langCode: 'ar-MA', voiceLabel: 'Darija' }, 'عندي حجز'), { lang: 'ar', label: 'Arabic' });
+assert.deepEqual(voiceRequest({ langCode: 'ar-MA', voiceLabel: 'Darija' }, { native: 'عندي حجز' }), { lang: 'ar', label: 'Arabic' });
+assert.deepEqual(voiceRequest({ langCode: 'ar-MA', voiceLabel: 'Darija' }, { native: 'Salam' }), { lang: null, label: 'Darija' });
 assert.equal(matchVoice([{ lang: 'fr-FR' }, { lang: 'en-US' }], 'fr')?.lang, 'fr-FR');
 assert.equal(matchVoice([{ lang: 'en-US' }], 'ja'), null);
 assert.equal(telHref('110'), 'tel:110');
