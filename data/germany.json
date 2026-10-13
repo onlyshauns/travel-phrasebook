@@ -1,0 +1,669 @@
+{
+  "id": "germany",
+  "name": "Germany",
+  "flag": "🇩🇪",
+  "lang": "Deutsch",
+  "langCode": "de-DE",
+  "voiceLabel": "German",
+  "latinScript": true,
+  "region": "Europe",
+  "timezone": "Europe/Berlin",
+  "hero": "#FFCE00",
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "rate": 0.93,
+    "label": "1 USD ≈ 0.93 EUR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All services"
+    },
+    {
+      "tel": "110",
+      "name": "Police"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 Germans value directness — \"Guten Tag\" in a shop before speaking is polite. Small talk is less common than in southern Europe.",
+    "food": "💡 Most restaurants add Trinkgeld (tip) expectations of 5–10%. Give cash directly to the server — don't leave it on the table.",
+    "directions": "💡 Germany's train system (Deutsche Bahn) is excellent but notoriously delayed. Always build buffer time for connections.",
+    "numbers": "💡 Germans write 1 with a serif (looks like 7 to some). A slash through 7 distinguishes it. Ask if unsure.",
+    "emergency": "💡 General emergency: <strong>112</strong>. Police: <strong>110</strong>.",
+    "shopping": "Most shops are closed on Sundays. Cards work almost everywhere.",
+    "medical": "Call 112. A pharmacy is marked with a red A.",
+    "immigration": "Schengen rules apply. Have your passport and the address.",
+    "hotel": "Quiet hours are taken seriously. Confirm whether breakfast is included.",
+    "transport": "Buy a ticket before you board the U-Bahn or a bus. Inspectors fine you on the spot."
+  },
+  "pronGuide": {
+    "title": "German Sounds",
+    "tips": [
+      "W = \"v\" (Wasser = VASS-er), V = \"f\" (Vater = FAH-ter)",
+      "CH after A/O/U is throaty (Bach), after E/I it's soft (ich)",
+      "Ü = purse your lips and say \"ee\"; Ö = round lips and say \"eh\"",
+      "Final voiced consonants go unvoiced — B→P, D→T, G→K"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/F (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Euro (€)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112 / 110"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Excellent quality"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "90 days (Schengen)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "⏰",
+      "rule": "Punctuality is non-negotiable",
+      "note": "Being on time is not polite — it is the minimum expectation. Being 5 minutes late requires a brief apology."
+    },
+    {
+      "e": "🗣️",
+      "rule": "Directness is a virtue, not rudeness",
+      "note": "Germans say exactly what they mean. Don't mistake bluntness for unfriendliness — it's genuine and they prefer it."
+    },
+    {
+      "e": "🛍️",
+      "rule": "Almost everything is closed on Sundays",
+      "note": "Sunday is legally protected rest time. Stock up on groceries Saturday. Petrol stations and some bakeries remain open."
+    },
+    {
+      "e": "♻️",
+      "rule": "Recycling is serious",
+      "note": "Separate your waste into paper, plastic, bio, and glass. The Pfand (deposit) bottle system means you return bottles to the supermarket."
+    },
+    {
+      "e": "👁️",
+      "rule": "Eye contact when toasting",
+      "note": "Hold eye contact with every person when clinking glasses. Breaking eye contact during a toast is considered bad luck."
+    },
+    {
+      "e": "🚴",
+      "rule": "Respect the cycle lane",
+      "note": "Cycling lanes are often next to the pavement and not always clearly marked. Walking in them will earn you an angry bell."
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "Germany is more cash-oriented than expected",
+      "note": "Many restaurants, cafés, and smaller shops don't accept cards. Carry €30–50 cash, especially outside major cities."
+    },
+    {
+      "e": "💳",
+      "rule": "EC (Girocard) is preferred over Visa/Mastercard",
+      "note": "German debit cards work on a different network. Your foreign Visa/Mastercard should still work at most terminals — but not always."
+    },
+    {
+      "e": "🍺",
+      "rule": "Tip directly to the server in cash",
+      "note": "Say the amount you want to pay (e.g., 'Achtzehn Euro' for an €16 bill + €2 tip). Don't leave cash on the table after you've left."
+    },
+    {
+      "e": "🔄",
+      "rule": "Pfand — bottle deposit is real",
+      "note": "Pay a deposit (€0.08–0.25) on plastic/glass bottles. Return them at supermarket machines for credit. Locals do it religiously."
+    },
+    {
+      "e": "☀️",
+      "rule": "Plan shopping around Sunday",
+      "note": "Shops are legally required to close on Sundays. Plan grocery shopping for Saturday or use petrol station shops in emergencies."
+    }
+  ],
+  "food": [
+    {
+      "e": "🌭",
+      "name": "Currywurst",
+      "what": "Sliced pork sausage smothered in curried ketchup — Berlin's iconic street food",
+      "tip": "Best from a Imbiss (street kiosk) with a plastic fork and chips (Pommes). Curry 36 in Berlin is legendary."
+    },
+    {
+      "e": "🥨",
+      "name": "Brezel (Pretzel)",
+      "what": "Soft, chewy baked pretzel with coarse salt — the perfect beer hall snack",
+      "tip": "Best eaten warm with butter. Order 'mit Butter' at a Bavarian bakery in the morning."
+    },
+    {
+      "e": "🍺",
+      "name": "Regional beer culture",
+      "what": "Each region has its own style — Bavarian Helles (lager), Berliner Weisse (sour wheat), Cologne's Kölsch (served in tiny 200ml glasses)",
+      "tip": "In Cologne, waiters refill your Kölsch automatically until you put a coaster on top of your glass."
+    },
+    {
+      "e": "🥩",
+      "name": "Schnitzel",
+      "what": "Breaded and pan-fried veal or pork cutlet — best at a traditional Gasthaus (pub-restaurant)",
+      "tip": "Authentic Wiener Schnitzel must be veal. Schnitzel Wiener Art (pork) is common and nearly as good."
+    },
+    {
+      "e": "🧀",
+      "name": "Käsespätzle",
+      "what": "Swabian egg noodles baked with melted cheese and topped with fried onions — Germany's answer to mac and cheese",
+      "tip": "A Baden-Württemberg staple. Rich and filling — one portion is usually enough for a full meal."
+    },
+    {
+      "e": "🥐",
+      "name": "Bäckerei (bakery) breakfast",
+      "what": "Fresh bread rolls (Brötchen) with cold cuts, cheese, and butter — Germany's daily breakfast ritual",
+      "tip": "Buy from a proper Bäckerei, not a supermarket. Germans are passionate about their bread — over 300 varieties."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🛡️",
+      "rule": "Germany is very safe overall",
+      "note": "Low violent crime. The main tourist concerns are petty theft in crowded city centres and train stations."
+    },
+    {
+      "e": "🚲",
+      "rule": "Cycling lanes are enforced",
+      "note": "Walking in a cycling lane risks a collision — cyclists move fast and have right of way. Always check before stepping off the pavement."
+    },
+    {
+      "e": "📋",
+      "rule": "Rules are followed and expected",
+      "note": "Germans follow rules closely. Jaywalking, skipping queues, or loud behaviour in residential areas will draw visible disapproval."
+    },
+    {
+      "e": "🚂",
+      "rule": "Validate your train ticket",
+      "note": "Regional trains (not ICE) often require you to validate (stamp) your ticket before boarding. Inspectors check — fine is €60 on the spot."
+    },
+    {
+      "e": "🌙",
+      "rule": "Ruhezeit (quiet hours)",
+      "note": "Noise restrictions apply 10pm–6am and all day Sunday. Loud parties, power tools, or music will upset neighbours — and it's enforceable."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚂",
+      "cat": "Transit",
+      "name": "DB Navigator",
+      "desc": "Deutsche Bahn's official app — essential for train tickets, platform info, and delay alerts.",
+      "ios": "https://apps.apple.com/app/id343555245",
+      "android": "https://play.google.com/store/apps/details?id=de.hafas.android.db"
+    },
+    {
+      "e": "🚕",
+      "cat": "Rides",
+      "name": "Bolt",
+      "desc": "Cheaper than Uber across Germany. Works in Berlin, Hamburg, Munich, and major cities.",
+      "ios": "https://apps.apple.com/app/id675033630",
+      "android": "https://play.google.com/store/apps/details?id=ee.mtakso.client"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "DeepL",
+      "desc": "Germany's own AI translator — better than Google Translate for German. Download the offline pack.",
+      "ios": "https://apps.apple.com/app/id1245403386",
+      "android": "https://play.google.com/store/apps/details?id=com.deepl.mobiletranslator"
+    },
+    {
+      "e": "💶",
+      "cat": "Money",
+      "name": "Wise",
+      "desc": "Best euro exchange rates. Set up before you leave — saves on ATM fees.",
+      "ios": "https://apps.apple.com/app/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "GetYourGuide",
+      "desc": "Berlin Wall tours, Neuschwanstein tickets, and Rhine River cruises — book ahead.",
+      "ios": "https://apps.apple.com/app/id657741529",
+      "android": "https://play.google.com/store/apps/details?id=com.getyourguide.android"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Booking.com",
+      "desc": "Free cancellation filters. Germany's hotel scene ranges from youth hostels to castle hotels.",
+      "ios": "https://apps.apple.com/app/id367003839",
+      "android": "https://play.google.com/store/apps/details?id=com.booking"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Guten Tag",
+        "pron": "GOO-ten takh",
+        "en": "Good day / Hello"
+      },
+      {
+        "native": "Guten Morgen",
+        "pron": "GOO-ten MOR-gen",
+        "en": "Good morning"
+      },
+      {
+        "native": "Guten Abend",
+        "pron": "GOO-ten AH-bent",
+        "en": "Good evening"
+      },
+      {
+        "native": "Danke schön",
+        "pron": "DAN-ke shern",
+        "en": "Thank you very much"
+      },
+      {
+        "native": "Bitte",
+        "pron": "BIT-te",
+        "en": "Please / You're welcome"
+      },
+      {
+        "native": "Entschuldigung",
+        "pron": "ent-SHOOL-di-gung",
+        "en": "Excuse me / Sorry"
+      },
+      {
+        "native": "Auf Wiedersehen",
+        "pron": "owf VEE-der-zayn",
+        "en": "Goodbye"
+      },
+      {
+        "native": "Ich verstehe nicht",
+        "pron": "ikh fer-SHTAY-e nikht",
+        "en": "I don't understand"
+      },
+      {
+        "native": "Sprechen Sie Englisch?",
+        "pron": "SHPRE-khen zee ENG-lish?",
+        "en": "Do you speak English?"
+      }
+    ],
+    "food": [
+      {
+        "native": "Die Speisekarte, bitte",
+        "pron": "dee SHPAI-ze-kar-te BIT-te",
+        "en": "The menu, please"
+      },
+      {
+        "native": "Was empfehlen Sie?",
+        "pron": "vas em-PFAY-len zee?",
+        "en": "What do you recommend?"
+      },
+      {
+        "native": "Ich bin Vegetarier/in",
+        "pron": "ikh bin ve-ge-TA-ri-er/in",
+        "en": "I'm vegetarian"
+      },
+      {
+        "native": "Das schmeckt sehr gut!",
+        "pron": "das shmekt zayr goot!",
+        "en": "This tastes very good!"
+      },
+      {
+        "native": "Die Rechnung, bitte",
+        "pron": "dee REK-nung BIT-te",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Ohne Gluten",
+        "pron": "O-ne GLOO-ten",
+        "en": "Without gluten"
+      },
+      {
+        "native": "Ich bin allergisch gegen...",
+        "pron": "ikh bin a-LER-gish GAY-gen...",
+        "en": "I'm allergic to..."
+      }
+    ],
+    "directions": [
+      {
+        "native": "Wo ist...?",
+        "pron": "vo ist?",
+        "en": "Where is...?"
+      },
+      {
+        "native": "Ich habe mich verirrt",
+        "pron": "ikh HA-be mikh fer-IRT",
+        "en": "I'm lost"
+      },
+      {
+        "native": "Rechts",
+        "pron": "rekhts",
+        "en": "Right"
+      },
+      {
+        "native": "Links",
+        "pron": "links",
+        "en": "Left"
+      },
+      {
+        "native": "Geradeaus",
+        "pron": "ge-RA-de-ows",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "Wie weit ist es?",
+        "pron": "vee vait ist es?",
+        "en": "How far is it?"
+      },
+      {
+        "native": "Der Bahnhof",
+        "pron": "der BAN-hof",
+        "en": "The train station"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Was kostet das?",
+        "pron": "vas KOS-tet das?",
+        "en": "How much does this cost?"
+      },
+      {
+        "native": "Das ist zu teuer",
+        "pron": "das ist tsoo TOY-er",
+        "en": "That's too expensive"
+      },
+      {
+        "native": "Kann ich mit Karte zahlen?",
+        "pron": "kan ikh mit KAR-te TSA-len?",
+        "en": "Can I pay by card?"
+      },
+      {
+        "native": "Ich schaue nur",
+        "pron": "ikh SHOW-e noor",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Ich nehme das",
+        "pron": "ikh NAY-me das",
+        "en": "I'll take this"
+      },
+      {
+        "native": "Haben Sie eine andere Größe?",
+        "pron": "HA-ben zee EI-ne AN-de-re GER-se?",
+        "en": "Do you have another size?"
+      },
+      {
+        "native": "Einen Kassenbon, bitte",
+        "pron": "EI-nen KA-sen-bon BIT-te",
+        "en": "A receipt, please"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Eins",
+        "pron": "ains",
+        "en": "1"
+      },
+      {
+        "native": "Zwei",
+        "pron": "tsvai",
+        "en": "2"
+      },
+      {
+        "native": "Drei",
+        "pron": "drai",
+        "en": "3"
+      },
+      {
+        "native": "Vier",
+        "pron": "fear",
+        "en": "4"
+      },
+      {
+        "native": "Fünf",
+        "pron": "fewnf",
+        "en": "5"
+      },
+      {
+        "native": "Sechs",
+        "pron": "zeks",
+        "en": "6"
+      },
+      {
+        "native": "Sieben",
+        "pron": "ZEE-ben",
+        "en": "7"
+      },
+      {
+        "native": "Acht",
+        "pron": "akht",
+        "en": "8"
+      },
+      {
+        "native": "Neun",
+        "pron": "noyn",
+        "en": "9"
+      },
+      {
+        "native": "Zehn",
+        "pron": "tsayn",
+        "en": "10"
+      },
+      {
+        "native": "Hundert",
+        "pron": "HOON-dert",
+        "en": "100"
+      },
+      {
+        "native": "Tausend",
+        "pron": "TOW-zent",
+        "en": "1,000"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Hilfe!",
+        "pron": "HIL-fe!",
+        "en": "Help!"
+      },
+      {
+        "native": "Rufen Sie die Polizei!",
+        "pron": "ROO-fen zee dee po-li-TSAI!",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Rufen Sie einen Krankenwagen!",
+        "pron": "ROO-fen zee EI-nen KRAN-ken-va-gen!",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Wo ist das Krankenhaus?",
+        "pron": "vo ist das KRAN-ken-hows?",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Ich wurde bestohlen",
+        "pron": "ikh VOOR-de be-SHTO-len",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "Ich brauche einen Arzt",
+        "pron": "ikh BROW-khe EI-nen artst",
+        "en": "I need a doctor"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Ich fühle mich nicht wohl",
+        "pron": "ikh FÜ-leh mikh nikht VOL",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Rufen Sie einen Krankenwagen",
+        "pron": "ROO-fen zee AI-nen KRAN-ken-vah-gen",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Wo ist das nächste Krankenhaus?",
+        "pron": "vo ist das NEKH-steh KRAN-ken-hows",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Ich habe Fieber",
+        "pron": "ikh HAH-beh FEE-ber",
+        "en": "I have a fever"
+      },
+      {
+        "native": "Ich brauche dieses Medikament",
+        "pron": "ikh BROW-kheh DEE-zes meh-dee-kah-MENT",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "Gibt es eine Apotheke in der Nähe?",
+        "pron": "gipt es AI-neh ah-poh-TAY-keh in der NAY-eh",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Ich bin Tourist",
+        "pron": "ikh bin too-RIST",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "Ich bleibe [X] Tage",
+        "pron": "ikh BLY-beh [X] TAH-geh",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Ich habe nichts zu verzollen",
+        "pron": "ikh HAH-beh nikhts tsoo fer-TSOL-en",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Wo ist die Gepäckausgabe?",
+        "pron": "vo ist dee geh-PEK-ows-gah-beh",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Ich reise alleine",
+        "pron": "ikh RY-zeh ah-LY-neh",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Das ist mein Hotel",
+        "pron": "das ist myn ho-TEL",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Könnten Sie das wiederholen?",
+        "pron": "KUN-ten zee das VEE-der-ho-len",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "Ich brauche einen Dolmetscher",
+        "pron": "ikh BROW-kheh AI-nen DOL-met-sher",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Ich habe eine Reservierung",
+        "pron": "ikh HA-buh EYE-nuh reh-zer-VEER-ung",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Kann ich jetzt einchecken?",
+        "pron": "kan ikh yetst EYN-chek-en",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "Wann ist der Check-out?",
+        "pron": "van ist dair CHECK-out",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Mein Schlüssel funktioniert nicht",
+        "pron": "myne SHLOOS-el funk-tsyo-NEERT nikht",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "Die Klimaanlage ist kaputt",
+        "pron": "dee KLEE-ma-an-la-guh ist ka-POOT",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Können Sie mehr Handtücher bringen?",
+        "pron": "KER-nen zee mair HAN-tew-kher BRING-en",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "Bitte nicht stören",
+        "pron": "BIT-uh nikht SHTER-en",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "Wie lautet das WLAN-Passwort?",
+        "pron": "vee LOW-tet das VEY-lan-PAS-vort",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Eine Fahrkarte, bitte",
+        "pron": "EYE-nuh FAR-kar-tuh BIT-uh",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Wo ist die U-Bahn-Station?",
+        "pron": "vo ist dee OO-ban shta-TSYON",
+        "en": "Where is the subway station?"
+      },
+      {
+        "native": "Fährt dieser Zug nach...?",
+        "pron": "fairt DEE-zer tsook nakh",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Wo muss ich aussteigen für...?",
+        "pron": "vo mus ikh OWS-shtye-gen fewr",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Bitte rufen Sie ein Taxi",
+        "pron": "BIT-uh ROO-fen zee eyn TAK-see",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "Fahren Sie mich zu diesem Hotel",
+        "pron": "FAR-en zee mikh tsoo DEE-zem ho-TEL",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Was kostet die Fahrt?",
+        "pron": "vas KOS-tet dee fart",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Halten Sie hier bitte",
+        "pron": "HAL-ten zee heer BIT-uh",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "dc87c0e27cf18a639be8a3cfbc8069466f47349d1e99ee56d8306b93d0f61448"
+}

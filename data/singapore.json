@@ -1,0 +1,677 @@
+{
+  "id": "singapore",
+  "name": "Singapore",
+  "flag": "🇸🇬",
+  "lang": "English & Singlish",
+  "langCode": "en-SG",
+  "voiceLabel": "English",
+  "latinScript": true,
+  "region": "Southeast Asia",
+  "timezone": "Asia/Singapore",
+  "hero": "#EF3340",
+  "currency": {
+    "code": "SGD",
+    "symbol": "S$",
+    "rate": 1.35,
+    "label": "1 USD ≈ 1.35 SGD",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "999",
+      "name": "Police"
+    },
+    {
+      "tel": "995",
+      "name": "Fire and ambulance"
+    }
+  ],
+  "tips": {
+    "greetings": "Plain English is enough. \"You eat already?\" is a warm hello, not a question you have to answer.",
+    "food": "Hawker centres are the everyday meal. Point at the dish if the stall is loud. \"Tapau\" means takeaway.",
+    "directions": "MRT announcements are in English. Say the station name, or book a Grab.",
+    "numbers": "Prices are in Singapore dollars. Hawker food often starts around a few dollars. Small change still helps.",
+    "emergency": "Call 999 for the police and 995 for fire and ambulance.",
+    "shopping": "Prices in malls are fixed. Ask \"any discount?\" only at a market stall.",
+    "medical": "Tap water is safe. Clinics and pharmacies are easy to find. Call 995 for an ambulance.",
+    "immigration": "Have your passport and the hotel address. Many visitors can enter without a visa for a short stay.",
+    "hotel": "Chewing gum is restricted. Ask the desk for the Wi-Fi and the MRT exit.",
+    "transport": "Use the MRT and buses. A stored-value card covers both. Grab is the ride-hail app."
+  },
+  "pronGuide": {
+    "title": "Singlish",
+    "tips": [
+      "English is the language to use. People understand plain English.",
+      "Lah, leh, and meh can sit at the end of a sentence. You do not need them.",
+      "\"Can or not?\" means \"Is this possible?\" \"Can\" on its own means yes.",
+      "\"Tapau\" means takeaway. \"Shiok\" means delicious or great."
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type G (240V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "SGD (S$)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "999 / 995"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Left side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Safe to drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "Visa-free (many countries, 30–90 days)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🙏",
+      "rule": "Respect elders",
+      "note": "Address older people first; use both hands when giving or receiving items."
+    },
+    {
+      "e": "🚫",
+      "rule": "No durian indoors",
+      "note": "Durian is banned on the MRT and in many hotels due to its strong smell."
+    },
+    {
+      "e": "👟",
+      "rule": "Remove shoes",
+      "note": "Take off shoes before entering homes and some traditional shops."
+    },
+    {
+      "e": "🍽️",
+      "rule": "Chope a table",
+      "note": "At hawker centres, reserve a table by leaving a packet of tissues on it — this is called \"chope-ing.\""
+    },
+    {
+      "e": "🤝",
+      "rule": "Handshakes are common",
+      "note": "A light handshake is standard; Malay Muslims may not shake hands across genders."
+    }
+  ],
+  "money": [
+    {
+      "e": "💳",
+      "rule": "Cards widely accepted",
+      "note": "Singapore is very cashless — most hawker centres now accept PayNow / NETS."
+    },
+    {
+      "e": "🏧",
+      "rule": "ATMs everywhere",
+      "note": "Use ATMs at 7-Eleven or bank branches for best rates; avoid airport currency desks."
+    },
+    {
+      "e": "🚫",
+      "rule": "No tipping culture",
+      "note": "Tipping is not expected and sometimes refused. Service charge is often included."
+    }
+  ],
+  "food": [
+    {
+      "e": "🍜",
+      "name": "Laksa",
+      "what": "Spicy coconut noodle soup",
+      "tip": "Order at hawker centres — Katong laksa is iconic."
+    },
+    {
+      "e": "🍗",
+      "name": "Hainanese Chicken Rice",
+      "what": "National dish: poached chicken over fragrant rice",
+      "tip": "Try Tian Tian at Maxwell Food Centre."
+    },
+    {
+      "e": "🦀",
+      "name": "Chilli Crab",
+      "what": "Stir-fried crab in tangy chilli sauce",
+      "tip": "Pricey but worth it — order mantou buns to dip in the sauce."
+    },
+    {
+      "e": "🥞",
+      "name": "Roti Prata",
+      "what": "Flaky flatbread with curry dip",
+      "tip": "Best eaten for breakfast. Ask for \"kosong\" (plain) or \"telur\" (egg)."
+    },
+    {
+      "e": "🍢",
+      "name": "Satay",
+      "what": "Grilled skewers with peanut sauce",
+      "tip": "Satay Street at Lau Pa Sat is great for evenings."
+    }
+  ],
+  "safety": [
+    {
+      "e": "✅",
+      "rule": "Very safe",
+      "note": "Singapore has some of the lowest crime rates in Asia. Scams are rare."
+    },
+    {
+      "e": "⚠️",
+      "rule": "Strict laws",
+      "note": "Fines for littering, jaywalking, and chewing gum (importing gum is banned). Follow signs."
+    },
+    {
+      "e": "🌧️",
+      "rule": "Tropical weather",
+      "note": "It rains year-round; carry a small umbrella. Heat and humidity are intense."
+    },
+    {
+      "e": "🦟",
+      "rule": "Dengue awareness",
+      "note": "Apply mosquito repellent, especially in residential areas."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rideshare",
+      "name": "Grab",
+      "desc": "Dominant rideshare and food delivery app in SEA",
+      "ios": "https://apps.apple.com/app/grab/id647268330",
+      "android": "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger"
+    },
+    {
+      "e": "🚇",
+      "cat": "Transit",
+      "name": "SG Buses",
+      "desc": "Bus arrival timings and MRT maps",
+      "ios": "https://apps.apple.com/sg/app/sg-buses/id392719982",
+      "android": "https://play.google.com/store/apps/details?id=sg.com.mytransport.bussingapore"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Google Maps",
+      "desc": "Works great in Singapore with MRT directions",
+      "ios": "https://apps.apple.com/app/google-maps/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💱",
+      "cat": "Finance",
+      "name": "Wise",
+      "desc": "Best rates for currency exchange",
+      "ios": "https://apps.apple.com/app/wise/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Hello",
+        "pron": "heh-LOH",
+        "en": "Hello"
+      },
+      {
+        "native": "Good morning",
+        "pron": "good MOR-ning",
+        "en": "Good morning"
+      },
+      {
+        "native": "Thank you",
+        "pron": "thank YOO",
+        "en": "Thank you"
+      },
+      {
+        "native": "Thank you so much",
+        "pron": "thank YOO so much",
+        "en": "Thank you very much"
+      },
+      {
+        "native": "Excuse me",
+        "pron": "ex-KYOOZ mee",
+        "en": "Excuse me"
+      },
+      {
+        "native": "Sorry",
+        "pron": "SOR-ree",
+        "en": "Sorry"
+      },
+      {
+        "native": "Can you help me?",
+        "pron": "kan yoo help mee",
+        "en": "Can you help me?"
+      },
+      {
+        "native": "Sorry, can you say that again?",
+        "pron": "SOR-ree kan yoo say that uh-GEN",
+        "en": "Can you repeat that?"
+      },
+      {
+        "native": "I don't understand",
+        "pron": "eye dohnt un-der-STAND",
+        "en": "I don't understand"
+      },
+      {
+        "native": "My name is...",
+        "pron": "my naym iz",
+        "en": "My name is..."
+      },
+      {
+        "native": "You eat already?",
+        "pron": "yoo eat or-RED-dee",
+        "en": "How are you? (a common greeting)"
+      }
+    ],
+    "food": [
+      {
+        "native": "Table for two, please",
+        "pron": "TAY-bul for too pleez",
+        "en": "A table for two, please"
+      },
+      {
+        "native": "Can I see the menu?",
+        "pron": "kan eye see the MEN-yoo",
+        "en": "The menu, please"
+      },
+      {
+        "native": "This one, please",
+        "pron": "this wun pleez",
+        "en": "I would like this one"
+      },
+      {
+        "native": "Not spicy",
+        "pron": "not SPY-see",
+        "en": "Not spicy"
+      },
+      {
+        "native": "A little spicy",
+        "pron": "a LIT-ul SPY-see",
+        "en": "A little spicy"
+      },
+      {
+        "native": "Is this halal?",
+        "pron": "iz this huh-LAHL",
+        "en": "Is it halal?"
+      },
+      {
+        "native": "I'm vegetarian",
+        "pron": "eye-m vej-uh-TAIR-ee-un",
+        "en": "I am vegetarian"
+      },
+      {
+        "native": "Tapau, please",
+        "pron": "tah-POW pleez",
+        "en": "Takeaway, please"
+      },
+      {
+        "native": "The bill, please",
+        "pron": "the bil pleez",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Can I have water?",
+        "pron": "kan eye hav WAW-ter",
+        "en": "Some water, please"
+      },
+      {
+        "native": "Wah, shiok",
+        "pron": "wah shee-OK",
+        "en": "This is delicious"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Where is the MRT?",
+        "pron": "wair iz the em-ar-TEE",
+        "en": "Where is the MRT?"
+      },
+      {
+        "native": "How far is it?",
+        "pron": "how far iz it",
+        "en": "How far is it?"
+      },
+      {
+        "native": "Turn left",
+        "pron": "turn left",
+        "en": "Turn left"
+      },
+      {
+        "native": "Turn right",
+        "pron": "turn right",
+        "en": "Turn right"
+      },
+      {
+        "native": "Go straight",
+        "pron": "go strayt",
+        "en": "Go straight"
+      },
+      {
+        "native": "Please take me to this address",
+        "pron": "pleez tayk mee to this AD-ress",
+        "en": "Please take me to this address"
+      },
+      {
+        "native": "Stop here, can?",
+        "pron": "stop heer kan",
+        "en": "Stop here, please"
+      },
+      {
+        "native": "I'm lost",
+        "pron": "eye-m lost",
+        "en": "I am lost"
+      },
+      {
+        "native": "Where is the toilet?",
+        "pron": "wair iz the TOY-let",
+        "en": "Where is the toilet?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "How much is this?",
+        "pron": "how much iz this",
+        "en": "How much does this cost?"
+      },
+      {
+        "native": "Too expensive",
+        "pron": "too ex-PEN-siv",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "Any discount?",
+        "pron": "EN-ee DIS-kownt",
+        "en": "Is there a discount?"
+      },
+      {
+        "native": "Just looking",
+        "pron": "just LOOK-ing",
+        "en": "I'm just looking"
+      },
+      {
+        "native": "I'll take this",
+        "pron": "eye-l tayk this",
+        "en": "I'll take this"
+      },
+      {
+        "native": "Do you have another size?",
+        "pron": "doo yoo hav uh-NUTH-er syz",
+        "en": "Do you have another size?"
+      },
+      {
+        "native": "Can I pay by card?",
+        "pron": "kan eye pay by kard",
+        "en": "Can I pay by card?"
+      },
+      {
+        "native": "Can I have a receipt?",
+        "pron": "kan eye hav a ree-SEET",
+        "en": "A receipt, please"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "One",
+        "pron": "wun",
+        "en": "1"
+      },
+      {
+        "native": "Two",
+        "pron": "too",
+        "en": "2"
+      },
+      {
+        "native": "Three",
+        "pron": "three",
+        "en": "3"
+      },
+      {
+        "native": "Four",
+        "pron": "for",
+        "en": "4"
+      },
+      {
+        "native": "Five",
+        "pron": "fyv",
+        "en": "5"
+      },
+      {
+        "native": "Ten",
+        "pron": "ten",
+        "en": "10"
+      },
+      {
+        "native": "Twenty",
+        "pron": "TWEN-tee",
+        "en": "20"
+      },
+      {
+        "native": "Fifty",
+        "pron": "FIF-tee",
+        "en": "50"
+      },
+      {
+        "native": "One hundred",
+        "pron": "wun HUN-dred",
+        "en": "100"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Help!",
+        "pron": "help",
+        "en": "Help!"
+      },
+      {
+        "native": "Call the police!",
+        "pron": "kawl the puh-LEES",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Call an ambulance!",
+        "pron": "kawl an AM-byoo-luns",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Fire!",
+        "pron": "fyr",
+        "en": "Fire!"
+      },
+      {
+        "native": "I need a doctor",
+        "pron": "eye need a DOK-ter",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "I'm allergic to...",
+        "pron": "eye-m uh-LER-jik too",
+        "en": "I am allergic to..."
+      },
+      {
+        "native": "My bag was stolen",
+        "pron": "my bag woz STOH-len",
+        "en": "My bag was stolen"
+      },
+      {
+        "native": "Where is the hospital?",
+        "pron": "wair iz the HOS-pi-tal",
+        "en": "Where is the hospital?"
+      }
+    ],
+    "medical": [
+      {
+        "native": "I don't feel well",
+        "pron": "eye dohnt feel wel",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "I have a fever",
+        "pron": "eye hav a FEE-ver",
+        "en": "I have a fever"
+      },
+      {
+        "native": "I need a pharmacy",
+        "pron": "eye need a FAR-muh-see",
+        "en": "I need a pharmacy"
+      },
+      {
+        "native": "It hurts here",
+        "pron": "it herts heer",
+        "en": "It hurts here"
+      },
+      {
+        "native": "I have a stomach ache",
+        "pron": "eye hav a STUM-uk ayk",
+        "en": "I have a stomach ache"
+      },
+      {
+        "native": "I need this medicine",
+        "pron": "eye need this MED-uh-sin",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "Is there a clinic nearby?",
+        "pron": "iz thair a KLIN-ik neer-BY",
+        "en": "Is there a clinic nearby?"
+      },
+      {
+        "native": "I feel dizzy",
+        "pron": "eye feel DIZ-ee",
+        "en": "I feel dizzy"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "I'm here on holiday",
+        "pron": "eye-m heer on HOL-uh-day",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "I'm staying for [X] days",
+        "pron": "eye-m STAY-ing for days",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "This is my passport",
+        "pron": "this iz my PAS-port",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "Nothing to declare",
+        "pron": "NUTH-ing too deh-KLAIR",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Where is baggage claim?",
+        "pron": "wair iz BAG-ij klaym",
+        "en": "Where is baggage claim?"
+      },
+      {
+        "native": "I'm travelling alone",
+        "pron": "eye-m TRAV-uh-ling uh-LOHN",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "This is my hotel",
+        "pron": "this iz my hoh-TEL",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "I need an interpreter",
+        "pron": "eye need an in-TER-pruh-ter",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "I have a reservation",
+        "pron": "eye hav a rez-er-VAY-shun",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Can I check in now?",
+        "pron": "kan eye chek in now",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "What time is checkout?",
+        "pron": "wot tym iz CHEK-owt",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "My key doesn't work",
+        "pron": "my kee DUZ-unt werk",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "The air conditioning is broken",
+        "pron": "the air kon-DISH-un-ing iz BROH-ken",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Can I have more towels?",
+        "pron": "kan eye hav mor TOW-ulz",
+        "en": "Can I have more towels?"
+      },
+      {
+        "native": "Please do not disturb",
+        "pron": "pleez doo not dis-TURB",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "What's the Wi-Fi password?",
+        "pron": "wots the WY-fy PAS-wurd",
+        "en": "What's the Wi-Fi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "One ticket, please",
+        "pron": "wun TIK-it pleez",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Where is the MRT station?",
+        "pron": "wair iz the em-ar-TEE STAY-shun",
+        "en": "Where is the MRT station?"
+      },
+      {
+        "native": "Does this train go to...?",
+        "pron": "duz this trayn go too",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Where do I get off for...?",
+        "pron": "wair doo eye get off for",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Can you call a taxi?",
+        "pron": "kan yoo kawl a TAK-see",
+        "en": "Can you call a taxi?"
+      },
+      {
+        "native": "Please take me to this hotel",
+        "pron": "pleez tayk mee too this hoh-TEL",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "How much is the fare?",
+        "pron": "how much iz the fair",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Stop here, please",
+        "pron": "stop heer pleez",
+        "en": "Please stop here"
+      }
+    ]
+  },
+  "contentHash": "22c72c2cebbf34ace7730a1ffea738943e9cab3983c158fa23fbee754b3be29d"
+}

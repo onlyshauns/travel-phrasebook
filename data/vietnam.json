@@ -1,0 +1,678 @@
+{
+  "id": "vietnam",
+  "name": "Vietnam",
+  "flag": "🇻🇳",
+  "lang": "Tiếng Việt",
+  "langCode": "vi-VN",
+  "voiceLabel": "Vietnamese",
+  "latinScript": true,
+  "region": "Southeast Asia",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "hero": "#DA251D",
+  "currency": {
+    "code": "VND",
+    "symbol": "₫",
+    "rate": 25000,
+    "label": "1 USD ≈ 25,000 VND",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "113",
+      "name": "Police"
+    },
+    {
+      "tel": "115",
+      "name": "Ambulance"
+    },
+    {
+      "tel": "114",
+      "name": "Fire"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 Vietnamese has tones — the same syllable in different tones means different things. Don't worry, locals will appreciate any attempt.",
+    "food": "💡 Phở is pronounced more like \"fuh\" than \"foe\". Street food is safe — follow the queue of locals.",
+    "directions": "💡 Always use Grab in Vietnam — fixed price, no negotiation needed. Cross roads slowly and steadily, traffic flows around you.",
+    "numbers": "💡 Prices are in thousands (ngàn) — \"ba mươi\" (30) usually means 30,000 đồng (~$1.20).",
+    "emergency": "💡 Police: <strong>113</strong>. Ambulance: <strong>115</strong>. Fire: <strong>114</strong>.",
+    "shopping": "Bargain in markets. Count the zeros on a dong price before you agree.",
+    "medical": "Call 115 for an ambulance. Buy bottled water.",
+    "immigration": "Keep the entry stamp and have a hotel address written down.",
+    "hotel": "Ask whether breakfast is included, and whether the room faces a noisy street.",
+    "transport": "Grab works in the big cities. Prefer it to a street taxi."
+  },
+  "pronGuide": {
+    "title": "Vietnamese Sounds",
+    "tips": [
+      "6 tones marked by accent marks — flat (no mark) is your safe default",
+      "Rising tone (á) goes up, like asking a question in English",
+      "The letter D is \"z\" in northern Vietnam, \"y\" in the south",
+      "Ơ sounds like \"uh\" in bird, Ư is like \"oo\" with rounded lips forward"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type A/C (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Dong (₫)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "113 / 115"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Do NOT drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "E-visa 90 days"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🤲",
+      "rule": "Use two hands when giving or receiving",
+      "note": "Especially with elders. Giving money, business cards, or gifts with one hand is considered casual or disrespectful."
+    },
+    {
+      "e": "👟",
+      "rule": "Remove shoes at homes and some temples",
+      "note": "Look for shoes at the entrance — it's the universal signal. Always follow the lead of your host."
+    },
+    {
+      "e": "😐",
+      "rule": "Saving face matters deeply",
+      "note": "Avoid public confrontation or expressing frustration. Criticism should be gentle and private — public embarrassment is taken seriously."
+    },
+    {
+      "e": "👨‍👩‍👦",
+      "rule": "Respect for elders is paramount",
+      "note": "Vietnamese society is family-first and deeply Confucian. Address older people respectfully and defer to them in social situations."
+    },
+    {
+      "e": "🛍️",
+      "rule": "Bargaining is expected at markets",
+      "note": "Smile, be friendly, and start at 50–60% of asking price. It's a social ritual — enjoy it."
+    },
+    {
+      "e": "⛩️",
+      "rule": "Dress modestly at temples and pagodas",
+      "note": "Cover shoulders and knees. Most temples have wraps available to borrow."
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "USD is also accepted in tourist areas",
+      "note": "Especially in Hanoi's Old Quarter and Ho Chi Minh City. However, you'll often get worse value than paying in dong."
+    },
+    {
+      "e": "🏧",
+      "rule": "Vietcombank ATMs are best for foreigners",
+      "note": "Look for Vietcombank or Techcombank. Withdrawal limits vary — try ₫3,000,000 (~$120) per transaction."
+    },
+    {
+      "e": "🛒",
+      "rule": "Bargain hard at markets",
+      "note": "Ben Thanh Market and Hanoi's Old Quarter — start at 40–50% of asking. Walking away often brings the price down further."
+    },
+    {
+      "e": "💱",
+      "rule": "Exchange at banks or official kiosks only",
+      "note": "Street money changers sometimes shortchange tourists by using trick counting. Always use a licensed exchanger."
+    },
+    {
+      "e": "🍽️",
+      "rule": "Tipping is not traditional but appreciated",
+      "note": "₫20,000–50,000 at restaurants is generous. Guides and drivers who perform well deserve more."
+    }
+  ],
+  "food": [
+    {
+      "e": "🍜",
+      "name": "Phở",
+      "what": "Rice noodle soup with beef or chicken, herbs, lime, and bean sprouts — the national breakfast dish",
+      "tip": "Add basil, bean sprouts, and a squeeze of lime. Ask for 'tái' (rare beef) to cook in the hot broth."
+    },
+    {
+      "e": "🥖",
+      "name": "Bánh mì",
+      "what": "Vietnamese baguette stuffed with pork, pâté, pickled vegetables, coriander, and chilli — a French colonial legacy done better",
+      "tip": "The best ones are from street carts, not cafés. Bánh Mì 25 in Hanoi is famous."
+    },
+    {
+      "e": "🥗",
+      "name": "Gỏi cuốn",
+      "what": "Fresh (unfried) spring rolls with shrimp, pork, herbs, and rice noodles wrapped in rice paper",
+      "tip": "Dip in peanut sauce, not fish sauce. A lighter option when the heat gets to you."
+    },
+    {
+      "e": "🍳",
+      "name": "Bánh xèo",
+      "what": "Sizzling rice flour crêpe filled with pork, shrimp, and bean sprouts — eaten wrapped in lettuce with dipping sauce",
+      "tip": "Tear pieces off with your hands and wrap in the accompanying lettuce and herbs."
+    },
+    {
+      "e": "☕",
+      "name": "Cà phê trứng",
+      "what": "Hanoi's famous egg coffee — a thick, custardy foam of whisked egg yolk and condensed milk over espresso",
+      "tip": "Try it at Café Giang or Café Dinh in Hanoi's Old Quarter — the originators."
+    },
+    {
+      "e": "🍌",
+      "name": "Sinh tố (fruit smoothie)",
+      "what": "Fresh tropical fruit blended with condensed milk and ice — avocado, mango, soursop, dragonfruit",
+      "tip": "Available everywhere for under ₫30,000. The avocado smoothie (sinh tố bơ) is surprisingly delicious."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🚦",
+      "rule": "Traffic is the real hazard",
+      "note": "Roads are chaotic with motorbikes flowing in all directions. Cross slowly and steadily — traffic flows around you. Never freeze or run."
+    },
+    {
+      "e": "🚗",
+      "rule": "Always use Grab for taxis",
+      "note": "Metered taxis frequently overcharge tourists. Grab shows the fixed price upfront — use it every time."
+    },
+    {
+      "e": "👜",
+      "rule": "Bag snatching from motorbikes",
+      "note": "Keep bags on your inside shoulder away from the road. Phone thieves on motorbikes target people looking at their phones while walking."
+    },
+    {
+      "e": "💱",
+      "rule": "Avoid street money changers",
+      "note": "Sleight-of-hand counting tricks are common. Use bank ATMs or official exchange kiosks only."
+    },
+    {
+      "e": "🌊",
+      "rule": "Check sea conditions in coastal areas",
+      "note": "Red flag days at Đà Nẵng and Mũi Né beaches mean dangerous conditions — local lifeguards enforce this."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rides",
+      "name": "Grab",
+      "desc": "Essential in Vietnam — fixed-price rides, food delivery, and bike-hailing all in one.",
+      "ios": "https://apps.apple.com/app/id647268330",
+      "android": "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Navigation",
+      "name": "Google Maps",
+      "desc": "Works well in Vietnam. Download Ho Chi Minh City or Hanoi offline maps.",
+      "ios": "https://apps.apple.com/app/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Google Translate",
+      "desc": "Camera mode reads Vietnamese menus. Download the offline language pack.",
+      "ios": "https://apps.apple.com/app/id414681729",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "💵",
+      "cat": "Money",
+      "name": "Wise",
+      "desc": "Best exchange rates for spending dong. Set up your account before travelling.",
+      "ios": "https://apps.apple.com/app/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "Klook",
+      "desc": "Ha Long Bay cruises, cooking classes, and motorbike tours — book in advance.",
+      "ios": "https://apps.apple.com/app/id1208769098",
+      "android": "https://play.google.com/store/apps/details?id=com.klook.app"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Booking.com",
+      "desc": "Free cancellation filters. Vietnam has excellent budget guesthouses (nhà nghỉ).",
+      "ios": "https://apps.apple.com/app/id367003839",
+      "android": "https://play.google.com/store/apps/details?id=com.booking"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Xin chào",
+        "pron": "sin CHOW",
+        "en": "Hello"
+      },
+      {
+        "native": "Cảm ơn",
+        "pron": "GAM uhn",
+        "en": "Thank you"
+      },
+      {
+        "native": "Xin lỗi",
+        "pron": "sin LOY",
+        "en": "Sorry / Excuse me"
+      },
+      {
+        "native": "Tạm biệt",
+        "pron": "TAM byet",
+        "en": "Goodbye"
+      },
+      {
+        "native": "Không",
+        "pron": "KHOM",
+        "en": "No"
+      },
+      {
+        "native": "Vâng / Được",
+        "pron": "VANG / duoc",
+        "en": "Yes / OK"
+      },
+      {
+        "native": "Tôi không hiểu",
+        "pron": "toy KHOM hyew",
+        "en": "I don't understand"
+      },
+      {
+        "native": "Bạn nói tiếng Anh không?",
+        "pron": "BAN noy tyeng Anh KHOM",
+        "en": "Do you speak English?"
+      },
+      {
+        "native": "Tên tôi là...",
+        "pron": "TEN toy la...",
+        "en": "My name is..."
+      }
+    ],
+    "food": [
+      {
+        "native": "Cho tôi xem thực đơn",
+        "pron": "cho toy SEM thuc don",
+        "en": "Can I see the menu?"
+      },
+      {
+        "native": "Tôi muốn cái này",
+        "pron": "toy MWON kai NAY",
+        "en": "I want this one"
+      },
+      {
+        "native": "Không có thịt",
+        "pron": "KHOM co TIT",
+        "en": "No meat please"
+      },
+      {
+        "native": "Cay quá!",
+        "pron": "KAY kwa",
+        "en": "Too spicy!"
+      },
+      {
+        "native": "Ngon lắm!",
+        "pron": "NGON lam",
+        "en": "Delicious!"
+      },
+      {
+        "native": "Cho tôi hóa đơn",
+        "pron": "cho toy HWA don",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Tôi bị dị ứng...",
+        "pron": "toy bee YEE ung",
+        "en": "I am allergic to..."
+      }
+    ],
+    "directions": [
+      {
+        "native": "...ở đâu?",
+        "pron": "...uh DOW?",
+        "en": "Where is...?"
+      },
+      {
+        "native": "Tôi bị lạc",
+        "pron": "toy bee LAC",
+        "en": "I'm lost"
+      },
+      {
+        "native": "Rẽ phải / Rẽ trái",
+        "pron": "re FAI / re CHAI",
+        "en": "Turn right / left"
+      },
+      {
+        "native": "Đi thẳng",
+        "pron": "dee TANG",
+        "en": "Go straight"
+      },
+      {
+        "native": "Gần đây không?",
+        "pron": "GUN day KHOM",
+        "en": "Is it nearby?"
+      },
+      {
+        "native": "Dừng lại ở đây",
+        "pron": "DUNG lai uh DAY",
+        "en": "Stop here, please"
+      },
+      {
+        "native": "Bản đồ",
+        "pron": "BAN do",
+        "en": "Map"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Cái này bao nhiêu?",
+        "pron": "kai NAY bow NYEW?",
+        "en": "How much is this?"
+      },
+      {
+        "native": "Đắt quá",
+        "pron": "DAT kwa",
+        "en": "Too expensive"
+      },
+      {
+        "native": "Giảm giá được không?",
+        "pron": "YAM ya DUOC KHOM?",
+        "en": "Can you lower the price?"
+      },
+      {
+        "native": "Tôi chỉ xem thôi",
+        "pron": "toy chi SEM toy",
+        "en": "Just looking"
+      },
+      {
+        "native": "Mua cái này",
+        "pron": "MWA kai NAY",
+        "en": "I'll take this"
+      },
+      {
+        "native": "Có túi không?",
+        "pron": "co TOO-ee KHOM?",
+        "en": "Do you have a bag?"
+      },
+      {
+        "native": "Cho tôi hóa đơn",
+        "pron": "cho toy HWA don",
+        "en": "A receipt, please"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Một",
+        "pron": "MOT",
+        "en": "1"
+      },
+      {
+        "native": "Hai",
+        "pron": "HI",
+        "en": "2"
+      },
+      {
+        "native": "Ba",
+        "pron": "BA",
+        "en": "3"
+      },
+      {
+        "native": "Bốn",
+        "pron": "BON",
+        "en": "4"
+      },
+      {
+        "native": "Năm",
+        "pron": "NAM",
+        "en": "5"
+      },
+      {
+        "native": "Sáu",
+        "pron": "SOW",
+        "en": "6"
+      },
+      {
+        "native": "Bảy",
+        "pron": "BAY",
+        "en": "7"
+      },
+      {
+        "native": "Tám",
+        "pron": "TAM",
+        "en": "8"
+      },
+      {
+        "native": "Chín",
+        "pron": "JIN",
+        "en": "9"
+      },
+      {
+        "native": "Mười",
+        "pron": "MUOI",
+        "en": "10"
+      },
+      {
+        "native": "Một trăm",
+        "pron": "mot TRAM",
+        "en": "100"
+      },
+      {
+        "native": "Một nghìn",
+        "pron": "mot NYIN",
+        "en": "1,000"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Cứu tôi với!",
+        "pron": "KUU toy voi!",
+        "en": "Help!"
+      },
+      {
+        "native": "Gọi cảnh sát!",
+        "pron": "GOY kang SAT!",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Gọi cấp cứu!",
+        "pron": "GOY kap KUU!",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Bệnh viện ở đâu?",
+        "pron": "BEN vyen uh DOW?",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Tôi bị cướp",
+        "pron": "toy bee KOOP",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "Tôi cần bác sĩ",
+        "pron": "toy KAN bak SEE",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Tôi bị dị ứng",
+        "pron": "toy bee YEE ung",
+        "en": "I have an allergy"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Tôi không khỏe",
+        "pron": "toy khong KHWAY",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Gọi xe cứu thương",
+        "pron": "goy seh koo TONG",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Bệnh viện gần đây ở đâu?",
+        "pron": "ben VYEN gun day uh DOW",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Tôi bị sốt",
+        "pron": "toy bee SOT",
+        "en": "I have a fever"
+      },
+      {
+        "native": "Tôi bị dị ứng với...",
+        "pron": "toy bee zee OONG voy",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "Tôi cần thuốc này",
+        "pron": "toy kun TWOK nay",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "Có nhà thuốc gần đây không?",
+        "pron": "ko nya TWOK gun day khong",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Tôi là khách du lịch",
+        "pron": "toy la khak zoo LIK",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "Tôi ở đây [X] ngày",
+        "pron": "toy uh day [X] ngay",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Tôi không có gì để khai báo",
+        "pron": "toy khong ko zee deh khai BAO",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Khu vực lấy hành lý ở đâu?",
+        "pron": "koo vuk lay han lee uh DOW",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Tôi đi một mình",
+        "pron": "toy dee mot MIN",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Đây là khách sạn của tôi",
+        "pron": "day la khak SAN kua toy",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Xin lặp lại được không?",
+        "pron": "sin lup LAI duk khong",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "Tôi cần phiên dịch",
+        "pron": "toy kun FYEN dik",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Tôi có đặt phòng trước",
+        "pron": "toy koh dat FONG truoc",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Tôi có thể nhận phòng ngay không?",
+        "pron": "toy koh teh nyan FONG ngay KHONG",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "Trả phòng lúc mấy giờ?",
+        "pron": "tra FONG look may zuh",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Thẻ phòng của tôi không hoạt động",
+        "pron": "teh FONG koo-a toy KHONG hwat dong",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "Máy lạnh bị hỏng",
+        "pron": "MAY lanh bee hong",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Cho tôi thêm khăn tắm được không?",
+        "pron": "cho toy tem KAN tam duoc KHONG",
+        "en": "Can I have extra towels?"
+      },
+      {
+        "native": "Xin đừng làm phiền",
+        "pron": "sin dung lam FEN",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "Mật khẩu WiFi là gì?",
+        "pron": "mat kow WAI-fai la ZEE",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Cho tôi một vé",
+        "pron": "cho toy mot VEH",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Ga tàu điện ngầm ở đâu?",
+        "pron": "GA tau dyen NGAM o DOW",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "Tàu này có đến... không?",
+        "pron": "TAU nay koh den ... KHONG",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Tôi xuống ở đâu để đến...?",
+        "pron": "toy SUONG o DOW de den",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Gọi taxi giúp tôi với",
+        "pron": "GOY TAK-see zoop toy VOY",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "Đưa tôi đến khách sạn này",
+        "pron": "dua toy den KHACH san NAY",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Giá vé là bao nhiêu?",
+        "pron": "ZA veh la BAO nyew",
+        "en": "How much is the fare?"
+      }
+    ]
+  },
+  "contentHash": "9b2cf225056729d4577e391770e1d2740f95975916ff5d5829d0e17120c13aef"
+}

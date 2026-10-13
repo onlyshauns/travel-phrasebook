@@ -1,0 +1,853 @@
+{
+  "id": "france",
+  "name": "France",
+  "flag": "🇫🇷",
+  "lang": "Français",
+  "langCode": "fr-FR",
+  "voiceLabel": "French",
+  "latinScript": true,
+  "region": "Europe",
+  "timezone": "Europe/Paris",
+  "hero": "#002395",
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "rate": 0.93,
+    "label": "1 USD ≈ 0.93 EUR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All services"
+    },
+    {
+      "tel": "17",
+      "name": "Police"
+    },
+    {
+      "tel": "15",
+      "name": "Ambulance"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 <strong>Always say Bonjour</strong> when entering any shop, café, or restaurant — and <em>Au revoir</em> when you leave. It's the #1 cultural rule.",
+    "food": "💡 The bill won't come unless you ask. Say <em>\"L'addition, s'il vous plaît\"</em> and make eye contact — don't wave or call out.",
+    "directions": "💡 Start with <em>\"Excusez-moi\"</em> and try a little French before switching to English — it goes a long way.",
+    "numbers": "💡 After 60, French gets quirky — 70 is <em>\"soixante-dix\"</em> (sixty-ten), 80 is <em>\"quatre-vingts\"</em> (four-twenties).",
+    "emergency": "💡 Emergency: <strong>112</strong>. Police: <strong>17</strong>. Ambulance (SAMU): <strong>15</strong>.",
+    "shopping": "Say Bonjour before you ask a price. Keep the receipt if you want a VAT refund at the airport.",
+    "medical": "Pharmacies with a green cross handle minor illness. For an emergency, call 15 or 112.",
+    "immigration": "Have your passport and hotel address ready. Many visitors can stay 90 days in the Schengen area.",
+    "hotel": "Breakfast is often extra. Ask for the Wi-Fi password and the checkout time at the desk.",
+    "transport": "Validate a metro ticket before you board. In a taxi, use the meter or book Bolt."
+  },
+  "pronGuide": {
+    "title": "French Sounds",
+    "tips": [
+      "Silent letters everywhere — <em>bonjour</em> is bon-ZHOOR, the R is a soft throat sound",
+      "Nasal vowels: AN, ON, IN — let air flow through your nose",
+      "Stress always falls on the last syllable of a word",
+      "The U (as in <em>tu</em>) is not like any English vowel — round lips and say \"ee\""
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/E"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Euro (€)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Safe"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "90 days (Schengen)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🗣️",
+      "rule": "Always greet before you speak",
+      "note": "Bonjour before any request in a shop, café, or pharmacy. Skipping it is genuinely considered rude — not just impolite."
+    },
+    {
+      "e": "🍽️",
+      "rule": "Ask for the bill — it won't come to you",
+      "note": "Meals are leisurely by design. Flag the waiter and say l'addition — waving or snapping fingers is an insult."
+    },
+    {
+      "e": "💶",
+      "rule": "Tipping is optional, not expected",
+      "note": "Service is already included in the bill. Rounding up €1–2 is perfectly generous."
+    },
+    {
+      "e": "🤫",
+      "rule": "Keep your voice down in public",
+      "note": "Loud conversations in cafés or on the metro mark you immediately as a tourist."
+    },
+    {
+      "e": "🥖",
+      "rule": "Bread goes on the table, not a plate",
+      "note": "Place it directly on the tablecloth. Don't ask for butter — it's not typically offered with meals."
+    },
+    {
+      "e": "🚶",
+      "rule": "Don't eat while walking",
+      "note": "Eating on the go is considered uncivilised. Sit down, even at a café terrace."
+    },
+    {
+      "e": "👗",
+      "rule": "Dress up a little",
+      "note": "Parisians tend to dress with intention. Smart-casual goes a long way in restaurants and galleries."
+    }
+  ],
+  "money": [
+    {
+      "e": "💳",
+      "rule": "Card accepted almost everywhere",
+      "note": "Contactless is the norm. Keep €20–50 cash for markets and small village shops."
+    },
+    {
+      "e": "🏧",
+      "rule": "Use bank ATMs, not airport kiosks",
+      "note": "Travelex and airport machines charge excessive fees. Find a regular bank ATM."
+    },
+    {
+      "e": "🤑",
+      "rule": "Tipping is optional",
+      "note": "Service is legally included. Rounding up €1–2 for good service is generous — Americans sometimes over-tip which can feel awkward."
+    },
+    {
+      "e": "❌",
+      "rule": "Decline dynamic currency conversion",
+      "note": "Always pay in euros when asked 'euros or your home currency?' — your bank rate is better."
+    },
+    {
+      "e": "🧾",
+      "rule": "Keep receipts from shops",
+      "note": "Required for tax-free VAT refund at the airport if you're a non-EU visitor."
+    }
+  ],
+  "food": [
+    {
+      "e": "🥐",
+      "name": "Croissant",
+      "what": "Buttery flaky pastry — buy from a boulangerie, not a supermarket",
+      "tip": "Best eaten warm at breakfast, no butter needed."
+    },
+    {
+      "e": "🥩",
+      "name": "Steak tartare",
+      "what": "Raw minced beef with capers and egg yolk — a Parisian bistro staple",
+      "tip": "Order it only at reputable restaurants."
+    },
+    {
+      "e": "🧅",
+      "name": "French onion soup",
+      "what": "Slow-caramelised onion broth topped with crouton and melted Gruyère",
+      "tip": "A classic winter dish, find it at any traditional bistro."
+    },
+    {
+      "e": "🐌",
+      "name": "Escargot",
+      "what": "Snails baked in garlic and herb butter — more butter than snail, in a good way",
+      "tip": "Best tried at a traditional brasserie."
+    },
+    {
+      "e": "🍮",
+      "name": "Crème brûlée",
+      "what": "Rich vanilla custard with a caramelised sugar crust — crack it with your spoon",
+      "tip": "The custard should wobble slightly in the centre."
+    },
+    {
+      "e": "🍷",
+      "name": "Vin de maison",
+      "what": "House wine served by carafe — often the best value on the menu",
+      "tip": "Ask for 'un pichet de rouge/blanc' — cheaper than a bottle, surprisingly good."
+    }
+  ],
+  "safety": [
+    {
+      "e": "📋",
+      "rule": "Petition scam",
+      "note": "Someone asks you to sign a petition for a charity, then demands a donation. Walk away — it's always a scam."
+    },
+    {
+      "e": "💍",
+      "rule": "Gold ring scam",
+      "note": "'Did you drop this ring?' They claim to have found it and pressure you to buy it. Ignore and keep walking."
+    },
+    {
+      "e": "🚔",
+      "rule": "Fake plainclothes police",
+      "note": "Someone flashes a badge and asks to inspect your wallet or passport. Real police don't do this — refuse and walk to a public place."
+    },
+    {
+      "e": "🚇",
+      "rule": "Metro pickpockets",
+      "note": "Line 1 (tourist corridor) and Sacré-Cœur are notorious. Keep bags in front, zip all pockets before entering crowded cars."
+    },
+    {
+      "e": "🚕",
+      "rule": "Use official taxis or apps",
+      "note": "From CDG airport, use marked taxi lanes (beige cars) or pre-book Bolt/Uber. Unlicensed drivers approach in arrivals — ignore them."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🗺️",
+      "cat": "Transit",
+      "name": "Citymapper",
+      "desc": "Best for Paris metro, RER, bus, and Vélib' bike routes.",
+      "ios": "https://apps.apple.com/app/id469463298",
+      "android": "https://play.google.com/store/apps/details?id=com.citymapper.app.release"
+    },
+    {
+      "e": "🚕",
+      "cat": "Rides",
+      "name": "Bolt",
+      "desc": "Cheaper than Uber. Both work well in Paris.",
+      "ios": "https://apps.apple.com/app/id675033630",
+      "android": "https://play.google.com/store/apps/details?id=ee.mtakso.client"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Google Translate",
+      "desc": "Camera mode reads menus. Download the French offline pack.",
+      "ios": "https://apps.apple.com/app/id414681729",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "💶",
+      "cat": "Money",
+      "name": "Wise",
+      "desc": "Best exchange rates for spending euros abroad.",
+      "ios": "https://apps.apple.com/app/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "GetYourGuide",
+      "desc": "Skip-the-line tickets for the Louvre, Eiffel Tower, and day trips.",
+      "ios": "https://apps.apple.com/app/id657741529",
+      "android": "https://play.google.com/store/apps/details?id=com.getyourguide.android"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Booking.com",
+      "desc": "Free cancellation filters keep your plans flexible.",
+      "ios": "https://apps.apple.com/app/id367003839",
+      "android": "https://play.google.com/store/apps/details?id=com.booking"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Bonjour",
+        "pron": "bon-ZHOOR",
+        "en": "Hello / Good morning"
+      },
+      {
+        "native": "Bonsoir",
+        "pron": "bon-SWAHR",
+        "en": "Good evening"
+      },
+      {
+        "native": "Au revoir",
+        "pron": "oh ruh-VWAHR",
+        "en": "Goodbye"
+      },
+      {
+        "native": "Merci",
+        "pron": "mair-SEE",
+        "en": "Thank you"
+      },
+      {
+        "native": "Merci beaucoup",
+        "pron": "mair-SEE boh-KOO",
+        "en": "Thank you very much"
+      },
+      {
+        "native": "S'il vous plaît",
+        "pron": "seel voo PLAY",
+        "en": "Please"
+      },
+      {
+        "native": "De rien",
+        "pron": "duh ree-EN",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Pardon",
+        "pron": "par-DOHN",
+        "en": "Sorry (bumping into someone)"
+      },
+      {
+        "native": "Désolé(e)",
+        "pron": "day-zo-LAY",
+        "en": "I'm sorry (sincere apology)"
+      },
+      {
+        "native": "Excusez-moi",
+        "pron": "ex-koo-ZAY mwah",
+        "en": "Excuse me"
+      },
+      {
+        "native": "Parlez-vous anglais ?",
+        "pron": "par-LAY voo on-GLAY",
+        "en": "Do you speak English?"
+      },
+      {
+        "native": "Je ne comprends pas",
+        "pron": "zhuh nuh com-PROHN pah",
+        "en": "I don't understand"
+      },
+      {
+        "native": "Pouvez-vous répéter ?",
+        "pron": "poo-VAY voo ray-pay-TAY",
+        "en": "Can you repeat that?"
+      },
+      {
+        "native": "Je m'appelle...",
+        "pron": "zhuh ma-PEL",
+        "en": "My name is..."
+      }
+    ],
+    "food": [
+      {
+        "native": "Je voudrais réserver une table",
+        "pron": "zhuh voo-DRAY ray-zair-VAY oon TAH-bluh",
+        "en": "I'd like to reserve a table"
+      },
+      {
+        "native": "Une table pour deux, s'il vous plaît",
+        "pron": "oon TAH-bluh poor duh",
+        "en": "A table for two, please"
+      },
+      {
+        "native": "La carte, s'il vous plaît",
+        "pron": "lah KART seel voo PLAY",
+        "en": "The menu, please"
+      },
+      {
+        "native": "Je voudrais...",
+        "pron": "zhuh voo-DRAY",
+        "en": "I would like..."
+      },
+      {
+        "native": "L'addition, s'il vous plaît",
+        "pron": "lah-dee-SYON seel voo PLAY",
+        "en": "The bill, please"
+      },
+      {
+        "native": "C'est délicieux !",
+        "pron": "say day-lee-SYUH",
+        "en": "This is delicious!"
+      },
+      {
+        "native": "Je suis végétarien(ne)",
+        "pron": "zhuh swee vay-zhay-tah-RYEN",
+        "en": "I am vegetarian"
+      },
+      {
+        "native": "Sans gluten, s'il vous plaît",
+        "pron": "son gloo-TEN seel voo PLAY",
+        "en": "Gluten-free, please"
+      },
+      {
+        "native": "Un café, s'il vous plaît",
+        "pron": "un ka-FAY seel voo PLAY",
+        "en": "A coffee, please"
+      },
+      {
+        "native": "Un verre de vin rouge / blanc",
+        "pron": "un VAIR duh van ROOZH / BLON",
+        "en": "A glass of red / white wine"
+      },
+      {
+        "native": "De l'eau, s'il vous plaît",
+        "pron": "duh LOH seel voo PLAY",
+        "en": "Some water, please"
+      },
+      {
+        "native": "C'est combien ?",
+        "pron": "say com-BYEN",
+        "en": "How much is it?"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Où est... ?",
+        "pron": "oo ay",
+        "en": "Where is...?"
+      },
+      {
+        "native": "La station de métro",
+        "pron": "lah sta-SYON duh may-TROH",
+        "en": "The metro station"
+      },
+      {
+        "native": "À gauche",
+        "pron": "ah GOHSH",
+        "en": "To the left"
+      },
+      {
+        "native": "À droite",
+        "pron": "ah DRWAHT",
+        "en": "To the right"
+      },
+      {
+        "native": "Tout droit",
+        "pron": "too DRWAH",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "Près d'ici",
+        "pron": "pray dee-SEE",
+        "en": "Near here"
+      },
+      {
+        "native": "Loin d'ici",
+        "pron": "lwen dee-SEE",
+        "en": "Far from here"
+      },
+      {
+        "native": "Je suis perdu(e)",
+        "pron": "zhuh swee pair-DU",
+        "en": "I am lost"
+      },
+      {
+        "native": "Pouvez-vous m'aider ?",
+        "pron": "poo-VAY voo may-DAY",
+        "en": "Can you help me?"
+      },
+      {
+        "native": "Un billet, s'il vous plaît",
+        "pron": "un bee-YAY seel voo PLAY",
+        "en": "A ticket, please"
+      },
+      {
+        "native": "Où sont les toilettes ?",
+        "pron": "oo son lay twa-LET",
+        "en": "Where are the toilets?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Combien ça coûte ?",
+        "pron": "com-BYEN sah KOOT",
+        "en": "How much does this cost?"
+      },
+      {
+        "native": "C'est trop cher",
+        "pron": "say troh SHAIR",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "Je regarde seulement",
+        "pron": "zhuh ruh-GARD suhl-MON",
+        "en": "I'm just looking"
+      },
+      {
+        "native": "Avez-vous... ?",
+        "pron": "ah-VAY voo",
+        "en": "Do you have...?"
+      },
+      {
+        "native": "En quelle taille ?",
+        "pron": "on kel TIE",
+        "en": "In what size?"
+      },
+      {
+        "native": "Je vais le prendre",
+        "pron": "zhuh vay luh PRON-druh",
+        "en": "I'll take it"
+      },
+      {
+        "native": "Acceptez-vous les cartes ?",
+        "pron": "ak-sep-TAY voo lay KART",
+        "en": "Do you accept cards?"
+      },
+      {
+        "native": "Un reçu, s'il vous plaît",
+        "pron": "un ruh-SU seel voo PLAY",
+        "en": "A receipt, please"
+      },
+      {
+        "native": "C'est ouvert / fermé ?",
+        "pron": "say oo-VAIR / fair-MAY",
+        "en": "Is it open / closed?"
+      },
+      {
+        "native": "Le wifi, c'est quoi ?",
+        "pron": "luh WEE-fee say kwah",
+        "en": "What's the wifi password?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Un / Une",
+        "pron": "un / oon",
+        "en": "1"
+      },
+      {
+        "native": "Deux",
+        "pron": "duh",
+        "en": "2"
+      },
+      {
+        "native": "Trois",
+        "pron": "trwah",
+        "en": "3"
+      },
+      {
+        "native": "Quatre",
+        "pron": "KAH-truh",
+        "en": "4"
+      },
+      {
+        "native": "Cinq",
+        "pron": "sank",
+        "en": "5"
+      },
+      {
+        "native": "Six",
+        "pron": "sees",
+        "en": "6"
+      },
+      {
+        "native": "Sept",
+        "pron": "set",
+        "en": "7"
+      },
+      {
+        "native": "Huit",
+        "pron": "weet",
+        "en": "8"
+      },
+      {
+        "native": "Neuf",
+        "pron": "nuhf",
+        "en": "9"
+      },
+      {
+        "native": "Dix",
+        "pron": "dees",
+        "en": "10"
+      },
+      {
+        "native": "Onze",
+        "pron": "onz",
+        "en": "11"
+      },
+      {
+        "native": "Douze",
+        "pron": "dooz",
+        "en": "12"
+      },
+      {
+        "native": "Treize",
+        "pron": "trez",
+        "en": "13"
+      },
+      {
+        "native": "Quatorze",
+        "pron": "ka-TORZ",
+        "en": "14"
+      },
+      {
+        "native": "Quinze",
+        "pron": "kanz",
+        "en": "15"
+      },
+      {
+        "native": "Seize",
+        "pron": "sez",
+        "en": "16"
+      },
+      {
+        "native": "Dix-sept",
+        "pron": "dee-SET",
+        "en": "17"
+      },
+      {
+        "native": "Dix-huit",
+        "pron": "dee-ZWEET",
+        "en": "18"
+      },
+      {
+        "native": "Dix-neuf",
+        "pron": "dee-ZNUHF",
+        "en": "19"
+      },
+      {
+        "native": "Vingt",
+        "pron": "van",
+        "en": "20"
+      },
+      {
+        "native": "Trente",
+        "pron": "tront",
+        "en": "30"
+      },
+      {
+        "native": "Quarante",
+        "pron": "ka-RONT",
+        "en": "40"
+      },
+      {
+        "native": "Cinquante",
+        "pron": "san-KONT",
+        "en": "50"
+      },
+      {
+        "native": "Soixante",
+        "pron": "swa-SONT",
+        "en": "60"
+      },
+      {
+        "native": "Soixante-dix",
+        "pron": "swa-sont-DEES",
+        "en": "70"
+      },
+      {
+        "native": "Quatre-vingts",
+        "pron": "KAT-ruh-van",
+        "en": "80"
+      },
+      {
+        "native": "Quatre-vingt-dix",
+        "pron": "kat-ruh-van-DEES",
+        "en": "90"
+      },
+      {
+        "native": "Cent",
+        "pron": "son",
+        "en": "100"
+      },
+      {
+        "native": "Mille",
+        "pron": "meel",
+        "en": "1000"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Au secours !",
+        "pron": "oh suh-KOOR",
+        "en": "Help!"
+      },
+      {
+        "native": "Appelez la police !",
+        "pron": "ah-play lah poh-LEES",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Appelez une ambulance !",
+        "pron": "ah-play oon om-boo-LONSS",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "J'ai besoin d'un médecin",
+        "pron": "zhay buh-ZWEN dun mayd-SAN",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Je suis allergique à...",
+        "pron": "zhuh swee ah-lair-ZHEEK ah",
+        "en": "I am allergic to..."
+      },
+      {
+        "native": "On m'a volé",
+        "pron": "on mah voh-LAY",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "Où est l'hôpital ?",
+        "pron": "oo ay lo-pee-TAL",
+        "en": "Where is the hospital?"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Je ne me sens pas bien",
+        "pron": "zhuh nuh muh sohn pah BYEHN",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Appelez une ambulance",
+        "pron": "ah-puh-LAY oon am-boo-LAHNS",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Où est l'hôpital le plus proche?",
+        "pron": "oo ay lo-pee-TAL luh ploo PROSH",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "J'ai de la fièvre",
+        "pron": "zhay duh lah FYEV-ruh",
+        "en": "I have a fever"
+      },
+      {
+        "native": "Je suis allergique à...",
+        "pron": "zhuh swee ah-lair-ZHEEK ah",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "J'ai besoin de ce médicament",
+        "pron": "zhay buh-ZWAHN duh suh may-dee-kah-MOHN",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "Y a-t-il une pharmacie?",
+        "pron": "ee ah-TEEL oon far-mah-SEE",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Je suis touriste",
+        "pron": "zhuh swee too-REEST",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "Je reste [X] jours",
+        "pron": "zhuh REST [X] ZHOOR",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Je n'ai rien à déclarer",
+        "pron": "zhuh nay RYEHN ah day-klah-RAY",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Où est la livraison des bagages?",
+        "pron": "oo ay lah leev-ray-ZOHN day bah-GAZH",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Je voyage seul(e)",
+        "pron": "zhuh voy-YAZH sul",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "C'est mon hôtel",
+        "pron": "say mon no-TEL",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Pouvez-vous répéter?",
+        "pron": "poo-VAY-voo ray-pay-TAY",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "J'ai besoin d'un interprète",
+        "pron": "zhay buh-ZWAHN dun an-tair-PRET",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "J'ai une réservation",
+        "pron": "zhay oon ray-zair-va-SYON",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Puis-je m'enregistrer maintenant ?",
+        "pron": "pwee zhuh mon-ruh-zhees-TRAY",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "À quelle heure est le départ ?",
+        "pron": "ah kel UR ay luh day-PAR",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Ma clé ne fonctionne pas",
+        "pron": "mah KLAY nuh fonk-SYON pah",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "L'air conditionné est en panne",
+        "pron": "lair kon-dee-syo-NAY ay on PAN",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Pouvez-vous apporter des serviettes ?",
+        "pron": "poo-VAY voo ah-por-TAY day sair-VYET",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "Ne pas déranger",
+        "pron": "nuh pah day-ron-ZHAY",
+        "en": "Do not disturb"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Un ticket, s'il vous plaît",
+        "pron": "un tee-KAY seel voo PLAY",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Où est la station de métro ?",
+        "pron": "oo ay lah sta-SYON duh may-TRO",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "Ce train va à... ?",
+        "pron": "suh TRAN vah ah",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Où dois-je descendre pour... ?",
+        "pron": "oo dwah zhuh day-SOND-ruh poor",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Un taxi, s'il vous plaît",
+        "pron": "un TAK-see seel voo PLAY",
+        "en": "A taxi, please"
+      },
+      {
+        "native": "Conduisez-moi à cet hôtel",
+        "pron": "kon-dwee-ZAY mwah ah set oh-TEL",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Combien coûte le trajet ?",
+        "pron": "kom-BYAN koot luh tra-ZHAY",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Arrêtez-vous ici, s'il vous plaît",
+        "pron": "ah-reh-TAY voo ee-SEE",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "52280eda380ee87c88912be43fc02b6295b7f0105da318b398bc52d784f4aa93"
+}

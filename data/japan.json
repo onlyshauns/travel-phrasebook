@@ -1,0 +1,679 @@
+{
+  "id": "japan",
+  "name": "Japan",
+  "flag": "🇯🇵",
+  "lang": "日本語",
+  "langCode": "ja-JP",
+  "voiceLabel": "Japanese",
+  "latinScript": false,
+  "region": "East Asia",
+  "timezone": "Asia/Tokyo",
+  "hero": "#BC002D",
+  "currency": {
+    "code": "JPY",
+    "symbol": "¥",
+    "rate": 155,
+    "label": "1 USD ≈ 155 JPY",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "110",
+      "name": "Police"
+    },
+    {
+      "tel": "119",
+      "name": "Fire and ambulance"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 Saying <em>Sumimasen</em> first (excuse me) before any request is the polite way to get someone's attention.",
+    "food": "💡 Many ramen shops use vending machines at the entrance — buy your ticket before sitting. Slurping noodles is a compliment.",
+    "directions": "💡 Japanese addresses work by block, not street name. Always save your destination in Google Maps before leaving your hotel.",
+    "numbers": "💡 Japanese uses two number systems. <em>Ichi, ni, san</em> (Chinese-origin) works for almost all travel situations.",
+    "emergency": "💡 Police: <strong>110</strong>. Fire & Ambulance: <strong>119</strong>. Police boxes (<em>koban</em>) are everywhere and officers are helpful.",
+    "shopping": "Do not bargain, and do not tip. Tax-free counters need your passport.",
+    "medical": "Call 119 for an ambulance. A koban police box can point you to a clinic.",
+    "immigration": "Have the address of your first hotel. Fingerprints are taken at the border.",
+    "hotel": "Shoes come off in the entrance. Shared baths may refuse tattoos.",
+    "transport": "Load a Suica or Pasmo at the airport station. Train doors close on time."
+  },
+  "pronGuide": {
+    "title": "Japanese Sounds",
+    "tips": [
+      "Each mora (syllable unit) gets equal time — no heavy stress",
+      "Double consonants (kk, tt, ss) get a brief pause before them",
+      "R is between English L and R — tongue tip near the roof of the mouth",
+      "Long vowels (aa, oo, uu) are held twice as long as short ones"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type A (2-pin flat)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Yen (¥)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "110 / 119"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Left"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Excellent quality"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "90 days, most nations"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🙇",
+      "rule": "Bowing is the universal greeting",
+      "note": "A small nod works for tourists. A deeper bow shows more respect. Handshakes are uncommon — let locals lead."
+    },
+    {
+      "e": "🚫",
+      "rule": "No eating while walking",
+      "note": "Eating on the go is considered rude. Finish your food at the stall or find a bench. Exception: festival (matsuri) food stalls."
+    },
+    {
+      "e": "🚇",
+      "rule": "Silence on public transport",
+      "note": "No phone calls on trains. Keep voices low. Phones on silent or vibrate — it's an unspoken rule everyone follows."
+    },
+    {
+      "e": "💴",
+      "rule": "Cash is still essential",
+      "note": "Japan is surprisingly cash-heavy. Many restaurants, small shops, and temples don't accept cards. Keep ¥5,000–10,000 on you."
+    },
+    {
+      "e": "🗑️",
+      "rule": "Almost no public rubbish bins",
+      "note": "Bins are rare outside convenience stores and train stations. Carry your rubbish — everyone does."
+    },
+    {
+      "e": "♨️",
+      "rule": "Onsen etiquette is strict",
+      "note": "Shower thoroughly before entering the communal bath. Tattoos are banned at most onsens — check in advance."
+    }
+  ],
+  "money": [
+    {
+      "e": "💴",
+      "rule": "Cash culture — carry always",
+      "note": "Many izakayas, ramen shops, and smaller restaurants are cash only. Keep ¥5,000–10,000 at all times."
+    },
+    {
+      "e": "🏧",
+      "rule": "7-Eleven and Japan Post ATMs are your friends",
+      "note": "These accept foreign cards with fair fees (~¥220/withdrawal). Take out more at once to minimise charges."
+    },
+    {
+      "e": "🚃",
+      "rule": "Load a Suica IC card",
+      "note": "Loaded via iPhone Wallet or at station machines. Used on all trains, buses, and convenience stores across Japan."
+    },
+    {
+      "e": "🏬",
+      "rule": "Tax-free shopping available",
+      "note": "Non-resident visitors get 10% consumption tax back at department stores and electronics shops — show your passport."
+    },
+    {
+      "e": "🙅",
+      "rule": "Never tip",
+      "note": "Tipping is not just unnecessary — it can genuinely confuse or embarrass service staff. Great service is simply expected."
+    }
+  ],
+  "food": [
+    {
+      "e": "🍜",
+      "name": "Ramen",
+      "what": "Regional broth-based noodle soup — tonkotsu (Hakata), miso (Sapporo), shoyu (Tokyo)",
+      "tip": "Follow the locals and use the vending machine to order. Eat it hot and finish quickly."
+    },
+    {
+      "e": "🍣",
+      "name": "Kaiten-zushi",
+      "what": "Conveyor belt sushi — affordable, fun, and surprisingly high quality at chain restaurants like Sushiro",
+      "tip": "Plates are colour-coded by price. Order hot items via the touchscreen tablet."
+    },
+    {
+      "e": "🍡",
+      "name": "Takoyaki",
+      "what": "Osaka street food — octopus-filled batter balls topped with mayo, bonito flakes, and takoyaki sauce",
+      "tip": "Blow on them — they stay piping hot inside long after the outside cools."
+    },
+    {
+      "e": "🍱",
+      "name": "Convenience store food",
+      "what": "7-Eleven, Lawson, FamilyMart onigiri, sandwiches, and hot foods are genuinely delicious",
+      "tip": "Onigiri (rice balls) make perfect cheap breakfasts. The tuna mayo is a classic."
+    },
+    {
+      "e": "🍵",
+      "name": "Matcha everything",
+      "what": "Green tea flavour in ice cream, KitKats, lattes, cakes — uniquely Japanese and worth trying",
+      "tip": "Uji (near Kyoto) is Japan's matcha heartland for the most authentic versions."
+    },
+    {
+      "e": "🥃",
+      "name": "Japanese whisky",
+      "what": "World-class single malts from Nikka and Suntory — smoother and more delicate than Scotch",
+      "tip": "Try it at a whisky bar in Ginza or Shinjuku. Prices are much better than buying abroad."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🛡️",
+      "rule": "Japan is exceptionally safe",
+      "note": "One of the world's safest countries. Violent crime targeting tourists is virtually unheard of."
+    },
+    {
+      "e": "📦",
+      "rule": "Lost items are almost always returned",
+      "note": "Leave something on a train or in a café — go back and it will almost certainly still be there or handed to staff."
+    },
+    {
+      "e": "🌏",
+      "rule": "Earthquake preparedness",
+      "note": "Download the NHK World app for earthquake alerts. Know your hotel's evacuation plan. Keep shoes near your bed."
+    },
+    {
+      "e": "🎰",
+      "rule": "Pachinko and gambling laws",
+      "note": "Casino gambling is technically illegal (though being liberalised). Pachinko parlours are loud and smoky — enter with curiosity."
+    },
+    {
+      "e": "📵",
+      "rule": "Phone calls on transport",
+      "note": "Making or receiving calls on public transport is a social no-no. Text instead. Priority seats are for elderly and pregnant — vacate immediately."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚃",
+      "cat": "Transit",
+      "name": "Hyperdia",
+      "desc": "The gold standard for train routes, IC fares, and bullet train schedules.",
+      "ios": "https://apps.apple.com/app/id404913424",
+      "android": "https://play.google.com/store/apps/details?id=com.hyperdia.android.activity"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Navigation",
+      "name": "Google Maps",
+      "desc": "Works well in Japan with full transit integration. Download Tokyo offline.",
+      "ios": "https://apps.apple.com/app/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Google Translate",
+      "desc": "Camera mode reads kanji menus and signs in real time. Download Japanese offline pack.",
+      "ios": "https://apps.apple.com/app/id414681729",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "💴",
+      "cat": "Money",
+      "name": "Wise",
+      "desc": "Best exchange rates for converting to Yen. Set up before you leave.",
+      "ios": "https://apps.apple.com/app/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "Klook",
+      "desc": "Pre-book teamLab, teamLab Borderless, Ghibli Museum, and bullet train tickets.",
+      "ios": "https://apps.apple.com/app/id1208769098",
+      "android": "https://play.google.com/store/apps/details?id=com.klook.app"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Booking.com",
+      "desc": "Free cancellation filters are essential in Japan where plans can change.",
+      "ios": "https://apps.apple.com/app/id367003839",
+      "android": "https://play.google.com/store/apps/details?id=com.booking"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "こんにちは",
+        "pron": "kon-ni-chi-WA",
+        "en": "Hello / Good afternoon"
+      },
+      {
+        "native": "おはようございます",
+        "pron": "o-ha-YO go-zai-mas",
+        "en": "Good morning"
+      },
+      {
+        "native": "こんばんは",
+        "pron": "kon-BAN-wa",
+        "en": "Good evening"
+      },
+      {
+        "native": "ありがとうございます",
+        "pron": "a-ri-ga-TO go-zai-mas",
+        "en": "Thank you very much"
+      },
+      {
+        "native": "すみません",
+        "pron": "su-mi-MA-sen",
+        "en": "Excuse me / Sorry"
+      },
+      {
+        "native": "はじめまして",
+        "pron": "ha-ji-me-MASH-te",
+        "en": "Nice to meet you"
+      },
+      {
+        "native": "さようなら",
+        "pron": "sa-yo-NA-ra",
+        "en": "Goodbye"
+      },
+      {
+        "native": "はい / いいえ",
+        "pron": "hai / ii-e",
+        "en": "Yes / No"
+      },
+      {
+        "native": "英語を話せますか？",
+        "pron": "ei-go o ha-na-se-MAS ka",
+        "en": "Do you speak English?"
+      }
+    ],
+    "food": [
+      {
+        "native": "一つください",
+        "pron": "hi-to-tsu ku-da-SAI",
+        "en": "One of these, please"
+      },
+      {
+        "native": "おすすめは何ですか？",
+        "pron": "o-su-su-me wa NAN des ka",
+        "en": "What do you recommend?"
+      },
+      {
+        "native": "アレルギーがあります",
+        "pron": "a-re-ru-GI ga a-ri-mas",
+        "en": "I have an allergy"
+      },
+      {
+        "native": "お会計をお願いします",
+        "pron": "o-kai-KEI o o-ne-gai shi-MAS",
+        "en": "The bill, please"
+      },
+      {
+        "native": "おいしい！",
+        "pron": "oi-SHI!",
+        "en": "Delicious!"
+      },
+      {
+        "native": "辛くしないでください",
+        "pron": "ka-ra-ku shi-nai-de ku-da-SAI",
+        "en": "Not spicy, please"
+      },
+      {
+        "native": "ベジタリアンです",
+        "pron": "be-ji-ta-ri-AN des",
+        "en": "I am vegetarian"
+      }
+    ],
+    "directions": [
+      {
+        "native": "〜はどこですか？",
+        "pron": "~ wa DO-ko des ka",
+        "en": "Where is ~?"
+      },
+      {
+        "native": "迷子になりました",
+        "pron": "mai-go ni na-ri-MASH-ta",
+        "en": "I'm lost"
+      },
+      {
+        "native": "右 / 左",
+        "pron": "mi-GI / hi-da-RI",
+        "en": "Right / Left"
+      },
+      {
+        "native": "まっすぐ",
+        "pron": "MAS-su-gu",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "駅はどこですか？",
+        "pron": "E-ki wa DO-ko des ka",
+        "en": "Where is the station?"
+      },
+      {
+        "native": "近いですか？",
+        "pron": "chi-KAI des ka",
+        "en": "Is it nearby?"
+      },
+      {
+        "native": "地図を見せてください",
+        "pron": "chi-zu o mi-SE-te ku-da-SAI",
+        "en": "Show me on the map, please"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "いくらですか？",
+        "pron": "i-KU-ra des ka",
+        "en": "How much is this?"
+      },
+      {
+        "native": "試着できますか？",
+        "pron": "shi-CHA-ku de-ki-MAS ka",
+        "en": "Can I try this on?"
+      },
+      {
+        "native": "カードで払えますか？",
+        "pron": "KA-do de ha-ra-e-MAS ka",
+        "en": "Can I pay by card?"
+      },
+      {
+        "native": "袋はいりません",
+        "pron": "fu-KU-ro wa i-ri-MA-sen",
+        "en": "No bag needed"
+      },
+      {
+        "native": "免税はできますか？",
+        "pron": "men-ZEI wa de-ki-MAS ka",
+        "en": "Is tax-free shopping available?"
+      },
+      {
+        "native": "これをください",
+        "pron": "ko-RE o ku-da-SAI",
+        "en": "I'll take this one"
+      },
+      {
+        "native": "領収書をください",
+        "pron": "ryo-SHU-sho o ku-da-SAI",
+        "en": "A receipt, please"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "一 (いち)",
+        "pron": "i-chi",
+        "en": "1"
+      },
+      {
+        "native": "二 (に)",
+        "pron": "ni",
+        "en": "2"
+      },
+      {
+        "native": "三 (さん)",
+        "pron": "san",
+        "en": "3"
+      },
+      {
+        "native": "四 (し/よん)",
+        "pron": "shi / yon",
+        "en": "4"
+      },
+      {
+        "native": "五 (ご)",
+        "pron": "go",
+        "en": "5"
+      },
+      {
+        "native": "六 (ろく)",
+        "pron": "ro-ku",
+        "en": "6"
+      },
+      {
+        "native": "七 (なな/しち)",
+        "pron": "na-na / shi-chi",
+        "en": "7"
+      },
+      {
+        "native": "八 (はち)",
+        "pron": "ha-chi",
+        "en": "8"
+      },
+      {
+        "native": "九 (く/きゅう)",
+        "pron": "ku / kyu",
+        "en": "9"
+      },
+      {
+        "native": "十 (じゅう)",
+        "pron": "ju",
+        "en": "10"
+      },
+      {
+        "native": "百 (ひゃく)",
+        "pron": "hya-ku",
+        "en": "100"
+      },
+      {
+        "native": "千 (せん)",
+        "pron": "sen",
+        "en": "1,000"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "助けて！",
+        "pron": "ta-SU-ke-te!",
+        "en": "Help!"
+      },
+      {
+        "native": "警察を呼んでください",
+        "pron": "ke-SA-tsu o YON-de ku-da-SAI",
+        "en": "Call the police!"
+      },
+      {
+        "native": "救急車を呼んでください",
+        "pron": "kyu-KYU-sha o YON-de ku-da-SAI",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "病院はどこですか？",
+        "pron": "BYO-in wa DO-ko des ka",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "盗難にあいました",
+        "pron": "TO-nan ni ai-MASH-ta",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "薬が必要です",
+        "pron": "ku-SU-ri ga hi-tsu-YO des",
+        "en": "I need medicine"
+      }
+    ],
+    "medical": [
+      {
+        "native": "気分が悪いです",
+        "pron": "ki-bun ga WAR-ui des",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "医者が必要です",
+        "pron": "i-sha ga hi-TSU-yo des",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "救急車を呼んでください",
+        "pron": "kyuu-kyuu-sha o YON-de ku-da-SAI",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "一番近い病院はどこですか?",
+        "pron": "i-chi-ban chi-KA-i BYO-in wa DO-ko des ka",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "熱があります",
+        "pron": "ne-tsu ga a-ri-MAS",
+        "en": "I have a fever"
+      },
+      {
+        "native": "私は...にアレルギーがあります",
+        "pron": "wa-ta-shi wa...ni a-RE-ru-gii ga a-ri-MAS",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "この薬が必要です",
+        "pron": "ko-no ku-su-ri ga hi-TSU-yo des",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "近くに薬局はありますか?",
+        "pron": "chi-KA-ku ni yak-KYO-ku wa a-ri-MAS ka",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "私は観光客です",
+        "pron": "wa-ta-shi wa KAN-kou-kya-ku des",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "[X]日間滞在します",
+        "pron": "[X]-ni-chi-kan TAI-zai shi-MAS",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "申告するものはありません",
+        "pron": "shin-ko-ku su-ru mo-no wa a-ri-ma-SEN",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "手荷物受取所はどこですか?",
+        "pron": "te-ni-mo-tsu u-ke-TO-ri-sho wa DO-ko des ka",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "一人で旅行しています",
+        "pron": "hi-to-ri de RYO-ko shi-te i-MAS",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "これが私のホテルです",
+        "pron": "ko-re ga wa-ta-shi no HO-te-ru des",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "もう一度おっしゃっていただけますか?",
+        "pron": "mo-u i-chi-do os-SHAT-te i-ta-da-ke-MAS ka",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "通訳が必要です",
+        "pron": "tsuu-YA-ku ga hi-TSU-yo des",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "予約があります",
+        "pron": "yo-YA-ku ga a-ri-MA-su",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "今すぐチェックインできますか？",
+        "pron": "i-MA su-GU che-ku-in de-KI-ma-su-KA",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "チェックアウトは何時ですか？",
+        "pron": "che-ku-a-U-to wa NAN-ji de-SU-ka",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "カードキーが動きません",
+        "pron": "KA-do-ki ga u-GO-ki-ma-SEN",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "エアコンが壊れています",
+        "pron": "e-A-kon ga ko-WA-re-te-i-MA-su",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "タオルを追加でいただけますか？",
+        "pron": "ta-O-ru o tsui-KA de i-ta-DA-ke-ma-SU-ka",
+        "en": "Can I have extra towels?"
+      },
+      {
+        "native": "起こさないでください",
+        "pron": "o-KO-sa-na-i-de ku-DA-sai",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "WiFiのパスワードを教えてください",
+        "pron": "WAI-fai no PA-su-WA-do o o-shi-E-te ku-DA-sai",
+        "en": "Please tell me the WiFi password"
+      }
+    ],
+    "transport": [
+      {
+        "native": "切符を一枚ください",
+        "pron": "ki-P-pu o i-CHI-mai ku-DA-sai",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "地下鉄の駅はどこですか？",
+        "pron": "chi-KA-te-tsu no E-ki wa do-KO de-SU-ka",
+        "en": "Where is the subway station?"
+      },
+      {
+        "native": "この電車は…行きますか？",
+        "pron": "ko-NO DEN-sha wa ... i-KI-ma-SU-ka",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "…にはどこで降りますか？",
+        "pron": "... ni wa do-KO de o-RI-ma-SU-ka",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "タクシーを呼んでください",
+        "pron": "ta-KU-shi o YON-de ku-DA-sai",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "このホテルまでお願いします",
+        "pron": "ko-NO ho-TE-ru ma-DE o-ne-GAI-shi-MA-su",
+        "en": "To this hotel, please"
+      },
+      {
+        "native": "料金はいくらですか？",
+        "pron": "RYO-kin wa i-KU-ra de-SU-ka",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "ここで止めてください",
+        "pron": "ko-KO de to-ME-te ku-DA-sai",
+        "en": "Please stop here"
+      }
+    ]
+  },
+  "contentHash": "33ed79f33374bf085da27e569e11203129036b187a628b09252d9b96c802b98c"
+}

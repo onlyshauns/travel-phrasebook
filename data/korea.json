@@ -1,0 +1,753 @@
+{
+  "id": "korea",
+  "name": "Korea",
+  "flag": "🇰🇷",
+  "lang": "한국어",
+  "langCode": "ko-KR",
+  "voiceLabel": "Korean",
+  "latinScript": false,
+  "region": "East Asia",
+  "timezone": "Asia/Seoul",
+  "hero": "#003478",
+  "currency": {
+    "code": "KRW",
+    "symbol": "₩",
+    "rate": 1320,
+    "label": "1 USD ≈ 1,320 KRW",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "Police"
+    },
+    {
+      "tel": "119",
+      "name": "Fire and ambulance"
+    },
+    {
+      "tel": "1330",
+      "name": "Tourist helpline"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 Koreans appreciate when foreigners try Korean. Even a simple 안녕하세요 earns a warm response.",
+    "food": "💡 Banchan (side dishes) are free and refillable. Tipping is not customary and can cause awkwardness.",
+    "directions": "💡 Seoul's metro is world-class with English signs. Kakao Maps and Naver Maps are more accurate than Google Maps in Korea.",
+    "numbers": "💡 Korean has two number systems. These Sino-Korean ones (일이삼) cover most travel needs — money, floors, dates.",
+    "emergency": "💡 Police: <strong>112</strong>. Fire & Ambulance: <strong>119</strong>. Tourist helpline (English 24/7): <strong>1330</strong>.",
+    "shopping": "Shop prices are fixed. Department stores have tax-refund counters.",
+    "medical": "Call 119 for fire and ambulance. Pharmacies are marked with a cross.",
+    "immigration": "Have your passport and the address. The English tourist line is 1330.",
+    "hotel": "Sort rubbish the way the room card asks. Ask the desk about a transit card.",
+    "transport": "T-money works on the subway and on buses. Stand on the marked side of the escalator."
+  },
+  "pronGuide": {
+    "title": "Korean Sounds",
+    "tips": [
+      "Consonants come in plain / aspirated / tense pairs: ㅂ(b) ㅍ(p) ㅃ(pp)",
+      "Each syllable block is one beat — no heavy stress like English",
+      "ㄹ is between English L and R — tongue tip behind upper teeth",
+      "Vowel ㅓ (eo) sounds like \"uh\" in butter"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/F (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Won (₩)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112 / 119"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Safe to drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "K-ETA required (most)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🙇",
+      "rule": "Bowing is the standard greeting",
+      "note": "A slight head nod works for casual interactions. Deeper bows show more respect to elders or seniors."
+    },
+    {
+      "e": "👴",
+      "rule": "Age and hierarchy matter",
+      "note": "Korea has a strong Confucian culture. Always show deference to older people — let them sit first, pour their drink first."
+    },
+    {
+      "e": "🍶",
+      "rule": "Pour drinks for others, not yourself",
+      "note": "It's polite to pour for the people around you and let others pour for you. Never fill your own glass."
+    },
+    {
+      "e": "🙌",
+      "rule": "Two hands when giving or receiving",
+      "note": "Use both hands — or support your right arm with your left — when giving or receiving objects, gifts, or money."
+    },
+    {
+      "e": "💴",
+      "rule": "Don't tip",
+      "note": "Tipping is not part of Korean culture and can sometimes cause confusion or embarrassment."
+    },
+    {
+      "e": "👟",
+      "rule": "Remove shoes at the entrance of homes",
+      "note": "Slippers will usually be provided. Always wait for a cue from your host."
+    }
+  ],
+  "money": [
+    {
+      "e": "💳",
+      "rule": "Card accepted almost everywhere",
+      "note": "Korea is nearly cashless — cards work at convenience stores, taxis, and most restaurants. Still carry ₩20,000–30,000 for small stalls."
+    },
+    {
+      "e": "🏧",
+      "rule": "7-Eleven and GS25 ATMs accept foreign cards",
+      "note": "These convenience store ATMs are the most reliable for international cards. Available 24/7 nationwide."
+    },
+    {
+      "e": "🚌",
+      "rule": "Load a T-money card",
+      "note": "Rechargeable transit card used on all buses, metro, and even some taxis. Saves time and gives a small discount per trip."
+    },
+    {
+      "e": "🙅",
+      "rule": "Never tip",
+      "note": "Tipping is genuinely not done in Korea. In some contexts it can feel awkward or even insulting — just don't."
+    },
+    {
+      "e": "🛍️",
+      "rule": "Tax refund at department stores",
+      "note": "Non-Korean visitors can get 10% VAT back on purchases over ₩30,000. Show your passport at checkout."
+    }
+  ],
+  "food": [
+    {
+      "e": "🥩",
+      "name": "Korean BBQ (삼겹살)",
+      "what": "Thick-cut pork belly grilled at your table, wrapped in lettuce with garlic and gochujang paste",
+      "tip": "The scissors are for cutting meat — let the staff do the first cut if you're new to it."
+    },
+    {
+      "e": "🍲",
+      "name": "Bibimbap (비빔밥)",
+      "what": "Rice bowl topped with seasoned vegetables, a fried egg, and gochujang — mix everything together before eating",
+      "tip": "Order the dolsot (hot stone pot) version for crispy rice at the bottom."
+    },
+    {
+      "e": "🌶️",
+      "name": "Tteokbokki (떡볶이)",
+      "what": "Chewy rice cakes in a spicy-sweet gochujang sauce — the most popular street food",
+      "tip": "Pairs well with a fish cake skewer and a cup of the broth."
+    },
+    {
+      "e": "🥒",
+      "name": "Kimchi (김치)",
+      "what": "Fermented cabbage with gochugaru, garlic, and ginger — comes free with every Korean meal",
+      "tip": "Hundreds of varieties exist. The aged kimchi (geotjeori vs. kimchi) has a deeper, more sour flavour."
+    },
+    {
+      "e": "🍶",
+      "name": "Soju (소주)",
+      "what": "Korea's beloved clear rice spirit, typically 16–25% ABV — almost always drunk with food",
+      "tip": "Never pour your own glass. Always pour for others first and let them pour for you."
+    },
+    {
+      "e": "☕",
+      "name": "Korean café culture",
+      "what": "Seoul has the highest café density of any city in the world — unique themed cafés everywhere",
+      "tip": "Many cafés require you to order at least one drink. Most have beautiful interiors worth a visit."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🛡️",
+      "rule": "Korea is exceptionally safe",
+      "note": "It consistently ranks among the world's safest countries for tourists. Violent crime targeting visitors is extremely rare."
+    },
+    {
+      "e": "📱",
+      "rule": "Lost items are almost always returned",
+      "note": "If you leave your phone or wallet somewhere, there's a very good chance it will be handed in to staff or police."
+    },
+    {
+      "e": "🌃",
+      "rule": "Nightlife areas can be rowdy late",
+      "note": "Hongdae and Itaewon are lively until 5am on weekends. Keep an eye on your drinks and belongings in crowded clubs."
+    },
+    {
+      "e": "🚇",
+      "rule": "Always give up priority seats on the metro",
+      "note": "Elderly and disabled priority seats (pink/yellow) must be vacated — Koreans take this seriously."
+    },
+    {
+      "e": "📞",
+      "rule": "Tourist helpline: 1330",
+      "note": "English-speaking operators available 24/7 for travel assistance, emergencies, and questions. Free to call."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🗺️",
+      "cat": "Navigation",
+      "name": "Kakao Maps",
+      "desc": "The go-to navigation app in Korea — far more accurate than Google Maps.",
+      "ios": "https://apps.apple.com/app/id304608425",
+      "android": "https://play.google.com/store/apps/details?id=net.daum.android.map"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Navigation",
+      "name": "Naver Maps",
+      "desc": "Great alternative with transit and walking directions.",
+      "ios": "https://apps.apple.com/app/id311867728",
+      "android": "https://play.google.com/store/apps/details?id=com.nhn.android.nmap"
+    },
+    {
+      "e": "🚕",
+      "cat": "Rides",
+      "name": "Kakao T",
+      "desc": "The dominant taxi-hailing app in Korea. Works across all major cities.",
+      "ios": "https://apps.apple.com/app/id981110422",
+      "android": "https://play.google.com/store/apps/details?id=com.kakao.taxi"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Papago",
+      "desc": "Better than Google Translate for Korean. Made by Naver.",
+      "ios": "https://apps.apple.com/app/id1147874819",
+      "android": "https://play.google.com/store/apps/details?id=com.naver.labs.translator"
+    },
+    {
+      "e": "💵",
+      "cat": "Money",
+      "name": "Wise",
+      "desc": "Best rates for spending Korean Won. Set up before you leave.",
+      "ios": "https://apps.apple.com/app/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "Klook",
+      "desc": "K-pop experiences, DMZ tours, and skip-the-line passes.",
+      "ios": "https://apps.apple.com/app/id1099611444",
+      "android": "https://play.google.com/store/apps/details?id=com.klook.klook"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "안녕하세요",
+        "pron": "an-NYONG-ha-se-yo",
+        "en": "Hello"
+      },
+      {
+        "native": "안녕히 가세요",
+        "pron": "an-nyong-hee GA-se-yo",
+        "en": "Goodbye (to person leaving)"
+      },
+      {
+        "native": "감사합니다",
+        "pron": "kam-SA-ham-ni-da",
+        "en": "Thank you"
+      },
+      {
+        "native": "대단히 감사합니다",
+        "pron": "dae-DAN-hee kam-SA-ham-ni-da",
+        "en": "Thank you very much"
+      },
+      {
+        "native": "천만에요",
+        "pron": "chon-MAN-e-yo",
+        "en": "You're welcome"
+      },
+      {
+        "native": "주세요",
+        "pron": "JU-se-yo",
+        "en": "Please (give me)"
+      },
+      {
+        "native": "실례합니다",
+        "pron": "sil-LYE-ham-ni-da",
+        "en": "Excuse me"
+      },
+      {
+        "native": "죄송합니다",
+        "pron": "joe-SONG-ham-ni-da",
+        "en": "I'm sorry"
+      },
+      {
+        "native": "영어 하세요?",
+        "pron": "yong-O HA-se-yo",
+        "en": "Do you speak English?"
+      },
+      {
+        "native": "이해 못 했어요",
+        "pron": "i-HAE mot hae-SSO-yo",
+        "en": "I don't understand"
+      },
+      {
+        "native": "다시 말씀해 주세요",
+        "pron": "DA-si mal-sseum-HAE JU-se-yo",
+        "en": "Can you repeat that?"
+      },
+      {
+        "native": "제 이름은...이에요",
+        "pron": "je i-REU-meun...i-E-yo",
+        "en": "My name is..."
+      }
+    ],
+    "food": [
+      {
+        "native": "두 명 자리 주세요",
+        "pron": "du MYONG ja-RI JU-se-yo",
+        "en": "Table for two, please"
+      },
+      {
+        "native": "메뉴 주세요",
+        "pron": "me-NYU JU-se-yo",
+        "en": "The menu, please"
+      },
+      {
+        "native": "...주세요",
+        "pron": "...JU-se-yo",
+        "en": "I would like..."
+      },
+      {
+        "native": "계산서 주세요",
+        "pron": "gye-SAN-so JU-se-yo",
+        "en": "The bill, please"
+      },
+      {
+        "native": "맛있어요!",
+        "pron": "ma-SI-sso-yo",
+        "en": "Delicious!"
+      },
+      {
+        "native": "저는 채식주의자예요",
+        "pron": "jo-NEUN chae-SIK-ju-ui-ja-YE-yo",
+        "en": "I am vegetarian"
+      },
+      {
+        "native": "글루텐 없이 주세요",
+        "pron": "geul-LU-ten op-SI JU-se-yo",
+        "en": "Gluten-free, please"
+      },
+      {
+        "native": "커피 주세요",
+        "pron": "KO-pi JU-se-yo",
+        "en": "A coffee, please"
+      },
+      {
+        "native": "물 주세요",
+        "pron": "mul JU-se-yo",
+        "en": "Water, please"
+      },
+      {
+        "native": "얼마예요?",
+        "pron": "ol-MA-ye-yo",
+        "en": "How much is it?"
+      }
+    ],
+    "directions": [
+      {
+        "native": "...어디예요?",
+        "pron": "...o-DI-ye-yo",
+        "en": "Where is...?"
+      },
+      {
+        "native": "지하철역",
+        "pron": "ji-HA-chol-yok",
+        "en": "Subway station"
+      },
+      {
+        "native": "왼쪽",
+        "pron": "oen-JJOK",
+        "en": "Left"
+      },
+      {
+        "native": "오른쪽",
+        "pron": "o-REUN-jjok",
+        "en": "Right"
+      },
+      {
+        "native": "직진",
+        "pron": "jik-JIN",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "가까워요",
+        "pron": "ga-GGA-wo-yo",
+        "en": "It's near"
+      },
+      {
+        "native": "멀어요",
+        "pron": "mo-RO-yo",
+        "en": "It's far"
+      },
+      {
+        "native": "길을 잃었어요",
+        "pron": "gi-REUL i-ROSS-so-yo",
+        "en": "I am lost"
+      },
+      {
+        "native": "도와주세요",
+        "pron": "do-WA-ju-se-yo",
+        "en": "Please help me"
+      },
+      {
+        "native": "티켓 한 장 주세요",
+        "pron": "ti-KET han JANG JU-se-yo",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "화장실이 어디예요?",
+        "pron": "hwa-JANG-si-ri o-DI-ye-yo",
+        "en": "Where is the toilet?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "얼마예요?",
+        "pron": "ol-MA-ye-yo",
+        "en": "How much does this cost?"
+      },
+      {
+        "native": "너무 비싸요",
+        "pron": "no-MU BI-ssa-yo",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "그냥 구경하는 거예요",
+        "pron": "geu-NYANG gu-GYONG-ha-neun go-YE-yo",
+        "en": "I'm just looking"
+      },
+      {
+        "native": "...있어요?",
+        "pron": "...i-SSO-yo",
+        "en": "Do you have...?"
+      },
+      {
+        "native": "무슨 사이즈예요?",
+        "pron": "mu-SEUN SA-i-jeu-ye-yo",
+        "en": "What size?"
+      },
+      {
+        "native": "이걸로 할게요",
+        "pron": "i-GOL-lo hal-GE-yo",
+        "en": "I'll take this"
+      },
+      {
+        "native": "카드 돼요?",
+        "pron": "KA-deu dwae-YO",
+        "en": "Do you accept cards?"
+      },
+      {
+        "native": "영수증 주세요",
+        "pron": "yong-SU-jeung JU-se-yo",
+        "en": "A receipt, please"
+      },
+      {
+        "native": "열었어요 / 닫혔어요?",
+        "pron": "yo-ROSS-so-yo / da-CHYO-sso-yo",
+        "en": "Is it open / closed?"
+      },
+      {
+        "native": "와이파이 비밀번호가 뭐예요?",
+        "pron": "wa-I-pa-i bi-MIL-bon-ho-ga mwo-YE-yo",
+        "en": "What's the wifi password?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "일",
+        "pron": "il",
+        "en": "1"
+      },
+      {
+        "native": "이",
+        "pron": "i",
+        "en": "2"
+      },
+      {
+        "native": "삼",
+        "pron": "sam",
+        "en": "3"
+      },
+      {
+        "native": "사",
+        "pron": "sa",
+        "en": "4"
+      },
+      {
+        "native": "오",
+        "pron": "o",
+        "en": "5"
+      },
+      {
+        "native": "육",
+        "pron": "yuk",
+        "en": "6"
+      },
+      {
+        "native": "칠",
+        "pron": "chil",
+        "en": "7"
+      },
+      {
+        "native": "팔",
+        "pron": "pal",
+        "en": "8"
+      },
+      {
+        "native": "구",
+        "pron": "gu",
+        "en": "9"
+      },
+      {
+        "native": "십",
+        "pron": "sip",
+        "en": "10"
+      },
+      {
+        "native": "십일",
+        "pron": "si-BIL",
+        "en": "11"
+      },
+      {
+        "native": "십이",
+        "pron": "si-BI",
+        "en": "12"
+      },
+      {
+        "native": "이십",
+        "pron": "i-SIP",
+        "en": "20"
+      },
+      {
+        "native": "오십",
+        "pron": "o-SIP",
+        "en": "50"
+      },
+      {
+        "native": "백",
+        "pron": "baek",
+        "en": "100"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "살려주세요!",
+        "pron": "sal-LYO-ju-se-yo",
+        "en": "Help!"
+      },
+      {
+        "native": "경찰 불러주세요!",
+        "pron": "gyong-CHAL bul-LO-ju-se-yo",
+        "en": "Call the police!"
+      },
+      {
+        "native": "구급차 불러주세요!",
+        "pron": "gu-GEUP-cha bul-LO-ju-se-yo",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "의사가 필요해요",
+        "pron": "ui-SA-ga pil-LYO-hae-yo",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "저는 ...에 알레르기가 있어요",
+        "pron": "jo-NEUN ...e al-LE-reu-gi-ga i-SSO-yo",
+        "en": "I am allergic to..."
+      },
+      {
+        "native": "도난당했어요",
+        "pron": "do-NAN-dang-hae-sso-yo",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "병원이 어디예요?",
+        "pron": "byong-WON-i o-DI-ye-yo",
+        "en": "Where is the hospital?"
+      }
+    ],
+    "medical": [
+      {
+        "native": "몸이 안 좋아요",
+        "pron": "mom-i an jo-a-yo",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "구급차를 불러주세요",
+        "pron": "gu-geup-cha-reul bul-leo-ju-se-yo",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "가장 가까운 병원이 어디예요?",
+        "pron": "ga-jang ga-kka-un byeong-won-i eo-di-ye-yo",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "열이 있어요",
+        "pron": "yeol-i iss-eo-yo",
+        "en": "I have a fever"
+      },
+      {
+        "native": "저는 ...에 알레르기가 있어요",
+        "pron": "jeo-neun ...e al-le-reu-gi-ga iss-eo-yo",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "이 약이 필요해요",
+        "pron": "i yak-i pil-yo-hae-yo",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "근처에 약국이 있어요?",
+        "pron": "geun-cheo-e yak-guk-i iss-eo-yo",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "저는 관광객이에요",
+        "pron": "jeo-neun gwan-gwang-gaek-i-e-yo",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "[X]일 머물 예정이에요",
+        "pron": "[X]-il meo-mul ye-jeong-i-e-yo",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "신고할 것이 없어요",
+        "pron": "sin-go-hal geot-i eops-eo-yo",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "수화물 찾는 곳이 어디예요?",
+        "pron": "su-hwa-mul chat-neun got-i eo-di-ye-yo",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "혼자 여행 중이에요",
+        "pron": "hon-ja yeo-haeng jung-i-e-yo",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "여기가 제 호텔이에요",
+        "pron": "yeo-gi-ga je ho-tel-i-e-yo",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "다시 말씀해 주세요",
+        "pron": "da-si mal-sseum-hae ju-se-yo",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "통역사가 필요해요",
+        "pron": "tong-yeok-sa-ga pil-yo-hae-yo",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "예약이 있어요",
+        "pron": "ye-YA-gi i-SSO-yo",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "지금 체크인 할 수 있어요?",
+        "pron": "ji-GEUM che-ku-in hal su i-SSO-yo",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "체크아웃은 몇 시예요?",
+        "pron": "che-ku-a-ut-EUN myot shi-YE-yo",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "카드키가 작동 안 해요",
+        "pron": "ka-DU-ki-ga jak-DONG an he-YO",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "에어컨이 고장났어요",
+        "pron": "e-O-kon-i go-JANG-na-sso-yo",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "수건 더 주실 수 있어요?",
+        "pron": "su-GON do ju-SHIL su i-SSO-yo",
+        "en": "Can I have more towels?"
+      },
+      {
+        "native": "방해하지 마세요",
+        "pron": "bang-HE-ha-ji ma-SE-yo",
+        "en": "Do not disturb"
+      }
+    ],
+    "transport": [
+      {
+        "native": "지하철역이 어디에 있어요?",
+        "pron": "ji-HA-chol-yok-i o-DI-e i-SSO-yo",
+        "en": "Where is the subway station?"
+      },
+      {
+        "native": "이 기차는 …에 가요?",
+        "pron": "i gi-CHA-neun ... e GA-yo",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "…에서 어디서 내려요?",
+        "pron": "... e-SO o-DI-so ne-RYO-yo",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "택시 불러 주세요",
+        "pron": "tek-SHI bul-LO ju-SE-yo",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "이 호텔로 가 주세요",
+        "pron": "i ho-TEL-lo ga ju-SE-yo",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "요금이 얼마예요?",
+        "pron": "yo-GEUM-i ol-MA-ye-yo",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "여기서 세워 주세요",
+        "pron": "yo-GI-so se-WO ju-SE-yo",
+        "en": "Please stop here"
+      }
+    ]
+  },
+  "contentHash": "6e2141234bc844512ec9dceed03365fd417bee1d1c983ff26572e5bf6aab92ee"
+}

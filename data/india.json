@@ -1,0 +1,633 @@
+{
+  "id": "india",
+  "name": "India",
+  "flag": "🇮🇳",
+  "lang": "हिन्दी (Hindi)",
+  "langCode": "hi-IN",
+  "voiceLabel": "Hindi",
+  "latinScript": false,
+  "region": "South Asia",
+  "timezone": "Asia/Kolkata",
+  "hero": "#FF9933",
+  "currency": {
+    "code": "INR",
+    "symbol": "₹",
+    "rate": 83.5,
+    "label": "1 USD ≈ 83.50 INR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All services"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 \"Namaste\" with pressed palms is universally understood and appreciated across India. English is widely spoken in cities.",
+    "food": "💡 Ask \"Veg or non-veg?\" when ordering — many restaurants are pure vegetarian. Spice levels vary hugely by region.",
+    "directions": "💡 Uber and Ola work well in cities. Auto-rickshaws should use meters — insist on it or agree on price before riding.",
+    "numbers": "💡 Currency is Indian Rupees (₹). Bargaining is expected at markets but not in shops with price tags.",
+    "emergency": "💡 Dial 112 (universal emergency). Tourist police helplines exist in major cities — save the local number.",
+    "shopping": "Bargain in a bazaar. Pay the printed price in a shop.",
+    "medical": "Call 112. Drink sealed bottled water, and skip ice you did not see poured.",
+    "immigration": "Keep an offline copy of your e-visa and the first hotel address.",
+    "hotel": "Ask whether the quoted rate includes tax. Use a padlock on a dorm locker.",
+    "transport": "Use Uber or Ola, or agree the auto-rickshaw fare before you sit down."
+  },
+  "pronGuide": {
+    "title": "Hindi Sounds",
+    "tips": [
+      "Hindi has retroflex consonants — T and D can be said with the tongue curled back (ट ड) vs forward (त द)",
+      "The \"h\" after consonants (like \"bh\", \"dh\") adds a breathy puff of air",
+      "Stress is generally on the second-to-last syllable",
+      "The nasal anusvara (ं) nasalises the preceding vowel — like French nasal vowels"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/D/M (230V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "INR (₹)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Left side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Do not drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "e-Visa available online"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🙏",
+      "rule": "Namaste greeting",
+      "note": "Press palms together and say \"Namaste\" — always respectful and appreciated everywhere."
+    },
+    {
+      "e": "👟",
+      "rule": "Remove shoes",
+      "note": "Always remove shoes before entering temples, mosques, and many homes."
+    },
+    {
+      "e": "🐄",
+      "rule": "Cows are sacred",
+      "note": "Don't honk at cows on roads. Beef is avoided by Hindus — check menus carefully."
+    },
+    {
+      "e": "🫱",
+      "rule": "Right hand rule",
+      "note": "Use your right hand for eating, giving, and receiving — the left is considered unclean."
+    },
+    {
+      "e": "👗",
+      "rule": "Dress modestly",
+      "note": "Cover shoulders and knees at religious sites. Scarves are handy for temples and mosques."
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "Carry cash",
+      "note": "Small towns and markets are cash-only. ATMs in cities are reliable — withdraw larger amounts at once."
+    },
+    {
+      "e": "💳",
+      "rule": "UPI payments",
+      "note": "Many shops accept Google Pay or PhonePe via QR code — fast and easy if you set it up."
+    },
+    {
+      "e": "🤝",
+      "rule": "Bargain at markets",
+      "note": "Haggling is expected at bazaars. Start at 50% of the asking price and meet in the middle."
+    }
+  ],
+  "food": [
+    {
+      "e": "🍛",
+      "name": "Butter Chicken",
+      "what": "Creamy tomato-based chicken curry",
+      "tip": "Safe gateway dish for spice newcomers. Best with garlic naan."
+    },
+    {
+      "e": "🫓",
+      "name": "Thali",
+      "what": "Full-plate meal with rice, dal, curries, and bread",
+      "tip": "Unlimited refills are common — a great way to try many dishes cheaply."
+    },
+    {
+      "e": "🥘",
+      "name": "Biryani",
+      "what": "Fragrant spiced rice with meat or vegetables",
+      "tip": "Hyderabadi and Lucknawi styles are world-famous. Look for dum-cooked versions."
+    },
+    {
+      "e": "🥙",
+      "name": "Chaat",
+      "what": "Tangy, spicy street snacks like pani puri and bhel puri",
+      "tip": "Try from busy stalls — the turnaround keeps it fresh and safe."
+    },
+    {
+      "e": "🫖",
+      "name": "Chai",
+      "what": "Spiced milk tea, served everywhere",
+      "tip": "Say \"ek cutting chai\" for a small glass at street stalls."
+    }
+  ],
+  "safety": [
+    {
+      "e": "💧",
+      "rule": "Bottled water only",
+      "note": "Never drink tap water. Check the seal on bottles. Avoid ice in drinks at unknown vendors."
+    },
+    {
+      "e": "⚠️",
+      "rule": "Traffic chaos",
+      "note": "Roads are hectic — always use pedestrian bridges or crossings when available."
+    },
+    {
+      "e": "🎒",
+      "rule": "Watch your bag",
+      "note": "Keep valuables in front pockets or a zipped bag, especially in markets and train stations."
+    },
+    {
+      "e": "🌡️",
+      "rule": "Heat and monsoon",
+      "note": "Summers are intensely hot. Stay hydrated and carry an umbrella during monsoon season (Jun–Sep)."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rideshare",
+      "name": "Uber / Ola",
+      "desc": "Uber and Ola both work in major Indian cities",
+      "ios": "https://apps.apple.com/app/uber/id368677368",
+      "android": "https://play.google.com/store/apps/details?id=com.ubercab"
+    },
+    {
+      "e": "🚂",
+      "cat": "Rail",
+      "name": "IRCTC Rail Connect",
+      "desc": "Book Indian Railways tickets",
+      "ios": "https://apps.apple.com/in/app/irctc-rail-connect/id1000342875",
+      "android": "https://play.google.com/store/apps/details?id=cris.org.in.prs.ima"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Google Maps",
+      "desc": "Excellent coverage across India",
+      "ios": "https://apps.apple.com/app/google-maps/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💱",
+      "cat": "Finance",
+      "name": "Wise",
+      "desc": "Best rates for converting to INR",
+      "ios": "https://apps.apple.com/app/wise/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "नमस्ते",
+        "pron": "na-MAS-tay",
+        "en": "Hello / Greetings"
+      },
+      {
+        "native": "सुप्रभात",
+        "pron": "soo-pra-BHAT",
+        "en": "Good morning"
+      },
+      {
+        "native": "शुभ संध्या",
+        "pron": "shubh SAND-hya",
+        "en": "Good evening"
+      },
+      {
+        "native": "आप कैसे हैं?",
+        "pron": "aap KAY-say hain",
+        "en": "How are you?"
+      },
+      {
+        "native": "मैं ठीक हूँ",
+        "pron": "main THEEK hoon",
+        "en": "I'm fine"
+      },
+      {
+        "native": "धन्यवाद",
+        "pron": "DHAN-ya-vaad",
+        "en": "Thank you"
+      },
+      {
+        "native": "कोई बात नहीं",
+        "pron": "KOH-ee baat na-HEEN",
+        "en": "You're welcome"
+      },
+      {
+        "native": "अलविदा",
+        "pron": "al-vi-DAH",
+        "en": "Goodbye"
+      }
+    ],
+    "food": [
+      {
+        "native": "एक थाली",
+        "pron": "ek THAH-lee",
+        "en": "One thali, please"
+      },
+      {
+        "native": "कम मसाला",
+        "pron": "kam ma-SAH-la",
+        "en": "Less spicy"
+      },
+      {
+        "native": "शाकाहारी",
+        "pron": "sha-KAH-ha-ree",
+        "en": "Vegetarian"
+      },
+      {
+        "native": "बहुत स्वादिष्ट!",
+        "pron": "ba-HOOT swa-DISH-ta",
+        "en": "Very delicious!"
+      },
+      {
+        "native": "बिल लाइए",
+        "pron": "bill LAH-ee-ay",
+        "en": "The bill, please"
+      },
+      {
+        "native": "पानी",
+        "pron": "PAH-nee",
+        "en": "Water"
+      },
+      {
+        "native": "बिना मांस",
+        "pron": "bi-NAH maas",
+        "en": "Without meat"
+      },
+      {
+        "native": "पैक करना",
+        "pron": "pack KAR-na",
+        "en": "To take away"
+      }
+    ],
+    "directions": [
+      {
+        "native": "मेट्रो स्टेशन कहाँ है?",
+        "pron": "METRO STAY-shun ka-HAN hai",
+        "en": "Where is the metro?"
+      },
+      {
+        "native": "कितनी दूर है?",
+        "pron": "KIT-nee DOOR hai",
+        "en": "How far is it?"
+      },
+      {
+        "native": "बाईं तरफ मुड़ें",
+        "pron": "bah-EEN ta-RAF MU-den",
+        "en": "Turn left"
+      },
+      {
+        "native": "दाईं तरफ मुड़ें",
+        "pron": "dah-EEN ta-RAF MU-den",
+        "en": "Turn right"
+      },
+      {
+        "native": "सीधे जाएं",
+        "pron": "SEE-dhay JAH-en",
+        "en": "Go straight"
+      },
+      {
+        "native": "मुझे यहाँ ले चलो",
+        "pron": "moo-JAY ya-HAN lay CHA-lo",
+        "en": "Take me here, please"
+      },
+      {
+        "native": "यहाँ रुकिए",
+        "pron": "ya-HAN ROO-ki-ay",
+        "en": "Stop here"
+      },
+      {
+        "native": "अभी कितना बाकी है?",
+        "pron": "ab-HEE KIT-na BAH-kee hai",
+        "en": "How much further?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "यह कितने का है?",
+        "pron": "yeh KIT-nay ka hai",
+        "en": "How much is this?"
+      },
+      {
+        "native": "बहुत महंगा है",
+        "pron": "ba-HOOT ma-HAN-ga hai",
+        "en": "Too expensive"
+      },
+      {
+        "native": "कम करो",
+        "pron": "kam KAR-oh",
+        "en": "Reduce the price"
+      },
+      {
+        "native": "दूसरा रंग है?",
+        "pron": "DOO-sa-ra RANG hai",
+        "en": "Another colour?"
+      },
+      {
+        "native": "देख रहा हूँ",
+        "pron": "DAYKH ra-HA hoon",
+        "en": "Just browsing"
+      },
+      {
+        "native": "यह लूँगा",
+        "pron": "yeh LOON-ga",
+        "en": "I'll take this"
+      },
+      {
+        "native": "कार्ड चलेगा?",
+        "pron": "CARD cha-LAY-ga",
+        "en": "Card accepted?"
+      },
+      {
+        "native": "रसीद दीजिए",
+        "pron": "ra-SEED DEE-ji-ay",
+        "en": "Please give me a receipt"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "एक",
+        "pron": "ek",
+        "en": "One"
+      },
+      {
+        "native": "दो",
+        "pron": "do",
+        "en": "Two"
+      },
+      {
+        "native": "तीन",
+        "pron": "teen",
+        "en": "Three"
+      },
+      {
+        "native": "चार",
+        "pron": "char",
+        "en": "Four"
+      },
+      {
+        "native": "पाँच",
+        "pron": "paanch",
+        "en": "Five"
+      },
+      {
+        "native": "दस",
+        "pron": "das",
+        "en": "Ten"
+      },
+      {
+        "native": "सौ",
+        "pron": "sau",
+        "en": "One hundred"
+      },
+      {
+        "native": "एक हज़ार",
+        "pron": "ek ha-ZAAR",
+        "en": "One thousand"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "बचाओ!",
+        "pron": "ba-CHAO",
+        "en": "Help!"
+      },
+      {
+        "native": "पुलिस बुलाओ!",
+        "pron": "POO-lis boo-LAO",
+        "en": "Call the police!"
+      },
+      {
+        "native": "एम्बुलेंस बुलाओ!",
+        "pron": "AMBULANCE boo-LAO",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "आग लगी है!",
+        "pron": "aag la-GEE hai",
+        "en": "Fire!"
+      },
+      {
+        "native": "मैं बीमार हूँ",
+        "pron": "main BEE-maar hoon",
+        "en": "I'm sick"
+      },
+      {
+        "native": "मेरी मदद करो!",
+        "pron": "MAY-ree ma-DAD ka-RO",
+        "en": "Please help me!"
+      },
+      {
+        "native": "अस्पताल कहाँ है?",
+        "pron": "as-pa-TAAL ka-HAN hai",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "मेरा बटुआ खो गया",
+        "pron": "MAY-ra ba-TOO-a kho GA-ya",
+        "en": "I've lost my wallet"
+      }
+    ],
+    "medical": [
+      {
+        "native": "मुझे अच्छा नहीं लग रहा",
+        "pron": "moo-JAY ach-CHA na-HEEN lag ra-HA",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "मुझे डॉक्टर चाहिए",
+        "pron": "moo-JAY DOK-ter CHA-hi-ay",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "एम्बुलेंस बुलाइए",
+        "pron": "AMBULANCE boo-LA-ee-ay",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "सबसे नजदीक अस्पताल कहाँ है?",
+        "pron": "sab-SAY naj-DEEK as-pa-TAAL ka-HAN hai",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "मुझे एलर्जी है",
+        "pron": "moo-JAY al-ER-jee hai",
+        "en": "I have an allergy"
+      },
+      {
+        "native": "मुझे डायबिटीज है",
+        "pron": "moo-JAY DY-ah-bee-TEEZ hai",
+        "en": "I have diabetes"
+      },
+      {
+        "native": "मुझे चक्कर आ रहा है",
+        "pron": "moo-JAY CHAK-kar aa ra-HA hai",
+        "en": "I feel dizzy"
+      },
+      {
+        "native": "दवाई चाहिए",
+        "pron": "da-VAH-ee CHA-hi-ay",
+        "en": "I need medicine"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "यह मेरा पासपोर्ट है",
+        "pron": "yeh MAY-ra PASS-port hai",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "मैं पर्यटन के लिए आया हूँ",
+        "pron": "main par-ya-TAN ke li-YAY AH-ya hoon",
+        "en": "I'm here for tourism"
+      },
+      {
+        "native": "मैं [X] दिन रुकूँगा",
+        "pron": "main [X] din roo-KOON-ga",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "घोषित करने के लिए कुछ नहीं",
+        "pron": "gho-SHIT kar-NAY ke li-YAY kuch na-HEEN",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "सामान काउंटर कहाँ है?",
+        "pron": "SA-man KAW-un-ter ka-HAN hai",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "मैं अकेला यात्रा कर रहा हूँ",
+        "pron": "main a-KAY-la YAH-tra kar ra-HA hoon",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "यह मेरा होटल है",
+        "pron": "yeh MAY-ra ho-TEL hai",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "मुझे दुभाषिया चाहिए",
+        "pron": "moo-JAY doo-BHA-shi-ya CHA-hi-ay",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "मेरी बुकिंग है",
+        "pron": "ME-ri BU-king hai",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "क्या मैं अभी चेक-इन कर सकता हूं?",
+        "pron": "kya main a-BHI check-in kar SAK-ta hoon",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "चेक-आउट कितने बजे है?",
+        "pron": "check-out KIT-ne BA-je hai",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "मेरी चाबी काम नहीं कर रही",
+        "pron": "ME-ri CHA-bi kaam na-HIN kar RA-hi",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "एयर कंडीशनर खराब है",
+        "pron": "air con-DI-shon-ar kha-RAB hai",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "क्या आप तौलिए ला सकते हैं?",
+        "pron": "kya aap TAU-li-ye la SAK-te hain",
+        "en": "Can you bring towels?"
+      },
+      {
+        "native": "परेशान मत करना",
+        "pron": "pa-RE-shan mat KAR-na",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "वाईफाई पासवर्ड क्या है?",
+        "pron": "wa-ee-FAI PAS-word kya hai",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "एक टिकट, कृपया",
+        "pron": "ek TI-kat KRIP-ya",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "मेट्रो स्टेशन कहाँ है?",
+        "pron": "ME-tro STE-shun ka-HAN hai",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "क्या यह ट्रेन... जाती है?",
+        "pron": "kya yeh TREN ... JA-ti hai",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "... के लिए कहाँ उतरूं?",
+        "pron": "... ke LI-ye ka-HAN U-ta-roon",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "कृपया टैक्सी बुलाइए",
+        "pron": "KRIP-ya TAK-si bu-LA-i-ye",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "मुझे इस होटल पर ले चलिए",
+        "pron": "MU-jhe is ho-TEL par le CHA-li-ye",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "किराया कितना है?",
+        "pron": "ki-RA-ya KIT-na hai",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "यहाँ रोकिए",
+        "pron": "ya-HAN RO-ki-ye",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "bec30b0af1dd4d4576798d37fbfdef5de3892cd52277d3773c036cc10e961108"
+}

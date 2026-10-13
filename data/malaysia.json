@@ -1,0 +1,750 @@
+{
+  "id": "malaysia",
+  "name": "Malaysia",
+  "flag": "🇲🇾",
+  "lang": "Bahasa Melayu",
+  "langCode": "ms-MY",
+  "voiceLabel": "Malay",
+  "latinScript": true,
+  "region": "Southeast Asia",
+  "timezone": "Asia/Kuala_Lumpur",
+  "hero": "#CC0001",
+  "currency": {
+    "code": "MYR",
+    "symbol": "RM",
+    "rate": 4.47,
+    "label": "1 USD ≈ 4.47 MYR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "999",
+      "name": "Police, fire, and ambulance"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 <strong>Selamat</strong> is the all-purpose greeting prefix. Locals will always appreciate you trying a few words of Malay.",
+    "food": "💡 Malaysian food is often served family-style. Nasi lemak (coconut rice with sambal) is the national dish — available everywhere, even for breakfast.",
+    "directions": "💡 Grab is the easiest way around KL. Just show the driver your destination on the screen.",
+    "numbers": "💡 Malay numbers are logical — \"dua puluh lima\" = 25 (two tens five). Easy to learn.",
+    "emergency": "💡 Emergency in Malaysia: <strong>999</strong> for police, fire, and ambulance.",
+    "shopping": "Bargain at a pasar malam, not in a mall. Start below the asking price.",
+    "medical": "Drink bottled or boiled water. Call 999 for an ambulance.",
+    "immigration": "Most visitors are stamped in for 30–90 days. Keep the arrival record.",
+    "hotel": "Take your shoes off if your host does. Save the address in Grab before you land.",
+    "transport": "Use Grab rather than hailing a taxi. The LRT covers central Kuala Lumpur."
+  },
+  "pronGuide": {
+    "title": "Malay Sounds",
+    "tips": [
+      "Pronunciation is mostly phonetic — say it as it looks",
+      "C is always \"ch\" (as in <em>cinta</em> = chin-tah)",
+      "Stress usually falls on the second-to-last syllable",
+      "NG at the start of a word sounds like singing (ng-ah = yes)"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type G (British)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Ringgit (RM)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "999"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Left"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Boil/bottle"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "30–90 days (most)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "👗",
+      "rule": "Dress modestly, especially at religious sites",
+      "note": "Cover knees and shoulders when visiting mosques or temples. Many sites provide sarongs at the entrance."
+    },
+    {
+      "e": "👟",
+      "rule": "Remove shoes before entering homes and temples",
+      "note": "Always remove footwear at the door. You'll usually see a pile of shoes outside as a signal."
+    },
+    {
+      "e": "🤝",
+      "rule": "Use your right hand for eating and greeting",
+      "note": "The left hand is considered unclean. Use your right hand to eat, give, and receive things."
+    },
+    {
+      "e": "🧕",
+      "rule": "Most restaurants in KL are halal",
+      "note": "Pork and alcohol are absent from halal establishments. Look for non-halal or Chinese restaurants if you need them."
+    },
+    {
+      "e": "🛒",
+      "rule": "Bargaining is fine in markets, not malls",
+      "note": "Night markets and street stalls expect it. Fixed-price shops and malls do not."
+    },
+    {
+      "e": "😊",
+      "rule": "Malaysians are warm and helpful",
+      "note": "Don't hesitate to ask for help — people will often go out of their way to assist tourists."
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "Cash is still king outside KL",
+      "note": "Carry RM 50–100 for markets and smaller towns. Cards work well in malls and chain restaurants."
+    },
+    {
+      "e": "🏧",
+      "rule": "Use Maybank or CIMB ATMs",
+      "note": "These are the most reliable for foreign cards with reasonable fees."
+    },
+    {
+      "e": "🛒",
+      "rule": "Bargain at markets, not malls",
+      "note": "Pasar malam (night markets) expect negotiation. Start at 60% of asking price and meet in the middle."
+    },
+    {
+      "e": "🍽️",
+      "rule": "Service charge already added",
+      "note": "Most restaurants add 10% service charge + 6% tax. Tipping on top is not expected."
+    },
+    {
+      "e": "❌",
+      "rule": "Decline dynamic currency conversion",
+      "note": "Always pay in Ringgit. If asked to pay in your home currency, say no — the rate is always worse."
+    }
+  ],
+  "food": [
+    {
+      "e": "🍚",
+      "name": "Nasi lemak",
+      "what": "Coconut rice with sambal, anchovies, peanuts, boiled egg — the national dish, eaten for breakfast",
+      "tip": "Best from a humble warung (food stall), not a restaurant."
+    },
+    {
+      "e": "🍜",
+      "name": "Char kway teow",
+      "what": "Wok-fried flat rice noodles with egg, bean sprouts, prawns and soy sauce",
+      "tip": "The best ones have wok hei — that smoky charred flavour from high heat."
+    },
+    {
+      "e": "🫓",
+      "name": "Roti canai",
+      "what": "Flaky flatbread served with dhal or curry sauce — eaten any time of day",
+      "tip": "Tear with your right hand and dip. Order 'roti telur' (with egg) for a heartier version."
+    },
+    {
+      "e": "🍵",
+      "name": "Teh tarik",
+      "what": "'Pulled tea' — strong sweetened milk tea poured between cups to create a frothy top",
+      "tip": "A national ritual. Ask for 'kurang manis' (less sweet) if you prefer."
+    },
+    {
+      "e": "🍢",
+      "name": "Satay",
+      "what": "Grilled meat skewers served with peanut sauce, cucumber, and rice cakes (ketupat)",
+      "tip": "Kajang satay (from Kajang town) is considered the best in Malaysia."
+    },
+    {
+      "e": "👑",
+      "name": "Durian",
+      "what": "The spiky 'King of Fruits' with a pungent smell and rich custardy flesh",
+      "tip": "Banned in many hotels and public transport. Try Musang King variety for the best flavour."
+    }
+  ],
+  "safety": [
+    {
+      "e": "👜",
+      "rule": "Snatch theft on pavement",
+      "note": "Walk on the inner side of the pavement (away from traffic), bag on the wall side. Motorbike snatchers grab from the road side."
+    },
+    {
+      "e": "🚗",
+      "rule": "Always use Grab, never hail random taxis",
+      "note": "Metered taxis frequently overcharge tourists. Grab shows the price upfront."
+    },
+    {
+      "e": "💊",
+      "rule": "Drug laws are extremely strict",
+      "note": "Possession of even small amounts can lead to long prison sentences. Trafficking carries the death penalty."
+    },
+    {
+      "e": "🌧️",
+      "rule": "Check the monsoon season",
+      "note": "East coast floods Nov–Mar; West coast (KL, Penang) can flood Oct–Nov. Check before travel."
+    },
+    {
+      "e": "🏖️",
+      "rule": "Secure valuables on beaches",
+      "note": "Don't leave bags unattended at beach resorts — opportunistic theft is common."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rides",
+      "name": "Grab",
+      "desc": "The dominant ride-hailing app across all of Southeast Asia.",
+      "ios": "https://apps.apple.com/app/id647268330",
+      "android": "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Navigation",
+      "name": "Google Maps",
+      "desc": "Works well in Malaysia. Download offline maps for KL.",
+      "ios": "https://apps.apple.com/app/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Google Translate",
+      "desc": "Download Malay offline. Camera mode works on menus and signs.",
+      "ios": "https://apps.apple.com/app/id414681729",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "💵",
+      "cat": "Money",
+      "name": "Wise",
+      "desc": "Best rates for spending Malaysian Ringgit abroad.",
+      "ios": "https://apps.apple.com/app/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Agoda",
+      "desc": "Strong in Southeast Asia — often cheaper than other booking sites.",
+      "ios": "https://apps.apple.com/app/id479753889",
+      "android": "https://play.google.com/store/apps/details?id=com.agoda.nuobo"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "Klook",
+      "desc": "Best for day trips, theme parks, and local experiences.",
+      "ios": "https://apps.apple.com/app/id1099611444",
+      "android": "https://play.google.com/store/apps/details?id=com.klook.klook"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Selamat pagi",
+        "pron": "suh-LAH-mat PAH-gee",
+        "en": "Good morning"
+      },
+      {
+        "native": "Selamat petang",
+        "pron": "suh-LAH-mat puh-TAHNG",
+        "en": "Good afternoon / evening"
+      },
+      {
+        "native": "Selamat malam",
+        "pron": "suh-LAH-mat MAH-lam",
+        "en": "Good night"
+      },
+      {
+        "native": "Terima kasih",
+        "pron": "tuh-REE-mah KAH-see",
+        "en": "Thank you"
+      },
+      {
+        "native": "Terima kasih banyak-banyak",
+        "pron": "tuh-REE-mah KAH-see BAH-nyak",
+        "en": "Thank you very much"
+      },
+      {
+        "native": "Sama-sama",
+        "pron": "SAH-mah SAH-mah",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Tolong",
+        "pron": "TOH-long",
+        "en": "Please / Help"
+      },
+      {
+        "native": "Maaf",
+        "pron": "MAH-af",
+        "en": "Sorry / Excuse me"
+      },
+      {
+        "native": "Boleh cakap Bahasa Inggeris?",
+        "pron": "BOH-leh CHA-kap ba-HAH-sa ing-GRISS",
+        "en": "Do you speak English?"
+      },
+      {
+        "native": "Saya tidak faham",
+        "pron": "SAH-yah tee-DAHK FAH-ham",
+        "en": "I don't understand"
+      },
+      {
+        "native": "Boleh ulang semula?",
+        "pron": "BOH-leh OO-lang suh-MOO-lah",
+        "en": "Can you repeat that?"
+      },
+      {
+        "native": "Nama saya...",
+        "pron": "NAH-mah SAH-yah",
+        "en": "My name is..."
+      }
+    ],
+    "food": [
+      {
+        "native": "Meja untuk dua orang, tolong",
+        "pron": "MEH-jah OON-took DOO-ah OH-rang",
+        "en": "A table for two, please"
+      },
+      {
+        "native": "Menu, tolong",
+        "pron": "MEH-noo TOH-long",
+        "en": "The menu, please"
+      },
+      {
+        "native": "Saya nak...",
+        "pron": "SAH-yah nahk",
+        "en": "I would like..."
+      },
+      {
+        "native": "Bil, tolong",
+        "pron": "beel TOH-long",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Sedap!",
+        "pron": "suh-DAHP",
+        "en": "Delicious!"
+      },
+      {
+        "native": "Saya vegetarian",
+        "pron": "SAH-yah veh-juh-TAY-ree-an",
+        "en": "I am vegetarian"
+      },
+      {
+        "native": "Tanpa gluten, tolong",
+        "pron": "TAHN-pah GLOO-ten TOH-long",
+        "en": "Gluten-free, please"
+      },
+      {
+        "native": "Kopi, tolong",
+        "pron": "KOH-pee TOH-long",
+        "en": "A coffee, please"
+      },
+      {
+        "native": "Air, tolong",
+        "pron": "ah-EAR TOH-long",
+        "en": "Some water, please"
+      },
+      {
+        "native": "Berapa harga ini?",
+        "pron": "buh-RAH-pah HAR-gah EE-nee",
+        "en": "How much is this?"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Di mana...?",
+        "pron": "dee MAH-nah",
+        "en": "Where is...?"
+      },
+      {
+        "native": "Stesen LRT",
+        "pron": "STEH-sen el-ar-TEE",
+        "en": "The LRT station"
+      },
+      {
+        "native": "Ke kiri",
+        "pron": "kuh KEE-ree",
+        "en": "To the left"
+      },
+      {
+        "native": "Ke kanan",
+        "pron": "kuh KAH-nan",
+        "en": "To the right"
+      },
+      {
+        "native": "Terus",
+        "pron": "TEH-roos",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "Dekat sini",
+        "pron": "duh-KAHT SEE-nee",
+        "en": "Near here"
+      },
+      {
+        "native": "Jauh",
+        "pron": "JAH-ooh",
+        "en": "Far"
+      },
+      {
+        "native": "Saya sesat",
+        "pron": "SAH-yah suh-SAHT",
+        "en": "I am lost"
+      },
+      {
+        "native": "Boleh tolong saya?",
+        "pron": "BOH-leh TOH-long SAH-yah",
+        "en": "Can you help me?"
+      },
+      {
+        "native": "Satu tiket, tolong",
+        "pron": "SAH-too TEE-ket TOH-long",
+        "en": "A ticket, please"
+      },
+      {
+        "native": "Di mana tandas?",
+        "pron": "dee MAH-nah TAHN-dahs",
+        "en": "Where is the toilet?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Berapa harganya?",
+        "pron": "buh-RAH-pah har-GAH-nyah",
+        "en": "How much does this cost?"
+      },
+      {
+        "native": "Mahal sangat",
+        "pron": "MAH-hal SAH-ngat",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "Saya tengok-tengok sahaja",
+        "pron": "SAH-yah tung-OHK SAH-hah-jah",
+        "en": "I'm just looking"
+      },
+      {
+        "native": "Ada...?",
+        "pron": "AH-dah",
+        "en": "Do you have...?"
+      },
+      {
+        "native": "Saiz apa?",
+        "pron": "sah-EEZ AH-pah",
+        "en": "What size?"
+      },
+      {
+        "native": "Saya ambil ini",
+        "pron": "SAH-yah AHM-beel EE-nee",
+        "en": "I'll take it"
+      },
+      {
+        "native": "Boleh guna kad?",
+        "pron": "BOH-leh GOO-nah kahd",
+        "en": "Do you accept cards?"
+      },
+      {
+        "native": "Resit, tolong",
+        "pron": "ruh-SEET TOH-long",
+        "en": "A receipt, please"
+      },
+      {
+        "native": "Buka / Tutup?",
+        "pron": "BOO-kah / TOO-toop",
+        "en": "Open / Closed?"
+      },
+      {
+        "native": "Kata laluan WiFi?",
+        "pron": "KAH-tah LAH-loo-an WEE-fee",
+        "en": "What's the wifi password?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Satu",
+        "pron": "SAH-too",
+        "en": "1"
+      },
+      {
+        "native": "Dua",
+        "pron": "DOO-ah",
+        "en": "2"
+      },
+      {
+        "native": "Tiga",
+        "pron": "TEE-gah",
+        "en": "3"
+      },
+      {
+        "native": "Empat",
+        "pron": "EM-pat",
+        "en": "4"
+      },
+      {
+        "native": "Lima",
+        "pron": "LEE-mah",
+        "en": "5"
+      },
+      {
+        "native": "Enam",
+        "pron": "EH-nam",
+        "en": "6"
+      },
+      {
+        "native": "Tujuh",
+        "pron": "TOO-jooh",
+        "en": "7"
+      },
+      {
+        "native": "Lapan",
+        "pron": "LAH-pan",
+        "en": "8"
+      },
+      {
+        "native": "Sembilan",
+        "pron": "suhm-BEE-lan",
+        "en": "9"
+      },
+      {
+        "native": "Sepuluh",
+        "pron": "suh-POO-looh",
+        "en": "10"
+      },
+      {
+        "native": "Sebelas",
+        "pron": "suh-BEH-lahs",
+        "en": "11"
+      },
+      {
+        "native": "Dua belas",
+        "pron": "DOO-ah BEH-lahs",
+        "en": "12"
+      },
+      {
+        "native": "Dua puluh",
+        "pron": "DOO-ah POO-looh",
+        "en": "20"
+      },
+      {
+        "native": "Lima puluh",
+        "pron": "LEE-mah POO-looh",
+        "en": "50"
+      },
+      {
+        "native": "Seratus",
+        "pron": "suh-RAH-toos",
+        "en": "100"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Tolong!",
+        "pron": "TOH-long",
+        "en": "Help!"
+      },
+      {
+        "native": "Panggil polis!",
+        "pron": "PAHNG-geel POH-lees",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Panggil ambulans!",
+        "pron": "PAHNG-geel AM-boo-lanss",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Saya perlu doktor",
+        "pron": "SAH-yah PER-loo DOK-tor",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Saya alah kepada...",
+        "pron": "SAH-yah AH-lah kuh-PAH-dah",
+        "en": "I am allergic to..."
+      },
+      {
+        "native": "Saya kena curi",
+        "pron": "SAH-yah kuh-NAH CHOO-ree",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "Di mana hospital?",
+        "pron": "dee MAH-nah hoss-PEE-tal",
+        "en": "Where is the hospital?"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Saya tidak sihat",
+        "pron": "sah-YAH TEE-dak see-HAT",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Tolong panggil ambulans",
+        "pron": "TO-long PANG-ghil am-BOO-lans",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Di mana hospital terdekat?",
+        "pron": "dee MAH-nah hos-PEE-tal ter-deh-KAT",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Saya demam",
+        "pron": "sah-YAH DEH-mam",
+        "en": "I have a fever"
+      },
+      {
+        "native": "Saya alah kepada...",
+        "pron": "sah-YAH AH-lah keh-PAH-dah",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "Saya perlukan ubat ini",
+        "pron": "sah-YAH per-loo-KAN OO-bat ee-NEE",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "Ada farmasi berhampiran?",
+        "pron": "AH-dah far-MAH-see ber-ham-PEE-ran",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Saya seorang pelancong",
+        "pron": "sah-YAH seh-OR-ang peh-LAN-chong",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "Saya di sini [X] hari",
+        "pron": "sah-YAH dee SEE-nee [X] HAH-ree",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Tiada apa untuk diperiksa",
+        "pron": "tee-AH-dah AH-pah oon-TUCK dee-peh-REEK-sah",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Di mana tuntutan bagasi?",
+        "pron": "dee MAH-nah toon-too-TAN bah-GAH-see",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Saya berseorangan",
+        "pron": "sah-YAH ber-seh-or-ANG-an",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Ini hotel saya",
+        "pron": "EE-nee ho-TEL sah-YAH",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Boleh ulang?",
+        "pron": "BO-leh OO-lang",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "Saya perlukan jurubahasa",
+        "pron": "sah-YAH per-loo-KAN joo-roo-bah-HA-sah",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Saya ada tempahan",
+        "pron": "SA-ya AH-da tem-PA-han",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Boleh saya daftar masuk sekarang?",
+        "pron": "BO-leh SA-ya DAF-tar MA-suk se-KA-rang",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "Pukul berapa waktu daftar keluar?",
+        "pron": "PU-kul be-RA-pa WAK-tu DAF-tar ke-LU-ar",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Kad kunci saya tidak berfungsi",
+        "pron": "KAD KUN-chi SA-ya TI-dak ber-FUNG-si",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "Penghawa dingin rosak",
+        "pron": "peng-HA-wa DI-ngin RO-sak",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Boleh bawa tuala tambahan?",
+        "pron": "BO-leh BA-wa TU-a-la tam-BA-han",
+        "en": "Can you bring extra towels?"
+      },
+      {
+        "native": "Jangan ganggu",
+        "pron": "JA-ngan GANG-gu",
+        "en": "Do not disturb"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Satu tiket, sila",
+        "pron": "SA-tu TI-ket SI-la",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Di mana stesen LRT?",
+        "pron": "di MA-na STA-sen el-ar-TEE",
+        "en": "Where is the LRT station?"
+      },
+      {
+        "native": "Tren ini ke...?",
+        "pron": "TREN i-ni ke",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Di mana saya turun untuk...?",
+        "pron": "di MA-na SA-ya TU-run UN-tuk",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Tolong panggil teksi",
+        "pron": "TO-long PANG-gil TEK-si",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "Hantar saya ke hotel ini",
+        "pron": "HAN-tar SA-ya ke ho-TEL i-ni",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Berapa tambangnya?",
+        "pron": "be-RA-pa tam-BANG-nya",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Berhenti di sini",
+        "pron": "ber-HEN-ti di SI-ni",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "e48d8a01a40bd7d1e1d40d5d890177e2a32ea4267913da53725353e90ad81259"
+}

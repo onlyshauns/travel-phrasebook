@@ -1,0 +1,637 @@
+{
+  "id": "turkey",
+  "name": "Turkey",
+  "flag": "🇹🇷",
+  "lang": "Türkçe",
+  "langCode": "tr-TR",
+  "voiceLabel": "Turkish",
+  "latinScript": true,
+  "region": "West Asia",
+  "timezone": "Europe/Istanbul",
+  "hero": "#E30A17",
+  "currency": {
+    "code": "TRY",
+    "symbol": "₺",
+    "rate": 32.5,
+    "label": "1 USD ≈ 32.50 TRY",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All services"
+    },
+    {
+      "tel": "155",
+      "name": "Police"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 \"Merhaba\" works everywhere. \"Teşekkür ederim\" is appreciated — locals love when tourists try Turkish.",
+    "food": "💡 \"Kebap\" is not just shish — explore lahmacun, pide, and meze. Tea (çay) is offered everywhere; accepting is polite.",
+    "directions": "💡 Istanbul has metro, tram, and ferry. The Istanbulkart (transit card) works on all — buy one at the airport.",
+    "numbers": "💡 Currency is Turkish Lira (₺ / TRY). Carry cash for bazaars. Exchange rates vary — avoid airport desks.",
+    "emergency": "💡 Dial 112 (general), 155 (police), 112 (ambulance). Tourist police in Istanbul: (0212) 527 4503.",
+    "shopping": "In the bazaar, agree the price before anyone wraps the goods.",
+    "medical": "Call 112. Clinics in Istanbul are used to travelers.",
+    "immigration": "Have your passport and the e-visa if you needed one, plus the hotel address.",
+    "hotel": "Ask for the Wi-Fi, and whether the hammam costs extra.",
+    "transport": "Use BiTaksi or a ferry. Buy an Istanbulkart for trams and buses."
+  },
+  "pronGuide": {
+    "title": "Turkish Sounds",
+    "tips": [
+      "Turkish is phonetically regular — every letter is pronounced the same way every time",
+      "Ş sounds like \"sh\", Ç like \"ch\", Ğ (soft G) silently lengthens the preceding vowel",
+      "The undotted ı (without a dot) is a unique central vowel — like the \"u\" in \"circus\"",
+      "Ü sounds like the French \"u\" or German \"ü\" — round your lips and say \"ee\""
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/F (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "TRY (₺)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112 / 155"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Do not drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "e-Visa required (most countries)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🫖",
+      "rule": "Çay culture",
+      "note": "Tea (çay) is the social glue of Turkey. Declining tea multiple times may be seen as rude — accept it!"
+    },
+    {
+      "e": "🕌",
+      "rule": "Mosque etiquette",
+      "note": "Remove shoes, cover heads (women) and shoulders. Be quiet and avoid visiting during prayer times."
+    },
+    {
+      "e": "🤝",
+      "rule": "Warm hospitality",
+      "note": "Turks are exceptionally hospitable. Shop owners may offer tea — it's social, not pressure to buy."
+    },
+    {
+      "e": "🛍️",
+      "rule": "Bazaar bargaining",
+      "note": "Haggling is expected at the Grand Bazaar and Spice Bazaar. Start at 50–60% of asking price."
+    },
+    {
+      "e": "👁️",
+      "rule": "Evil eye (Nazar)",
+      "note": "The blue eye symbol (nazar) wards off bad luck. Giving one as a gift is very welcome."
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "Carry lira",
+      "note": "Bazaars and smaller restaurants prefer Turkish Lira. Some accept EUR/USD but at poor rates."
+    },
+    {
+      "e": "🏧",
+      "rule": "ATMs everywhere",
+      "note": "ATMs are on every corner in Istanbul. Use bank-attached machines for safety."
+    },
+    {
+      "e": "💳",
+      "rule": "Cards in restaurants",
+      "note": "Hotels, restaurants, and major shops accept cards. Bazaar vendors prefer cash."
+    }
+  ],
+  "food": [
+    {
+      "e": "🥙",
+      "name": "Döner Kebap",
+      "what": "Rotisserie-grilled meat shaved into bread or on a plate",
+      "tip": "The most iconic Turkish street food. Ask for \"dürüm\" (wrap) for the full experience."
+    },
+    {
+      "e": "🫓",
+      "name": "Simit",
+      "what": "Sesame-crusted bread ring — Turkey's breakfast staple",
+      "tip": "Sold by street carts for ~5₺. Best eaten warm with fresh white cheese."
+    },
+    {
+      "e": "🍆",
+      "name": "Imam Bayıldı",
+      "what": "Stuffed aubergine in olive oil and tomatoes",
+      "tip": "A classic Turkish vegetable dish — the name means \"the imam fainted\" (from pleasure)."
+    },
+    {
+      "e": "🥘",
+      "name": "Mercimek Çorbası",
+      "what": "Red lentil soup",
+      "tip": "A Turkish staple, served with lemon and dried mint. Perfect cheap, warming meal."
+    },
+    {
+      "e": "🍬",
+      "name": "Turkish Delight (Lokum)",
+      "what": "Starch-based confection in dozens of flavours",
+      "tip": "Buy from the Spice Bazaar, not tourist shops. Rose and pomegranate are classics."
+    }
+  ],
+  "safety": [
+    {
+      "e": "✅",
+      "rule": "Generally safe",
+      "note": "Tourist areas in Istanbul and Cappadocia are safe. Stay aware as in any major city."
+    },
+    {
+      "e": "💧",
+      "rule": "No tap water",
+      "note": "Tap water is not potable — always drink bottled. Ice in restaurants is usually purified."
+    },
+    {
+      "e": "🚕",
+      "rule": "Use metered taxis",
+      "note": "Insist the meter is running. BiTaksi (app) is the safest way to book official taxis."
+    },
+    {
+      "e": "🛍️",
+      "rule": "Bazaar scams",
+      "note": "Be wary of carpet shop \"free tea tours\" that end in high-pressure sales."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚇",
+      "cat": "Transit",
+      "name": "Trafi",
+      "desc": "Istanbul public transport journey planner",
+      "ios": "https://apps.apple.com/app/trafi/id428837479",
+      "android": "https://play.google.com/store/apps/details?id=com.trafi.main"
+    },
+    {
+      "e": "🚗",
+      "cat": "Taxi",
+      "name": "BiTaksi",
+      "desc": "Official taxi-hailing app in Turkey",
+      "ios": "https://apps.apple.com/tr/app/bitaksi/id567633090",
+      "android": "https://play.google.com/store/apps/details?id=com.carbonist.bitaksi"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Google Maps",
+      "desc": "Works well across Turkey",
+      "ios": "https://apps.apple.com/app/google-maps/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💱",
+      "cat": "Finance",
+      "name": "Wise",
+      "desc": "Best rates for Turkish Lira",
+      "ios": "https://apps.apple.com/app/wise/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Merhaba",
+        "pron": "mer-HA-ba",
+        "en": "Hello"
+      },
+      {
+        "native": "Günaydın",
+        "pron": "gü-NAY-dın",
+        "en": "Good morning"
+      },
+      {
+        "native": "İyi akşamlar",
+        "pron": "EE-yee AK-sham-lar",
+        "en": "Good evening"
+      },
+      {
+        "native": "Nasılsınız?",
+        "pron": "na-SIL-sı-nız",
+        "en": "How are you?"
+      },
+      {
+        "native": "İyiyim",
+        "pron": "EE-yee-yim",
+        "en": "I'm fine"
+      },
+      {
+        "native": "Teşekkür ederim",
+        "pron": "teh-SHEK-kür eh-deh-RIM",
+        "en": "Thank you"
+      },
+      {
+        "native": "Rica ederim",
+        "pron": "RI-ja eh-deh-RIM",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Hoşça kalın",
+        "pron": "HOSH-cha ka-LIN",
+        "en": "Goodbye"
+      }
+    ],
+    "food": [
+      {
+        "native": "Bir döner, lütfen",
+        "pron": "bir DÖ-ner LÜFT-fen",
+        "en": "One döner, please"
+      },
+      {
+        "native": "Acısız",
+        "pron": "a-JI-sız",
+        "en": "Not spicy"
+      },
+      {
+        "native": "Vejetaryen yemek?",
+        "pron": "veh-je-TAR-yen ye-MEK",
+        "en": "Vegetarian food?"
+      },
+      {
+        "native": "Çok lezzetli!",
+        "pron": "chok lez-ZET-li",
+        "en": "Very delicious!"
+      },
+      {
+        "native": "Hesabı getirir misiniz?",
+        "pron": "he-SA-bı ge-ti-RIR mi-si-NIZ",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Bir çay, lütfen",
+        "pron": "bir CHAY LÜFT-fen",
+        "en": "One tea, please"
+      },
+      {
+        "native": "Su, lütfen",
+        "pron": "soo LÜFT-fen",
+        "en": "Water, please"
+      },
+      {
+        "native": "Paket yapar mısınız?",
+        "pron": "pa-KET ya-PAR mı-sı-Nız",
+        "en": "Can I have it to go?"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Metro nerede?",
+        "pron": "MET-ro ne-RE-de",
+        "en": "Where is the metro?"
+      },
+      {
+        "native": "Uzak mı?",
+        "pron": "oo-ZAK mı",
+        "en": "Is it far?"
+      },
+      {
+        "native": "Sola dönün",
+        "pron": "SO-la dö-NÜN",
+        "en": "Turn left"
+      },
+      {
+        "native": "Sağa dönün",
+        "pron": "SA-a dö-NÜN",
+        "en": "Turn right"
+      },
+      {
+        "native": "Düz gidin",
+        "pron": "düz gi-DIN",
+        "en": "Go straight"
+      },
+      {
+        "native": "Beni şuraya götürün",
+        "pron": "be-NI shoo-RA-ya gö-TÜ-rün",
+        "en": "Take me here"
+      },
+      {
+        "native": "Burada durun",
+        "pron": "boo-RA-da doo-ROON",
+        "en": "Stop here"
+      },
+      {
+        "native": "Daha ne kadar?",
+        "pron": "DA-ha ne ka-DAR",
+        "en": "How much further?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Bu ne kadar?",
+        "pron": "boo ne ka-DAR",
+        "en": "How much is this?"
+      },
+      {
+        "native": "Çok pahalı",
+        "pron": "chok pa-HA-lı",
+        "en": "Too expensive"
+      },
+      {
+        "native": "İndirim yapar mısınız?",
+        "pron": "in-di-RIM ya-PAR mı-sı-Nız",
+        "en": "Can you discount?"
+      },
+      {
+        "native": "Başka beden var mı?",
+        "pron": "BASH-ka be-DEN var mı",
+        "en": "Another size?"
+      },
+      {
+        "native": "Sadece bakıyorum",
+        "pron": "sa-DE-je ba-KI-yo-room",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Bunu alıyorum",
+        "pron": "boo-NOO a-LI-yo-room",
+        "en": "I'll take this"
+      },
+      {
+        "native": "Kartla ödeyebilir miyim?",
+        "pron": "kar-TLA ö-de-YE-bi-lir mi-YIM",
+        "en": "Can I pay by card?"
+      },
+      {
+        "native": "Fiş alabilir miyim?",
+        "pron": "FISH a-la-bi-LIR mi-YIM",
+        "en": "Can I have a receipt?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Bir",
+        "pron": "bir",
+        "en": "One"
+      },
+      {
+        "native": "İki",
+        "pron": "EE-ki",
+        "en": "Two"
+      },
+      {
+        "native": "Üç",
+        "pron": "üch",
+        "en": "Three"
+      },
+      {
+        "native": "Dört",
+        "pron": "dört",
+        "en": "Four"
+      },
+      {
+        "native": "Beş",
+        "pron": "besh",
+        "en": "Five"
+      },
+      {
+        "native": "On",
+        "pron": "on",
+        "en": "Ten"
+      },
+      {
+        "native": "Yüz",
+        "pron": "yüz",
+        "en": "One hundred"
+      },
+      {
+        "native": "Bin",
+        "pron": "bin",
+        "en": "One thousand"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "İmdat!",
+        "pron": "im-DAT",
+        "en": "Help!"
+      },
+      {
+        "native": "Polis çağırın!",
+        "pron": "po-LIS cha-ı-RIN",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Ambulans çağırın!",
+        "pron": "am-boo-LANS cha-ı-RIN",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Yangın var!",
+        "pron": "YAN-gın var",
+        "en": "Fire!"
+      },
+      {
+        "native": "Hastayım",
+        "pron": "has-ta-YIM",
+        "en": "I'm sick"
+      },
+      {
+        "native": "Yardım edin lütfen!",
+        "pron": "YAR-dım eh-DIN lüft-FEN",
+        "en": "Please help me!"
+      },
+      {
+        "native": "Hastane nerede?",
+        "pron": "has-TA-ne ne-RE-de",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Çantam çalındı",
+        "pron": "chan-TAM cha-LIN-dı",
+        "en": "My bag was stolen"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Kendimi iyi hissetmiyorum",
+        "pron": "ken-di-MI ee-yee his-set-mi-YO-room",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Doktora ihtiyacım var",
+        "pron": "dok-TO-ra ih-ti-YA-jım var",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Ambulans çağırın",
+        "pron": "am-boo-LANS cha-ı-RIN",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "En yakın hastane nerede?",
+        "pron": "en ya-KIN has-TA-ne ne-RE-de",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "...ya alerjim var",
+        "pron": "ya a-LER-jim var",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "Şeker hastasıyım",
+        "pron": "sheh-KER has-ta-SIH-yım",
+        "en": "I have diabetes"
+      },
+      {
+        "native": "Başım dönüyor",
+        "pron": "ba-SHIM dö-NÜ-yor",
+        "en": "I feel dizzy"
+      },
+      {
+        "native": "İlaca ihtiyacım var",
+        "pron": "ee-LA-ja ih-ti-YA-jım var",
+        "en": "I need medicine"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Pasaportunuz",
+        "pron": "pa-sa-por-TOO-nooz",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "Turizm amacıyla geldim",
+        "pron": "too-RIZM a-ma-JIH-la gel-DIM",
+        "en": "I'm here for tourism"
+      },
+      {
+        "native": "[X] gün kalacağım",
+        "pron": "[X] gün ka-la-JA-ım",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Beyan edecek bir şeyim yok",
+        "pron": "be-YAN eh-de-JEK bir sheh-YIM yok",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Bagaj teslim alanı nerede?",
+        "pron": "ba-GAZH tes-LIM a-la-NI ne-RE-de",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Yalnız seyahat ediyorum",
+        "pron": "yal-NIZ sey-a-HAT eh-di-YO-room",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Bu benim otelim",
+        "pron": "boo be-NIM oh-te-LIM",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Tercümana ihtiyacım var",
+        "pron": "ter-jü-MA-na ih-ti-YA-jım var",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Rezervasyonum var",
+        "pron": "re-zer-vas-YO-num var",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Şimdi giriş yapabilir miyim?",
+        "pron": "SHIM-di gi-RESH ya-pa-bi-LIR mi-yim",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "Çıkış saati kaçta?",
+        "pron": "chuh-KUSH sa-A-ti kach-TA",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Anahtar kartım çalışmıyor",
+        "pron": "a-nah-TAR kar-TUM cha-LUSH-mi-yor",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "Klima bozuk",
+        "pron": "KLI-ma bo-ZUK",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Daha fazla havlu getirebilir misiniz?",
+        "pron": "da-HA FAZ-la HAV-lu ge-ti-re-bi-LIR mi-si-niz",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "Rahatsız etmeyin",
+        "pron": "ra-hat-SUZ et-ME-yin",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "WiFi şifresi nedir?",
+        "pron": "wai-FAI shif-RE-si ne-DIR",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Bir bilet lütfen",
+        "pron": "bir bi-LET luet-FEN",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Metro istasyonu nerede?",
+        "pron": "MET-ro is-tas-YO-nu ne-RE-de",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "Bu tren ... 'a gidiyor mu?",
+        "pron": "bu TREN ... a gi-di-YOR mu",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "... için nerede inmeliyim?",
+        "pron": "... i-CHIN ne-RE-de in-me-li-YIM",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Bir taksi çağırabilir misiniz?",
+        "pron": "bir TAK-si cha-uh-ra-bi-LIR mi-si-niz",
+        "en": "Can you call a taxi?"
+      },
+      {
+        "native": "Beni bu otele götürün",
+        "pron": "be-NI bu o-TE-le goe-tue-RUON",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Ücret ne kadar?",
+        "pron": "uech-RET ne ka-DAR",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Burada durun lütfen",
+        "pron": "bu-RA-da du-RUN luet-FEN",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "fb4897e6f24bacc58b6b6bef03040aebdc7f6a9024951d7ccd72f63763ae604a"
+}
