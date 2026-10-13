@@ -1,0 +1,137 @@
+{
+  "countries": [
+    {
+      "id": "france",
+      "name": "France",
+      "flag": "🇫🇷",
+      "lang": "Français",
+      "region": "Europe"
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "lang": "Deutsch",
+      "region": "Europe"
+    },
+    {
+      "id": "greece",
+      "name": "Greece",
+      "flag": "🇬🇷",
+      "lang": "Ελληνικά",
+      "region": "Europe"
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "flag": "🇮🇹",
+      "lang": "Italiano",
+      "region": "Europe"
+    },
+    {
+      "id": "portugal",
+      "name": "Portugal",
+      "flag": "🇵🇹",
+      "lang": "Português",
+      "region": "Europe"
+    },
+    {
+      "id": "spain",
+      "name": "Spain",
+      "flag": "🇪🇸",
+      "lang": "Español",
+      "region": "Europe"
+    },
+    {
+      "id": "china",
+      "name": "China",
+      "flag": "🇨🇳",
+      "lang": "普通话 (Mandarin)",
+      "region": "East Asia"
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "flag": "🇯🇵",
+      "lang": "日本語",
+      "region": "East Asia"
+    },
+    {
+      "id": "korea",
+      "name": "Korea",
+      "flag": "🇰🇷",
+      "lang": "한국어",
+      "region": "East Asia"
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "flag": "🇮🇳",
+      "lang": "हिन्दी (Hindi)",
+      "region": "South Asia"
+    },
+    {
+      "id": "indonesia",
+      "name": "Indonesia",
+      "flag": "🇮🇩",
+      "lang": "Bahasa Indonesia",
+      "region": "Southeast Asia"
+    },
+    {
+      "id": "malaysia",
+      "name": "Malaysia",
+      "flag": "🇲🇾",
+      "lang": "Bahasa Melayu",
+      "region": "Southeast Asia"
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "flag": "🇸🇬",
+      "lang": "English & Singlish",
+      "region": "Southeast Asia"
+    },
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "flag": "🇹🇭",
+      "lang": "ภาษาไทย",
+      "region": "Southeast Asia"
+    },
+    {
+      "id": "vietnam",
+      "name": "Vietnam",
+      "flag": "🇻🇳",
+      "lang": "Tiếng Việt",
+      "region": "Southeast Asia"
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "flag": "🇹🇷",
+      "lang": "Türkçe",
+      "region": "West Asia"
+    },
+    {
+      "id": "brazil",
+      "name": "Brazil",
+      "flag": "🇧🇷",
+      "lang": "Português Brasileiro",
+      "region": "Americas"
+    },
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "flag": "🇲🇽",
+      "lang": "Español (México)",
+      "region": "Americas"
+    },
+    {
+      "id": "morocco",
+      "name": "Morocco",
+      "flag": "🇲🇦",
+      "lang": "Darija (Moroccan Arabic)",
+      "region": "Africa"
+    }
+  ]
+}

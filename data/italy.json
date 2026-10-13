@@ -1,0 +1,669 @@
+{
+  "id": "italy",
+  "name": "Italy",
+  "flag": "🇮🇹",
+  "lang": "Italiano",
+  "langCode": "it-IT",
+  "voiceLabel": "Italian",
+  "latinScript": true,
+  "region": "Europe",
+  "timezone": "Europe/Rome",
+  "hero": "#009246",
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "rate": 0.93,
+    "label": "1 USD ≈ 0.93 EUR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All services"
+    },
+    {
+      "tel": "118",
+      "name": "Medical emergency"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 <em>Ciao</em> is informal — use <em>Buongiorno</em> or <em>Buonasera</em> with strangers and in shops.",
+    "food": "💡 <em>Coperto</em> (cover charge, €1–3) is legal and normal — it's in the menu. Service is separate from tipping.",
+    "directions": "💡 ZTL zones (restricted traffic areas) in historic centres are camera-enforced. Never drive into them — fines follow you home.",
+    "numbers": "💡 Italian numbers are irregular 11–19 then follow a logical pattern. Learn <em>venti</em> (20) and build from there.",
+    "emergency": "💡 General emergency: <strong>112</strong>. Police (Carabinieri): <strong>112</strong>. Medical emergency: <strong>118</strong>.",
+    "shopping": "Say buongiorno before you browse. Take the receipt with you when you leave.",
+    "medical": "Call 112 or 118. A farmacia can help with minor problems.",
+    "immigration": "Schengen rules apply. Have the hotel address ready.",
+    "hotel": "A city tourist tax is often added at the desk. Ask before you pay.",
+    "transport": "Validate a bus ticket in the machine on board. Some trains need a seat reservation."
+  },
+  "pronGuide": {
+    "title": "Italian Sounds",
+    "tips": [
+      "Mostly phonetic — vowels are pure (A=ah, E=eh, I=ee, O=oh, U=oo)",
+      "C before E/I = \"ch\" (ciao, grazie) — before A/O/U = hard K",
+      "Double consonants are held longer — <em>penne</em> vs <em>pene</em> is a very different word!",
+      "GN = \"ny\" (gnocchi = NYOK-kee), GLI = \"ly\" (famiglia = fah-MEE-lyah)"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/F/L (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Euro (€)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112 / 118"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Safe (Rome's is excellent)"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "90 days (Schengen)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "☕",
+      "rule": "Cappuccino only before noon",
+      "note": "Ordering a cappuccino after a meal marks you immediately as a tourist. Espresso is what Italians drink after lunch and dinner."
+    },
+    {
+      "e": "⛪",
+      "rule": "Strict dress codes at churches",
+      "note": "Cover shoulders and knees at all churches and the Vatican. Many enforce this at the entrance — wraps are often available to rent."
+    },
+    {
+      "e": "🤌",
+      "rule": "Gestures are communication",
+      "note": "Italians use their hands extensively when speaking — it's warmth, not agitation. Don't be alarmed."
+    },
+    {
+      "e": "🕐",
+      "rule": "Kitchens close between lunch and dinner",
+      "note": "Most trattorias and restaurants don't serve food from 3–7pm. Aperitivo time (6–8pm) fills the gap."
+    },
+    {
+      "e": "👔",
+      "rule": "Use Lei (formal you) with strangers",
+      "note": "Using the informal 'tu' with shopkeepers or strangers can come across as rude. 'Lei' is the safe default."
+    },
+    {
+      "e": "🚰",
+      "rule": "Nasoni fountains in Rome are drinkable",
+      "note": "The street fountains (nasoni) throughout Rome dispense excellent cold drinking water — bring a refillable bottle."
+    }
+  ],
+  "money": [
+    {
+      "e": "💶",
+      "rule": "Coperto is legal — not a scam",
+      "note": "The cover charge (€1–3 per person) is printed in the menu and legally required to be disclosed. It's not a tip."
+    },
+    {
+      "e": "💵",
+      "rule": "Cash-only at many trattorias",
+      "note": "Smaller family-run restaurants outside tourist centres often don't take cards. Carry €30–50 cash."
+    },
+    {
+      "e": "🚫",
+      "rule": "Avoid piazza restaurants",
+      "note": "Restaurants on famous squares (Campo de' Fiori, Piazza Navona) are tourist traps — same food, double the price. Walk one block away."
+    },
+    {
+      "e": "💧",
+      "rule": "Acqua naturale o frizzante?",
+      "note": "Always specify: naturale (still) or frizzante (sparkling). Tap water (acqua del rubinetto) is free if you ask."
+    },
+    {
+      "e": "🎯",
+      "rule": "Tipping is not expected",
+      "note": "Round up or leave small change if happy. 5–10% for exceptional service. Never feel obligated."
+    }
+  ],
+  "food": [
+    {
+      "e": "🍝",
+      "name": "Cacio e pepe",
+      "what": "Rome's simplest and greatest pasta — just Pecorino cheese and black pepper, nothing else",
+      "tip": "Only order this in Rome. Anywhere else it's likely pre-made. The best versions have a silky, emulsified sauce."
+    },
+    {
+      "e": "🍕",
+      "name": "Pizza Napoletana",
+      "what": "Soft, chewy, slightly charred at the edges — wet in the centre by design. Only from Naples.",
+      "tip": "The thick, pillowy Neapolitan style is the original. Tonda Romana (thin and crispy) is Rome's version."
+    },
+    {
+      "e": "🍨",
+      "name": "Gelato",
+      "what": "Italy's dense, slow-churned ice cream — far less air than regular ice cream",
+      "tip": "Avoid gelato in bright mounds or plastic tubs — look for metal containers with lids (pastoso style). Price reflects quality."
+    },
+    {
+      "e": "🍊",
+      "name": "Aperitivo (Spritz)",
+      "what": "Campari or Aperol with prosecco and soda — Italy's pre-dinner ritual, often with free bar snacks",
+      "tip": "Best watched at sunset in Venice or at a bar in Milan's Brera district. Aperitivo hour is 6–8pm."
+    },
+    {
+      "e": "🥩",
+      "name": "Bistecca alla Fiorentina",
+      "what": "Thick-cut T-bone steak from Chianina cattle, grilled rare — a Florentine institution",
+      "tip": "Priced by the kilo (usually 800g–1.2kg). Order 'al sangue' (rare) — it's the only proper way."
+    },
+    {
+      "e": "🍞",
+      "name": "Supplì (Rome) / Arancini (Sicily)",
+      "what": "Fried rice balls filled with ragù and mozzarella — perfect street food",
+      "tip": "In Rome: supplì al telefono (the cheese stretches like a phone cord). In Sicily: arancini (cone-shaped, larger)."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🎒",
+      "rule": "Colosseum and Vatican area pickpockets",
+      "note": "Extremely active around major tourist sites. Use a cross-body bag, keep phones in front pockets, and stay alert in crowds."
+    },
+    {
+      "e": "🌸",
+      "rule": "The rose scam",
+      "note": "Someone places a rose in your hand or on your partner — then aggressively demands payment. Drop it and walk away."
+    },
+    {
+      "e": "🚕",
+      "rule": "Agree on taxi price before getting in",
+      "note": "Especially from airports and train stations. Official taxis have set rates to city centre — insist on the meter or confirm the fixed rate."
+    },
+    {
+      "e": "🚗",
+      "rule": "ZTL fines are automatic",
+      "note": "Historic centres have camera-enforced restricted zones. If you drive in with a rental car, fines arrive weeks later — often €100+."
+    },
+    {
+      "e": "🛍️",
+      "rule": "Buying fake goods is illegal",
+      "note": "Purchasing counterfeit bags or goods from street sellers is illegal in Italy — tourists have been fined on the spot."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚇",
+      "cat": "Transit",
+      "name": "Moovit",
+      "desc": "Best for Rome metro, Milan subway, and bus connections across all Italian cities.",
+      "ios": "https://apps.apple.com/app/id498477945",
+      "android": "https://play.google.com/store/apps/details?id=com.tranzmate"
+    },
+    {
+      "e": "🚕",
+      "cat": "Rides",
+      "name": "itTaxi",
+      "desc": "Official taxi app across Italy — metered, licensed, no surge pricing.",
+      "ios": "https://apps.apple.com/app/id581701170",
+      "android": "https://play.google.com/store/apps/details?id=com.ittaxi.passenger"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Google Translate",
+      "desc": "Camera mode reads Italian menus. Download offline pack for connectivity-free use.",
+      "ios": "https://apps.apple.com/app/id414681729",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "💶",
+      "cat": "Money",
+      "name": "Revolut",
+      "desc": "Excellent euro rates, contactless, and fee-free spending across Italy.",
+      "ios": "https://apps.apple.com/app/id1086924912",
+      "android": "https://play.google.com/store/apps/details?id=com.revolut.revolut"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "GetYourGuide",
+      "desc": "Skip-the-line access to the Colosseum, Vatican Museums, and Uffizi Gallery.",
+      "ios": "https://apps.apple.com/app/id657741529",
+      "android": "https://play.google.com/store/apps/details?id=com.getyourguide.android"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Booking.com",
+      "desc": "Free cancellation filters. Italy has excellent agriturismi (farm stays) worth booking early.",
+      "ios": "https://apps.apple.com/app/id367003839",
+      "android": "https://play.google.com/store/apps/details?id=com.booking"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Ciao",
+        "pron": "chow",
+        "en": "Hi / Bye (informal)"
+      },
+      {
+        "native": "Buongiorno",
+        "pron": "bwon-JOR-no",
+        "en": "Good morning"
+      },
+      {
+        "native": "Buonasera",
+        "pron": "bwona-SE-ra",
+        "en": "Good evening"
+      },
+      {
+        "native": "Grazie",
+        "pron": "GRA-tsye",
+        "en": "Thank you"
+      },
+      {
+        "native": "Prego",
+        "pron": "PRE-go",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Per favore",
+        "pron": "per fa-VO-re",
+        "en": "Please"
+      },
+      {
+        "native": "Mi scusi",
+        "pron": "mi SKOO-zi",
+        "en": "Excuse me (formal)"
+      },
+      {
+        "native": "Non capisco",
+        "pron": "non ka-PEE-sko",
+        "en": "I don't understand"
+      },
+      {
+        "native": "Parla inglese?",
+        "pron": "PAR-la een-GLE-ze?",
+        "en": "Do you speak English?"
+      }
+    ],
+    "food": [
+      {
+        "native": "Il menù, per favore",
+        "pron": "il me-NU per fa-VO-re",
+        "en": "The menu, please"
+      },
+      {
+        "native": "Cosa mi consiglia?",
+        "pron": "KO-za mi kon-SI-lya?",
+        "en": "What do you recommend?"
+      },
+      {
+        "native": "Sono vegetariano/a",
+        "pron": "SO-no ve-je-ta-RYA-no/a",
+        "en": "I'm vegetarian"
+      },
+      {
+        "native": "È delizioso!",
+        "pron": "e de-li-TSYO-zo!",
+        "en": "It's delicious!"
+      },
+      {
+        "native": "Il conto, per favore",
+        "pron": "il KON-to per fa-VO-re",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Acqua naturale",
+        "pron": "AK-wa na-too-RA-le",
+        "en": "Still water"
+      },
+      {
+        "native": "Sono allergico/a a...",
+        "pron": "SO-no al-LER-ji-ko/a a...",
+        "en": "I'm allergic to..."
+      }
+    ],
+    "directions": [
+      {
+        "native": "Dov'è...?",
+        "pron": "do-VE?",
+        "en": "Where is...?"
+      },
+      {
+        "native": "Mi sono perso/a",
+        "pron": "mi SO-no PER-so/a",
+        "en": "I'm lost"
+      },
+      {
+        "native": "A destra",
+        "pron": "a DES-tra",
+        "en": "To the right"
+      },
+      {
+        "native": "A sinistra",
+        "pron": "a si-NIS-tra",
+        "en": "To the left"
+      },
+      {
+        "native": "Dritto",
+        "pron": "DRIT-to",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "È lontano?",
+        "pron": "e lon-TA-no?",
+        "en": "Is it far?"
+      },
+      {
+        "native": "La stazione",
+        "pron": "la sta-TSYO-ne",
+        "en": "The train station"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Quanto costa?",
+        "pron": "KWAN-to KOS-ta?",
+        "en": "How much does it cost?"
+      },
+      {
+        "native": "È troppo caro",
+        "pron": "e TROP-po KA-ro",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "Posso pagare con carta?",
+        "pron": "POS-so pa-GA-re kon KAR-ta?",
+        "en": "Can I pay by card?"
+      },
+      {
+        "native": "Sto solo guardando",
+        "pron": "sto SO-lo gwar-DAN-do",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Lo prendo",
+        "pron": "lo PREN-do",
+        "en": "I'll take it"
+      },
+      {
+        "native": "Ha un'altra taglia?",
+        "pron": "a oo-NAL-tra TA-lya?",
+        "en": "Another size?"
+      },
+      {
+        "native": "Uno scontrino, per favore",
+        "pron": "OO-no skon-TRI-no per fa-VO-re",
+        "en": "A receipt, please"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Uno",
+        "pron": "OO-no",
+        "en": "1"
+      },
+      {
+        "native": "Due",
+        "pron": "DOO-e",
+        "en": "2"
+      },
+      {
+        "native": "Tre",
+        "pron": "tre",
+        "en": "3"
+      },
+      {
+        "native": "Quattro",
+        "pron": "KWAT-tro",
+        "en": "4"
+      },
+      {
+        "native": "Cinque",
+        "pron": "CHEEN-kwe",
+        "en": "5"
+      },
+      {
+        "native": "Sei",
+        "pron": "sei",
+        "en": "6"
+      },
+      {
+        "native": "Sette",
+        "pron": "SET-te",
+        "en": "7"
+      },
+      {
+        "native": "Otto",
+        "pron": "OT-to",
+        "en": "8"
+      },
+      {
+        "native": "Nove",
+        "pron": "NO-ve",
+        "en": "9"
+      },
+      {
+        "native": "Dieci",
+        "pron": "DYE-chi",
+        "en": "10"
+      },
+      {
+        "native": "Cento",
+        "pron": "CHEN-to",
+        "en": "100"
+      },
+      {
+        "native": "Mille",
+        "pron": "MIL-le",
+        "en": "1,000"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Aiuto!",
+        "pron": "a-YOO-to!",
+        "en": "Help!"
+      },
+      {
+        "native": "Chiamate la polizia!",
+        "pron": "kya-MA-te la po-LI-tsya!",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Chiamate un'ambulanza!",
+        "pron": "kya-MA-te oon am-boo-LAN-tsa!",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Dov'è l'ospedale?",
+        "pron": "do-VE los-pe-DA-le?",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Mi hanno derubato",
+        "pron": "mi AN-no de-roo-BA-to",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "Ho bisogno di un medico",
+        "pron": "o bi-ZO-nyo di oon ME-di-ko",
+        "en": "I need a doctor"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Non mi sento bene",
+        "pron": "non mee SEN-toh BEH-neh",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Chiamate un'ambulanza",
+        "pron": "kya-MAH-teh oon am-boo-LAN-tsa",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Dov'è l'ospedale più vicino?",
+        "pron": "doh-VEH los-peh-DAH-leh pyoo vee-CHEE-noh",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Ho la febbre",
+        "pron": "o la FEB-breh",
+        "en": "I have a fever"
+      },
+      {
+        "native": "Ho bisogno di questa medicina",
+        "pron": "o bee-ZON-yo dee KWES-tah meh-dee-CHEE-nah",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "C'è una farmacia vicino?",
+        "pron": "cheh OO-nah far-MAH-chya vee-CHEE-noh",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Sono un turista",
+        "pron": "SO-noh oon too-REES-tah",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "Mi fermo [X] giorni",
+        "pron": "mee FER-moh [X] JOR-nee",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Non ho nulla da dichiarare",
+        "pron": "non o NOOL-lah dah dee-kya-RAH-reh",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Dove si ritira il bagaglio?",
+        "pron": "DOH-veh see REE-tee-rah eel bah-GAL-yoh",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Viaggio da solo/a",
+        "pron": "VYAJ-jo dah SO-loh",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Questo è il mio hotel",
+        "pron": "KWES-toh eh eel MEE-oh oh-TEL",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Può ripetere?",
+        "pron": "pwo ree-peh-TEH-reh",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "Ho bisogno di un interprete",
+        "pron": "o bee-ZON-yo dee oon in-TER-preh-teh",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Ho una prenotazione",
+        "pron": "oh OO-nah preh-no-ta-TSYO-neh",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Posso fare il check-in adesso?",
+        "pron": "POS-so FAH-reh eel check-in ah-DES-so",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "A che ora è il check-out?",
+        "pron": "ah kay O-rah ay eel check-out",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "La mia chiave non funziona",
+        "pron": "lah MEE-ah KYAH-veh non foon-TSYO-nah",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "L'aria condizionata è rotta",
+        "pron": "LAH-ryah kon-dee-tsyo-NAH-tah ay ROT-tah",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Può portarmi altri asciugamani?",
+        "pron": "pwoh por-TAR-mee AL-tree ah-shoo-ga-MAH-nee",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "Non disturbare",
+        "pron": "non dis-toor-BAH-reh",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "Qual è la password del WiFi?",
+        "pron": "kwal ay lah PAS-word del wee-FEE",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Un biglietto, per favore",
+        "pron": "oon beel-YET-to pair fah-VO-reh",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Dov'è la stazione della metro?",
+        "pron": "do-VAY lah sta-TSYO-neh DEL-lah MEH-tro",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "Questo treno va a...?",
+        "pron": "KWES-to TREH-no vah ah",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Dove scendo per...?",
+        "pron": "DO-veh SHEN-do pair",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Può chiamarmi un taxi?",
+        "pron": "pwoh kyah-MAR-mee oon TAK-see",
+        "en": "Can you call me a taxi?"
+      },
+      {
+        "native": "Mi porti a quest'albergo",
+        "pron": "mee POR-tee ah kwes-tal-BAIR-go",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Quanto costa la corsa?",
+        "pron": "KWAN-to KOS-tah lah KOR-sah",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Si fermi qui, per favore",
+        "pron": "see FAIR-mee kwee pair fah-VO-reh",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "324211fb8b0b4393c432d4fcb9a55a1f578ce5bf513f022629c7aa041033bf18"
+}

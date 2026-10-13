@@ -1,0 +1,633 @@
+{
+  "id": "mexico",
+  "name": "Mexico",
+  "flag": "🇲🇽",
+  "lang": "Español (México)",
+  "langCode": "es-MX",
+  "voiceLabel": "Spanish",
+  "latinScript": true,
+  "region": "Americas",
+  "timezone": "America/Mexico_City",
+  "hero": "#006847",
+  "currency": {
+    "code": "MXN",
+    "symbol": "$",
+    "rate": 17.1,
+    "label": "1 USD ≈ 17.10 MXN",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "911",
+      "name": "All emergencies"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 \"Buenos días/tardes/noches\" match the time of day. A handshake is standard; close friends hug and sometimes do a single cheek kiss.",
+    "food": "💡 Street tacos are safe and incredible — look for busy stalls with high turnover. Ask \"¿Pica mucho?\" to gauge spice level.",
+    "directions": "💡 Uber is available in major cities. Metro in Mexico City is extremely cheap and efficient.",
+    "numbers": "💡 Currency is Mexican Peso (MXN, $). Many places accept USD, but change is given in Pesos.",
+    "emergency": "💡 Dial 911 (all emergencies). LOCATEL (5658-1111 in CDMX) is a tourist help line.",
+    "shopping": "Bargain in markets. Small bills are more useful than large ones.",
+    "medical": "Call 911. Drink bottled water.",
+    "immigration": "Have your tourist form and the hotel address.",
+    "hotel": "Use the safe for your passport. Ask the desk to call a taxi if it is late.",
+    "transport": "Use a registered taxi or Uber. Confirm the destination on the map."
+  },
+  "pronGuide": {
+    "title": "Mexican Spanish Sounds",
+    "tips": [
+      "The letter Ñ makes a \"ny\" sound — España sounds like \"es-PAH-nya\"",
+      "LL is pronounced like a Y in Mexico — \"llama\" = YAH-ma",
+      "The letter J (and G before E/I) is a strong guttural H sound",
+      "Mexican Spanish is generally clear and easy to understand — a great starter for Spanish learners"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type A/B (127V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "MXN ($)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "911"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Do not drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "Visa-free (most countries)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🤝",
+      "rule": "Greet everyone",
+      "note": "In Mexico it's rude to walk into a room without greeting everyone individually. Take the time."
+    },
+    {
+      "e": "⏰",
+      "rule": "Flexible time",
+      "note": "\"Ahorita\" can mean now, later, or never. Mexicans are warm hosts but timing is relaxed."
+    },
+    {
+      "e": "🙏",
+      "rule": "Religion is important",
+      "note": "Lower your voice and dress modestly in churches. Many are active places of worship."
+    },
+    {
+      "e": "🎵",
+      "rule": "Mariachi culture",
+      "note": "If mariachis play at your table, it's expected to pay them ~100 MXN per song. Enjoy!"
+    },
+    {
+      "e": "🌮",
+      "rule": "Food is identity",
+      "note": "Complimenting the food is always appreciated. Never say Mexican food is \"just like Taco Bell.\""
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "Mix of cash and card",
+      "note": "Markets and small restaurants are cash-only. Cards work in hotels and chains. Carry MXN."
+    },
+    {
+      "e": "🏧",
+      "rule": "Use bank ATMs",
+      "note": "HSBC, Santander, and Banamex ATMs are safest. Avoid standalone machines in tourist areas."
+    },
+    {
+      "e": "💱",
+      "rule": "USD widely accepted",
+      "note": "Many tourist areas take USD, but pay in MXN to avoid bad exchange rates at the register."
+    }
+  ],
+  "food": [
+    {
+      "e": "🌮",
+      "name": "Tacos al Pastor",
+      "what": "Marinated pork on a vertical spit, with pineapple",
+      "tip": "The pinnacle of Mexico City street food. Order three to start."
+    },
+    {
+      "e": "🫔",
+      "name": "Tamales",
+      "what": "Masa dough stuffed with meat, wrapped in corn husks",
+      "tip": "Sold in the morning from street carts. \"Tamal de rajas\" (cheese and chilli) is vegetarian."
+    },
+    {
+      "e": "🥑",
+      "name": "Guacamole",
+      "what": "Fresh avocado dip with lime, onion, and chilli",
+      "tip": "Order it freshly made tableside at sit-down restaurants."
+    },
+    {
+      "e": "🍜",
+      "name": "Pozole",
+      "what": "Hominy corn soup with meat — red, white, or green",
+      "tip": "A hearty Mexican staple. Perfect on a cold day or after a night out."
+    },
+    {
+      "e": "🧇",
+      "name": "Chilaquiles",
+      "what": "Fried tortilla strips in salsa with eggs and cream",
+      "tip": "The ultimate Mexican breakfast. Order \"rojos\" (red) or \"verdes\" (green)."
+    }
+  ],
+  "safety": [
+    {
+      "e": "💧",
+      "rule": "No tap water",
+      "note": "Only drink bottled or filtered water. Avoid salads and fresh juices from unknown vendors."
+    },
+    {
+      "e": "🚕",
+      "rule": "Use Uber",
+      "note": "Hail Uber over street taxis, especially at night. Never take unofficial cabs from airports."
+    },
+    {
+      "e": "🎒",
+      "rule": "Minimal valuables",
+      "note": "Leave expensive jewellery at the hotel. Keep your phone in your pocket, not in your hand."
+    },
+    {
+      "e": "🌆",
+      "rule": "Know your neighbourhood",
+      "note": "Tourist zones are generally safe. Ask locals or your hotel about which areas to avoid."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rideshare",
+      "name": "Uber",
+      "desc": "Safest way to get around Mexican cities",
+      "ios": "https://apps.apple.com/app/uber/id368677368",
+      "android": "https://play.google.com/store/apps/details?id=com.ubercab"
+    },
+    {
+      "e": "🍔",
+      "cat": "Food",
+      "name": "Rappi",
+      "desc": "Popular food and grocery delivery in Latin America",
+      "ios": "https://apps.apple.com/app/rappi/id1091829841",
+      "android": "https://play.google.com/store/apps/details?id=com.grability.rappi"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Google Maps",
+      "desc": "Excellent for Mexico City and major cities",
+      "ios": "https://apps.apple.com/app/google-maps/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💱",
+      "cat": "Finance",
+      "name": "Wise",
+      "desc": "Good rates for MXN exchange",
+      "ios": "https://apps.apple.com/app/wise/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "¡Hola!",
+        "pron": "OH-la",
+        "en": "Hello!"
+      },
+      {
+        "native": "Buenos días",
+        "pron": "BWEH-nos DEE-as",
+        "en": "Good morning"
+      },
+      {
+        "native": "Buenas noches",
+        "pron": "BWEH-nas NOH-ches",
+        "en": "Good evening"
+      },
+      {
+        "native": "¿Cómo está?",
+        "pron": "KOH-moh es-TAH",
+        "en": "How are you?"
+      },
+      {
+        "native": "Muy bien, gracias",
+        "pron": "mwee BYEN GRAH-see-as",
+        "en": "Very well, thank you"
+      },
+      {
+        "native": "Gracias",
+        "pron": "GRAH-see-as",
+        "en": "Thank you"
+      },
+      {
+        "native": "De nada",
+        "pron": "de NAH-da",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Hasta luego",
+        "pron": "AS-ta LWEH-go",
+        "en": "Goodbye"
+      }
+    ],
+    "food": [
+      {
+        "native": "Una orden de tacos",
+        "pron": "OO-na OR-den de TAH-kos",
+        "en": "An order of tacos"
+      },
+      {
+        "native": "Sin picante",
+        "pron": "seen pee-KAN-te",
+        "en": "Not spicy"
+      },
+      {
+        "native": "¿Pica mucho?",
+        "pron": "PEE-ka MOO-cho",
+        "en": "Is it very spicy?"
+      },
+      {
+        "native": "Soy vegetariano/a",
+        "pron": "soy veh-he-ta-RYAH-no/na",
+        "en": "I'm vegetarian"
+      },
+      {
+        "native": "¡Está delicioso!",
+        "pron": "es-TAH de-lee-SYOH-so",
+        "en": "It's delicious!"
+      },
+      {
+        "native": "La cuenta, por favor",
+        "pron": "la KWEN-ta por fa-VOR",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Para llevar",
+        "pron": "PAH-ra yeh-VAR",
+        "en": "To go"
+      },
+      {
+        "native": "¿Tienen menú?",
+        "pron": "TYEH-nen me-NOO",
+        "en": "Do you have a menu?"
+      }
+    ],
+    "directions": [
+      {
+        "native": "¿Dónde está el metro?",
+        "pron": "DON-de es-TAH el MEH-tro",
+        "en": "Where is the metro?"
+      },
+      {
+        "native": "¿Está lejos?",
+        "pron": "es-TAH LEH-hos",
+        "en": "Is it far?"
+      },
+      {
+        "native": "Doble a la izquierda",
+        "pron": "DOH-bleh a la ees-KYEHR-da",
+        "en": "Turn left"
+      },
+      {
+        "native": "Doble a la derecha",
+        "pron": "DOH-bleh a la deh-REH-cha",
+        "en": "Turn right"
+      },
+      {
+        "native": "Siga derecho",
+        "pron": "SEE-ga deh-REH-cho",
+        "en": "Go straight"
+      },
+      {
+        "native": "Lléveme a...",
+        "pron": "YEH-veh-meh a",
+        "en": "Take me to..."
+      },
+      {
+        "native": "Pare aquí",
+        "pron": "PAH-reh a-KEE",
+        "en": "Stop here"
+      },
+      {
+        "native": "¿Cuánto falta?",
+        "pron": "KWAN-to FAL-ta",
+        "en": "How much further?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "¿Cuánto cuesta?",
+        "pron": "KWAN-to KWES-ta",
+        "en": "How much does it cost?"
+      },
+      {
+        "native": "Está muy caro",
+        "pron": "es-TAH mwee KAH-ro",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "¿Me da un descuento?",
+        "pron": "meh da oon des-KWEN-to",
+        "en": "Can you give a discount?"
+      },
+      {
+        "native": "¿Tiene otra talla?",
+        "pron": "TYEH-neh OH-tra TAH-ya",
+        "en": "Another size?"
+      },
+      {
+        "native": "Solo estoy mirando",
+        "pron": "SOH-lo es-TOY mee-RAN-do",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Me lo llevo",
+        "pron": "meh lo YEH-vo",
+        "en": "I'll take it"
+      },
+      {
+        "native": "¿Acepta tarjeta?",
+        "pron": "a-SEP-ta tar-HEH-ta",
+        "en": "Do you accept card?"
+      },
+      {
+        "native": "¿Me da un recibo?",
+        "pron": "meh da oon reh-SEE-bo",
+        "en": "Can I have a receipt?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Uno",
+        "pron": "OO-no",
+        "en": "One"
+      },
+      {
+        "native": "Dos",
+        "pron": "dos",
+        "en": "Two"
+      },
+      {
+        "native": "Tres",
+        "pron": "tres",
+        "en": "Three"
+      },
+      {
+        "native": "Cuatro",
+        "pron": "KWAH-tro",
+        "en": "Four"
+      },
+      {
+        "native": "Cinco",
+        "pron": "SEEN-ko",
+        "en": "Five"
+      },
+      {
+        "native": "Diez",
+        "pron": "dyez",
+        "en": "Ten"
+      },
+      {
+        "native": "Cien",
+        "pron": "syen",
+        "en": "One hundred"
+      },
+      {
+        "native": "Mil",
+        "pron": "meel",
+        "en": "One thousand"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "¡Ayuda!",
+        "pron": "a-YOO-da",
+        "en": "Help!"
+      },
+      {
+        "native": "¡Llame a la policía!",
+        "pron": "YAH-meh a la po-lee-SEE-a",
+        "en": "Call the police!"
+      },
+      {
+        "native": "¡Llame a una ambulancia!",
+        "pron": "YAH-meh a OO-na am-boo-LAN-sya",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "¡Fuego!",
+        "pron": "FWEH-go",
+        "en": "Fire!"
+      },
+      {
+        "native": "Estoy enfermo/a",
+        "pron": "es-TOY en-FER-mo/ma",
+        "en": "I'm sick"
+      },
+      {
+        "native": "¡Ayúdeme, por favor!",
+        "pron": "a-YOO-deh-meh por fa-VOR",
+        "en": "Please help me!"
+      },
+      {
+        "native": "¿Dónde está el hospital?",
+        "pron": "DON-de es-TAH el os-pee-TAL",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Me robaron",
+        "pron": "meh ro-BAH-ron",
+        "en": "I've been robbed"
+      }
+    ],
+    "medical": [
+      {
+        "native": "No me siento bien",
+        "pron": "no meh SYEN-to BYEN",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Necesito un médico",
+        "pron": "neh-seh-SEE-to oon MEH-di-ko",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Llame una ambulancia",
+        "pron": "YAH-meh OO-na am-boo-LAN-sya",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "¿Dónde está el hospital más cercano?",
+        "pron": "DON-de es-TAH el os-pee-TAL mas ser-KAH-no",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Soy alérgico/a a...",
+        "pron": "soy a-LER-hi-ko/ka a",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "Tengo diabetes",
+        "pron": "TEN-go dye-ah-BEH-tes",
+        "en": "I have diabetes"
+      },
+      {
+        "native": "Me siento mareado/a",
+        "pron": "meh SYEN-to ma-reh-AH-do/da",
+        "en": "I feel dizzy"
+      },
+      {
+        "native": "Necesito medicamento",
+        "pron": "neh-seh-SEE-to meh-di-kah-MEN-to",
+        "en": "I need medicine"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Aquí está mi pasaporte",
+        "pron": "a-KEE es-TAH mee pa-sa-POR-te",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "Vengo de turismo",
+        "pron": "VEN-go de too-REEZ-mo",
+        "en": "I'm here for tourism"
+      },
+      {
+        "native": "Me quedo [X] días",
+        "pron": "meh KED-o [X] DEE-as",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "No tengo nada que declarar",
+        "pron": "no TEN-go NA-da ke deh-kla-RAR",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "¿Dónde recojo mi equipaje?",
+        "pron": "DON-de reh-KO-ho mee eh-kee-PAH-he",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Viajo solo/a",
+        "pron": "VYAH-ho SO-lo/la",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Este es mi hotel",
+        "pron": "ES-te es mee oh-TEL",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Necesito un intérprete",
+        "pron": "neh-seh-SEE-to oon in-TER-pre-te",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Tengo una reservación",
+        "pron": "TEN-go OO-na re-ser-va-SYON",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "¿Puedo registrarme ahora?",
+        "pron": "PWEH-do re-his-TRAR-me ah-O-ra",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "¿A qué hora es la salida?",
+        "pron": "a KAY O-ra es la sa-LEE-da",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Mi llave no funciona",
+        "pron": "mee YA-ve no foon-SYO-na",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "El aire acondicionado no sirve",
+        "pron": "el AI-re a-kon-dee-syo-NA-do no SIR-ve",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "¿Me puede traer más toallas?",
+        "pron": "me PWEH-de tra-AIR mas to-AH-yas",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "No molestar",
+        "pron": "no mo-les-TAR",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "¿Cuál es la contraseña del WiFi?",
+        "pron": "kwal es la kon-tra-SEHN-ya del wee-FEE",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Un boleto, por favor",
+        "pron": "oon bo-LE-to por fa-VOR",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "¿Dónde está la estación del Metro?",
+        "pron": "DON-de es-TA la es-ta-SYON del ME-tro",
+        "en": "Where is the Metro station?"
+      },
+      {
+        "native": "¿Este tren va a...?",
+        "pron": "ES-te tren ba a",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "¿Dónde bajo para...?",
+        "pron": "DON-de BA-ho PA-ra",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "¿Puede llamarme un taxi?",
+        "pron": "PWEH-de ya-MAR-me oon TAK-si",
+        "en": "Can you call me a taxi?"
+      },
+      {
+        "native": "Lléveme a este hotel",
+        "pron": "YEH-ve-me a ES-te o-TEL",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "¿Cuánto es el pasaje?",
+        "pron": "KWAN-to es el pa-SA-he",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Pare aquí, por favor",
+        "pron": "PA-re a-KEE por fa-VOR",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "69c47a0e63d913ebe9f9ffe2bc3d73c3919e1edc8e4813fd590fca9c2149f60c"
+}

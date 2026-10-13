@@ -1,0 +1,763 @@
+{
+  "id": "indonesia",
+  "name": "Indonesia",
+  "flag": "🇮🇩",
+  "lang": "Bahasa Indonesia",
+  "langCode": "id-ID",
+  "voiceLabel": "Indonesian",
+  "latinScript": true,
+  "region": "Southeast Asia",
+  "timezone": "Asia/Jakarta",
+  "hero": "#CE1126",
+  "currency": {
+    "code": "IDR",
+    "symbol": "Rp",
+    "rate": 15800,
+    "label": "1 USD ≈ 15,800 IDR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All services"
+    },
+    {
+      "tel": "110",
+      "name": "Police"
+    },
+    {
+      "tel": "118",
+      "name": "Ambulance"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 Adding <em>\"Pak\"</em> (older men) or <em>\"Bu\"</em> (older women) after a greeting shows respect.",
+    "food": "💡 Nasi goreng (fried rice) and mie goreng (fried noodles) are safe bets anywhere in the country.",
+    "directions": "💡 Ojek (motorbike taxis via Gojek or Grab) are fastest through traffic. Always use the app for pricing.",
+    "numbers": "💡 \"Dua puluh lima\" = 25 (two tens five). Completely regular and easy to learn.",
+    "emergency": "💡 Emergency: <strong>112</strong>. Police: <strong>110</strong>. Ambulance: <strong>118</strong>.",
+    "shopping": "Bargain in markets. Mall prices are fixed.",
+    "medical": "Call 118 for an ambulance. Drink bottled water.",
+    "immigration": "Visa rules change. Check the latest stay length before you fly, and keep your passport.",
+    "hotel": "Ask for a fan or repellent if the room has mosquitoes and no net.",
+    "transport": "Use Grab or Gojek. Confirm the destination on the map before the bike moves."
+  },
+  "pronGuide": {
+    "title": "Indonesian Sounds",
+    "tips": [
+      "Mostly phonetic — read it like Spanish",
+      "C is always \"ch\" (<em>coba</em> = cho-bah)",
+      "NG at the start of a word is valid (like \"singing\")",
+      "Stress the second-to-last syllable in most words"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/F (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Rupiah (Rp)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112 / 118"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Left"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Do NOT drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "Rp 500k on arrival"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🤝",
+      "rule": "Use your right hand — always",
+      "note": "The left hand is considered unclean. Use your right hand to eat, give gifts, money, or shake hands."
+    },
+    {
+      "e": "👗",
+      "rule": "Dress modestly, especially in Bali",
+      "note": "Cover shoulders and knees at temples. A sash or sarong is often required — and usually provided at the gate."
+    },
+    {
+      "e": "👟",
+      "rule": "Remove shoes before entering homes and temples",
+      "note": "A pile of shoes outside is the universal signal. Always follow the lead of your hosts."
+    },
+    {
+      "e": "🕌",
+      "rule": "Respect prayer times",
+      "note": "The call to prayer happens five times a day. Be patient if shops pause briefly — it's usually just a few minutes."
+    },
+    {
+      "e": "☝️",
+      "rule": "Point with your thumb, not your finger",
+      "note": "Pointing with your index finger is considered rude. Use your right thumb to gesture direction."
+    },
+    {
+      "e": "🛒",
+      "rule": "Bargaining is expected in markets",
+      "note": "Start at about half the asking price in street markets and work from there. Fixed-price signs mean no negotiation."
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "Cash is essential outside Bali/Jakarta",
+      "note": "Rural areas, local warungs, and markets are cash only. Always keep Rp 100,000–200,000 on hand."
+    },
+    {
+      "e": "🏧",
+      "rule": "BCA and Mandiri ATMs most reliable",
+      "note": "These two banks accept foreign cards most consistently. Avoid smaller ATMs in tourist areas — fees are higher."
+    },
+    {
+      "e": "💱",
+      "rule": "Watch those zeroes",
+      "note": "Rp 1,000 is about $0.06. Rp 500,000 notes are the largest — count your change carefully as the denominations look similar."
+    },
+    {
+      "e": "🛒",
+      "rule": "Bargain in markets, not shops",
+      "note": "Night markets and craft stalls expect negotiation. Malls and restaurants with printed menus don't. Start at 50% and be friendly."
+    },
+    {
+      "e": "💸",
+      "rule": "Visa on arrival fee: Rp 500,000",
+      "note": "Payable in cash at the airport — exact change preferred. Some nationalities are exempt. Check before you travel."
+    }
+  ],
+  "food": [
+    {
+      "e": "🍳",
+      "name": "Nasi goreng",
+      "what": "Fried rice with sweet soy sauce (kecap manis), egg, and vegetables — Indonesia's national dish",
+      "tip": "Available everywhere, any time of day. Order it with a fried egg on top."
+    },
+    {
+      "e": "🍢",
+      "name": "Satay (sate)",
+      "what": "Grilled skewers of marinated meat served with peanut sauce and lontong (rice cake)",
+      "tip": "Sate Madura (from Madura island) is considered the best — often sold by street cart vendors."
+    },
+    {
+      "e": "🥜",
+      "name": "Gado-gado",
+      "what": "Blanched vegetables with hard-boiled egg in a rich peanut sauce dressing",
+      "tip": "A great vegetarian option that's filling and widely available."
+    },
+    {
+      "e": "🥩",
+      "name": "Rendang",
+      "what": "Slow-cooked beef in coconut milk and spices until dry and intensely flavoured — a Padang specialty",
+      "tip": "Best eaten with steamed rice. The Padang restaurant chain (Restoran Padang) is everywhere."
+    },
+    {
+      "e": "🐷",
+      "name": "Babi guling (Bali only)",
+      "what": "Whole spit-roasted suckling pig stuffed with Balinese spices — a ceremonial dish now widely available",
+      "tip": "Not halal — only available in Bali and at non-Muslim establishments. Ibu Oka in Ubud is famous for it."
+    },
+    {
+      "e": "☕",
+      "name": "Kopi tubruk",
+      "what": "Traditional Indonesian coffee — finely ground beans brewed directly in the cup with hot water",
+      "tip": "Wait for the grounds to settle before drinking. Kopi luwak (civet coffee) is a pricey local novelty."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🛵",
+      "rule": "Motorbike rental risks",
+      "note": "Ensure you have insurance before renting. Helmets are mandatory and enforced. Check the bike thoroughly for existing damage before riding off."
+    },
+    {
+      "e": "💊",
+      "rule": "Drug laws carry severe penalties",
+      "note": "Indonesia has some of the world's strictest drug laws. Trafficking can result in the death penalty. Possession carries long jail terms."
+    },
+    {
+      "e": "🏖️",
+      "rule": "Secure valuables at beach resorts",
+      "note": "Petty theft is common on popular beaches in Bali. Don't leave bags, electronics, or passports unattended."
+    },
+    {
+      "e": "🕌",
+      "rule": "Respect religious spaces",
+      "note": "Dress modestly near mosques and Hindu temples. Do not enter active ceremonies without invitation. Remove shoes always."
+    },
+    {
+      "e": "🌊",
+      "rule": "Bali ocean currents are dangerous",
+      "note": "Several beaches have powerful rip currents. Only swim at beaches with lifeguards and flags. Kuta and Seminyak can be treacherous."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🛵",
+      "cat": "Rides",
+      "name": "Gojek",
+      "desc": "Indonesia's super-app — rides, food delivery, payments, and more.",
+      "ios": "https://apps.apple.com/app/id944875099",
+      "android": "https://play.google.com/store/apps/details?id=com.gojek.app"
+    },
+    {
+      "e": "🚗",
+      "cat": "Rides",
+      "name": "Grab",
+      "desc": "Great alternative to Gojek, especially outside Java.",
+      "ios": "https://apps.apple.com/app/id647268330",
+      "android": "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Navigation",
+      "name": "Google Maps",
+      "desc": "Works well in Indonesia. Download city maps offline.",
+      "ios": "https://apps.apple.com/app/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Google Translate",
+      "desc": "Download Indonesian offline. Camera mode handles menus and signs.",
+      "ios": "https://apps.apple.com/app/id414681729",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Agoda",
+      "desc": "Strong in Southeast Asia — often has the best deals for Indonesia.",
+      "ios": "https://apps.apple.com/app/id479753889",
+      "android": "https://play.google.com/store/apps/details?id=com.agoda.nuobo"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "Klook",
+      "desc": "Bali temple tours, volcano hikes, and island-hopping trips.",
+      "ios": "https://apps.apple.com/app/id1099611444",
+      "android": "https://play.google.com/store/apps/details?id=com.klook.klook"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Halo / Selamat pagi",
+        "pron": "HAH-loh / suh-LAH-mat PAH-gee",
+        "en": "Hello / Good morning"
+      },
+      {
+        "native": "Selamat sore",
+        "pron": "suh-LAH-mat SOH-reh",
+        "en": "Good afternoon / evening"
+      },
+      {
+        "native": "Selamat malam",
+        "pron": "suh-LAH-mat MAH-lam",
+        "en": "Good night"
+      },
+      {
+        "native": "Sampai jumpa",
+        "pron": "sahm-PAI JOOM-pah",
+        "en": "Goodbye"
+      },
+      {
+        "native": "Terima kasih",
+        "pron": "tuh-REE-mah KAH-see",
+        "en": "Thank you"
+      },
+      {
+        "native": "Terima kasih banyak",
+        "pron": "tuh-REE-mah KAH-see BAH-nyak",
+        "en": "Thank you very much"
+      },
+      {
+        "native": "Sama-sama",
+        "pron": "SAH-mah SAH-mah",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Tolong",
+        "pron": "TOH-long",
+        "en": "Please"
+      },
+      {
+        "native": "Maaf",
+        "pron": "MAH-af",
+        "en": "Sorry / Excuse me"
+      },
+      {
+        "native": "Apakah Anda bisa berbahasa Inggris?",
+        "pron": "ah-PAH-kah AHN-dah BEE-sah",
+        "en": "Do you speak English?"
+      },
+      {
+        "native": "Saya tidak mengerti",
+        "pron": "SAH-yah tee-DAHK meng-ER-tee",
+        "en": "I don't understand"
+      },
+      {
+        "native": "Bisa diulang?",
+        "pron": "BEE-sah dee-OO-lang",
+        "en": "Can you repeat that?"
+      },
+      {
+        "native": "Nama saya...",
+        "pron": "NAH-mah SAH-yah",
+        "en": "My name is..."
+      }
+    ],
+    "food": [
+      {
+        "native": "Meja untuk dua orang, tolong",
+        "pron": "MEH-jah OON-took DOO-ah OH-rang",
+        "en": "A table for two, please"
+      },
+      {
+        "native": "Menu, tolong",
+        "pron": "MEH-noo TOH-long",
+        "en": "The menu, please"
+      },
+      {
+        "native": "Saya mau...",
+        "pron": "SAH-yah MAH-oo",
+        "en": "I would like..."
+      },
+      {
+        "native": "Tolong minta bon",
+        "pron": "TOH-long MIN-tah bon",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Enak sekali!",
+        "pron": "EH-nak suh-KAH-lee",
+        "en": "Delicious!"
+      },
+      {
+        "native": "Saya vegetarian",
+        "pron": "SAH-yah veh-juh-TAY-ree-an",
+        "en": "I am vegetarian"
+      },
+      {
+        "native": "Tanpa gluten, tolong",
+        "pron": "TAHN-pah GLOO-ten TOH-long",
+        "en": "Gluten-free, please"
+      },
+      {
+        "native": "Kopi, tolong",
+        "pron": "KOH-pee TOH-long",
+        "en": "A coffee, please"
+      },
+      {
+        "native": "Air putih, tolong",
+        "pron": "ah-EAR POO-tih TOH-long",
+        "en": "Water, please"
+      },
+      {
+        "native": "Berapa harganya?",
+        "pron": "buh-RAH-pah har-GAH-nyah",
+        "en": "How much?"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Di mana...?",
+        "pron": "dee MAH-nah",
+        "en": "Where is...?"
+      },
+      {
+        "native": "Stasiun kereta",
+        "pron": "stah-see-OON kuh-REH-tah",
+        "en": "Train station"
+      },
+      {
+        "native": "Ke kiri",
+        "pron": "kuh KEE-ree",
+        "en": "To the left"
+      },
+      {
+        "native": "Ke kanan",
+        "pron": "kuh KAH-nan",
+        "en": "To the right"
+      },
+      {
+        "native": "Lurus",
+        "pron": "LOO-roos",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "Dekat sini",
+        "pron": "duh-KAHT SEE-nee",
+        "en": "Near here"
+      },
+      {
+        "native": "Jauh",
+        "pron": "JAH-ooh",
+        "en": "Far"
+      },
+      {
+        "native": "Saya tersesat",
+        "pron": "SAH-yah tuh-suh-SAHT",
+        "en": "I am lost"
+      },
+      {
+        "native": "Bisakah Anda membantu saya?",
+        "pron": "BEE-sah-kah AHN-dah mem-BAN-too SAH-yah",
+        "en": "Can you help me?"
+      },
+      {
+        "native": "Satu tiket, tolong",
+        "pron": "SAH-too TEE-ket TOH-long",
+        "en": "A ticket, please"
+      },
+      {
+        "native": "Di mana toilet?",
+        "pron": "dee MAH-nah TOY-let",
+        "en": "Where is the toilet?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Berapa harganya?",
+        "pron": "buh-RAH-pah har-GAH-nyah",
+        "en": "How much does this cost?"
+      },
+      {
+        "native": "Terlalu mahal",
+        "pron": "tuh-LAH-loo MAH-hal",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "Saya hanya melihat-lihat",
+        "pron": "SAH-yah HAH-nyah muh-LEE-hat",
+        "en": "I'm just looking"
+      },
+      {
+        "native": "Apakah ada...?",
+        "pron": "ah-PAH-kah AH-dah",
+        "en": "Do you have...?"
+      },
+      {
+        "native": "Ukuran apa?",
+        "pron": "oo-KOO-ran AH-pah",
+        "en": "What size?"
+      },
+      {
+        "native": "Saya ambil ini",
+        "pron": "SAH-yah AHM-beel EE-nee",
+        "en": "I'll take it"
+      },
+      {
+        "native": "Bisa bayar dengan kartu?",
+        "pron": "BEE-sah BAH-yar duh-NGAHN KAR-too",
+        "en": "Do you accept cards?"
+      },
+      {
+        "native": "Struk, tolong",
+        "pron": "strook TOH-long",
+        "en": "A receipt, please"
+      },
+      {
+        "native": "Buka / Tutup?",
+        "pron": "BOO-kah / TOO-toop",
+        "en": "Open / Closed?"
+      },
+      {
+        "native": "Password WiFi-nya apa?",
+        "pron": "PASS-word WEE-fee-nyah AH-pah",
+        "en": "What's the wifi password?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Satu",
+        "pron": "SAH-too",
+        "en": "1"
+      },
+      {
+        "native": "Dua",
+        "pron": "DOO-ah",
+        "en": "2"
+      },
+      {
+        "native": "Tiga",
+        "pron": "TEE-gah",
+        "en": "3"
+      },
+      {
+        "native": "Empat",
+        "pron": "EM-pat",
+        "en": "4"
+      },
+      {
+        "native": "Lima",
+        "pron": "LEE-mah",
+        "en": "5"
+      },
+      {
+        "native": "Enam",
+        "pron": "EH-nam",
+        "en": "6"
+      },
+      {
+        "native": "Tujuh",
+        "pron": "TOO-jooh",
+        "en": "7"
+      },
+      {
+        "native": "Delapan",
+        "pron": "duh-LAH-pan",
+        "en": "8"
+      },
+      {
+        "native": "Sembilan",
+        "pron": "suhm-BEE-lan",
+        "en": "9"
+      },
+      {
+        "native": "Sepuluh",
+        "pron": "suh-POO-looh",
+        "en": "10"
+      },
+      {
+        "native": "Sebelas",
+        "pron": "suh-BEH-lahs",
+        "en": "11"
+      },
+      {
+        "native": "Dua belas",
+        "pron": "DOO-ah BEH-lahs",
+        "en": "12"
+      },
+      {
+        "native": "Dua puluh",
+        "pron": "DOO-ah POO-looh",
+        "en": "20"
+      },
+      {
+        "native": "Lima puluh",
+        "pron": "LEE-mah POO-looh",
+        "en": "50"
+      },
+      {
+        "native": "Seratus",
+        "pron": "suh-RAH-toos",
+        "en": "100"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Tolong!",
+        "pron": "TOH-long",
+        "en": "Help!"
+      },
+      {
+        "native": "Panggil polisi!",
+        "pron": "PAHNG-geel poh-LEE-see",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Panggil ambulans!",
+        "pron": "PAHNG-geel AM-boo-lanss",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Saya butuh dokter",
+        "pron": "SAH-yah BOO-tuh DOK-ter",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Saya alergi terhadap...",
+        "pron": "SAH-yah ah-LER-gee tuh-HA-dap",
+        "en": "I am allergic to..."
+      },
+      {
+        "native": "Saya dirampok",
+        "pron": "SAH-yah dee-RAM-pok",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "Di mana rumah sakit?",
+        "pron": "dee MAH-nah ROO-mah SAH-kit",
+        "en": "Where is the hospital?"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Saya tidak sehat",
+        "pron": "SAH-yah TEE-dak SEH-hat",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Tolong panggil ambulans",
+        "pron": "TO-long PANG-ghil am-BOO-lans",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Di mana rumah sakit terdekat?",
+        "pron": "dee MAH-nah ROO-mah SAH-kit ter-deh-KAT",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Saya demam",
+        "pron": "SAH-yah DEH-mam",
+        "en": "I have a fever"
+      },
+      {
+        "native": "Saya alergi terhadap...",
+        "pron": "SAH-yah ah-LER-gee ter-HAH-dap",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "Saya butuh obat ini",
+        "pron": "SAH-yah BOO-too OH-bat EE-nee",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "Ada apotek di dekat sini?",
+        "pron": "AH-dah ah-poh-TEK dee deh-KAT SEE-nee",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Saya turis",
+        "pron": "SAH-yah TOO-ris",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "Saya di sini [X] hari",
+        "pron": "SAH-yah dee SEE-nee [X] HAH-ree",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Tidak ada yang dideklarasikan",
+        "pron": "TEE-dak AH-dah yang dee-deh-klah-rah-SEE-kan",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Di mana pengambilan bagasi?",
+        "pron": "dee MAH-nah peng-am-BEE-lan bah-GAH-see",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Saya bepergian sendiri",
+        "pron": "SAH-yah beh-per-GEE-an SEN-dee-ree",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Ini hotel saya",
+        "pron": "EE-nee ho-TEL SAH-yah",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Bisa diulangi?",
+        "pron": "BEE-sah dee-oo-LANG-ee",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "Saya butuh penerjemah",
+        "pron": "SAH-yah BOO-too peh-ner-JEH-mah",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Saya punya reservasi",
+        "pron": "SA-ya PU-nya re-ser-VA-si",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Boleh check-in sekarang?",
+        "pron": "BO-leh check-in se-KA-rang",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "Jam berapa check-out?",
+        "pron": "JAM be-RA-pa check-out",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Kunci kamar saya tidak berfungsi",
+        "pron": "KUN-chi KA-mar SA-ya ti-DAK ber-FUNG-si",
+        "en": "My room key doesn't work"
+      },
+      {
+        "native": "AC-nya rusak",
+        "pron": "ah-SEH-nya RU-sak",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Bisa minta handuk tambahan?",
+        "pron": "BI-sa MIN-ta HAN-duk tam-BA-han",
+        "en": "Can I have extra towels?"
+      },
+      {
+        "native": "Jangan diganggu",
+        "pron": "JA-ngan di-GANG-gu",
+        "en": "Do not disturb"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Satu tiket, tolong",
+        "pron": "SA-tu TI-ket TO-long",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Di mana stasiun MRT?",
+        "pron": "di MA-na STAS-yun em-ar-TEE",
+        "en": "Where is the MRT station?"
+      },
+      {
+        "native": "Kereta ini ke...?",
+        "pron": "ke-RE-ta i-ni ke",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Di mana saya turun untuk...?",
+        "pron": "di MA-na SA-ya TU-run UN-tuk",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Tolong panggilkan taksi",
+        "pron": "TO-long pang-GIL-kan TAK-si",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "Antar saya ke hotel ini",
+        "pron": "AN-tar SA-ya ke ho-TEL i-ni",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Berapa ongkosnya?",
+        "pron": "be-RA-pa ong-KOS-nya",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Berhenti di sini",
+        "pron": "ber-HEN-ti di SI-ni",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "03c5f104d3fc96b48ae06447744db9757af3c92cd17786f0f6b80adce533c9fd"
+}

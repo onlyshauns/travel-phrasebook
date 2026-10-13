@@ -1,0 +1,633 @@
+{
+  "id": "portugal",
+  "name": "Portugal",
+  "flag": "🇵🇹",
+  "lang": "Português",
+  "langCode": "pt-PT",
+  "voiceLabel": "Portuguese",
+  "latinScript": true,
+  "region": "Europe",
+  "timezone": "Europe/Lisbon",
+  "hero": "#006600",
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "rate": 0.93,
+    "label": "1 USD ≈ 0.93 EUR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All emergencies"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 \"Olá\" is always safe. \"Bom dia/tarde/noite\" for morning/afternoon/evening. Address strangers politely as \"senhor/senhora\".",
+    "food": "💡 Lunch is the main meal — restaurants have excellent \"menu do dia\" (daily set menu) with two courses and drink for ~€12.",
+    "directions": "💡 Lisbon's trams are iconic but slow. Use Uber or the Metro for efficiency. Porto is very walkable.",
+    "numbers": "💡 Euro (€) is the currency. Tipping ~10% is appreciated but not mandatory.",
+    "emergency": "💡 Dial 112 for all emergencies. Portugal is very safe for tourists.",
+    "shopping": "Cards are widely accepted. Say olá when you enter a shop.",
+    "medical": "Call 112. A pharmacy can help with minor problems.",
+    "immigration": "Schengen rules apply. Have the hotel address.",
+    "hotel": "Lisbon and Porto are steep. Ask whether you can walk to the room with bags.",
+    "transport": "Validate the transit card. Uber and Bolt both work."
+  },
+  "pronGuide": {
+    "title": "European Portuguese Sounds",
+    "tips": [
+      "Portuguese vowels are often swallowed — unstressed E sounds almost silent (\"de\" = \"d'\", \"que\" = \"k'\")",
+      "The LH pair makes a \"ly\" sound and NH makes \"ny\" — like Italian",
+      "S between vowels sounds like \"z\"; at end of syllable it becomes \"sh\"",
+      "The ã and ão endings are nasal — \"manhã\" (morning) = man-YANG, \"não\" (no) = nowng"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type F (230V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "EUR (€)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Safe to drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "Schengen rules apply"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🎵",
+      "rule": "Saudade",
+      "note": "The concept of nostalgic longing — central to fado music and Portuguese identity. Ask about it!"
+    },
+    {
+      "e": "☕",
+      "rule": "Coffee culture",
+      "note": "A \"bica\" is an espresso, \"meia de leite\" a milky coffee. Coffee shops are for lingering, not rushing."
+    },
+    {
+      "e": "🍷",
+      "rule": "Wine and food",
+      "note": "Portugal has outstanding local wines and pastéis. Asking for recommendations shows respect."
+    },
+    {
+      "e": "🤝",
+      "rule": "Reserved but warm",
+      "note": "Portuguese people are initially reserved but become very friendly once comfortable. Don't rush."
+    },
+    {
+      "e": "⏰",
+      "rule": "Dinner is late",
+      "note": "Restaurants don't fill up until 8–9pm. Arriving at 7pm, you'll often be the only table."
+    }
+  ],
+  "money": [
+    {
+      "e": "💳",
+      "rule": "Cards accepted",
+      "note": "Cards work in nearly all restaurants, shops, and transport. Contactless is widespread."
+    },
+    {
+      "e": "💵",
+      "rule": "Carry some cash",
+      "note": "Small cafés and market vendors prefer cash. Have €20–50 on hand for small purchases."
+    },
+    {
+      "e": "🧾",
+      "rule": "Ask for NIF",
+      "note": "If you're an EU resident, ask for a NIF (tax number) on receipts to enter a tax lottery."
+    }
+  ],
+  "food": [
+    {
+      "e": "🥧",
+      "name": "Pastel de Nata",
+      "what": "Flaky custard tart with cinnamon",
+      "tip": "Best at Pastéis de Belém in Lisbon. Eat warm with cinnamon and powdered sugar."
+    },
+    {
+      "e": "🐟",
+      "name": "Bacalhau (Salt Cod)",
+      "what": "Dried and salted cod — Portugal's national ingredient",
+      "tip": "Said to have 365 recipes. Try bacalhau com natas (creamy bake)."
+    },
+    {
+      "e": "🦞",
+      "name": "Marisco",
+      "what": "Fresh seafood — clams, prawns, barnacles",
+      "tip": "Marisqueiras (seafood restaurants) are best value at lunch near the coast."
+    },
+    {
+      "e": "🥣",
+      "name": "Caldo Verde",
+      "what": "Kale and potato soup with chorizo",
+      "tip": "The quintessential Portuguese comfort food. Perfect in colder months."
+    },
+    {
+      "e": "🍷",
+      "name": "Vinho Verde",
+      "what": "Light, slightly sparkling white wine from northern Portugal",
+      "tip": "\"Green wine\" is named for youth, not colour. Excellent with seafood."
+    }
+  ],
+  "safety": [
+    {
+      "e": "✅",
+      "rule": "Very safe",
+      "note": "Portugal consistently ranks among Europe's safest countries. Crime against tourists is rare."
+    },
+    {
+      "e": "🚋",
+      "rule": "Tram pickpockets",
+      "note": "Lisbon's iconic Tram 28 is a known pickpocket hotspot. Keep bags in front and stay alert."
+    },
+    {
+      "e": "🌊",
+      "rule": "Atlantic coast rips",
+      "note": "Ocean beaches can have strong rip currents. Always swim at flagged beaches (green or yellow)."
+    },
+    {
+      "e": "☀️",
+      "rule": "Strong summer sun",
+      "note": "The Algarve gets intense UV in summer. Use SPF 50 and avoid midday sun on beaches."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rideshare",
+      "name": "Uber",
+      "desc": "Works in Lisbon, Porto, and major cities",
+      "ios": "https://apps.apple.com/app/uber/id368677368",
+      "android": "https://play.google.com/store/apps/details?id=com.ubercab"
+    },
+    {
+      "e": "🚇",
+      "cat": "Transit",
+      "name": "Carris Metropolitana",
+      "desc": "Lisbon public transport app",
+      "ios": "https://apps.apple.com/pt/app/carris-metropolitana/id1464860780",
+      "android": "https://play.google.com/store/apps/details?id=pt.carrismetropolitana.app"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Google Maps",
+      "desc": "Reliable across Portugal",
+      "ios": "https://apps.apple.com/app/google-maps/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "🍽️",
+      "cat": "Food",
+      "name": "Zomato",
+      "desc": "Restaurant discovery and reviews in Portugal",
+      "ios": "https://apps.apple.com/app/zomato/id434613896",
+      "android": "https://play.google.com/store/apps/details?id=com.application.zomato"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Olá",
+        "pron": "oh-LAH",
+        "en": "Hello"
+      },
+      {
+        "native": "Bom dia",
+        "pron": "bong JEE-a",
+        "en": "Good morning"
+      },
+      {
+        "native": "Boa tarde",
+        "pron": "BOH-a TAR-de",
+        "en": "Good afternoon"
+      },
+      {
+        "native": "Como está?",
+        "pron": "KOH-moo esh-TAH",
+        "en": "How are you?"
+      },
+      {
+        "native": "Estou bem",
+        "pron": "esh-TOH beng",
+        "en": "I'm fine"
+      },
+      {
+        "native": "Obrigado / Obrigada",
+        "pron": "oh-bree-GAH-doo / oh-bree-GAH-da",
+        "en": "Thank you (m/f)"
+      },
+      {
+        "native": "De nada",
+        "pron": "de NAH-da",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Até logo",
+        "pron": "a-TAY LOH-goo",
+        "en": "Goodbye"
+      }
+    ],
+    "food": [
+      {
+        "native": "Uma bica, por favor",
+        "pron": "OO-ma BEE-ka por fa-VOR",
+        "en": "An espresso, please"
+      },
+      {
+        "native": "Queria o prato do dia",
+        "pron": "ke-REE-a oo PRAH-too doo JEE-a",
+        "en": "I'd like the dish of the day"
+      },
+      {
+        "native": "Sou vegetariano/a",
+        "pron": "soh veh-jeh-ta-ree-AH-noo/na",
+        "en": "I'm vegetarian"
+      },
+      {
+        "native": "Está delicioso!",
+        "pron": "esh-TAH deh-lee-see-OH-zoo",
+        "en": "It's delicious!"
+      },
+      {
+        "native": "A conta, por favor",
+        "pron": "a KON-ta por fa-VOR",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Sem glúten",
+        "pron": "seng GLOO-teng",
+        "en": "Gluten-free"
+      },
+      {
+        "native": "Está muito bom",
+        "pron": "esh-TAH MWEE-too bong",
+        "en": "This is very good"
+      },
+      {
+        "native": "Para levar",
+        "pron": "PAH-ra le-VAR",
+        "en": "To take away"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Onde fica o metro?",
+        "pron": "ON-de FEE-ka oo MEH-troo",
+        "en": "Where is the metro?"
+      },
+      {
+        "native": "Está longe?",
+        "pron": "esh-TAH LON-je",
+        "en": "Is it far?"
+      },
+      {
+        "native": "Vire à esquerda",
+        "pron": "VEE-re a esh-KER-da",
+        "en": "Turn left"
+      },
+      {
+        "native": "Vire à direita",
+        "pron": "VEE-re a dee-RAY-ta",
+        "en": "Turn right"
+      },
+      {
+        "native": "Em frente",
+        "pron": "eng FREN-te",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "Leve-me a...",
+        "pron": "LEH-ve-me a",
+        "en": "Take me to..."
+      },
+      {
+        "native": "Pare aqui",
+        "pron": "PAH-re a-KEE",
+        "en": "Stop here"
+      },
+      {
+        "native": "Quanto falta?",
+        "pron": "KWAN-too FAL-ta",
+        "en": "How much further?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Quanto custa?",
+        "pron": "KWAN-too KUSH-ta",
+        "en": "How much is this?"
+      },
+      {
+        "native": "É muito caro",
+        "pron": "eh MWEE-too KAH-roo",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "Tem outro tamanho?",
+        "pron": "teng OH-troo ta-MAH-nyoo",
+        "en": "Another size?"
+      },
+      {
+        "native": "Só estou a ver",
+        "pron": "soh esh-TOH a vair",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Vou levar este",
+        "pron": "voh le-VAR ESH-te",
+        "en": "I'll take this"
+      },
+      {
+        "native": "Aceita cartão?",
+        "pron": "a-SAY-ta kar-TOWNG",
+        "en": "Do you take cards?"
+      },
+      {
+        "native": "Posso ter um recibo?",
+        "pron": "POH-soo tair oong reh-SEE-boo",
+        "en": "Can I have a receipt?"
+      },
+      {
+        "native": "Tem desconto?",
+        "pron": "teng desh-KON-too",
+        "en": "Is there a discount?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Um",
+        "pron": "oong",
+        "en": "One"
+      },
+      {
+        "native": "Dois",
+        "pron": "doysh",
+        "en": "Two"
+      },
+      {
+        "native": "Três",
+        "pron": "traysh",
+        "en": "Three"
+      },
+      {
+        "native": "Quatro",
+        "pron": "KWAH-troo",
+        "en": "Four"
+      },
+      {
+        "native": "Cinco",
+        "pron": "SING-koo",
+        "en": "Five"
+      },
+      {
+        "native": "Dez",
+        "pron": "desh",
+        "en": "Ten"
+      },
+      {
+        "native": "Cem",
+        "pron": "sang",
+        "en": "One hundred"
+      },
+      {
+        "native": "Mil",
+        "pron": "meel",
+        "en": "One thousand"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Socorro!",
+        "pron": "soo-KOH-roo",
+        "en": "Help!"
+      },
+      {
+        "native": "Chame a polícia!",
+        "pron": "SHA-me a poo-LEE-sya",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Chame uma ambulância!",
+        "pron": "SHA-me OO-ma am-boo-LAN-sya",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Fogo!",
+        "pron": "FOH-goo",
+        "en": "Fire!"
+      },
+      {
+        "native": "Estou doente",
+        "pron": "esh-TOH doo-EN-te",
+        "en": "I'm sick"
+      },
+      {
+        "native": "Ajude-me, por favor!",
+        "pron": "a-ZHOO-de-me por fa-VOR",
+        "en": "Help me, please!"
+      },
+      {
+        "native": "Onde fica o hospital?",
+        "pron": "ON-de FEE-ka oo osh-pee-TAL",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Fui roubado/a",
+        "pron": "fwee roh-BAH-doo/da",
+        "en": "I've been robbed"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Não me sinto bem",
+        "pron": "nowng meh SEEN-too beng",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Preciso de um médico",
+        "pron": "preh-SEE-zoo jee oong MEH-di-koo",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Chame uma ambulância",
+        "pron": "SHA-meh OO-ma am-boo-LAN-sya",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Onde fica o hospital mais próximo?",
+        "pron": "ON-deh FEE-ka oo osh-pee-TAL maish PRO-see-moo",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Sou alérgico/a a...",
+        "pron": "soh a-LER-ji-koo/ka a",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "Tenho diabetes",
+        "pron": "TEN-yoo dee-ah-BEH-tesh",
+        "en": "I have diabetes"
+      },
+      {
+        "native": "Estou tonto/a",
+        "pron": "esh-TOH TON-too/ta",
+        "en": "I feel dizzy"
+      },
+      {
+        "native": "Preciso de medicamento",
+        "pron": "preh-SEE-zoo jee meh-di-kah-MEN-too",
+        "en": "I need medicine"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Aqui está o meu passaporte",
+        "pron": "a-KEE esh-TAH oo mew pa-sa-POR-teh",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "Estou cá de férias",
+        "pron": "esh-TOH kah deh FEH-ree-ash",
+        "en": "I'm here for a holiday"
+      },
+      {
+        "native": "Fico [X] dias",
+        "pron": "FEE-koo [X] JEE-ash",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Não tenho nada a declarar",
+        "pron": "nowng TEN-yoo NAH-da a deh-kla-RAR",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Onde é a recolha de bagagens?",
+        "pron": "ON-deh eh a reh-KO-lya de ba-GA-zhaingsh",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Viajo sozinho/a",
+        "pron": "vee-AH-zhoo soo-ZEE-nyoo/nya",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Este é o meu hotel",
+        "pron": "ESH-teh eh oo mew oh-TEL",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Preciso de um intérprete",
+        "pron": "preh-SEE-zoo jee oong in-TER-preh-teh",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Tenho uma reserva",
+        "pron": "TEN-yo OO-ma re-ZER-va",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Posso fazer o check-in agora?",
+        "pron": "PO-so fa-ZER o check-in a-GO-ra",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "A que horas é o check-out?",
+        "pron": "a ke O-ras eh o check-out",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "O meu cartão não funciona",
+        "pron": "o MEU kar-TOW now foon-SYO-na",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "O ar-condicionado está avariado",
+        "pron": "o ar-kon-dee-syo-NA-do es-TA a-va-RYA-do",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Pode trazer mais toalhas?",
+        "pron": "PO-de tra-ZER mais to-AH-lyas",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "Não incomodar",
+        "pron": "now in-ko-mo-DAR",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "Qual é a senha do WiFi?",
+        "pron": "kwal EH a SEN-ya do wee-FEE",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Um bilhete, por favor",
+        "pron": "oom bi-YEH-te por fa-VOR",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Onde fica a estação de metro?",
+        "pron": "ON-de FEE-ka a es-ta-SOW de ME-tro",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "Este comboio vai para...?",
+        "pron": "ES-te kom-BOY-o vai PA-ra",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Onde saio para...?",
+        "pron": "ON-de SAI-o PA-ra",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Pode chamar um táxi?",
+        "pron": "PO-de sha-MAR oom TAK-si",
+        "en": "Can you call a taxi?"
+      },
+      {
+        "native": "Leve-me a este hotel",
+        "pron": "LEH-ve-me a ES-te o-TEL",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Quanto é a tarifa?",
+        "pron": "KWAN-to EH a ta-REE-fa",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Pare aqui, por favor",
+        "pron": "PA-re a-KEE por fa-VOR",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "a9360dc3a97fff57519bdaee3a8ad2b1556946f43a6f04f3deabfb03ca6fffbf"
+}

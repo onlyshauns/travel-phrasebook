@@ -1,0 +1,641 @@
+{
+  "id": "china",
+  "name": "China",
+  "flag": "🇨🇳",
+  "lang": "普通话 (Mandarin)",
+  "langCode": "zh-CN",
+  "voiceLabel": "Mandarin",
+  "latinScript": false,
+  "region": "East Asia",
+  "timezone": "Asia/Shanghai",
+  "hero": "#DE2910",
+  "currency": {
+    "code": "CNY",
+    "symbol": "¥",
+    "rate": 7.24,
+    "label": "1 USD ≈ 7.24 CNY",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "110",
+      "name": "Police"
+    },
+    {
+      "tel": "120",
+      "name": "Ambulance"
+    },
+    {
+      "tel": "119",
+      "name": "Fire"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 \"你好\" (nǐ hǎo) is universal. Add the person's title (老师 teacher, 先生 Mr) to show extra respect.",
+    "food": "💡 Menus often have pictures — point confidently. Say \"辣不辣?\" to ask if it's spicy before ordering.",
+    "directions": "💡 Subway maps are in English and Chinese. Show your destination written in Chinese characters to taxi drivers.",
+    "numbers": "💡 The number 4 is unlucky (sounds like \"death\"). Eight is very lucky. Prices are in Yuan (¥ / RMB).",
+    "emergency": "💡 Dial 110 (police), 120 (ambulance), 119 (fire). WeChat and Alipay are essential — carry little cash.",
+    "shopping": "Bargain in markets, not in malls. Alipay and WeChat Pay are the usual way to pay.",
+    "medical": "Call 120 for an ambulance. International clinics cost more and speak more English.",
+    "immigration": "Have the hotel address in Chinese characters on your phone.",
+    "hotel": "Check-in often needs the passport itself, not a photo. Ask for the Wi-Fi.",
+    "transport": "Metro signs are bilingual in the big cities. Didi is the ride-hail app."
+  },
+  "pronGuide": {
+    "title": "Mandarin Sounds",
+    "tips": [
+      "Mandarin has four tones — the same syllable means different things at different pitches",
+      "X sounds like \"sh\", Q like \"ch\", ZH like a hard \"j\"",
+      "Pinyin \"e\" alone is like \"uh\", but \"ei\" is like \"ay\"",
+      "The ü sound (written u after j/q/x/y) is like French \"tu\" — round lips and say \"ee\""
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type A/C/I (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "CNY / RMB (¥)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "110 / 120"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Do not drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "Visa required (most countries)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🥢",
+      "rule": "Chopstick etiquette",
+      "note": "Never stick chopsticks upright in rice — it resembles funeral incense. Pass food with serving chopsticks."
+    },
+    {
+      "e": "🎁",
+      "rule": "Gift giving",
+      "note": "Use both hands to give and receive. Don't open gifts immediately in front of the giver."
+    },
+    {
+      "e": "📱",
+      "rule": "WeChat is everything",
+      "note": "Get WeChat before arrival — it's used for payments, maps, translation, and communication."
+    },
+    {
+      "e": "🔴",
+      "rule": "Lucky red",
+      "note": "Red envelopes (红包) are given for luck. Wear red for celebrations, avoid white at them."
+    },
+    {
+      "e": "🤝",
+      "rule": "Face (面子)",
+      "note": "Avoid public criticism or arguing — causing someone to lose face is deeply offensive."
+    }
+  ],
+  "money": [
+    {
+      "e": "📱",
+      "rule": "Go cashless",
+      "note": "WeChat Pay and Alipay are used almost everywhere. Set up one before you arrive."
+    },
+    {
+      "e": "🏧",
+      "rule": "Bank ATMs only",
+      "note": "Use Bank of China or ICBC ATMs — they reliably accept foreign cards."
+    },
+    {
+      "e": "💴",
+      "rule": "Carry some cash",
+      "note": "Small vendors and rural areas may be cash only. ¥100 bills are widely accepted."
+    }
+  ],
+  "food": [
+    {
+      "e": "🥟",
+      "name": "Dumplings (饺子)",
+      "what": "Pan-fried or boiled pockets of meat and veg",
+      "tip": "Order jiānjiǎo (pan-fried) for crispy bottoms. Perfect with black vinegar."
+    },
+    {
+      "e": "🍜",
+      "name": "Peking Duck (北京烤鸭)",
+      "what": "Crispy roasted duck with pancakes and hoisin",
+      "tip": "Order at Quanjude or Da Dong in Beijing. Book ahead."
+    },
+    {
+      "e": "🌶️",
+      "name": "Mapo Tofu (麻婆豆腐)",
+      "what": "Silken tofu in fiery Sichuan chilli sauce",
+      "tip": "Numbing and spicy — warn staff if you cannot handle heat."
+    },
+    {
+      "e": "🥣",
+      "name": "Congee (粥)",
+      "what": "Rice porridge, a popular breakfast",
+      "tip": "Customize with century egg, pork, or preserved vegetables."
+    },
+    {
+      "e": "🍢",
+      "name": "Street Skewers (串串)",
+      "what": "Grilled meat and veg on sticks",
+      "tip": "Night markets are the place to try these. Always delicious."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🌐",
+      "rule": "VPN needed",
+      "note": "Google, WhatsApp, Facebook, and Instagram are blocked. Download a VPN before arrival."
+    },
+    {
+      "e": "✅",
+      "rule": "Generally safe",
+      "note": "Violent crime against tourists is rare. Watch your belongings in crowded markets."
+    },
+    {
+      "e": "📋",
+      "rule": "Register with hotel",
+      "note": "Your hotel will register you with local authorities — this is routine and required by law."
+    },
+    {
+      "e": "🚦",
+      "rule": "Traffic is chaotic",
+      "note": "Pedestrians do not always have right of way — look both ways, even on green."
+    }
+  ],
+  "apps": [
+    {
+      "e": "💬",
+      "cat": "Essential",
+      "name": "WeChat",
+      "desc": "Messaging, payments, maps — your lifeline in China",
+      "ios": "https://apps.apple.com/app/wechat/id414478124",
+      "android": "https://play.google.com/store/apps/details?id=com.tencent.mm"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Baidu Maps",
+      "desc": "Best navigation in China (Chinese UI)",
+      "ios": "https://apps.apple.com/app/baidu-maps/id452186370",
+      "android": "https://play.google.com/store/apps/details?id=com.baidu.BaiduMap"
+    },
+    {
+      "e": "🔒",
+      "cat": "VPN",
+      "name": "ExpressVPN",
+      "desc": "Access Google and social media in China",
+      "ios": "https://apps.apple.com/app/expressvpn/id886492891",
+      "android": "https://play.google.com/store/apps/details?id=com.expressvpn.vpn"
+    },
+    {
+      "e": "🌍",
+      "cat": "Translate",
+      "name": "Pleco",
+      "desc": "Offline Chinese dictionary and translator",
+      "ios": "https://apps.apple.com/app/pleco-chinese-dictionary/id309226768",
+      "android": "https://play.google.com/store/apps/details?id=com.pleco.chinesesystem"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "你好",
+        "pron": "nǐ hǎo",
+        "en": "Hello"
+      },
+      {
+        "native": "早上好",
+        "pron": "zǎo shàng hǎo",
+        "en": "Good morning"
+      },
+      {
+        "native": "晚上好",
+        "pron": "wǎn shàng hǎo",
+        "en": "Good evening"
+      },
+      {
+        "native": "你好吗？",
+        "pron": "nǐ hǎo ma",
+        "en": "How are you?"
+      },
+      {
+        "native": "我很好",
+        "pron": "wǒ hěn hǎo",
+        "en": "I'm fine"
+      },
+      {
+        "native": "谢谢",
+        "pron": "xiè xiè",
+        "en": "Thank you"
+      },
+      {
+        "native": "不客气",
+        "pron": "bù kè qì",
+        "en": "You're welcome"
+      },
+      {
+        "native": "再见",
+        "pron": "zài jiàn",
+        "en": "Goodbye"
+      }
+    ],
+    "food": [
+      {
+        "native": "一份这个，谢谢",
+        "pron": "yī fèn zhè gè xiè xiè",
+        "en": "One of this, please"
+      },
+      {
+        "native": "不辣",
+        "pron": "bù là",
+        "en": "Not spicy"
+      },
+      {
+        "native": "辣不辣？",
+        "pron": "là bù là",
+        "en": "Is it spicy?"
+      },
+      {
+        "native": "我吃素",
+        "pron": "wǒ chī sù",
+        "en": "I'm vegetarian"
+      },
+      {
+        "native": "好吃！",
+        "pron": "hǎo chī",
+        "en": "Delicious!"
+      },
+      {
+        "native": "买单",
+        "pron": "mǎi dān",
+        "en": "The bill, please"
+      },
+      {
+        "native": "打包",
+        "pron": "dǎ bāo",
+        "en": "Takeaway"
+      },
+      {
+        "native": "菜单",
+        "pron": "cài dān",
+        "en": "Menu"
+      }
+    ],
+    "directions": [
+      {
+        "native": "地铁站在哪里？",
+        "pron": "dì tiě zhàn zài nǎ lǐ",
+        "en": "Where is the subway?"
+      },
+      {
+        "native": "多远？",
+        "pron": "duō yuǎn",
+        "en": "How far?"
+      },
+      {
+        "native": "左转",
+        "pron": "zuǒ zhuǎn",
+        "en": "Turn left"
+      },
+      {
+        "native": "右转",
+        "pron": "yòu zhuǎn",
+        "en": "Turn right"
+      },
+      {
+        "native": "直走",
+        "pron": "zhí zǒu",
+        "en": "Go straight"
+      },
+      {
+        "native": "请带我去...",
+        "pron": "qǐng dài wǒ qù",
+        "en": "Please take me to..."
+      },
+      {
+        "native": "在这里停车",
+        "pron": "zài zhè lǐ tíng chē",
+        "en": "Stop here"
+      },
+      {
+        "native": "还有多远？",
+        "pron": "hái yǒu duō yuǎn",
+        "en": "How much further?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "多少钱？",
+        "pron": "duō shǎo qián",
+        "en": "How much is this?"
+      },
+      {
+        "native": "太贵了",
+        "pron": "tài guì le",
+        "en": "Too expensive"
+      },
+      {
+        "native": "可以便宜一点吗？",
+        "pron": "kě yǐ pián yí yī diǎn ma",
+        "en": "Can you lower the price?"
+      },
+      {
+        "native": "有其他颜色吗？",
+        "pron": "yǒu qí tā yán sè ma",
+        "en": "Other colours?"
+      },
+      {
+        "native": "我只是看看",
+        "pron": "wǒ zhǐ shì kàn kàn",
+        "en": "Just browsing"
+      },
+      {
+        "native": "我要这个",
+        "pron": "wǒ yào zhè gè",
+        "en": "I'll take this"
+      },
+      {
+        "native": "可以刷卡吗？",
+        "pron": "kě yǐ shuā kǎ ma",
+        "en": "Can I pay by card?"
+      },
+      {
+        "native": "有收据吗？",
+        "pron": "yǒu shōu jù ma",
+        "en": "Can I have a receipt?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "一",
+        "pron": "yī",
+        "en": "One"
+      },
+      {
+        "native": "二",
+        "pron": "èr",
+        "en": "Two"
+      },
+      {
+        "native": "三",
+        "pron": "sān",
+        "en": "Three"
+      },
+      {
+        "native": "四",
+        "pron": "sì",
+        "en": "Four"
+      },
+      {
+        "native": "五",
+        "pron": "wǔ",
+        "en": "Five"
+      },
+      {
+        "native": "十",
+        "pron": "shí",
+        "en": "Ten"
+      },
+      {
+        "native": "一百",
+        "pron": "yī bǎi",
+        "en": "One hundred"
+      },
+      {
+        "native": "一千",
+        "pron": "yī qiān",
+        "en": "One thousand"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "救命！",
+        "pron": "jiù mìng",
+        "en": "Help!"
+      },
+      {
+        "native": "叫警察！",
+        "pron": "jiào jǐng chá",
+        "en": "Call the police!"
+      },
+      {
+        "native": "叫救护车！",
+        "pron": "jiào jiù hù chē",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "着火了！",
+        "pron": "zháo huǒ le",
+        "en": "Fire!"
+      },
+      {
+        "native": "我生病了",
+        "pron": "wǒ shēng bìng le",
+        "en": "I'm sick"
+      },
+      {
+        "native": "请帮我！",
+        "pron": "qǐng bāng wǒ",
+        "en": "Please help me!"
+      },
+      {
+        "native": "医院在哪里？",
+        "pron": "yī yuàn zài nǎ lǐ",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "我的钱包丢了",
+        "pron": "wǒ de qián bāo diū le",
+        "en": "I've lost my wallet"
+      }
+    ],
+    "medical": [
+      {
+        "native": "我感觉不舒服",
+        "pron": "wǒ gǎn jué bù shū fu",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "我需要看医生",
+        "pron": "wǒ xū yào kàn yī shēng",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "请叫救护车",
+        "pron": "qǐng jiào jiù hù chē",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "最近的医院在哪里？",
+        "pron": "zuì jìn de yī yuàn zài nǎ lǐ",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "我对...过敏",
+        "pron": "wǒ duì... guò mǐn",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "我有糖尿病",
+        "pron": "wǒ yǒu táng niào bìng",
+        "en": "I have diabetes"
+      },
+      {
+        "native": "我头晕",
+        "pron": "wǒ tóu yūn",
+        "en": "I feel dizzy"
+      },
+      {
+        "native": "我需要药",
+        "pron": "wǒ xū yào yào",
+        "en": "I need medicine"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "这是我的护照",
+        "pron": "zhè shì wǒ de hù zhào",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "我来旅游",
+        "pron": "wǒ lái lǚ yóu",
+        "en": "I'm here for tourism"
+      },
+      {
+        "native": "我住[X]天",
+        "pron": "wǒ zhù [X] tiān",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "没有要申报的",
+        "pron": "méi yǒu yào shēn bào de",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "行李提取处在哪里？",
+        "pron": "xíng lǐ tí qǔ chù zài nǎ lǐ",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "我一个人旅行",
+        "pron": "wǒ yī gè rén lǚ xíng",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "这是我的酒店",
+        "pron": "zhè shì wǒ de jiǔ diàn",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "我需要翻译",
+        "pron": "wǒ xū yào fān yì",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "我有预订",
+        "pron": "wǒ yǒu yù-dìng",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "我现在可以办理入住吗？",
+        "pron": "wǒ xiàn-zài kě-yǐ bàn-lǐ rù-zhù ma",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "退房时间是几点？",
+        "pron": "tuì-fáng shí-jiān shì jǐ diǎn",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "我的房卡失效了",
+        "pron": "wǒ de fáng-kǎ shī-xiào le",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "空调坏了",
+        "pron": "kōng-tiáo huài le",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "可以多给我一些毛巾吗？",
+        "pron": "kě-yǐ duō gěi wǒ yī-xiē máo-jīn ma",
+        "en": "Can I have more towels?"
+      },
+      {
+        "native": "请勿打扰",
+        "pron": "qǐng wù dǎ-rǎo",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "WiFi密码是什么？",
+        "pron": "wài-fāi mì-mǎ shì shén-me",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "一张票，谢谢",
+        "pron": "yī zhāng piào xiè-xiè",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "地铁站在哪里？",
+        "pron": "dì-tiě zhàn zài nǎ-lǐ",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "这列火车去…吗？",
+        "pron": "zhè liè huǒ-chē qù ... ma",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "去…在哪一站下车？",
+        "pron": "qù ... zài nǎ yī zhàn xià-chē",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "请帮我叫辆出租车",
+        "pron": "qǐng bāng wǒ jiào liàng chū-zū-chē",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "请送我去这家酒店",
+        "pron": "qǐng sòng wǒ qù zhè jiā jiǔ-diàn",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "票价是多少？",
+        "pron": "piào-jià shì duō-shǎo",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "请在这里停车",
+        "pron": "qǐng zài zhè-lǐ tíng-chē",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "e2ada3c5b7541bd43836cd3dbd559a0c43596f1c8533fe86533b46a87b8455f3"
+}

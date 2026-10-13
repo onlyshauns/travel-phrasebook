@@ -1,0 +1,641 @@
+{
+  "id": "brazil",
+  "name": "Brazil",
+  "flag": "🇧🇷",
+  "lang": "Português Brasileiro",
+  "langCode": "pt-BR",
+  "voiceLabel": "Portuguese",
+  "latinScript": true,
+  "region": "Americas",
+  "timezone": "America/Sao_Paulo",
+  "hero": "#009C3B",
+  "currency": {
+    "code": "BRL",
+    "symbol": "R$",
+    "rate": 4.97,
+    "label": "1 USD ≈ 4.97 BRL",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "190",
+      "name": "Police"
+    },
+    {
+      "tel": "192",
+      "name": "Ambulance"
+    },
+    {
+      "tel": "193",
+      "name": "Fire"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 \"Oi\" and \"Olá\" are both common greetings. Brazilians are warm — expect cheek kisses in social settings.",
+    "food": "💡 \"Prato feito\" (PF) plates at lunch offer huge, cheap meals. Say \"sem carne\" if you're vegetarian.",
+    "directions": "💡 Uber is reliable and widely used in Brazilian cities. Metered taxis are safe; avoid unmarked cabs.",
+    "numbers": "💡 Currency is the Brazilian Real (R$). ATMs are everywhere; Nubank and Itaú are reliable.",
+    "emergency": "💡 Dial 190 (police), 192 (ambulance), 193 (fire). Keep photocopies of documents — keep the original in the hotel safe.",
+    "shopping": "Watch the card terminal, and prefer a card or PIX to a large wad of cash.",
+    "medical": "Call 192 for an ambulance. Travelers usually use a private hospital.",
+    "immigration": "Have your passport and the address. Photograph the entry stamp.",
+    "hotel": "Ask which streets are fine to walk at night. Use an app car after dark.",
+    "transport": "Uber works in the big cities. On a bus, keep your phone in a front pocket."
+  },
+  "pronGuide": {
+    "title": "Brazilian Portuguese Sounds",
+    "tips": [
+      "Nasal vowels (ã, ão, em, en) — let air flow through your nose, like \"sang\" without the G",
+      "The letters LH make a \"ly\" sound (like million) and NH makes \"ny\" (like canyon)",
+      "S at end of syllable sounds like \"sh\" in São Paulo dialect (SH-ão POW-loo)",
+      "R at start of word or doubled (rr) sounds like the English H"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type N (127V/220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "BRL (R$)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "190 / 192"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Varies — bottle safe"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "Visa-free (many countries)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "💋",
+      "rule": "Cheek kisses",
+      "note": "One or two air-kisses on the cheek are the standard greeting between women, or a man and woman."
+    },
+    {
+      "e": "⏰",
+      "rule": "Flexible time",
+      "note": "Social events start late — arriving 30–60 minutes after the stated time is perfectly normal."
+    },
+    {
+      "e": "⚽",
+      "rule": "Football is sacred",
+      "note": "On match days, streets empty and bars fill. Respect the passion — join in if you can!"
+    },
+    {
+      "e": "👗",
+      "rule": "Beach dress code",
+      "note": "Brazilians wear very little on the beach — that's normal. In the city, dress more modestly."
+    },
+    {
+      "e": "🗣️",
+      "rule": "Touchy conversations",
+      "note": "Avoid politics — it's a deeply divided topic. Sport, food, and travel are safer."
+    }
+  ],
+  "money": [
+    {
+      "e": "💳",
+      "rule": "Cards widely accepted",
+      "note": "Major cards work in cities. Pix (instant transfer) is extremely popular — even street vendors use it."
+    },
+    {
+      "e": "🏧",
+      "rule": "ATM fees",
+      "note": "Many ATMs charge high fees. Banco do Brasil and Bradesco are most foreigner-friendly."
+    },
+    {
+      "e": "💵",
+      "rule": "USD not accepted",
+      "note": "Always exchange to Reais — shops don't accept USD. Casas de câmbio at airports are acceptable."
+    }
+  ],
+  "food": [
+    {
+      "e": "🥩",
+      "name": "Churrasco",
+      "what": "Brazilian BBQ — various meats slow-grilled over fire",
+      "tip": "Visit a churrascaria (rodízio) for unlimited meats. Pace yourself!"
+    },
+    {
+      "e": "🫘",
+      "name": "Feijoada",
+      "what": "Black bean stew with pork, typically served Saturdays",
+      "tip": "Eaten with rice, farofa (toasted cassava), and oranges. Very filling."
+    },
+    {
+      "e": "🧃",
+      "name": "Açaí Bowl",
+      "what": "Purple Amazon berry served as a thick, iced bowl",
+      "tip": "A post-beach staple. Ask for \"granola e banana\" on top."
+    },
+    {
+      "e": "🥟",
+      "name": "Coxinha",
+      "what": "Fried dough stuffed with shredded chicken",
+      "tip": "The classic Brazilian street snack — sold at every padaria (bakery)."
+    },
+    {
+      "e": "🍹",
+      "name": "Caipirinha",
+      "what": "Brazil's national cocktail: cachaça, lime, and sugar",
+      "tip": "Ask for \"morango\" (strawberry) or \"maracujá\" (passion fruit) variations."
+    }
+  ],
+  "safety": [
+    {
+      "e": "📱",
+      "rule": "Don't flash valuables",
+      "note": "Keep phones away when walking. Use a cheap phone or leave the good one at the hotel."
+    },
+    {
+      "e": "🏖️",
+      "rule": "Beach safety",
+      "note": "Don't leave belongings unattended on the beach. Use hotel safe for passports and cash."
+    },
+    {
+      "e": "🚕",
+      "rule": "Use official transport",
+      "note": "Always use Uber or booked taxis. Never get into an unofficial cab, especially at night."
+    },
+    {
+      "e": "🌙",
+      "rule": "Avoid dark streets at night",
+      "note": "Stay in well-lit, populated areas after dark. Ask locals for neighbourhood safety tips."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rideshare",
+      "name": "Uber",
+      "desc": "Dominant rideshare app in Brazil",
+      "ios": "https://apps.apple.com/app/uber/id368677368",
+      "android": "https://play.google.com/store/apps/details?id=com.ubercab"
+    },
+    {
+      "e": "🍔",
+      "cat": "Food",
+      "name": "iFood",
+      "desc": "Brazil's top food delivery platform",
+      "ios": "https://apps.apple.com/br/app/ifood/id483017570",
+      "android": "https://play.google.com/store/apps/details?id=br.com.brainweb.ifood"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Google Maps",
+      "desc": "Works great across Brazil",
+      "ios": "https://apps.apple.com/app/google-maps/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💱",
+      "cat": "Finance",
+      "name": "Wise",
+      "desc": "Best exchange rates for BRL",
+      "ios": "https://apps.apple.com/app/wise/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Olá",
+        "pron": "oh-LAH",
+        "en": "Hello"
+      },
+      {
+        "native": "Bom dia",
+        "pron": "bom JEE-a",
+        "en": "Good morning"
+      },
+      {
+        "native": "Boa noite",
+        "pron": "BOH-a NOY-chee",
+        "en": "Good evening"
+      },
+      {
+        "native": "Como vai?",
+        "pron": "KOH-moo vai",
+        "en": "How are you?"
+      },
+      {
+        "native": "Tudo bem",
+        "pron": "TOO-doo beng",
+        "en": "I'm fine / All good"
+      },
+      {
+        "native": "Obrigado / Obrigada",
+        "pron": "oh-bree-GAH-doo / oh-bree-GAH-da",
+        "en": "Thank you (m/f)"
+      },
+      {
+        "native": "De nada",
+        "pron": "jee NAH-da",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Até logo",
+        "pron": "ah-TAY LOH-goo",
+        "en": "Goodbye"
+      }
+    ],
+    "food": [
+      {
+        "native": "Uma cerveja, por favor",
+        "pron": "OO-ma ser-VAY-zha por fa-VOR",
+        "en": "One beer, please"
+      },
+      {
+        "native": "Sem pimenta",
+        "pron": "seng pee-MEN-ta",
+        "en": "Without spice"
+      },
+      {
+        "native": "Sou vegetariano/a",
+        "pron": "soh veh-jeh-ta-ree-AH-noo/na",
+        "en": "I'm vegetarian"
+      },
+      {
+        "native": "Está delicioso!",
+        "pron": "es-TAH de-lee-see-OH-zoo",
+        "en": "It's delicious!"
+      },
+      {
+        "native": "A conta, por favor",
+        "pron": "a KON-ta por fa-VOR",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Para viagem",
+        "pron": "PAH-ra vee-AH-zheng",
+        "en": "To take away"
+      },
+      {
+        "native": "Cardápio",
+        "pron": "kar-DAH-pee-oo",
+        "en": "Menu"
+      },
+      {
+        "native": "Sem glúten",
+        "pron": "seng GLOO-teng",
+        "en": "Gluten-free"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Onde fica o metrô?",
+        "pron": "ON-jee FEE-ka oo me-TROH",
+        "en": "Where is the metro?"
+      },
+      {
+        "native": "Fica longe?",
+        "pron": "FEE-ka LONG-zhee",
+        "en": "Is it far?"
+      },
+      {
+        "native": "Vire à esquerda",
+        "pron": "VEE-ree a es-KER-da",
+        "en": "Turn left"
+      },
+      {
+        "native": "Vire à direita",
+        "pron": "VEE-ree a jee-RAY-ta",
+        "en": "Turn right"
+      },
+      {
+        "native": "Siga em frente",
+        "pron": "SEE-ga eng FREN-chee",
+        "en": "Go straight"
+      },
+      {
+        "native": "Me leve para...",
+        "pron": "mee LEH-vee PAH-ra",
+        "en": "Take me to..."
+      },
+      {
+        "native": "Para aqui",
+        "pron": "PAH-ra a-KEE",
+        "en": "Stop here"
+      },
+      {
+        "native": "Quanto falta?",
+        "pron": "KWAN-too FAL-ta",
+        "en": "How much further?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Quanto custa?",
+        "pron": "KWAN-too KUS-ta",
+        "en": "How much does it cost?"
+      },
+      {
+        "native": "Muito caro",
+        "pron": "MWEE-too KAH-roo",
+        "en": "Too expensive"
+      },
+      {
+        "native": "Pode fazer um desconto?",
+        "pron": "POH-jee fa-ZER oong des-KON-too",
+        "en": "Can you discount?"
+      },
+      {
+        "native": "Tem outro tamanho?",
+        "pron": "teng OW-troo ta-MAH-nyoo",
+        "en": "Another size?"
+      },
+      {
+        "native": "Só estou olhando",
+        "pron": "soh es-TOH oh-LYAN-doo",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Vou levar este",
+        "pron": "voh le-VAR ES-chee",
+        "en": "I'll take this"
+      },
+      {
+        "native": "Aceita cartão?",
+        "pron": "a-SAY-ta kar-TOWNG",
+        "en": "Do you accept card?"
+      },
+      {
+        "native": "Recibo, por favor",
+        "pron": "reh-SEE-boo por fa-VOR",
+        "en": "Receipt, please"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Um",
+        "pron": "oong",
+        "en": "One"
+      },
+      {
+        "native": "Dois",
+        "pron": "doish",
+        "en": "Two"
+      },
+      {
+        "native": "Três",
+        "pron": "trays",
+        "en": "Three"
+      },
+      {
+        "native": "Quatro",
+        "pron": "KWA-troo",
+        "en": "Four"
+      },
+      {
+        "native": "Cinco",
+        "pron": "SING-koo",
+        "en": "Five"
+      },
+      {
+        "native": "Dez",
+        "pron": "desh",
+        "en": "Ten"
+      },
+      {
+        "native": "Cem",
+        "pron": "seng",
+        "en": "One hundred"
+      },
+      {
+        "native": "Mil",
+        "pron": "meel",
+        "en": "One thousand"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Socorro!",
+        "pron": "soh-KOR-roo",
+        "en": "Help!"
+      },
+      {
+        "native": "Chame a polícia!",
+        "pron": "SHA-mee a po-LEE-see-a",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Chame uma ambulância!",
+        "pron": "SHA-mee OO-ma am-boo-LAN-see-a",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Fogo!",
+        "pron": "FOH-goo",
+        "en": "Fire!"
+      },
+      {
+        "native": "Estou doente",
+        "pron": "es-TOH doo-EN-chee",
+        "en": "I'm sick"
+      },
+      {
+        "native": "Me ajude!",
+        "pron": "mee a-ZHOO-jee",
+        "en": "Please help me!"
+      },
+      {
+        "native": "Onde fica o hospital?",
+        "pron": "ON-jee FEE-ka oo os-pee-TAL",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Fui roubado/a",
+        "pron": "fwee roh-BAH-doo/da",
+        "en": "I've been robbed"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Não estou me sentindo bem",
+        "pron": "nowng es-TOH mee sen-CHIN-doo beng",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Preciso de um médico",
+        "pron": "pre-SEE-zoo jee oong MEH-ji-koo",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Chame uma ambulância",
+        "pron": "SHA-mee OO-ma am-boo-LAN-sya",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Onde fica o hospital mais próximo?",
+        "pron": "ON-jee FEE-ka oo os-pee-TAL mais PRO-see-moo",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Tenho alergia a...",
+        "pron": "TEN-yoo ah-ler-ZHEE-a a",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "Tenho diabetes",
+        "pron": "TEN-yoo jee-ah-BEH-chees",
+        "en": "I have diabetes"
+      },
+      {
+        "native": "Estou com tontura",
+        "pron": "es-TOH kong ton-TOO-ra",
+        "en": "I feel dizzy"
+      },
+      {
+        "native": "Preciso de remédio",
+        "pron": "pre-SEE-zoo jee he-MEH-jee-oo",
+        "en": "I need medicine"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Aqui está meu passaporte",
+        "pron": "a-KEE es-TAH mew pas-a-POR-chee",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "Estou aqui a turismo",
+        "pron": "es-TOH a-KEE a too-REEZ-moo",
+        "en": "I'm here for tourism"
+      },
+      {
+        "native": "Ficarei [X] dias",
+        "pron": "fi-ka-RAY [X] JEE-as",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Não tenho nada a declarar",
+        "pron": "nowng TEN-yoo NA-da a deh-kla-RAR",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Onde fica a retirada de bagagem?",
+        "pron": "ON-jee FEE-ka a heh-chee-RA-da jee ba-GA-zheng",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Estou viajando sozinho/a",
+        "pron": "es-TOH vee-a-ZHAN-doo so-ZEE-nyoo/nya",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Este é meu hotel",
+        "pron": "ES-chee eh mew oh-TEL",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Preciso de um intérprete",
+        "pron": "pre-SEE-zoo jee oong in-TER-pre-chee",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Tenho uma reserva",
+        "pron": "TEN-yo OO-ma he-ZER-va",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Posso fazer o check-in agora?",
+        "pron": "PO-so fa-ZER o check-in a-GO-ra",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "Que horas é o check-out?",
+        "pron": "ke O-ras eh o check-out",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Minha chave não funciona",
+        "pron": "MIN-ya SHA-ve now foon-SYO-na",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "O ar-condicionado está com defeito",
+        "pron": "o ar-kon-dee-syo-NA-do es-TA kom de-FEI-to",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Pode trazer mais toalhas?",
+        "pron": "PO-de tra-ZER mais to-A-lyas",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "Não perturbe",
+        "pron": "now per-TUR-be",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "Qual é a senha do WiFi?",
+        "pron": "kwal EH a SEN-ya do wee-FEE",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Uma passagem, por favor",
+        "pron": "OO-ma pa-SA-zhem por fa-VOR",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Onde fica a estação de metrô?",
+        "pron": "ON-de FEE-ka a es-ta-SOW de me-TRO",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "Este trem vai para...?",
+        "pron": "ES-te trem vai PA-ra",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Onde eu desço para...?",
+        "pron": "ON-de eu DES-so PA-ra",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Pode chamar um táxi?",
+        "pron": "PO-de sha-MAR oom TAK-si",
+        "en": "Can you call a taxi?"
+      },
+      {
+        "native": "Me leve a este hotel",
+        "pron": "me LEH-ve a ES-te o-TEL",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Quanto é a tarifa?",
+        "pron": "KWAN-to eh a ta-REE-fa",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Para aqui, por favor",
+        "pron": "PA-ra a-KEE por fa-VOR",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "700564302344687b352b9da374498170f17cf0e86c822fa67e624ee61edfa6b5"
+}

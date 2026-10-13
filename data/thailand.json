@@ -1,0 +1,748 @@
+{
+  "id": "thailand",
+  "name": "Thailand",
+  "flag": "🇹🇭",
+  "lang": "ภาษาไทย",
+  "langCode": "th-TH",
+  "voiceLabel": "Thai",
+  "latinScript": false,
+  "region": "Southeast Asia",
+  "timezone": "Asia/Bangkok",
+  "hero": "#003087",
+  "currency": {
+    "code": "THB",
+    "symbol": "฿",
+    "rate": 35,
+    "label": "1 USD ≈ 35 THB",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "191",
+      "name": "Police"
+    },
+    {
+      "tel": "1155",
+      "name": "Tourist police"
+    },
+    {
+      "tel": "1669",
+      "name": "Ambulance"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 Add <strong>krap</strong> (men) or <strong>ka</strong> (women) to the end of any phrase to make it polite.",
+    "food": "💡 <em>\"Mai phet\"</em> = not spicy. <em>\"Phet nit noi\"</em> = a little spicy. Street food is safe and delicious — go where locals eat.",
+    "directions": "💡 Agree on a tuk-tuk price before getting in. Bangkok's BTS Skytrain and MRT are far easier — signs are in English.",
+    "numbers": "💡 Prices are almost always shown in Arabic numerals. Focus on learning the spoken words.",
+    "emergency": "💡 Police: <strong>191</strong>. Tourist Police (English): <strong>1155</strong>. Ambulance: <strong>1669</strong>.",
+    "shopping": "Night markets expect bargaining. Mall prices are fixed.",
+    "medical": "Call 1669 for an ambulance. Private hospitals in Bangkok are used to travelers.",
+    "immigration": "Have an onward ticket and a hotel address. The tourist police line is 1155.",
+    "hotel": "Shoes come off at temple stays and many guesthouses. Ask whether tax is included.",
+    "transport": "Grab works in the cities. On the BTS or MRT, a stored-value card is worth it."
+  },
+  "pronGuide": {
+    "title": "Thai Sounds",
+    "tips": [
+      "Thai has 5 tones — for tourists, a flat (mid) tone works for most common words",
+      "Rising tone for yes/no questions sounds more natural",
+      "Avoid strong falling tones on greetings — it can sound impatient",
+      "Double consonants like \"kk\" represent a brief stop before the sound"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type A/B/C"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Thai Baht (฿)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "191 / 1669"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Left"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Do NOT drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "60 days on arrival"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🙏",
+      "rule": "The wai is the standard greeting",
+      "note": "Press your palms together at chest level and bow slightly. Return a wai when someone offers one to you."
+    },
+    {
+      "e": "👑",
+      "rule": "Never criticise the monarchy",
+      "note": "Lèse-majesté laws are strictly enforced. Any criticism of the royal family is illegal and taken very seriously."
+    },
+    {
+      "e": "🦶",
+      "rule": "Feet are considered low and unclean",
+      "note": "Never point your feet at people, sacred images, or monks. Don't prop your feet on tables or chairs."
+    },
+    {
+      "e": "🧢",
+      "rule": "Never touch anyone's head",
+      "note": "The head is considered the most sacred part of the body. Even patting a child on the head is inappropriate."
+    },
+    {
+      "e": "⛩️",
+      "rule": "Cover up at temples",
+      "note": "Shoulders and knees must be covered. Many temples provide wraps at the entrance for a small fee."
+    },
+    {
+      "e": "🧘",
+      "rule": "Women must not touch monks",
+      "note": "Female travellers should not hand anything directly to a monk or make physical contact."
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "Cash-heavy economy outside Bangkok",
+      "note": "Street food, tuk-tuks, and local markets are cash only. Keep ฿500–1,000 on you at all times."
+    },
+    {
+      "e": "🏧",
+      "rule": "ATM fee is ฿220 per withdrawal",
+      "note": "That's about $6 — take out more at once rather than multiple small withdrawals. Kasikorn Bank is reliable."
+    },
+    {
+      "e": "💱",
+      "rule": "Super Rich money changers give the best rates",
+      "note": "Look for 'Super Rich' exchange booths in Bangkok — consistently better than banks or airport counters."
+    },
+    {
+      "e": "🎯",
+      "rule": "Bargaining expected in markets",
+      "note": "Chatuchak Weekend Market and street stalls — start at 50–60% of the asking price. Smile and be friendly."
+    },
+    {
+      "e": "🍽️",
+      "rule": "Tipping is appreciated, not expected",
+      "note": "฿20–50 for good restaurant service, ฿100 for a massage. Round up taxi fares."
+    }
+  ],
+  "food": [
+    {
+      "e": "🍜",
+      "name": "Pad Thai",
+      "what": "Stir-fried rice noodles with egg, tofu or shrimp, bean sprouts, and crushed peanuts",
+      "tip": "Always customise with the condiment tray: fish sauce, chilli, sugar, and vinegar."
+    },
+    {
+      "e": "🌶️",
+      "name": "Tom yum goong",
+      "what": "Spicy lemongrass and lime prawn soup — intensely aromatic and sour",
+      "tip": "Ask for 'mai phet' (not spicy) if needed. The galangal and lemongrass are not meant to be eaten."
+    },
+    {
+      "e": "🥭",
+      "name": "Mango sticky rice",
+      "what": "Sweet glutinous rice soaked in coconut milk served with fresh mango slices",
+      "tip": "Best in mango season (March–June). A must-try dessert."
+    },
+    {
+      "e": "🥗",
+      "name": "Som tam",
+      "what": "Green papaya salad pounded with chilli, lime, fish sauce, tomatoes, and dried shrimp",
+      "tip": "Specify your spice level upfront — even 'medium' can be very hot by Western standards."
+    },
+    {
+      "e": "🥥",
+      "name": "Massaman curry",
+      "what": "Mild, rich coconut curry with potato and peanuts — Persian-influenced and fragrant",
+      "tip": "Less common than green curry but arguably more complex. Best with beef or lamb."
+    },
+    {
+      "e": "🛵",
+      "name": "Street food safety",
+      "what": "Eat where locals eat — high turnover means fresh food, even from roadside stalls",
+      "tip": "If it smells amazing and has a queue, it's good. Cooked-to-order is always safer than pre-made."
+    }
+  ],
+  "safety": [
+    {
+      "e": "💎",
+      "rule": "Gem scam",
+      "note": "A friendly local tells you about a 'once-in-a-lifetime' sale on rubies or sapphires you can resell for profit. 100% a scam — the gems are worthless."
+    },
+    {
+      "e": "🛺",
+      "rule": "Tuk-tuk 'temple tour' scam",
+      "note": "Driver offers a very cheap tour, then takes you to shops where he gets a commission. Politely decline and use Grab instead."
+    },
+    {
+      "e": "🙏",
+      "rule": "Closed temple scam",
+      "note": "'That temple is closed today — I'll take you to a special one.' It's never closed. Always verify yourself before changing plans."
+    },
+    {
+      "e": "🚔",
+      "rule": "Tourist police number: 1155",
+      "note": "Tourist police speak English and are specifically trained to help foreigners. Save this number."
+    },
+    {
+      "e": "👘",
+      "rule": "Dress codes at major temples",
+      "note": "Wat Phra Kaew (Grand Palace) enforces strict rules — no sleeveless tops or shorts. Wraps are available to rent at the entrance."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rides",
+      "name": "Grab",
+      "desc": "Most reliable ride-hailing across Bangkok and major cities.",
+      "ios": "https://apps.apple.com/app/id647268330",
+      "android": "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Navigation",
+      "name": "Google Maps",
+      "desc": "Works well in Thailand. Download Bangkok offline maps.",
+      "ios": "https://apps.apple.com/app/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Google Translate",
+      "desc": "Camera mode reads Thai script on menus and signs.",
+      "ios": "https://apps.apple.com/app/id414681729",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "💵",
+      "cat": "Money",
+      "name": "Wise",
+      "desc": "Best rates for spending Thai Baht. Set up before you leave.",
+      "ios": "https://apps.apple.com/app/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Agoda",
+      "desc": "Headquartered in Bangkok — often has the best Thai hotel deals.",
+      "ios": "https://apps.apple.com/app/id479753889",
+      "android": "https://play.google.com/store/apps/details?id=com.agoda.nuobo"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "Klook",
+      "desc": "Skip-the-line tickets, temple tours, and island day trips.",
+      "ios": "https://apps.apple.com/app/id1099611444",
+      "android": "https://play.google.com/store/apps/details?id=com.klook.klook"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "สวัสดี",
+        "pron": "sah-WAHT-dee (krap/ka)",
+        "en": "Hello / Good day"
+      },
+      {
+        "native": "ราตรีสวัสดิ์",
+        "pron": "raat-tree sah-WAHT",
+        "en": "Good night"
+      },
+      {
+        "native": "ลาก่อน",
+        "pron": "laa-GAWN",
+        "en": "Goodbye"
+      },
+      {
+        "native": "ขอบคุณ",
+        "pron": "kòp-KHUN",
+        "en": "Thank you"
+      },
+      {
+        "native": "ขอบคุณมาก",
+        "pron": "kòp-KHUN mâak",
+        "en": "Thank you very much"
+      },
+      {
+        "native": "ยินดี",
+        "pron": "yin-DEE",
+        "en": "You're welcome"
+      },
+      {
+        "native": "ขอโทษ",
+        "pron": "kŏr TÔHT",
+        "en": "Sorry / Excuse me"
+      },
+      {
+        "native": "คุณพูดภาษาอังกฤษได้ไหม",
+        "pron": "khun pôot paa-SĂA ang-GRIT dâi mái",
+        "en": "Do you speak English?"
+      },
+      {
+        "native": "ไม่เข้าใจ",
+        "pron": "mâi kâo JAI",
+        "en": "I don't understand"
+      },
+      {
+        "native": "ช่วยพูดซ้ำได้ไหม",
+        "pron": "chûay pôot sám dâi mái",
+        "en": "Can you repeat that?"
+      },
+      {
+        "native": "ผม/ฉันชื่อ...",
+        "pron": "pŏm / chán chûue",
+        "en": "My name is..."
+      }
+    ],
+    "food": [
+      {
+        "native": "ขอโต๊ะสำหรับสองคน",
+        "pron": "kŏr dtó săm-ràp sŏng khon",
+        "en": "A table for two, please"
+      },
+      {
+        "native": "ขอเมนูหน่อย",
+        "pron": "kŏr meh-NOO nòi",
+        "en": "The menu, please"
+      },
+      {
+        "native": "ขอ...",
+        "pron": "kŏr...",
+        "en": "I would like..."
+      },
+      {
+        "native": "เก็บเงินด้วย",
+        "pron": "gèp ngern dûay",
+        "en": "The bill, please"
+      },
+      {
+        "native": "อร่อยมาก!",
+        "pron": "a-RÒI mâak",
+        "en": "Delicious!"
+      },
+      {
+        "native": "ฉันกินมังสวิรัติ",
+        "pron": "chán gin mang-sà-wí-RÁT",
+        "en": "I am vegetarian"
+      },
+      {
+        "native": "ไม่เผ็ด",
+        "pron": "mâi pèt",
+        "en": "Not spicy, please"
+      },
+      {
+        "native": "กาแฟหน่อย",
+        "pron": "GAA-fae nòi",
+        "en": "A coffee, please"
+      },
+      {
+        "native": "น้ำหน่อย",
+        "pron": "náam nòi",
+        "en": "Some water, please"
+      },
+      {
+        "native": "ราคาเท่าไหร่",
+        "pron": "raa-KAA tâo RÀI",
+        "en": "How much is it?"
+      }
+    ],
+    "directions": [
+      {
+        "native": "...อยู่ที่ไหน",
+        "pron": "...yòo têe NǍI",
+        "en": "Where is...?"
+      },
+      {
+        "native": "สถานีรถไฟฟ้า",
+        "pron": "sà-tǎa-NEE rót-fai-FÁA",
+        "en": "BTS / MRT station"
+      },
+      {
+        "native": "ซ้าย",
+        "pron": "sáai",
+        "en": "Left"
+      },
+      {
+        "native": "ขวา",
+        "pron": "kwăa",
+        "en": "Right"
+      },
+      {
+        "native": "ตรงไป",
+        "pron": "trong bpai",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "ใกล้",
+        "pron": "glâi",
+        "en": "Near"
+      },
+      {
+        "native": "ไกล",
+        "pron": "glai",
+        "en": "Far"
+      },
+      {
+        "native": "ฉันหลงทาง",
+        "pron": "chán lŏng TAANG",
+        "en": "I am lost"
+      },
+      {
+        "native": "ช่วยฉันได้ไหม",
+        "pron": "chûay chán dâi mái",
+        "en": "Can you help me?"
+      },
+      {
+        "native": "ขอตั๋วหนึ่งใบ",
+        "pron": "kŏr dtŭa nùeng bai",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "ห้องน้ำอยู่ที่ไหน",
+        "pron": "hông-náam yòo têe NǍI",
+        "en": "Where is the toilet?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "ราคาเท่าไหร่",
+        "pron": "raa-KAA tâo RÀI",
+        "en": "How much does this cost?"
+      },
+      {
+        "native": "แพงเกินไป",
+        "pron": "pɛɛng gern bpai",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "แค่ดูเฉยๆ",
+        "pron": "kâe duu chĕuy chĕuy",
+        "en": "I'm just looking"
+      },
+      {
+        "native": "มี...ไหม",
+        "pron": "mee...mái",
+        "en": "Do you have...?"
+      },
+      {
+        "native": "ไซส์อะไร",
+        "pron": "sai à-RAI",
+        "en": "What size?"
+      },
+      {
+        "native": "เอาอันนี้",
+        "pron": "ao an-NÍI",
+        "en": "I'll take this"
+      },
+      {
+        "native": "รับบัตรเครดิตไหม",
+        "pron": "ráp bàt kray-DÌT mái",
+        "en": "Do you accept cards?"
+      },
+      {
+        "native": "ขอใบเสร็จด้วย",
+        "pron": "kŏr bai-sèt dûay",
+        "en": "A receipt, please"
+      },
+      {
+        "native": "เปิด / ปิด?",
+        "pron": "bpèrt / bpìt",
+        "en": "Open / Closed?"
+      },
+      {
+        "native": "รหัส WiFi คืออะไร",
+        "pron": "rá-hàt WEE-fai kuue à-RAI",
+        "en": "What's the wifi password?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "หนึ่ง",
+        "pron": "nùeng",
+        "en": "1"
+      },
+      {
+        "native": "สอง",
+        "pron": "sŏng",
+        "en": "2"
+      },
+      {
+        "native": "สาม",
+        "pron": "sǎam",
+        "en": "3"
+      },
+      {
+        "native": "สี่",
+        "pron": "sèe",
+        "en": "4"
+      },
+      {
+        "native": "ห้า",
+        "pron": "hâa",
+        "en": "5"
+      },
+      {
+        "native": "หก",
+        "pron": "hòk",
+        "en": "6"
+      },
+      {
+        "native": "เจ็ด",
+        "pron": "jèt",
+        "en": "7"
+      },
+      {
+        "native": "แปด",
+        "pron": "bpàet",
+        "en": "8"
+      },
+      {
+        "native": "เก้า",
+        "pron": "gâo",
+        "en": "9"
+      },
+      {
+        "native": "สิบ",
+        "pron": "sìp",
+        "en": "10"
+      },
+      {
+        "native": "สิบเอ็ด",
+        "pron": "sìp-èt",
+        "en": "11"
+      },
+      {
+        "native": "สิบสอง",
+        "pron": "sìp-sŏng",
+        "en": "12"
+      },
+      {
+        "native": "ยี่สิบ",
+        "pron": "yêe-sìp",
+        "en": "20"
+      },
+      {
+        "native": "ห้าสิบ",
+        "pron": "hâa-sìp",
+        "en": "50"
+      },
+      {
+        "native": "หนึ่งร้อย",
+        "pron": "nùeng-rói",
+        "en": "100"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "ช่วยด้วย!",
+        "pron": "chûay dûay",
+        "en": "Help!"
+      },
+      {
+        "native": "เรียกตำรวจด้วย!",
+        "pron": "rîak tam-RÙAT dûay",
+        "en": "Call the police!"
+      },
+      {
+        "native": "เรียกรถพยาบาลด้วย!",
+        "pron": "rîak rót-pá-yaa-BAAN dûay",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "ต้องการหมอ",
+        "pron": "dtông-gaan MŎR",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "ฉันแพ้...",
+        "pron": "chán pɛ̂ɛ",
+        "en": "I am allergic to..."
+      },
+      {
+        "native": "ถูกขโมย",
+        "pron": "tòok kà-MOI",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "โรงพยาบาลอยู่ที่ไหน",
+        "pron": "roong-pá-yaa-BAAN yòo têe NǍI",
+        "en": "Where is the hospital?"
+      }
+    ],
+    "medical": [
+      {
+        "native": "ฉันไม่สบาย",
+        "pron": "chán mâi sà-baai",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "เรียกรถพยาบาล",
+        "pron": "rîak rót pha-yaa-baan",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "โรงพยาบาลอยู่ที่ไหน?",
+        "pron": "rohng pha-yaa-baan yùu têe-nǎi",
+        "en": "Where's the hospital?"
+      },
+      {
+        "native": "ฉันมีไข้",
+        "pron": "chán mii kâi",
+        "en": "I have a fever"
+      },
+      {
+        "native": "ฉันแพ้...",
+        "pron": "chán pâe...",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "ฉันต้องการยานี้",
+        "pron": "chán dtông-gaan yaa née",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "มีร้านขายยาใกล้นี้ไหม?",
+        "pron": "mii ráan kǎai yaa glâi née mǎi",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "ฉันมาท่องเที่ยว",
+        "pron": "chán maa tông-têeo",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "ฉันอยู่ [X] วัน",
+        "pron": "chán yùu [X] wan",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "ฉันไม่มีสิ่งของต้องแจ้ง",
+        "pron": "chán mâi mii sìng-kǎwng dtông jâeng",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "รับกระเป๋าที่ไหน?",
+        "pron": "ráp grà-bǎo têe-nǎi",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "ฉันเดินทางคนเดียว",
+        "pron": "chán dern-taang kon-dieo",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "นี่คือโรงแรมของฉัน",
+        "pron": "nîi keu rohng-raem kǎwng chán",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "ช่วยพูดซ้ำได้ไหม?",
+        "pron": "chûay phûut sám dâi mǎi",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "ฉันต้องการล่าม",
+        "pron": "chán dtông-gaan lâam",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "ผมจองห้องไว้แล้ว",
+        "pron": "pom jong HONG wai laew",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "เช็คอินได้เลยไหม",
+        "pron": "check-in dai loei MAI",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "เช็คเอาต์กี่โมง",
+        "pron": "check-out gee MONG",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "กุญแจไม่ทำงาน",
+        "pron": "gun-jae mai tham NGAN",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "แอร์เสีย",
+        "pron": "air SIA",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "ขอผ้าเช็ดตัวเพิ่มได้ไหม",
+        "pron": "kor PA-chet-tua perm dai MAI",
+        "en": "Can I have more towels?"
+      },
+      {
+        "native": "กรุณาอย่ารบกวน",
+        "pron": "ga-RU-na ya rob-GUAN",
+        "en": "Do not disturb"
+      }
+    ],
+    "transport": [
+      {
+        "native": "สถานีรถไฟฟ้าอยู่ที่ไหน",
+        "pron": "sa-tha-NEE rot-fai-FA yu tee NAI",
+        "en": "Where is the BTS/MRT station?"
+      },
+      {
+        "native": "รถไฟสายนี้ไปถึง...ไหม",
+        "pron": "rot-FAI sai NEE pai TEUNG ... mai",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "ลงที่ไหนสำหรับ...",
+        "pron": "long tee NAI sam-RAP",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "ช่วยเรียกแท็กซี่ให้ด้วย",
+        "pron": "chuay RIAK taek-SEE hai duay",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "ไปโรงแรมนี้",
+        "pron": "pai rong-RAEM NEE",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "ค่าโดยสารเท่าไหร่",
+        "pron": "KHA doi-SAN tao RAI",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "จอดตรงนี้ด้วย",
+        "pron": "jot TRONG nee duay",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "dcc855a06e3062268c45541db0da7ff40dae222a5613f10e08a940edd1b3d862"
+}

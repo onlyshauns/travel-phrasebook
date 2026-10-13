@@ -1,0 +1,641 @@
+{
+  "id": "morocco",
+  "name": "Morocco",
+  "flag": "🇲🇦",
+  "lang": "Darija (Moroccan Arabic)",
+  "langCode": "ar-MA",
+  "voiceLabel": "Darija",
+  "latinScript": true,
+  "region": "Africa",
+  "timezone": "Africa/Casablanca",
+  "hero": "#C1272D",
+  "currency": {
+    "code": "MAD",
+    "symbol": "DH",
+    "rate": 10,
+    "label": "1 USD ≈ 10.00 MAD",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "190",
+      "name": "Police"
+    },
+    {
+      "tel": "150",
+      "name": "Fire"
+    },
+    {
+      "tel": "141",
+      "name": "Ambulance"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 \"La bès?\" (How are you?) with \"La bès, hamdullah\" (Fine, thank God) is the classic Moroccan exchange. French is widely spoken.",
+    "food": "💡 Eat with your right hand. Bread (\"khobz\") accompanies every meal — use it to scoop tagine. Mint tea is a welcome ritual.",
+    "directions": "💡 Petit taxis are cheap within cities (metered). Grand taxis go between cities. Negotiate price before getting in.",
+    "numbers": "💡 Currency is Moroccan Dirham (MAD). Cash is essential — many souks and riads are cash only.",
+    "emergency": "💡 Dial 190 (police), 150 (fire), 141 (SAMU medical). Brigade Touristique for tourist assistance.",
+    "shopping": "The first price in a souk is an opening. Counter lower, and stay polite.",
+    "medical": "Call 141 for an ambulance. Drink bottled water.",
+    "immigration": "Have your passport and the riad address in French or Arabic.",
+    "hotel": "A riad sits inside the medina. Pin the door, because taxis stop at the gate.",
+    "transport": "Agree the petit-taxi fare, or ask for the meter, before the car moves."
+  },
+  "pronGuide": {
+    "title": "Darija Sounds",
+    "tips": [
+      "Darija (Moroccan Arabic) borrows heavily from French and Berber — you'll hear French words mixed in constantly",
+      "The letters gh and kh are guttural — similar to the Spanish J or French R",
+      "Double consonants are pronounced longer, e.g. \"bzzaf\" (a lot) has a long Z",
+      "The H's in Moroccan words are real consonants — always pronounce them"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/E (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "MAD (DH)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "190 / 141"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Do not drink"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "Visa-free (many countries, 90 days)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🫖",
+      "rule": "Mint tea ritual",
+      "note": "Moroccan mint tea (atay) is poured from a height — both for show and to cool it. Never refuse the first glass."
+    },
+    {
+      "e": "🤝",
+      "rule": "Right hand greetings",
+      "note": "Handshake with the right hand, then touch your hand to your heart. This shows sincerity."
+    },
+    {
+      "e": "👗",
+      "rule": "Dress modestly",
+      "note": "Cover shoulders and knees, especially in medinas and mosques. Women should carry a scarf."
+    },
+    {
+      "e": "💰",
+      "rule": "Bargaining is culture",
+      "note": "In souks, the first price is always negotiable. Counter with 30–40% — it's expected and fun."
+    },
+    {
+      "e": "🕌",
+      "rule": "Mosques and non-Muslims",
+      "note": "Most Moroccan mosques are closed to non-Muslims. The Hassan II mosque in Casablanca is an exception."
+    }
+  ],
+  "money": [
+    {
+      "e": "💵",
+      "rule": "Cash is king",
+      "note": "Souks, small riads, and local restaurants are cash-only. Carry MAD in small denominations."
+    },
+    {
+      "e": "🏧",
+      "rule": "Withdraw in cities",
+      "note": "ATMs are reliable in Marrakech, Casablanca, and Fes. Avoid exchanging money on the street."
+    },
+    {
+      "e": "🤝",
+      "rule": "Tip generously",
+      "note": "10–15 MAD for guides, porters, and henna artists. Tipping is expected and forms part of their income."
+    }
+  ],
+  "food": [
+    {
+      "e": "🫕",
+      "name": "Tagine",
+      "what": "Slow-cooked stew in a conical clay pot — lamb, chicken, or vegetables",
+      "tip": "Order at a local restaurant, not tourist spots. Ask for \"beld\" (traditional/local-style)."
+    },
+    {
+      "e": "🥘",
+      "name": "Couscous",
+      "what": "Semolina grains steamed over broth with vegetables and meat",
+      "tip": "Traditionally served on Fridays. Eating couscous with family is a Moroccan ritual."
+    },
+    {
+      "e": "🥗",
+      "name": "Zaalouk",
+      "what": "Smoky aubergine and tomato salad",
+      "tip": "Served as a cold starter. Scoop with bread. Also try taktouka (roasted pepper version)."
+    },
+    {
+      "e": "🧇",
+      "name": "Msemen",
+      "what": "Square flaky flatbread, often with honey or argan oil",
+      "tip": "A Moroccan breakfast staple. Pair with mint tea for the full experience."
+    },
+    {
+      "e": "🥜",
+      "name": "Bastilla",
+      "what": "Savoury-sweet pie with pigeon (or chicken), almonds, and cinnamon",
+      "tip": "A Fes speciality. One of Morocco's most complex, impressive dishes."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🧭",
+      "rule": "Medina navigation",
+      "note": "Medina alleys are a labyrinth — use Google Maps offline. Guides offering help may want a tip."
+    },
+    {
+      "e": "🚕",
+      "rule": "Official taxis only",
+      "note": "Use licensed petit taxis (metered) or agree a price up front. Avoid unmarked \"taxis.\""
+    },
+    {
+      "e": "👁️",
+      "rule": "Henna and argan scams",
+      "note": "Free henna or argan oil \"samples\" come with aggressive sales. Politely decline if not interested."
+    },
+    {
+      "e": "👗",
+      "rule": "Dress for context",
+      "note": "Revealing clothing can attract unwanted attention in medinas. Light, modest layers work best."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚗",
+      "cat": "Rideshare",
+      "name": "Careem",
+      "desc": "Dominant rideshare in MENA region",
+      "ios": "https://apps.apple.com/app/careem/id592978487",
+      "android": "https://play.google.com/store/apps/details?id=com.careem.acma"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Google Maps",
+      "desc": "Works offline well — download Marrakech/Fes",
+      "ios": "https://apps.apple.com/app/google-maps/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "💬",
+      "cat": "Translate",
+      "name": "Google Translate",
+      "desc": "Arabic and Darija phrase help offline",
+      "ios": "https://apps.apple.com/app/google-translate/id414706506",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "💱",
+      "cat": "Finance",
+      "name": "Wise",
+      "desc": "Best rates for Moroccan Dirham",
+      "ios": "https://apps.apple.com/app/wise/id612261027",
+      "android": "https://play.google.com/store/apps/details?id=com.transferwise.android"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Salam",
+        "pron": "sa-LAM",
+        "en": "Hello"
+      },
+      {
+        "native": "Salam alaikum",
+        "pron": "sa-LAM a-LAY-kum",
+        "en": "Peace be upon you"
+      },
+      {
+        "native": "Sbah l-khir",
+        "pron": "sbah el-KHEER",
+        "en": "Good morning"
+      },
+      {
+        "native": "Msa l-khir",
+        "pron": "m-sa el-KHEER",
+        "en": "Good evening"
+      },
+      {
+        "native": "La bès?",
+        "pron": "la BESS",
+        "en": "How are you?"
+      },
+      {
+        "native": "La bès, hamdullah",
+        "pron": "la BESS ham-DOO-lah",
+        "en": "Fine, thank God"
+      },
+      {
+        "native": "Shukran",
+        "pron": "SHOOK-ran",
+        "en": "Thank you"
+      },
+      {
+        "native": "Bslama",
+        "pron": "b-SLA-ma",
+        "en": "Goodbye"
+      }
+    ],
+    "food": [
+      {
+        "native": "Wahd tagine, afak",
+        "pron": "wahd ta-ZHEEN a-FAK",
+        "en": "One tagine, please"
+      },
+      {
+        "native": "Bla l-har",
+        "pron": "bla el-HAR",
+        "en": "Without spice"
+      },
+      {
+        "native": "Ana ma kankol l-lhem",
+        "pron": "AH-na ma kan-KOL el-LHEM",
+        "en": "I don't eat meat"
+      },
+      {
+        "native": "Bnina bzzaf!",
+        "pron": "bni-NA bzaf",
+        "en": "Very delicious!"
+      },
+      {
+        "native": "L-hesab, afak",
+        "pron": "el he-SAB a-FAK",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Atay, afak",
+        "pron": "a-TAY a-FAK",
+        "en": "Tea, please"
+      },
+      {
+        "native": "L-ma, afak",
+        "pron": "el-MA a-FAK",
+        "en": "Water, please"
+      },
+      {
+        "native": "Machi had l-khedma",
+        "pron": "MA-shee had el-KHEDma",
+        "en": "Not what I ordered"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Fin kayna l-mahatta?",
+        "pron": "fin KAY-na el ma-HAt-ta",
+        "en": "Where is the station?"
+      },
+      {
+        "native": "Ba'id bzzaf?",
+        "pron": "ba-EED bzaf",
+        "en": "Is it far?"
+      },
+      {
+        "native": "Li l-ysar",
+        "pron": "li el-ee-SAR",
+        "en": "To the left"
+      },
+      {
+        "native": "Li l-limin",
+        "pron": "li el-LI-min",
+        "en": "To the right"
+      },
+      {
+        "native": "Neeshan",
+        "pron": "nee-SHAN",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "Weddni l...",
+        "pron": "wed-DNI l",
+        "en": "Take me to..."
+      },
+      {
+        "native": "Wqef hna",
+        "pron": "wa-KEF hna",
+        "en": "Stop here"
+      },
+      {
+        "native": "Qrib wla ba'id?",
+        "pron": "QRIB wla ba-EED",
+        "en": "Near or far?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Bshal hada?",
+        "pron": "b-SHAL ha-DA",
+        "en": "How much is this?"
+      },
+      {
+        "native": "Ghali bzzaf",
+        "pron": "GHA-li bzaf",
+        "en": "Too expensive"
+      },
+      {
+        "native": "Khfef chwiya",
+        "pron": "kh-FEF shwi-YA",
+        "en": "Lower the price a little"
+      },
+      {
+        "native": "Wash kayn numero akhar?",
+        "pron": "wash KAY-in noo-ME-ro AK-har",
+        "en": "Another size?"
+      },
+      {
+        "native": "Ghir kantshof",
+        "pron": "ghir kant-SHOF",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Ghadi nakhud hada",
+        "pron": "GHA-di na-KHUD ha-DA",
+        "en": "I'll take this"
+      },
+      {
+        "native": "Wash kadir nkhallas b kart?",
+        "pron": "wash ka-DIR nkh-LAS b kart",
+        "en": "Can I pay by card?"
+      },
+      {
+        "native": "Atini wahd l-fatoura",
+        "pron": "a-TI-ni wahd el fa-TOO-ra",
+        "en": "Give me a receipt"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Wahd",
+        "pron": "wahd",
+        "en": "One"
+      },
+      {
+        "native": "Jouj",
+        "pron": "zhoozh",
+        "en": "Two"
+      },
+      {
+        "native": "Tlata",
+        "pron": "TLA-ta",
+        "en": "Three"
+      },
+      {
+        "native": "Rb'a",
+        "pron": "RB-a",
+        "en": "Four"
+      },
+      {
+        "native": "Khamsa",
+        "pron": "KHAM-sa",
+        "en": "Five"
+      },
+      {
+        "native": "'ashra",
+        "pron": "ASH-ra",
+        "en": "Ten"
+      },
+      {
+        "native": "Miya",
+        "pron": "MI-ya",
+        "en": "One hundred"
+      },
+      {
+        "native": "Alf",
+        "pron": "alf",
+        "en": "One thousand"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "'Aweni!",
+        "pron": "aw-NI",
+        "en": "Help!"
+      },
+      {
+        "native": "'Ayyet l-boless!",
+        "pron": "ay-YET el bo-LESS",
+        "en": "Call the police!"
+      },
+      {
+        "native": "'Ayyet l-is'af!",
+        "pron": "ay-YET el is-AF",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Kayna l-'afya!",
+        "pron": "KAY-na el AF-ya",
+        "en": "There's a fire!"
+      },
+      {
+        "native": "Ana mrid",
+        "pron": "AH-na m-RID",
+        "en": "I'm sick"
+      },
+      {
+        "native": "'Aweni afak!",
+        "pron": "aw-NI a-FAK",
+        "en": "Please help me!"
+      },
+      {
+        "native": "Fin kayn sbitar?",
+        "pron": "fin KAY-in sbi-TAR",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Srqo l-bzam dyali",
+        "pron": "sr-QO el b-ZAM dya-LI",
+        "en": "My wallet was stolen"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Ma kaynshi bkhir",
+        "pron": "ma KAY-nshi b-KHEER",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Khassni tbib",
+        "pron": "KHAS-ni t-BIB",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "'Ayyet l-is'af",
+        "pron": "ay-YET el is-AF",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Fin kayn sbitar qrib?",
+        "pron": "fin KAY-in sbi-TAR qrib",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "'Andi hassasiya l...",
+        "pron": "AN-di has-sa-SEE-ya l",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "'Andi diabit",
+        "pron": "AN-di dye-ah-BIT",
+        "en": "I have diabetes"
+      },
+      {
+        "native": "Ra'si kaydur",
+        "pron": "ra-SEE kai-DUR",
+        "en": "I feel dizzy"
+      },
+      {
+        "native": "Khassni dwa",
+        "pron": "KHAS-ni dwa",
+        "en": "I need medicine"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Hadchi pasporti",
+        "pron": "had-SHI pas-POR-ti",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "Jit ghir lsiyaha",
+        "pron": "jit ghir l-see-YAH-ha",
+        "en": "I'm here for tourism"
+      },
+      {
+        "native": "Ghadi nqam [X] iyam",
+        "pron": "GHA-di n-QAM [X] ee-YAM",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Ma 'andi walu l-i'lan",
+        "pron": "ma AN-di wa-LOO l-ee-LAN",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Fin kayna sala t-bagaj?",
+        "pron": "fin KAY-na SA-la t-ba-GAJ",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Ana msafer wahdni",
+        "pron": "AH-na m-SA-fer wah-DNI",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Hada lotili dyali",
+        "pron": "HA-da lo-TEE-li dya-LI",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Khassni tarjman",
+        "pron": "KHAS-ni tar-JMAN",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "عندي حجز",
+        "pron": "AN-di HE-jez",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "واش يمكنني نسجل دابا؟",
+        "pron": "wash im-KEN-ni nas-JEL DA-ba",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "فأش كيكون وقت الخروج؟",
+        "pron": "f-ASH kay-KUN wakt el-khoo-ROOJ",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "مفتاحي ما خدامش",
+        "pron": "mef-TA-hi ma kha-DAM-sh",
+        "en": "My key doesn't work"
+      },
+      {
+        "native": "التكييف معطل",
+        "pron": "et-tak-YIF mu-AT-tal",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "واش يمكنكم تجيبوا لي فوط زيادة؟",
+        "pron": "wash im-KEN-kom tej-BOO li FOOT zya-DA",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "ما تعيقونيش",
+        "pron": "ma ta-ay-KU-nish",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "شنو هو باسورد الويفي؟",
+        "pron": "SHNU hu PAS-word el-WAI-fai",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "واحد بيييه عافاك",
+        "pron": "WA-hed bi-YEH a-FA-k",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "فين هي محطة الطرامواي؟",
+        "pron": "FIN hi ma-hat-TA et-TRAM-way",
+        "en": "Where is the tram station?"
+      },
+      {
+        "native": "هاد القطر كيمشي ل...؟",
+        "pron": "had el-ka-TAR kay-IM-shi l...",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "فين نهبط باش نوصل ل...؟",
+        "pron": "FIN neh-BET bash no-SAL l...",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "عافاك سيفطلي طاكسي",
+        "pron": "a-FA-k si-FAT-li TAK-si",
+        "en": "Please call a taxi"
+      },
+      {
+        "native": "ودني لهاد الفندق",
+        "pron": "WAD-ni l-had el-FUN-dek",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "بشحال الكرا؟",
+        "pron": "b-SHHAL el-KRA",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "وقف هنا عافاك",
+        "pron": "WA-kef HE-na a-FA-k",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "1256adc1e4d0b6c49552bf7a04d29a53115a8db414b1aee56ac654c2ee6530ad"
+}

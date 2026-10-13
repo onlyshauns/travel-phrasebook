@@ -1,0 +1,641 @@
+{
+  "id": "greece",
+  "name": "Greece",
+  "flag": "🇬🇷",
+  "lang": "Ελληνικά",
+  "langCode": "el-GR",
+  "voiceLabel": "Greek",
+  "latinScript": false,
+  "region": "Europe",
+  "timezone": "Europe/Athens",
+  "hero": "#0D5EAF",
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "rate": 0.93,
+    "label": "1 USD ≈ 0.93 EUR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All services"
+    },
+    {
+      "tel": "100",
+      "name": "Police"
+    },
+    {
+      "tel": "166",
+      "name": "Ambulance"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 \"Γεια σας\" (YAH-sas) is formal/plural; \"Γεια σου\" (YAH-soo) for friends. Greek people are very friendly — a smile goes a long way.",
+    "food": "💡 Ask \"Τι συνιστάτε;\" (What do you recommend?) — Greeks love sharing food culture. Never rush a meal.",
+    "directions": "💡 Athens metro is modern and cheap. Greek islands require ferries — book ahead in summer.",
+    "numbers": "💡 Currency is Euro (€). Credit cards are now widely accepted, but carry cash for small islands.",
+    "emergency": "💡 Dial 112 (EU emergency), 100 (police), 166 (ambulance). Tourist police number: 1571.",
+    "shopping": "Cash still matters on the islands. Say yassas when you walk in.",
+    "medical": "Call 166 for an ambulance, or 112.",
+    "immigration": "Schengen rules apply. A ferry may ask for your passport.",
+    "hotel": "Ask whether breakfast and the room tax are included.",
+    "transport": "Summer ferries sell out. In Athens, buy a metro ticket before you board."
+  },
+  "pronGuide": {
+    "title": "Greek Sounds",
+    "tips": [
+      "Greek letters look different but sounds are often familiar — Γ (gamma) before E/I makes a \"y\" sound",
+      "The combination ΜΠ (mp) makes a \"b\" sound, and ΝΤ (nt) makes a \"d\" sound at the start of a word",
+      "Double vowels αι = \"e\", οι = \"ee\", ου = \"oo\", ει = \"ee\"",
+      "The letter Χ (chi) is like the Scottish \"loch\" — a breathy H sound at the back of the throat"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/F (230V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "EUR (€)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112 / 166"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right side"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Safe in cities"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "Schengen rules apply"
+    }
+  ],
+  "culture": [
+    {
+      "e": "🤝",
+      "rule": "Philoxenia",
+      "note": "The ancient Greek concept of hospitality to strangers is alive today. Expect generosity and warmth."
+    },
+    {
+      "e": "🍽️",
+      "rule": "Sharing plates",
+      "note": "Greek dining is communal — order mezedes (small plates) for the table. Don't eat alone."
+    },
+    {
+      "e": "🙅",
+      "rule": "Head tilt means no",
+      "note": "A slight backward tilt of the head means \"no\" in Greece. Nodding down means \"yes.\""
+    },
+    {
+      "e": "🪔",
+      "rule": "Church etiquette",
+      "note": "Dress modestly in churches — cover shoulders and knees. Candle lighting is a local ritual."
+    },
+    {
+      "e": "☕",
+      "rule": "Coffee is slow",
+      "note": "Greek coffee is never rushed. Sitting at a kafeneio for hours is perfectly normal."
+    }
+  ],
+  "money": [
+    {
+      "e": "💳",
+      "rule": "Cards mostly accepted",
+      "note": "Cities and resorts are card-friendly. Smaller islands and cafés may prefer cash."
+    },
+    {
+      "e": "🏧",
+      "rule": "ATMs on islands",
+      "note": "ATMs exist on most tourist islands but can run out of cash in peak season. Withdraw early."
+    },
+    {
+      "e": "🧾",
+      "rule": "Ask for a receipt",
+      "note": "By law you must be given a receipt. If a shop \"forgets,\" they may be avoiding taxes."
+    }
+  ],
+  "food": [
+    {
+      "e": "🥙",
+      "name": "Souvlaki",
+      "what": "Grilled meat skewers, often in pita with tzatziki",
+      "tip": "The Greek fast food. Order at a souvlatzidiko — eat standing up for the full experience."
+    },
+    {
+      "e": "🧀",
+      "name": "Spanakopita",
+      "what": "Filo pastry stuffed with spinach and feta",
+      "tip": "Best from a bakery in the morning. Tiropita (cheese only) is equally good."
+    },
+    {
+      "e": "🫒",
+      "name": "Greek Salad",
+      "what": "Tomato, cucumber, feta, olives, olive oil",
+      "tip": "Never ask for dressing — the olive oil, oregano, and salt are the dressing."
+    },
+    {
+      "e": "🍮",
+      "name": "Loukoumades",
+      "what": "Honey-drenched fried dough balls",
+      "tip": "A street food staple since ancient times. Get them hot with cinnamon."
+    },
+    {
+      "e": "🐙",
+      "name": "Grilled Octopus",
+      "what": "Char-grilled with lemon and olive oil",
+      "tip": "Find it drying on a line outside tavernas — a fresh sign. Best at coastal villages."
+    }
+  ],
+  "safety": [
+    {
+      "e": "✅",
+      "rule": "Very safe",
+      "note": "Greece is among Europe's safest countries. Violent crime is extremely rare."
+    },
+    {
+      "e": "🌊",
+      "rule": "Sea safety",
+      "note": "Strong winds (meltemi) can make seas choppy. Check forecasts before ferry travel."
+    },
+    {
+      "e": "🌡️",
+      "rule": "Summer heat",
+      "note": "July–August temperatures reach 40°C. Hydrate, use sunscreen, and avoid peak midday hours."
+    },
+    {
+      "e": "🚗",
+      "rule": "Mountain road driving",
+      "note": "Island roads can be narrow and winding. Drive carefully and hire a car with full insurance."
+    }
+  ],
+  "apps": [
+    {
+      "e": "⛴️",
+      "cat": "Ferries",
+      "name": "Ferryhopper",
+      "desc": "Book Greek island ferry tickets online",
+      "ios": "https://apps.apple.com/gr/app/ferryhopper/id1108268174",
+      "android": "https://play.google.com/store/apps/details?id=com.ferryhopper.app"
+    },
+    {
+      "e": "🚗",
+      "cat": "Rideshare",
+      "name": "Uber",
+      "desc": "Available in Athens and Thessaloniki",
+      "ios": "https://apps.apple.com/app/uber/id368677368",
+      "android": "https://play.google.com/store/apps/details?id=com.ubercab"
+    },
+    {
+      "e": "🗺️",
+      "cat": "Maps",
+      "name": "Google Maps",
+      "desc": "Reliable across Greece including islands",
+      "ios": "https://apps.apple.com/app/google-maps/id585027354",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+    },
+    {
+      "e": "🌤️",
+      "cat": "Weather",
+      "name": "Meteo.gr",
+      "desc": "Greek national weather service app",
+      "ios": "https://apps.apple.com/gr/app/meteo-gr/id504741781",
+      "android": "https://play.google.com/store/apps/details?id=gr.meteo.app"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Γεια σας",
+        "pron": "YAH-sas",
+        "en": "Hello (formal)"
+      },
+      {
+        "native": "Καλημέρα",
+        "pron": "kah-lee-MEH-ra",
+        "en": "Good morning"
+      },
+      {
+        "native": "Καλησπέρα",
+        "pron": "kah-lee-SPEH-ra",
+        "en": "Good evening"
+      },
+      {
+        "native": "Πώς είστε;",
+        "pron": "pos EE-ste",
+        "en": "How are you?"
+      },
+      {
+        "native": "Είμαι καλά",
+        "pron": "EE-me ka-LAH",
+        "en": "I'm fine"
+      },
+      {
+        "native": "Ευχαριστώ",
+        "pron": "ef-ha-ri-STOH",
+        "en": "Thank you"
+      },
+      {
+        "native": "Παρακαλώ",
+        "pron": "pa-ra-ka-LOH",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Αντίο",
+        "pron": "an-DEE-oh",
+        "en": "Goodbye"
+      }
+    ],
+    "food": [
+      {
+        "native": "Ένα σουβλάκι, παρακαλώ",
+        "pron": "EH-na soov-LAH-kee pa-ra-ka-LOH",
+        "en": "One souvlaki, please"
+      },
+      {
+        "native": "Χωρίς κρέας",
+        "pron": "cho-REES KREH-as",
+        "en": "Without meat"
+      },
+      {
+        "native": "Είναι πικάντικο;",
+        "pron": "EE-ne pi-KAN-di-ko",
+        "en": "Is it spicy?"
+      },
+      {
+        "native": "Πολύ νόστιμο!",
+        "pron": "po-LEE NOS-ti-mo",
+        "en": "Very delicious!"
+      },
+      {
+        "native": "Τον λογαριασμό, παρακαλώ",
+        "pron": "ton lo-ga-RYAZ-mo pa-ra-ka-LOH",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Είμαι χορτοφάγος",
+        "pron": "EE-me hor-to-FAH-gos",
+        "en": "I'm vegetarian"
+      },
+      {
+        "native": "Νερό, παρακαλώ",
+        "pron": "ne-ROH pa-ra-ka-LOH",
+        "en": "Water, please"
+      },
+      {
+        "native": "Τι συνιστάτε;",
+        "pron": "ti si-ni-STAH-te",
+        "en": "What do you recommend?"
+      }
+    ],
+    "directions": [
+      {
+        "native": "Πού είναι το μετρό;",
+        "pron": "poo EE-ne to me-TROH",
+        "en": "Where is the metro?"
+      },
+      {
+        "native": "Είναι μακριά;",
+        "pron": "EE-ne ma-KRYAH",
+        "en": "Is it far?"
+      },
+      {
+        "native": "Στρίψτε αριστερά",
+        "pron": "STREEP-ste a-ri-ste-RAH",
+        "en": "Turn left"
+      },
+      {
+        "native": "Στρίψτε δεξιά",
+        "pron": "STREEP-ste dek-SYAH",
+        "en": "Turn right"
+      },
+      {
+        "native": "Ευθεία",
+        "pron": "ef-THEE-a",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "Πάμε στο...",
+        "pron": "PAH-me sto",
+        "en": "Take me to..."
+      },
+      {
+        "native": "Σταματήστε εδώ",
+        "pron": "sta-ma-TEE-ste e-DOH",
+        "en": "Stop here"
+      },
+      {
+        "native": "Πόσο ακόμα;",
+        "pron": "POH-so a-KOH-ma",
+        "en": "How much further?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "Πόσο κάνει;",
+        "pron": "POH-so KAH-ni",
+        "en": "How much is this?"
+      },
+      {
+        "native": "Είναι πολύ ακριβό",
+        "pron": "EE-ne po-LEE a-kri-VOH",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "Έχετε άλλο νούμερο;",
+        "pron": "EH-he-te AH-lo NOO-me-ro",
+        "en": "Another size?"
+      },
+      {
+        "native": "Απλώς κοιτάζω",
+        "pron": "ap-LOHS ki-TAH-zo",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Θα το πάρω",
+        "pron": "tha to PAH-ro",
+        "en": "I'll take it"
+      },
+      {
+        "native": "Δέχεστε κάρτα;",
+        "pron": "DEH-hes-te KAR-ta",
+        "en": "Do you accept cards?"
+      },
+      {
+        "native": "Μπορώ να έχω απόδειξη;",
+        "pron": "bo-ROH na EH-ho a-POH-dik-see",
+        "en": "Can I have a receipt?"
+      },
+      {
+        "native": "Έχετε έκπτωση;",
+        "pron": "EH-he-te EK-pto-si",
+        "en": "Do you have a discount?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Ένα",
+        "pron": "EH-na",
+        "en": "One"
+      },
+      {
+        "native": "Δύο",
+        "pron": "DEE-o",
+        "en": "Two"
+      },
+      {
+        "native": "Τρία",
+        "pron": "TREE-a",
+        "en": "Three"
+      },
+      {
+        "native": "Τέσσερα",
+        "pron": "TEH-se-ra",
+        "en": "Four"
+      },
+      {
+        "native": "Πέντε",
+        "pron": "PEN-de",
+        "en": "Five"
+      },
+      {
+        "native": "Δέκα",
+        "pron": "DEH-ka",
+        "en": "Ten"
+      },
+      {
+        "native": "Εκατό",
+        "pron": "e-ka-TOH",
+        "en": "One hundred"
+      },
+      {
+        "native": "Χίλια",
+        "pron": "HEE-lya",
+        "en": "One thousand"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "Βοήθεια!",
+        "pron": "vo-EE-thi-a",
+        "en": "Help!"
+      },
+      {
+        "native": "Καλέστε την αστυνομία!",
+        "pron": "ka-LES-te tin as-ti-no-MEE-a",
+        "en": "Call the police!"
+      },
+      {
+        "native": "Καλέστε ασθενοφόρο!",
+        "pron": "ka-LES-te as-the-no-FOH-ro",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "Φωτιά!",
+        "pron": "fo-TYAH",
+        "en": "Fire!"
+      },
+      {
+        "native": "Είμαι άρρωστος",
+        "pron": "EE-me AH-ros-tos",
+        "en": "I'm sick"
+      },
+      {
+        "native": "Βοηθήστε με!",
+        "pron": "vo-ee-THEE-ste me",
+        "en": "Please help me!"
+      },
+      {
+        "native": "Πού είναι το νοσοκομείο;",
+        "pron": "poo EE-ne to no-so-ko-MEE-o",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Με έκλεψαν",
+        "pron": "me EK-lep-san",
+        "en": "I've been robbed"
+      }
+    ],
+    "medical": [
+      {
+        "native": "Δεν αισθάνομαι καλά",
+        "pron": "den es-THA-no-me ka-LAH",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Χρειάζομαι γιατρό",
+        "pron": "khree-AH-zo-me ya-TROH",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Καλέστε ασθενοφόρο",
+        "pron": "ka-LES-te as-the-no-FOH-ro",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "Πού είναι το πλησιέστερο νοσοκομείο;",
+        "pron": "poo EE-ne to plee-SYES-te-ro no-so-ko-MEE-o",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Είμαι αλλεργικός/ή σε...",
+        "pron": "EE-me a-ler-yi-KOS/KEE se",
+        "en": "I'm allergic to..."
+      },
+      {
+        "native": "Έχω διαβήτη",
+        "pron": "EH-ho dya-VEE-tee",
+        "en": "I have diabetes"
+      },
+      {
+        "native": "Ζαλίζομαι",
+        "pron": "za-LEE-zo-me",
+        "en": "I feel dizzy"
+      },
+      {
+        "native": "Χρειάζομαι φάρμακο",
+        "pron": "khree-AH-zo-me FAR-ma-ko",
+        "en": "I need medicine"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Ορίστε το διαβατήριό μου",
+        "pron": "o-REE-ste to dya-va-TEE-ryo moo",
+        "en": "Here is my passport"
+      },
+      {
+        "native": "Είμαι εδώ για τουρισμό",
+        "pron": "EE-me e-DOH ya too-riz-MOH",
+        "en": "I'm here for tourism"
+      },
+      {
+        "native": "Θα μείνω [X] μέρες",
+        "pron": "tha MEE-no [X] MEH-res",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "Δεν έχω τίποτα να δηλώσω",
+        "pron": "den EH-ho TEE-po-ta na dee-LOH-so",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "Πού είναι η παραλαβή αποσκευών;",
+        "pron": "poo EE-ne ee pa-ra-la-VEE a-pos-ke-VON",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Ταξιδεύω μόνος/η",
+        "pron": "tak-si-DEH-vo MOH-nos/nee",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Αυτό είναι το ξενοδοχείο μου",
+        "pron": "af-TOH EE-ne to kse-no-do-HEE-o moo",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "Χρειάζομαι διερμηνέα",
+        "pron": "khree-AH-zo-me dyer-mee-NEH-a",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Έχω κράτηση",
+        "pron": "E-kho KRA-ti-si",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "Μπορώ να κάνω check-in τώρα;",
+        "pron": "bo-RO na KA-no check-in TO-ra",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "Τι ώρα είναι το check-out;",
+        "pron": "ti O-ra I-ne to check-out",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Η κλειδοκάρτα μου δεν λειτουργεί",
+        "pron": "i kli-do-KAR-ta mu den li-tur-YI",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "Το κλιματιστικό είναι χαλασμένο",
+        "pron": "to kli-ma-tis-ti-KO I-ne kha-laz-ME-no",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "Μπορείτε να φέρετε περισσότερες πετσέτες;",
+        "pron": "bo-RI-te na FE-re-te pe-ri-SO-te-res pe-TSE-tes",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "Μην ενοχλείτε",
+        "pron": "min e-no-KHLi-te",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "Ποιος είναι ο κωδικός WiFi;",
+        "pron": "pios I-ne o ko-di-KOS wai-FAI",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Ένα εισιτήριο, παρακαλώ",
+        "pron": "E-na i-si-TI-rio pa-ra-ka-LO",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "Πού είναι ο σταθμός μετρό;",
+        "pron": "pu I-ne o stath-MOS me-TRO",
+        "en": "Where is the metro station?"
+      },
+      {
+        "native": "Αυτό το τρένο πηγαίνει στ'...;",
+        "pron": "af-TO to TRE-no pi-YE-ni st'...",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "Πού κατεβαίνω για...;",
+        "pron": "pu ka-te-VE-no ya",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "Μπορείτε να καλέσετε ένα ταξί;",
+        "pron": "bo-RI-te na ka-LE-se-te E-na tak-SI",
+        "en": "Can you call a taxi?"
+      },
+      {
+        "native": "Πηγαίνετέ με σε αυτό το ξενοδοχείο",
+        "pron": "pi-YE-ne-te me se af-TO to kse-no-do-KHI-o",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "Πόσο είναι το κόμιστρο;",
+        "pron": "PO-so I-ne to KO-mis-tro",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Σταματήστε εδώ, παρακαλώ",
+        "pron": "sta-ma-TIS-te e-DO pa-ra-ka-LO",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "e9732687dbc7932f193c5476e50b35d43cbe63693f1c30824ff9d1e82c58ae36"
+}

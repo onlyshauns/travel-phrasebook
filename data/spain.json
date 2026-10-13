@@ -1,0 +1,674 @@
+{
+  "id": "spain",
+  "name": "Spain",
+  "flag": "🇪🇸",
+  "lang": "Español",
+  "langCode": "es-ES",
+  "voiceLabel": "Spanish",
+  "latinScript": true,
+  "region": "Europe",
+  "timezone": "Europe/Madrid",
+  "hero": "#c60b1e",
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "rate": 0.93,
+    "label": "1 USD ≈ 0.93 EUR",
+    "asOf": "2024-06"
+  },
+  "emergencyNumbers": [
+    {
+      "tel": "112",
+      "name": "All services"
+    },
+    {
+      "tel": "092",
+      "name": "Tourist police (Barcelona)"
+    }
+  ],
+  "tips": {
+    "greetings": "💡 <em>Hola</em> works everywhere. Spaniards are warm — a smile and an attempt at Spanish goes a very long way.",
+    "food": "💡 Lunch (2–4pm) is the main meal. Dinner rarely starts before 9pm. Many kitchens close between 4–8pm.",
+    "directions": "💡 Spanish cities have excellent metro systems. Buy a 10-trip card (Tarjeta Multi) in Madrid — much cheaper per ride.",
+    "numbers": "💡 Spanish numbers are logical and regular from 1–30, then follow a consistent pattern.",
+    "emergency": "💡 Emergency: <strong>112</strong> (all services). Tourist police in Barcelona: <strong>092</strong>.",
+    "shopping": "Say hola when you walk in. Small shops may close in the afternoon.",
+    "medical": "Call 112. A pharmacy door lists the nearest one open overnight.",
+    "immigration": "Schengen rules apply. Have a return ticket and the hotel address.",
+    "hotel": "Afternoon closing is real. Ask for the Wi-Fi password at check-in.",
+    "transport": "Validate a metro ticket. In Barcelona, keep your bag in front of you."
+  },
+  "pronGuide": {
+    "title": "Spanish Sounds",
+    "tips": [
+      "In Spain, C before E/I = \"th\" — Barcelona = Bar-theh-LO-nah",
+      "V and B sound almost identical in Spanish",
+      "Stress the second-to-last syllable in most words",
+      "LL and Y both sound like \"y\" (as in yes) in most of Spain"
+    ]
+  },
+  "quickFacts": [
+    {
+      "icon": "🔌",
+      "label": "Plug",
+      "value": "Type C/F (220V)"
+    },
+    {
+      "icon": "💵",
+      "label": "Currency",
+      "value": "Euro (€)"
+    },
+    {
+      "icon": "🚑",
+      "label": "Emergency",
+      "value": "112"
+    },
+    {
+      "icon": "🚗",
+      "label": "Driving",
+      "value": "Right"
+    },
+    {
+      "icon": "💧",
+      "label": "Tap Water",
+      "value": "Safe (locals prefer bottled)"
+    },
+    {
+      "icon": "🛂",
+      "label": "Visa",
+      "value": "90 days (Schengen)"
+    }
+  ],
+  "culture": [
+    {
+      "e": "💋",
+      "rule": "Cheek-to-cheek kiss as greeting",
+      "note": "Two kisses (right cheek first) between friends, even if meeting for the first time. Men often kiss women; men may hug each other."
+    },
+    {
+      "e": "🌙",
+      "rule": "Dinner is late — really late",
+      "note": "Restaurants fill up after 9pm. Eating before 8pm marks you as a tourist. Clubs don't get busy until 2am."
+    },
+    {
+      "e": "😴",
+      "rule": "Siesta is real",
+      "note": "Many shops close 2–5pm, especially outside major cities. Plan your shopping around it."
+    },
+    {
+      "e": "🍺",
+      "rule": "Tapa with every drink in some cities",
+      "note": "In Granada, Seville, and smaller cities, ordering a drink often comes with a free tapa. In Barcelona, it usually doesn't."
+    },
+    {
+      "e": "⚽",
+      "rule": "Football allegiances run deep",
+      "note": "Real Madrid vs Barça is more than sport — it's political. Read the room before expressing opinions."
+    },
+    {
+      "e": "🗣️",
+      "rule": "Speak up — noise is normal",
+      "note": "Spanish social culture is lively and loud by Northern European standards. Don't mistake volume for argument."
+    }
+  ],
+  "money": [
+    {
+      "e": "💳",
+      "rule": "Cards widely accepted",
+      "note": "Contactless works nearly everywhere in cities. Some rural restaurants and markets are cash-only — carry €20–40."
+    },
+    {
+      "e": "🍽️",
+      "rule": "Menú del día is incredible value",
+      "note": "A set lunch menu (starter, main, dessert, drink) for €10–15 at local restaurants. Only available at lunchtime."
+    },
+    {
+      "e": "🏬",
+      "rule": "VAT refund for non-EU visitors",
+      "note": "Claim IVA tax back (21%) at the airport for purchases over €90 at eligible shops. Ask for a 'Tax Free' form."
+    },
+    {
+      "e": "🚫",
+      "rule": "Avoid plaza mayor tourist traps",
+      "note": "Restaurants on the main plazas charge 2–3x what you'd pay one street back. Walk away from the square."
+    },
+    {
+      "e": "🎯",
+      "rule": "Tipping is modest, not mandatory",
+      "note": "Round up or leave 5–10% for good service. Leaving nothing is acceptable. American-style 20% tipping is not expected."
+    }
+  ],
+  "food": [
+    {
+      "e": "🥩",
+      "name": "Jamón ibérico",
+      "what": "World-class air-cured ham from acorn-fed black pigs — one of Spain's greatest exports",
+      "tip": "Splurge on Jamón ibérico de bellota (acorn-fed). Slice thin and eat at room temperature."
+    },
+    {
+      "e": "🥔",
+      "name": "Patatas bravas",
+      "what": "Fried potato cubes with spicy tomato sauce and/or aioli — the quintessential tapa",
+      "tip": "Every bar makes them slightly differently. Finding your favourite version is a worthy quest."
+    },
+    {
+      "e": "🍤",
+      "name": "Gambas al ajillo",
+      "what": "Prawns sizzled in olive oil with garlic and dried chilli — served in a clay dish",
+      "tip": "Mop up every drop of the oil with bread. The best part."
+    },
+    {
+      "e": "🥘",
+      "name": "Paella valenciana",
+      "what": "Saffron rice with rabbit, chicken, and green beans — the original paella from Valencia",
+      "tip": "If a paella is ready in under 20 minutes, it's frozen. Proper paella takes 40+ minutes."
+    },
+    {
+      "e": "🍫",
+      "name": "Churros con chocolate",
+      "what": "Fried dough sticks dunked in thick, dark hot chocolate — breakfast or late-night snack",
+      "tip": "Best at a chocolatería on a cold morning. Not the thin churros — the thick porras version is better."
+    },
+    {
+      "e": "🍷",
+      "name": "Rioja / Cava",
+      "what": "Spain's world-famous red wine from La Rioja, or Cava sparkling wine from Catalonia",
+      "tip": "Order house wine by the glass — quality is high and the price is low. Vermut (vermouth) is the local aperitif."
+    }
+  ],
+  "safety": [
+    {
+      "e": "🎒",
+      "rule": "Pickpockets on Las Ramblas & Gran Vía",
+      "note": "Barcelona's Las Ramblas and Madrid's Gran Vía are among Europe's worst for pickpocketing. Use a cross-body bag, zip all pockets."
+    },
+    {
+      "e": "👕",
+      "rule": "Distraction scam — 'bird poo'",
+      "note": "Someone claims you have something on your jacket and 'helps' clean it while an accomplice goes through your bag. Refuse any contact."
+    },
+    {
+      "e": "🌙",
+      "rule": "Drink spiking in clubs",
+      "note": "Keep your drink in hand in Ibiza, Magaluf, and Barcelona's tourist clubs. Don't leave drinks unattended."
+    },
+    {
+      "e": "🚗",
+      "rule": "Don't leave anything visible in rental cars",
+      "note": "Smash-and-grab theft from parked cars is common in tourist areas. Take everything out, even bags from the boot."
+    },
+    {
+      "e": "🌡️",
+      "rule": "Summer heat in Andalucía",
+      "note": "Temperatures exceed 40°C in Seville, Córdoba, and Granada in July–August. Stay hydrated and avoid midday sun."
+    }
+  ],
+  "apps": [
+    {
+      "e": "🚇",
+      "cat": "Transit",
+      "name": "Moovit",
+      "desc": "Covers metro, bus, and tram in Madrid, Barcelona, and major Spanish cities.",
+      "ios": "https://apps.apple.com/app/id498477945",
+      "android": "https://play.google.com/store/apps/details?id=com.tranzmate"
+    },
+    {
+      "e": "🚕",
+      "cat": "Rides",
+      "name": "Cabify",
+      "desc": "Spain's dominant ride-hailing alternative to Uber. Works across major cities.",
+      "ios": "https://apps.apple.com/app/id476087442",
+      "android": "https://play.google.com/store/apps/details?id=cabify.mobile.app"
+    },
+    {
+      "e": "💬",
+      "cat": "Language",
+      "name": "Google Translate",
+      "desc": "Camera mode reads menus and signs. Download the Spanish offline pack.",
+      "ios": "https://apps.apple.com/app/id414681729",
+      "android": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+    },
+    {
+      "e": "💶",
+      "cat": "Money",
+      "name": "Revolut",
+      "desc": "Excellent euro exchange rates with no foreign transaction fees.",
+      "ios": "https://apps.apple.com/app/id1086924912",
+      "android": "https://play.google.com/store/apps/details?id=com.revolut.revolut"
+    },
+    {
+      "e": "🎫",
+      "cat": "Activities",
+      "name": "GetYourGuide",
+      "desc": "Skip-the-line tickets for Sagrada Família, Alhambra, and Prado Museum.",
+      "ios": "https://apps.apple.com/app/id657741529",
+      "android": "https://play.google.com/store/apps/details?id=com.getyourguide.android"
+    },
+    {
+      "e": "🏨",
+      "cat": "Stay",
+      "name": "Booking.com",
+      "desc": "Free cancellation filters. Spain has excellent boutique hotels and paradors.",
+      "ios": "https://apps.apple.com/app/id367003839",
+      "android": "https://play.google.com/store/apps/details?id=com.booking"
+    }
+  ],
+  "phrases": {
+    "greetings": [
+      {
+        "native": "Hola",
+        "pron": "O-la",
+        "en": "Hello"
+      },
+      {
+        "native": "Buenos días",
+        "pron": "BWE-nos DEE-as",
+        "en": "Good morning"
+      },
+      {
+        "native": "Buenas tardes",
+        "pron": "BWE-nas TAR-des",
+        "en": "Good afternoon / evening"
+      },
+      {
+        "native": "Gracias",
+        "pron": "GRA-syas",
+        "en": "Thank you"
+      },
+      {
+        "native": "De nada",
+        "pron": "de NA-da",
+        "en": "You're welcome"
+      },
+      {
+        "native": "Por favor",
+        "pron": "por fa-VOR",
+        "en": "Please"
+      },
+      {
+        "native": "Perdona",
+        "pron": "per-DO-na",
+        "en": "Excuse me"
+      },
+      {
+        "native": "No entiendo",
+        "pron": "no en-TYEN-do",
+        "en": "I don't understand"
+      },
+      {
+        "native": "¿Hablas inglés?",
+        "pron": "AB-las een-GLES?",
+        "en": "Do you speak English?"
+      }
+    ],
+    "food": [
+      {
+        "native": "La carta, por favor",
+        "pron": "la KAR-ta por fa-VOR",
+        "en": "The menu, please"
+      },
+      {
+        "native": "¿Qué recomienda?",
+        "pron": "ke re-ko-MYEN-da?",
+        "en": "What do you recommend?"
+      },
+      {
+        "native": "Soy vegetariano/a",
+        "pron": "soy ve-he-ta-RYA-no/a",
+        "en": "I'm vegetarian"
+      },
+      {
+        "native": "¡Está delicioso!",
+        "pron": "es-TA de-li-SYO-so!",
+        "en": "This is delicious!"
+      },
+      {
+        "native": "La cuenta, por favor",
+        "pron": "la KWEN-ta por fa-VOR",
+        "en": "The bill, please"
+      },
+      {
+        "native": "Sin gluten",
+        "pron": "sin GLOO-ten",
+        "en": "Gluten-free"
+      },
+      {
+        "native": "Tengo alergia a...",
+        "pron": "TEN-go a-LER-hya a...",
+        "en": "I'm allergic to..."
+      }
+    ],
+    "directions": [
+      {
+        "native": "¿Dónde está...?",
+        "pron": "DON-de es-TA...?",
+        "en": "Where is...?"
+      },
+      {
+        "native": "Estoy perdido/a",
+        "pron": "es-TOY per-DEE-do/a",
+        "en": "I'm lost"
+      },
+      {
+        "native": "A la derecha",
+        "pron": "a la de-RE-cha",
+        "en": "To the right"
+      },
+      {
+        "native": "A la izquierda",
+        "pron": "a la ees-KYER-da",
+        "en": "To the left"
+      },
+      {
+        "native": "Todo recto",
+        "pron": "TO-do REK-to",
+        "en": "Straight ahead"
+      },
+      {
+        "native": "¿Hay un metro cerca?",
+        "pron": "eye oon ME-tro SER-ka?",
+        "en": "Is there a metro nearby?"
+      },
+      {
+        "native": "¿Cuánto tarda?",
+        "pron": "KWAN-to TAR-da?",
+        "en": "How long does it take?"
+      }
+    ],
+    "shopping": [
+      {
+        "native": "¿Cuánto cuesta?",
+        "pron": "KWAN-to KWES-ta?",
+        "en": "How much is this?"
+      },
+      {
+        "native": "Es demasiado caro",
+        "pron": "es de-ma-SYA-do KA-ro",
+        "en": "It's too expensive"
+      },
+      {
+        "native": "¿Puedo pagar con tarjeta?",
+        "pron": "PWE-do pa-GAR kon tar-HE-ta?",
+        "en": "Can I pay by card?"
+      },
+      {
+        "native": "Solo estoy mirando",
+        "pron": "SO-lo es-TOY mi-RAN-do",
+        "en": "Just browsing"
+      },
+      {
+        "native": "Me llevo esto",
+        "pron": "me YE-vo ES-to",
+        "en": "I'll take this"
+      },
+      {
+        "native": "¿Tiene otra talla?",
+        "pron": "TYE-ne O-tra TA-ya?",
+        "en": "Do you have another size?"
+      },
+      {
+        "native": "¿Puede darme un recibo?",
+        "pron": "PWE-de DAR-me oon re-SI-bo?",
+        "en": "Can I have a receipt?"
+      }
+    ],
+    "numbers": [
+      {
+        "native": "Uno",
+        "pron": "OO-no",
+        "en": "1"
+      },
+      {
+        "native": "Dos",
+        "pron": "dos",
+        "en": "2"
+      },
+      {
+        "native": "Tres",
+        "pron": "tres",
+        "en": "3"
+      },
+      {
+        "native": "Cuatro",
+        "pron": "KWA-tro",
+        "en": "4"
+      },
+      {
+        "native": "Cinco",
+        "pron": "SEEN-ko",
+        "en": "5"
+      },
+      {
+        "native": "Seis",
+        "pron": "seis",
+        "en": "6"
+      },
+      {
+        "native": "Siete",
+        "pron": "SYE-te",
+        "en": "7"
+      },
+      {
+        "native": "Ocho",
+        "pron": "O-cho",
+        "en": "8"
+      },
+      {
+        "native": "Nueve",
+        "pron": "NWE-ve",
+        "en": "9"
+      },
+      {
+        "native": "Diez",
+        "pron": "dyes",
+        "en": "10"
+      },
+      {
+        "native": "Cien",
+        "pron": "syen",
+        "en": "100"
+      },
+      {
+        "native": "Mil",
+        "pron": "mil",
+        "en": "1,000"
+      }
+    ],
+    "emergency": [
+      {
+        "native": "¡Ayuda!",
+        "pron": "a-YOO-da!",
+        "en": "Help!"
+      },
+      {
+        "native": "¡Llame a la policía!",
+        "pron": "YA-me a la po-li-SEE-a!",
+        "en": "Call the police!"
+      },
+      {
+        "native": "¡Llame a una ambulancia!",
+        "pron": "YA-me a OO-na am-boo-LAN-sya!",
+        "en": "Call an ambulance!"
+      },
+      {
+        "native": "¿Dónde está el hospital?",
+        "pron": "DON-de es-TA el os-pi-TAL?",
+        "en": "Where is the hospital?"
+      },
+      {
+        "native": "Me han robado",
+        "pron": "me an ro-BA-do",
+        "en": "I've been robbed"
+      },
+      {
+        "native": "Necesito un médico",
+        "pron": "ne-se-SI-to oon ME-di-ko",
+        "en": "I need a doctor"
+      },
+      {
+        "native": "Tengo una alergia",
+        "pron": "TEN-go OO-na a-LER-hya",
+        "en": "I have an allergy"
+      }
+    ],
+    "medical": [
+      {
+        "native": "No me encuentro bien",
+        "pron": "no meh en-KWEN-tro BYEHN",
+        "en": "I don't feel well"
+      },
+      {
+        "native": "Llamen una ambulancia",
+        "pron": "YAH-men OO-nah am-boo-LAN-thya",
+        "en": "Call an ambulance"
+      },
+      {
+        "native": "¿Dónde está el hospital más cercano?",
+        "pron": "DON-deh es-TAH el os-pee-TAL mas ser-KAH-no",
+        "en": "Where's the nearest hospital?"
+      },
+      {
+        "native": "Tengo fiebre",
+        "pron": "TEN-go FYEH-breh",
+        "en": "I have a fever"
+      },
+      {
+        "native": "Necesito este medicamento",
+        "pron": "neh-seh-SEE-toh ES-teh meh-dee-kah-MEN-toh",
+        "en": "I need this medicine"
+      },
+      {
+        "native": "¿Hay una farmacia cerca?",
+        "pron": "ay OO-nah far-MAH-thya THER-ka",
+        "en": "Is there a pharmacy?"
+      }
+    ],
+    "immigration": [
+      {
+        "native": "Soy turista",
+        "pron": "soy too-REES-tah",
+        "en": "I'm a tourist"
+      },
+      {
+        "native": "Me quedo [X] días",
+        "pron": "meh KEH-doh [X] DEE-as",
+        "en": "I'm staying [X] days"
+      },
+      {
+        "native": "No tengo nada que declarar",
+        "pron": "no TEN-go NAH-dah keh deh-klah-RAR",
+        "en": "Nothing to declare"
+      },
+      {
+        "native": "¿Dónde es la recogida de equipajes?",
+        "pron": "DON-deh es la reh-koh-HEE-dah deh eh-kee-PAH-hes",
+        "en": "Where's baggage claim?"
+      },
+      {
+        "native": "Viajo solo/a",
+        "pron": "BYAH-ho SO-loh",
+        "en": "I'm travelling alone"
+      },
+      {
+        "native": "Este es mi hotel",
+        "pron": "ES-teh es mee oh-TEL",
+        "en": "This is my hotel"
+      },
+      {
+        "native": "¿Puede repetir?",
+        "pron": "PWEH-deh reh-peh-TEER",
+        "en": "Could you repeat that?"
+      },
+      {
+        "native": "Necesito un intérprete",
+        "pron": "neh-seh-SEE-toh oon in-TER-preh-teh",
+        "en": "I need an interpreter"
+      }
+    ],
+    "hotel": [
+      {
+        "native": "Tengo una reserva",
+        "pron": "TEN-go OO-nah reh-SAIR-bah",
+        "en": "I have a reservation"
+      },
+      {
+        "native": "¿Puedo hacer el check-in ahora?",
+        "pron": "PWAY-do ah-SAIR el check-in ah-O-rah",
+        "en": "Can I check in now?"
+      },
+      {
+        "native": "¿A qué hora es el check-out?",
+        "pron": "ah KAY O-rah es el check-out",
+        "en": "What time is checkout?"
+      },
+      {
+        "native": "Mi tarjeta no funciona",
+        "pron": "mee tar-HEH-tah no foon-SYON-ah",
+        "en": "My key card doesn't work"
+      },
+      {
+        "native": "El aire acondicionado está roto",
+        "pron": "el AY-ray ah-kon-dee-syo-NAH-do es-TAH RO-to",
+        "en": "The air conditioning is broken"
+      },
+      {
+        "native": "¿Puede traerme más toallas?",
+        "pron": "PWAY-day trah-AIR-may mas to-AH-yas",
+        "en": "Can you bring more towels?"
+      },
+      {
+        "native": "No molestar",
+        "pron": "no mo-les-TAR",
+        "en": "Do not disturb"
+      },
+      {
+        "native": "¿Cuál es la contraseña del WiFi?",
+        "pron": "kwal es lah kon-trah-SAYN-yah del wee-FEE",
+        "en": "What's the WiFi password?"
+      }
+    ],
+    "transport": [
+      {
+        "native": "Un billete, por favor",
+        "pron": "oon bee-YEH-teh por fah-VOR",
+        "en": "One ticket, please"
+      },
+      {
+        "native": "¿Dónde está el metro?",
+        "pron": "DON-day es-TAH el MEH-tro",
+        "en": "Where is the metro?"
+      },
+      {
+        "native": "¿Este tren va a...?",
+        "pron": "ES-teh tren bah ah",
+        "en": "Does this train go to...?"
+      },
+      {
+        "native": "¿Dónde bajo para...?",
+        "pron": "DON-day BAH-ho PAH-rah",
+        "en": "Where do I get off for...?"
+      },
+      {
+        "native": "¿Puede llamar a un taxi?",
+        "pron": "PWAY-day yah-MAR ah oon TAK-see",
+        "en": "Can you call a taxi?"
+      },
+      {
+        "native": "Lléveme a este hotel",
+        "pron": "YEH-veh-may ah ES-teh o-TEL",
+        "en": "Take me to this hotel"
+      },
+      {
+        "native": "¿Cuánto es la tarifa?",
+        "pron": "KWAN-to es lah tah-REE-fah",
+        "en": "How much is the fare?"
+      },
+      {
+        "native": "Pare aquí, por favor",
+        "pron": "PAH-ray ah-KEE por fah-VOR",
+        "en": "Stop here, please"
+      }
+    ]
+  },
+  "contentHash": "e2c3a5e02c4c825962491e626849f716266d0286748574def9ea6b24ca118352"
+}

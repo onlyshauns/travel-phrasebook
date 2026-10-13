@@ -1,79 +1,45 @@
 # Travel Phrasebook
 
-A fast, offline-capable travel companion with essential phrases, culture tips, and travel info for 19 countries. Built as a single-file PWA — no app store, no install, no internet required once loaded.
+Offline phrasebook for 19 countries: phrases with pronunciation, culture and safety notes, a quiz, and emergency numbers you can call. One static site, no build step.
 
-**Live:** [travelphrasebook.vercel.app](https://travelphrasebook.vercel.app)
-
----
+**Live:** [travelphrasebook.vercel.app](https://travelphrasebook.vercel.app) once this branch is deployed. This repository does not deploy itself.
 
 ## Countries
 
-🇫🇷 France · 🇩🇪 Germany · 🇪🇸 Spain · 🇮🇹 Italy · 🇵🇹 Portugal · 🇬🇷 Greece · 🇹🇷 Turkey · 🇲🇦 Morocco · 🇯🇵 Japan · 🇰🇷 Korea · 🇨🇳 China · 🇮🇳 India · 🇹🇭 Thailand · 🇻🇳 Vietnam · 🇮🇩 Indonesia · 🇲🇾 Malaysia · 🇸🇬 Singapore · 🇧🇷 Brazil · 🇲🇽 Mexico
+France, Germany, Greece, Italy, Portugal, Spain, China, Japan, Korea, India, Indonesia, Malaysia, Singapore, Thailand, Vietnam, Turkey, Brazil, Mexico, Morocco.
 
-## Features
+Singapore is English and Singlish. Morocco uses romanized Darija for most phrases and Arabic script for hotel and transport, with an Arabic font on those lines.
 
-**Phrases** — 10 categories per country, all with native script, phonetic pronunciation, and tap-to-hear text-to-speech:
-- 👋 Greetings · 🍽️ Food · 🗺️ Directions · 🛍️ Shopping · 🔢 Numbers
-- 🆘 Emergency · 🏥 Medical · 🛂 Immigration · 🏨 Hotel · 🚌 Transport
+## What the app does
 
-**Info** — Culture tips, money advice, local food guide, safety alerts, quick facts, and recommended apps — per country.
+- Tap a phrase, or the round play button, to hear it. **Slower** repeats it at 0.65×. If the phone has no voice for that language, the row says so and keeps the pronunciation on screen.
+- **Show** opens the native line full screen for someone else to read. English stays hidden until "Also show English".
+- Emergency is one call button per service. Japan is 110 and 119. Singapore is 999 and 995.
+- Info is a definition list. **Convert USD** opens a calculator that uses a June 2024 snapshot, not a live rate.
+- The trip sheet lists emergency numbers, that same snapshot, and a few apps. It is not a combined phrase list.
+- Favourites, recents, quiz progress, and the theme stay in `localStorage`.
 
-**Quiz mode** — Flashcard-style flip quiz with streak tracking and per-country progress saved to local storage.
+France phrases, including the numbers 30–1000, live in `data/france.json`. [french-phrasebook](https://github.com/onlyshauns/french-phrasebook) copies that file. Change it here, then copy it across, so the two apps do not drift.
 
-**Currency calculator** — Live-rate converter, pre-loaded with each country's currency.
+## Layout
 
-**Show to local** — Full-screen display of any phrase to show a local without speaking.
+```
+index.html              Shell
+css/app.css             Layout and theme
+js/app.js               UI
+js/phrase-utils.js      Speech, script, and tel helpers
+data/index.json         Country list
+data/<country>.json     Phrases and notes
+sw.js                   Offline cache. Only successful responses are stored.
+scripts/check-content.mjs
+```
 
-**Emergency modal** — One tap to surface the local emergency number and critical phrases on a high-contrast screen.
+`node scripts/check-content.mjs` checks every country for missing sections, duplicate English lines, undialable emergency numbers, the Singapore language, and the France/Japan numbers.
 
-**Favourites & recents** — Save phrases across sessions; quickly jump back to recently visited countries.
-
-**Trip planner** — Select multiple countries to see a combined phrase set.
-
-**Country hero banners** — Each phrasebook header is tinted with the country's flag colours.
-
-**Dark mode** — Warm soft-charcoal theme, toggled manually and persisted to local storage.
-
-**PWA / offline** — Service worker caches everything on first load. Works on a plane.
-
-## Tech
-
-| | |
-|---|---|
-| **Stack** | Single HTML file — HTML, CSS, JS, no build step |
-| **Fonts** | Playfair Display (headings) + DM Sans (body) via Google Fonts |
-| **Routing** | `history.pushState` + Vercel rewrites (`/:country → /`) |
-| **Offline** | Service worker (`sw.js`) with cache-first strategy |
-| **Storage** | `localStorage` — favourites, recents, quiz progress, dark mode preference |
-| **TTS** | Web Speech API (`speechSynthesis`) |
-| **Deploy** | Vercel (static) |
-
-## Local development
-
-No build tools needed — just open the file:
+## Local preview
 
 ```bash
-# Option 1: open directly
-open index.html
-
-# Option 2: serve locally (for service worker support)
-npx serve .
-# or
 python3 -m http.server
 ```
 
-## Deploy
-
-```bash
-npx vercel --prod
-```
-
-## Structure
-
-```
-index.html     # Entire app — HTML, CSS, JS, and all phrase data
-manifest.json  # PWA manifest
-sw.js          # Service worker (cache-first, versioned)
-icon.svg       # App icon
-vercel.json    # Rewrite rules for client-side routing
-```
+Open `http://127.0.0.1:8000`. The service worker only registers on `http://` or `https://`, not from a `file://` page.
